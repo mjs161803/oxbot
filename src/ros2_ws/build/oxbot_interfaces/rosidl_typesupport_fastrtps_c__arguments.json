@@ -1,0 +1,19 @@
+{
+  "package_name": "oxbot_interfaces",
+  "output_dir": "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces",
+  "template_dir": "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource",
+  "idl_tuples": [
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardFeedback.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/install/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c",
+    "/opt/ros/humble/install/lib/python3.6/site-packages/rosidl_typesupport_fastrtps_c/__init__.py",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/idl__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/idl__type_support_c.cpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/msg__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/msg__type_support_c.cpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl"
+  ]
+}

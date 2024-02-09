@@ -1,0 +1,6 @@
+{
+  "package_name": "oxbot_interfaces",
+  "non_idl_tuples": [
+    "/root/oxbot/src/ros2_ws/src/oxbot_interfaces:msg/HoverboardFeedback.msg"
+  ]
+}
