@@ -83,6 +83,7 @@ rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h: /opt/ros/humble/i
 rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h: /opt/ros/humble/install/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h: /opt/ros/humble/install/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.6 /opt/ros/humble/install/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c__arguments.json
 
@@ -95,8 +96,23 @@ rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h: ro
 rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h
 
+rosidl_generator_c/oxbot_interfaces/srv/compute_rectangle_area.h: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/srv/compute_rectangle_area.h
+
+rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h
+
+rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h
+
+rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h
+
 rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c
+
+rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c
 
 CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o: rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c
@@ -112,19 +128,35 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_int
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c -o CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.s
 
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o: rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o -MF CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o.d -o CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c
+
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c > CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.i
+
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c -o CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.s
+
 # Object files for target oxbot_interfaces__rosidl_generator_c
 oxbot_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o"
+"CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o" \
+"CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o"
 
 # External object files for target oxbot_interfaces__rosidl_generator_c
 oxbot_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 liboxbot_interfaces__rosidl_generator_c.so: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o
+liboxbot_interfaces__rosidl_generator_c.so: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o
 liboxbot_interfaces__rosidl_generator_c.so: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/build.make
 liboxbot_interfaces__rosidl_generator_c.so: /opt/ros/humble/install/lib/librosidl_runtime_c.so
 liboxbot_interfaces__rosidl_generator_c.so: /opt/ros/humble/install/lib/librcutils.so
 liboxbot_interfaces__rosidl_generator_c.so: CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library liboxbot_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library liboxbot_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +172,11 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/o
 CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h
 CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h
 CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/msg/hoverboard_feedback.h
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/srv/compute_rectangle_area.h
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h
+CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h
 	cd /root/oxbot/src/ros2_ws/build/oxbot_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/oxbot/src/ros2_ws/src/oxbot_interfaces /root/oxbot/src/ros2_ws/src/oxbot_interfaces /root/oxbot/src/ros2_ws/build/oxbot_interfaces /root/oxbot/src/ros2_ws/build/oxbot_interfaces /root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/depend
 

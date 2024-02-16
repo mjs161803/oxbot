@@ -360,7 +360,23 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/oxbot_interfaces/srv" TYPE FILE FILES "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/oxbot_interfaces/msg" TYPE FILE FILES "/root/oxbot/src/ros2_ws/src/oxbot_interfaces/msg/HoverboardFeedback.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/oxbot_interfaces/srv" TYPE FILE FILES "/root/oxbot/src/ros2_ws/src/oxbot_interfaces/srv/ComputeRectangleArea.srv")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/oxbot_interfaces/srv" TYPE FILE FILES "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_cmake/srv/ComputeRectangleArea_Request.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/oxbot_interfaces/srv" TYPE FILE FILES "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_cmake/srv/ComputeRectangleArea_Response.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

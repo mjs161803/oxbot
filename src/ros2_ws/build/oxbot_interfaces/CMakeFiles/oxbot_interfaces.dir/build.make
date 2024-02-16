@@ -67,6 +67,9 @@ include CMakeFiles/oxbot_interfaces.dir/compiler_depend.make
 include CMakeFiles/oxbot_interfaces.dir/progress.make
 
 CMakeFiles/oxbot_interfaces: /root/oxbot/src/ros2_ws/src/oxbot_interfaces/msg/HoverboardFeedback.msg
+CMakeFiles/oxbot_interfaces: /root/oxbot/src/ros2_ws/src/oxbot_interfaces/srv/ComputeRectangleArea.srv
+CMakeFiles/oxbot_interfaces: rosidl_cmake/srv/ComputeRectangleArea_Request.msg
+CMakeFiles/oxbot_interfaces: rosidl_cmake/srv/ComputeRectangleArea_Response.msg
 
 oxbot_interfaces: CMakeFiles/oxbot_interfaces
 oxbot_interfaces: CMakeFiles/oxbot_interfaces.dir/build.make

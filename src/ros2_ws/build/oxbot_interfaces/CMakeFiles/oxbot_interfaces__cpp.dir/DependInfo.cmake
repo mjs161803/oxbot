@@ -15,6 +15,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/srv/compute_rectangle_area.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__builder.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__traits.hpp" "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp"
   )
 
 

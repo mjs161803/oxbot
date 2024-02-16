@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/__init__.py"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback.py"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/srv/__init__.py"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area.py"
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c"
   "CMakeFiles/oxbot_interfaces__py"
 )
 

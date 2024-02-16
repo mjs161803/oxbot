@@ -70,8 +70,11 @@ include /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMak
 /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c.c
 /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback.py
+/root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area.py
 /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/__init__.py
+/root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/__init__.py
 /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c
+/root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c
 
 rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/install/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/install/lib/python3.6/site-packages/rosidl_generator_py/__init__.py
@@ -87,6 +90,7 @@ rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/install/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/install/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py && /usr/bin/python3.6 /opt/ros/humble/install/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -99,11 +103,20 @@ rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c
 rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback.py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback.py
 
+rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area.py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area.py
+
 rosidl_generator_py/oxbot_interfaces/msg/__init__.py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/msg/__init__.py
 
+rosidl_generator_py/oxbot_interfaces/srv/__init__.py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/srv/__init__.py
+
 rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c
+
+rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c
 
 oxbot_interfaces__py: /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py
 oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c.c
@@ -112,6 +125,9 @@ oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.e
 oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/__init__.py
 oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback.py
 oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c
+oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/__init__.py
+oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area.py
+oxbot_interfaces__py: rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c
 oxbot_interfaces__py: /root/oxbot/src/ros2_ws/build/oxbot_interfaces/oxbot_interfaces__py/CMakeFiles/oxbot_interfaces__py.dir/build.make
 .PHONY : oxbot_interfaces__py
 
