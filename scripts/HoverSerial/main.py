@@ -51,7 +51,7 @@ def thread_receive_feedback():
 
 if __name__ == "__main__":
 
-    SERIAL_PORT = '/dev/ttyUSB1'
+    SERIAL_PORT = '/dev/ttyUSB0'
     SERIAL_BAUD = 115200
 
     #SERIAL_PORT = '/dev/ttyUSB1'
