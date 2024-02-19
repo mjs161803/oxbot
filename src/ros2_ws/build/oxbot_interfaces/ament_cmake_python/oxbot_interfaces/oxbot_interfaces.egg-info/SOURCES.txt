@@ -6,3 +6,5 @@ oxbot_interfaces.egg-info/dependency_links.txt
 oxbot_interfaces.egg-info/top_level.txt
 oxbot_interfaces/msg/__init__.py
 oxbot_interfaces/msg/_hoverboard_feedback.py
+oxbot_interfaces/srv/__init__.py
+oxbot_interfaces/srv/_compute_rectangle_area.py

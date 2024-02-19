@@ -1,0 +1,34 @@
+[0.176s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/motion_control -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/motion_control
+[0.384s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[4.919s] -- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter 
+[5.622s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/install/share/rclcpp/cmake)
+[5.983s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[6.027s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[6.099s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[6.218s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.394s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.985s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[7.008s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[7.263s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[7.329s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[7.534s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[7.535s] -- Looking for pthread_create in pthreads
+[7.710s] -- Looking for pthread_create in pthreads - not found
+[7.711s] -- Looking for pthread_create in pthread
+[7.918s] -- Looking for pthread_create in pthread - found
+[7.922s] -- Found Threads: TRUE  
+[8.998s] -- Found oxbot_interfaces: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake)
+[9.122s] [31mCMake Error at CMakeLists.txt:13 (add_executable):
+[9.122s]   The target name "motion_control," is reserved or not valid for certain
+[9.123s]   CMake features, such as generator expressions, and may result in undefined
+[9.123s]   behavior.
+[9.124s] 
+[9.124s] [0m
+[9.125s] [31mCMake Error at /opt/ros/humble/install/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[9.126s]   ament_target_dependencies() the first argument must be a valid target name
+[9.126s] Call Stack (most recent call first):
+[9.127s]   CMakeLists.txt:14 (ament_target_dependencies)
+[9.127s] 
+[9.140s] [0m
+[9.141s] -- Configuring incomplete, errors occurred!
+[9.164s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '1': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/motion_control -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/motion_control

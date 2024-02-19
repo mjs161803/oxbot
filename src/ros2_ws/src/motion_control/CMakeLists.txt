@@ -8,6 +8,10 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(oxbot_interfaces REQUIRED)
+
+add_executable(motion_controller src/motion_controller.cpp)
+ament_target_dependencies(motion_controller rclcpp oxbot_interfaces)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -20,5 +24,10 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(TARGETS
+  motion_controller
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
