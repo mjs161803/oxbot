@@ -51,11 +51,8 @@ def thread_receive_feedback():
 
 if __name__ == "__main__":
 
-    SERIAL_PORT = '/dev/ttyUSB0'
+    SERIAL_PORT = '/dev/front-wheels'
     SERIAL_BAUD = 115200
-
-    #SERIAL_PORT = '/dev/ttyUSB1'
-    #SERIAL_BAUD = 115200
     
     hover_serial = Hoverboard_serial(SERIAL_PORT, SERIAL_BAUD)
 
