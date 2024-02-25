@@ -234,6 +234,30 @@ src/motion_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/motion_controller.cpp.s
 .PHONY : src/motion_controller.cpp.s
 
+src/ros2node_motion_controller.o: src/ros2node_motion_controller.cpp.o
+.PHONY : src/ros2node_motion_controller.o
+
+# target to build an object file
+src/ros2node_motion_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o
+.PHONY : src/ros2node_motion_controller.cpp.o
+
+src/ros2node_motion_controller.i: src/ros2node_motion_controller.cpp.i
+.PHONY : src/ros2node_motion_controller.i
+
+# target to preprocess a source file
+src/ros2node_motion_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.i
+.PHONY : src/ros2node_motion_controller.cpp.i
+
+src/ros2node_motion_controller.s: src/ros2node_motion_controller.cpp.s
+.PHONY : src/ros2node_motion_controller.s
+
+# target to generate assembly for a file
+src/ros2node_motion_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.s
+.PHONY : src/ros2node_motion_controller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,6 +277,9 @@ help:
 	@echo "... src/motion_controller.o"
 	@echo "... src/motion_controller.i"
 	@echo "... src/motion_controller.s"
+	@echo "... src/ros2node_motion_controller.o"
+	@echo "... src/ros2node_motion_controller.i"
+	@echo "... src/ros2node_motion_controller.s"
 .PHONY : help
 
 

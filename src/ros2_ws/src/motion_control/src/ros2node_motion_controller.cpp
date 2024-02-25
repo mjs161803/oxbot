@@ -1,16 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
+#include "./ros2node_motion_controller.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
-// #include "./ros2node_motion_controller.hpp"
-
-class MotionControllerNode: public rclcpp::Node {
-    public:
-    MotionControllerNode();
-
-    private:
-    void publishFeedback();
-    rclcpp::Publisher<oxbot_interfaces::msg::HoverboardFeedback>::SharedPtr feedback_publisher_;
-    rclcpp::TimerBase::SharedPtr feedback_timer_;
-};
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     {

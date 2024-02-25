@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(oxbot_interfaces REQUIRED)
 
-add_executable(motion_controller src/motion_controller.cpp)
+add_executable(motion_controller src/motion_controller.cpp src/ros2node_motion_controller.cpp)
 ament_target_dependencies(motion_controller rclcpp oxbot_interfaces)
 
 if(BUILD_TESTING)

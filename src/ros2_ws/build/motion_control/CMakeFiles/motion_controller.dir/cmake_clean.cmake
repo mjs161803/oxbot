@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o"
   "CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o.d"
+  "CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o"
+  "CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o.d"
   "motion_controller"
   "motion_controller.pdb"
 )
