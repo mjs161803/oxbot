@@ -1,0 +1,51 @@
+[0.000000] (-) TimerEvent: {}
+[0.001681] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
+[0.001894] (motion_control) JobQueued: {'identifier': 'motion_control', 'dependencies': OrderedDict([('oxbot_interfaces', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')])}
+[0.002066] (motion_control) JobStarted: {'identifier': 'motion_control'}
+[0.101086] (-) TimerEvent: {}
+[0.202676] (-) TimerEvent: {}
+[0.303614] (-) TimerEvent: {}
+[0.319104] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'cmake'}
+[0.322324] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'build'}
+[0.326109] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/motion_control', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/helpers/browser.sh'), ('SHLVL', '2'), ('OLDPWD', '/root/oxbot'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-699ddae2-9860-4d0d-8aca-97f0fb1821dd.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-8a9fd987-f26e-44c0-b555-6a419688bc24.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-8a9fd987-f26e-44c0-b555-6a419688bc24.sock","/tmp/.X11-unix/X0","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-168e4dc320.sock'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-8a9fd987-f26e-44c0-b555-6a419688bc24.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/root/oxbot/src/ros2_ws/install/motion_control:/opt/ros/humble/install')]), 'shell': False}
+[0.403889] (-) TimerEvent: {}
+[0.504857] (-) TimerEvent: {}
+[0.605696] (-) TimerEvent: {}
+[0.624341] (motion_control) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o\x1b[0m\n'}
+[0.628579] (motion_control) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o\x1b[0m\n'}
+[0.705885] (-) TimerEvent: {}
+[0.807914] (-) TimerEvent: {}
+[0.909825] (-) TimerEvent: {}
+[1.011789] (-) TimerEvent: {}
+[1.113730] (-) TimerEvent: {}
+[1.215773] (-) TimerEvent: {}
+[1.317690] (-) TimerEvent: {}
+[1.419714] (-) TimerEvent: {}
+[1.521703] (-) TimerEvent: {}
+[1.623717] (-) TimerEvent: {}
+[1.638362] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/ros2node_motion_controller.cpp:2:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kros2node_motion_controller.hpp: No such file or directory\n'}
+[1.639345] (motion_control) StderrLine: {'line': b' #include \x1b[01;31m\x1b[K"ros2node_motion_controller.hpp"\x1b[m\x1b[K\n'}
+[1.639927] (motion_control) StderrLine: {'line': b'          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.640404] (motion_control) StderrLine: {'line': b'compilation terminated.\n'}
+[1.645853] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/motion_controller.cpp:2:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kros2node_motion_controller.hpp: No such file or directory\n'}
+[1.647286] (motion_control) StderrLine: {'line': b' #include \x1b[01;31m\x1b[K"ros2node_motion_controller.hpp"\x1b[m\x1b[K\n'}
+[1.648089] (motion_control) StderrLine: {'line': b'          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.648750] (motion_control) StderrLine: {'line': b'compilation terminated.\n'}
+[1.681649] (motion_control) StdoutLine: {'line': b"CMakeFiles/motion_controller.dir/build.make:75: recipe for target 'CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o' failed\n"}
+[1.682999] (motion_control) StdoutLine: {'line': b"CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o' failed\n"}
+[1.684091] (motion_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o] Error 1\n'}
+[1.684749] (motion_control) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[1.685358] (motion_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o] Error 1\n'}
+[1.685938] (motion_control) StdoutLine: {'line': b"CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed\n"}
+[1.686632] (motion_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2\n'}
+[1.687246] (motion_control) StdoutLine: {'line': b"Makefile:145: recipe for target 'all' failed\n"}
+[1.687796] (motion_control) StderrLine: {'line': b'make: *** [all] Error 2\n'}
+[1.708967] (motion_control) CommandEnded: {'returncode': 2}
+[1.724068] (-) TimerEvent: {}
+[1.825115] (-) TimerEvent: {}
+[1.925874] (-) TimerEvent: {}
+[2.031776] (-) TimerEvent: {}
+[2.147090] (-) TimerEvent: {}
+[2.237909] (motion_control) JobEnded: {'identifier': 'motion_control', 'rc': 2}
+[2.247267] (-) TimerEvent: {}
+[2.250337] (-) EventReactorShutdown: {}

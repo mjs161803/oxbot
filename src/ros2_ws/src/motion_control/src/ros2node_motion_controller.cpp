@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "./ros2node_motion_controller.hpp"
+#include "ros2node_motion_controller.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")

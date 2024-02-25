@@ -1,5 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
-#include "./ros2node_motion_controller.hpp"
+#include "ros2node_motion_controller.hpp"
 
 int main(int argc, char **argv)
 {
