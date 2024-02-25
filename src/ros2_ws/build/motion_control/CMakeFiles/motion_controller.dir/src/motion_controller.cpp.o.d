@@ -575,6 +575,7 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_template.hpp \
+ /root/oxbot/src/ros2_ws/src/motion_control/src/./ros2node_motion_controller.cpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp \

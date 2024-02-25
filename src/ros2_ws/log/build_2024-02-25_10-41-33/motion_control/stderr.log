@@ -1,0 +1,6 @@
+CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: In function `void __gnu_cxx::new_allocator<MotionControllerNode>::construct<MotionControllerNode>(MotionControllerNode*)':
+motion_controller.cpp:(.text._ZN9__gnu_cxx13new_allocatorI20MotionControllerNodeE9constructIS1_JEEEvPT_DpOT0_[_ZN9__gnu_cxx13new_allocatorI20MotionControllerNodeE9constructIS1_JEEEvPT_DpOT0_]+0x30): undefined reference to `MotionControllerNode::MotionControllerNode()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [motion_controller] Error 1
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+make: *** [all] Error 2

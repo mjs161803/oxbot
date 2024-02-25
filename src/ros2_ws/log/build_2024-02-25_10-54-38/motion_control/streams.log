@@ -1,0 +1,25 @@
+[0.127s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[0.418s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o[0m
+[30.309s] [100%] [32m[1mLinking CXX executable motion_controller[0m
+[31.108s] [100%] Built target motion_controller
+[34.971s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '0': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[35.340s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/motion_control
+[35.495s] -- Install configuration: ""
+[35.497s] -- Installing: /root/oxbot/src/ros2_ws/install/motion_control/lib/motion_control/motion_controller
+[35.503s] -- Set runtime path of "/root/oxbot/src/ros2_ws/install/motion_control/lib/motion_control/motion_controller" to ""
+[35.504s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/package_run_dependencies/motion_control
+[35.504s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/parent_prefix_path/motion_control
+[35.505s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.sh
+[35.506s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.dsv
+[35.507s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.sh
+[35.507s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.dsv
+[35.508s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.bash
+[35.508s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.sh
+[35.509s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.zsh
+[35.509s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.dsv
+[35.510s] -- Installing: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.dsv
+[35.510s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/packages/motion_control
+[35.511s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig.cmake
+[35.512s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig-version.cmake
+[35.512s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.xml
+[35.546s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '0': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/motion_control
