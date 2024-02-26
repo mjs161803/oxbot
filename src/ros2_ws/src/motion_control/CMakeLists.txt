@@ -5,13 +5,14 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/motion_control/)
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(oxbot_interfaces REQUIRED)
 
-add_executable(motion_controller src/motion_controller.cpp src/ros2node_motion_controller.cpp)
-target_include_directories(motion_controller PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/motion_control/)
+add_executable(motion_controller src/motion_controller.cpp src/ros2node_motion_controller.cpp src/serial_communicator.cpp)
 ament_target_dependencies(motion_controller rclcpp oxbot_interfaces)
 
 if(BUILD_TESTING)
