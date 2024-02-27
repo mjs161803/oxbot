@@ -1,4 +1,5 @@
 #include <string>
+#include "termios.h"
 
 class SerialCommunicator
 {
@@ -15,6 +16,7 @@ class SerialCommunicator
     private:
     std::string front_wheels_serial_path_;
     std::string rear_wheels_serial_path_;
-    int fh_;
+    int front_wheels_serial_fh_;
+    int rear_wheels_serial_fh_;
 
 };

@@ -1,11 +1,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "ros2node_motion_controller.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
+#include "motion_control_config.hpp"
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     {
         feedback_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_feedback", 30);
         feedback_timer_ = this->create_wall_timer(std::chrono::seconds(1), std::bind(&MotionControllerNode::publishFeedback, this));
+        serial_comm_ = SerialCommunicator(FRONT_WHEELS_SERIAL_PATH, REAR_WHEELS_SERIAL_PATH);
     }
 
 void MotionControllerNode::publishFeedback()
