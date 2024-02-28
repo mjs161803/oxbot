@@ -1,0 +1,2 @@
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '2': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4

@@ -78,15 +78,22 @@ rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feed
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp: /opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
 	/usr/bin/python3.6 /opt/ros/humble/install/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp__arguments.json
+
+rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_cpp.hpp
 
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_cpp.hpp
 
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp
 
 rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp
@@ -105,10 +112,24 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typ
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp.s
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp > CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.i
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.s
+
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o: rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp
 
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.i: cmake_force
@@ -122,12 +143,14 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typ
 # Object files for target oxbot_interfaces__rosidl_typesupport_introspection_cpp
 oxbot_interfaces__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp.o" \
+"CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o" \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o"
 
 # External object files for target oxbot_interfaces__rosidl_typesupport_introspection_cpp
 oxbot_interfaces__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
 
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp.o
+liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/install/lib/librosidl_typesupport_introspection_cpp.so
@@ -135,7 +158,7 @@ liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/in
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/install/lib/librcutils.so
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/install/lib/librosidl_typesupport_introspection_c.so
 liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +169,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/clean
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_cpp.hpp

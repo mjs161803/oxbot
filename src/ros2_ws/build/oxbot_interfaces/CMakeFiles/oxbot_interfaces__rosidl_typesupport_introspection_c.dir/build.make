@@ -78,15 +78,22 @@ rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedba
 rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/install/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h: /opt/ros/humble/install/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl
 rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3.6 /opt/ros/humble/install/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c__arguments.json
+
+rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c
+
+rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c
 
 rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c
@@ -105,10 +112,24 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c.s
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c > CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.i
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.s
+
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o: rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c
 
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.i: cmake_force
@@ -122,12 +143,14 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 # Object files for target oxbot_interfaces__rosidl_typesupport_introspection_c
 oxbot_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c.o" \
+"CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o" \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o"
 
 # External object files for target oxbot_interfaces__rosidl_typesupport_introspection_c
 oxbot_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c.o
+liboxbot_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: liboxbot_interfaces__rosidl_generator_c.so
@@ -135,7 +158,7 @@ liboxbot_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/inst
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/install/lib/librosidl_runtime_c.so
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/install/lib/librcutils.so
 liboxbot_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library liboxbot_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library liboxbot_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +169,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/clean
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_c.h
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_c.h

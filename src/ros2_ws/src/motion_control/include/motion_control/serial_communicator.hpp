@@ -1,5 +1,7 @@
 #include <string>
 #include "termios.h"
+#include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
+#include "oxbot_interfaces/msg/hoverboard_command.hpp"
 
 class SerialCommunicator
 {
@@ -11,7 +13,9 @@ class SerialCommunicator
     SerialCommunicator(SerialCommunicator&&) noexcept;              //move constructor
     SerialCommunicator& operator=(SerialCommunicator&&) noexcept;   //move assignment operator
     ~SerialCommunicator();                                          //destructor
-    
+
+    int sc_write(const oxbot_interfaces::msg::HoverboardCommand);
+    const oxbot_interfaces::msg::HoverboardFeedback sc_read();
 
     private:
     std::string front_wheels_serial_path_;

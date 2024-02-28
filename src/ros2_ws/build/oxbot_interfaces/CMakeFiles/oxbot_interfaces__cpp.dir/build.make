@@ -70,6 +70,10 @@ CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/hove
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp
+CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_command.hpp
+CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp
+CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp
+CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/srv/compute_rectangle_area.hpp
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__builder.hpp
 CMakeFiles/oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.hpp
@@ -91,6 +95,7 @@ rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: /opt/ros/humb
 rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: /opt/ros/humble/install/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: /opt/ros/humble/install/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl
 rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.6 /opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp__arguments.json
@@ -103,6 +108,18 @@ rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp
 
 rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp
+
+rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_command.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_command.hpp
+
+rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp
+
+rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp
+
+rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp
 
 rosidl_generator_cpp/oxbot_interfaces/srv/compute_rectangle_area.hpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/srv/compute_rectangle_area.hpp
@@ -117,9 +134,13 @@ rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__traits.
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__traits.hpp
 
 oxbot_interfaces__cpp: CMakeFiles/oxbot_interfaces__cpp
+oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp
+oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp
+oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp
+oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_command.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/msg/hoverboard_feedback.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/srv/compute_rectangle_area.hpp
 oxbot_interfaces__cpp: rosidl_generator_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__builder.hpp

@@ -83,10 +83,24 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c -o CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.s
 
+CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c
+CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o -MF CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o.d -o CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c
+
+CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c > CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.i
+
+CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c -o CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.s
+
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o: rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o -MF CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o.d -o CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c
 
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.i: cmake_force
@@ -100,12 +114,14 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_i
 # Object files for target oxbot_interfaces__rosidl_generator_py
 oxbot_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o" \
+"CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o" \
 "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o"
 
 # External object files for target oxbot_interfaces__rosidl_generator_py
 oxbot_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
 
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o
+rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/build.make
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: /usr/lib/aarch64-linux-gnu/libpython3.6m.so
@@ -114,7 +130,7 @@ rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: /opt/ros/humble/install/lib/librosidl_runtime_c.so
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: /opt/ros/humble/install/lib/librcutils.so
 rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so: CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

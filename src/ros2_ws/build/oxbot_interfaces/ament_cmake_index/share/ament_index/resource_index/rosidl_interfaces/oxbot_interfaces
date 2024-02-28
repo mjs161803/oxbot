@@ -1,3 +1,5 @@
+msg/HoverboardCommand.idl
+msg/HoverboardCommand.msg
 msg/HoverboardFeedback.idl
 msg/HoverboardFeedback.msg
 srv/ComputeRectangleArea.idl

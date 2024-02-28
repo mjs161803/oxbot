@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o" "gcc" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o.d"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o" "gcc" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o.d"
   "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o" "gcc" "CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o.d"
   )

@@ -144,6 +144,9 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gen
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h \
+ /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.h \
+ /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_command__struct.h \
+ /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_command__functions.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h

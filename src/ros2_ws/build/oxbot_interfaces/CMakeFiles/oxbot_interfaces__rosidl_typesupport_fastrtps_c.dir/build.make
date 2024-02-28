@@ -78,12 +78,19 @@ rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__r
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/install/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl
+rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support for eProsima Fast-RTPS"
 	/usr/bin/python3.6 /opt/ros/humble/install/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c --generator-arguments-file /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c__arguments.json
 
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp
 
 rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_c.h
@@ -105,10 +112,24 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp.s
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp > CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.i
+
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.s
+
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o -MF CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o.d -o CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o -c /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp
 
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.i: cmake_force
@@ -122,12 +143,14 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 # Object files for target oxbot_interfaces__rosidl_typesupport_fastrtps_c
 oxbot_interfaces__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp.o" \
+"CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o" \
 "CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o"
 
 # External object files for target oxbot_interfaces__rosidl_typesupport_fastrtps_c
 oxbot_interfaces__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp.o
+liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/install/lib/librosidl_typesupport_fastrtps_cpp.so
@@ -138,7 +161,7 @@ liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/install/l
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/install/lib/librosidl_runtime_c.so
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/install/lib/librcutils.so
 liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/oxbot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -149,6 +172,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/clean
 
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_c.h
