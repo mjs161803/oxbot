@@ -17,5 +17,4 @@ class MotionControllerNode: public rclcpp::Node {
     rclcpp::TimerBase::SharedPtr query_timer_;
 
     SerialCommunicator serial_comm_;
-    int serial_buff_size_;
 };
