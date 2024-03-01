@@ -1,0 +1,44 @@
+[0.198s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
+[0.601s] -- The C compiler identification is GNU 7.5.0
+[0.976s] -- The CXX compiler identification is GNU 7.5.0
+[1.078s] -- Detecting C compiler ABI info
+[1.324s] -- Detecting C compiler ABI info - done
+[1.374s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.379s] -- Detecting C compile features
+[1.382s] -- Detecting C compile features - done
+[1.426s] -- Detecting CXX compiler ABI info
+[1.672s] -- Detecting CXX compiler ABI info - done
+[1.723s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.725s] -- Detecting CXX compile features
+[1.727s] -- Detecting CXX compile features - done
+[1.760s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[6.273s] -- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter 
+[6.974s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)
+[7.617s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.620s] -- Added test 'lint_cmake' to check CMake code style
+[7.623s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.628s] -- Added test 'xmllint' to check XML markup files
+[7.640s] -- Configuring done (7.3s)
+[7.653s] -- Generating done (0.0s)
+[7.659s] -- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_startup
+[7.696s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
+[7.707s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_startup -- -j4 -l4
+[7.914s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_startup -- -j4 -l4
+[8.336s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_startup
+[8.478s] -- Install configuration: ""
+[8.481s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/package_run_dependencies/oxbot_startup
+[8.482s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/parent_prefix_path/oxbot_startup
+[8.484s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.sh
+[8.486s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.dsv
+[8.486s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.sh
+[8.487s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.dsv
+[8.488s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.bash
+[8.489s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.sh
+[8.489s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.zsh
+[8.490s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.dsv
+[8.491s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.dsv
+[8.492s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/packages/oxbot_startup
+[8.493s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig.cmake
+[8.494s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig-version.cmake
+[8.495s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.xml
+[8.518s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_startup

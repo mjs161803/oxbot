@@ -1,0 +1,6 @@
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_bringup
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_bringup
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_bringup -- -j4 -l4
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_bringup -- -j4 -l4
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_bringup
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_bringup

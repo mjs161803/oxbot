@@ -1,0 +1,1 @@
+/root/oxbot/src/ros2_ws/build/oxbot_startup/ament_cmake_environment_hooks/local_setup.sh

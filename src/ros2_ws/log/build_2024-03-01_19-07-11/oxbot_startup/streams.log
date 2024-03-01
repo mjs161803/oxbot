@@ -1,0 +1,3 @@
+[0.170s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
+[0.328s] [0mCMake Error: The source "/root/oxbot/src/ros2_ws/src/oxbot_startup/CMakeLists.txt" does not match the source "/root/oxbot/src/ros2_ws/oxbot_startup/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.[0m
+[0.353s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '1': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup

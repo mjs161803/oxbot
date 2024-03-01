@@ -1,0 +1,27 @@
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_startup
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/package_run_dependencies/oxbot_startup
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/parent_prefix_path/oxbot_startup
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.sh
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.dsv
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.sh
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.dsv
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.bash
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.sh
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.zsh
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.dsv
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.dsv
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/packages/oxbot_startup
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig.cmake
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig-version.cmake
+-- Symlinking: /root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.xml

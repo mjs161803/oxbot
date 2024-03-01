@@ -1,0 +1,16 @@
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/launch/motor_testing.launch.py
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/ament_index/resource_index/package_run_dependencies/oxbot_bringup
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/ament_index/resource_index/parent_prefix_path/oxbot_bringup
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/environment/ament_prefix_path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/environment/ament_prefix_path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/environment/path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/environment/path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/local_setup.bash
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/local_setup.sh
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/local_setup.zsh
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/local_setup.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/ament_index/resource_index/packages/oxbot_bringup
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/cmake/oxbot_bringupConfig.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/cmake/oxbot_bringupConfig-version.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.xml

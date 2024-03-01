@@ -1,0 +1,15 @@
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/package_run_dependencies/oxbot_startup
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/parent_prefix_path/oxbot_startup
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/ament_prefix_path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/environment/path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.bash
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.sh
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.zsh
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/local_setup.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/ament_index/resource_index/packages/oxbot_startup
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/cmake/oxbot_startupConfig-version.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_startup/share/oxbot_startup/package.xml

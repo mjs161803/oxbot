@@ -1,0 +1,2 @@
+source;share/oxbot_startup/environment/ament_prefix_path.sh
+source;share/oxbot_startup/environment/path.sh
