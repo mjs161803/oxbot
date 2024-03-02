@@ -4,5 +4,5 @@
 #define SERIAL_FEEDBACK_MESSAGE_SIZE 144 // the feedback message from the hoverboard controller is 144 bytes long 
 
 // Timing configurations
-#define OUTPUT_FREQUENCY 2 # desired frequency of motion_controller output publisher, in Hz
-#define SERIAL_POLLING_FREQUENCY 100 # desired frequency pulling feedback data from the serial buffer file handle
+#define OUTPUT_FREQUENCY 2 // desired frequency of motion_controller output publisher, in Hz
+#define SERIAL_POLLING_FREQUENCY 100 // desired frequency pulling feedback data from the serial buffer file handle

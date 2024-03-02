@@ -6,12 +6,14 @@
 *           2.1.1) private member serial_comm_ is created using the SerialCommunicator::SerialCommunicator() default constructor
 *               2.1.1.1) SerialCommunicator() default constructor initializes private members for serial file handles for reading/writing
 *       2.2) motion_controller node is spun
-*           2.2.1) serial_timer_callback_() is called at SERIAL_POLLING_FREQUENCY Hz
-*               2.2.1.1) ros2node_motion_controller->serial_timer_callback_: Gather raw serial data via motion_controller->sc_read() call
-*                   2.2.1.1.1) serial_comm_: retreive serial buffer
-*                   2.2.1.1.3) serial_comm_: parse buffer into oxbot_interfaces::msg::HoverboardFeedback objects, calculating and adding timestamps 
-*                   2.2.1.1.4) a std::vector<oxbot_interfaces::msg::HoverboardFeedback> object is returned to SerialCommunicator object
-*               2.2.1.2) SerialCommunicator->serial_timer_callback_: check for null
+*           2.2.1) feedbackTimerCallback() is called at SERIAL_POLLING_FREQUENCY Hz
+*               2.2.1.1) get front wheel serial buffer and append it in MotionControllerNode.front_serial_feedback_data vector
+*                   2.2.1.1.1) serial_comm_: retreive serial buffer, convert char array to std::vector<unsigned char>, return that vector
+*               2.2.1.2) get rear wheel serial buffer and append it in MotionControllerNode.rear_serial_feedback_data vector
+*                   2.2.1.2.1) serial_comm_: retreive serial buffer, convert char array to std::vector<unsigned char>, return that vector
+*           2.2.2) publishFeedback() is called at OUTPUT_FREQUENCY Hz
+*               2.2.2.1) parse/process front_serial_feedback_data and rear_serial_feedback_data, generate vector of oxbot_interfaces::msg::HoverboardFeedback messages
+*               2.2.2.2)  
 
 *   3) Hoverboard controllers are powered each powered on
 */
@@ -33,7 +35,7 @@ class SerialCommunicator
     ~SerialCommunicator();                                              //destructor
 
     int sc_write(const oxbot_interfaces::msg::HoverboardCommand);
-    const std::vector<oxbot_interfaces::msg::HoverboardFeedback> sc_read(); // method returns a character buffer containing feedback message data for parsing, if any are in the serial device queue
+    const std::vector<unsigned char> sc_read(); // method returns a vector of unsigned char's containing feedback message data for parsing, if any are in the serial device queue
 
     private:
     std::string front_wheels_serial_path_;
