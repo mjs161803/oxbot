@@ -1,0 +1,327 @@
+[0.000000] (-) TimerEvent: {}
+[0.001082] (-) JobUnselected: {'identifier': 'oxbot_bringup'}
+[0.002091] (-) JobUnselected: {'identifier': 'oxbot_config'}
+[0.002764] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
+[0.008123] (motion_control) JobQueued: {'identifier': 'motion_control', 'dependencies': OrderedDict([('oxbot_interfaces', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')])}
+[0.008360] (motion_control) JobStarted: {'identifier': 'motion_control'}
+[0.103938] (-) TimerEvent: {}
+[0.177360] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'cmake'}
+[0.180225] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'build'}
+[0.183666] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/motion_control', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/bin/helpers/browser.sh'), ('SHLVL', '2'), ('OLDPWD', '/root/oxbot/src/ros2_ws/src'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.87.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-5148f91b-531d-42bc-a287-b06fb85b1a62.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-a11200ae-419c-494c-b322-9bed00945dd9.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':8'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-a11200ae-419c-494c-b322-9bed00945dd9.sock","/tmp/.X11-unix/X8","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/root/oxbot/src/ros2_ws/install/oxbot_config:/root/oxbot/src/ros2_ws/install/oxbot_bringup:/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-a11200ae-419c-494c-b322-9bed00945dd9.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X8'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/root/oxbot/src/ros2_ws/install/oxbot_startup:/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_config:/root/oxbot/src/ros2_ws/install/oxbot_bringup:/opt/ros/humble/install')]), 'shell': False}
+[0.204159] (-) TimerEvent: {}
+[0.305121] (-) TimerEvent: {}
+[0.396632] (motion_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[0.405272] (-) TimerEvent: {}
+[0.506411] (-) TimerEvent: {}
+[0.607203] (-) TimerEvent: {}
+[0.708028] (-) TimerEvent: {}
+[0.809410] (-) TimerEvent: {}
+[0.910203] (-) TimerEvent: {}
+[1.011398] (-) TimerEvent: {}
+[1.112629] (-) TimerEvent: {}
+[1.213808] (-) TimerEvent: {}
+[1.314599] (-) TimerEvent: {}
+[1.415804] (-) TimerEvent: {}
+[1.516519] (-) TimerEvent: {}
+[1.617373] (-) TimerEvent: {}
+[1.635312] (motion_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.5 (/opt/ros/humble/install/share/rclcpp/cmake)\n'}
+[1.717551] (-) TimerEvent: {}
+[1.806297] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[1.817724] (-) TimerEvent: {}
+[1.822704] (motion_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[1.860841] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[1.917982] (-) TimerEvent: {}
+[1.933811] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.018211] (-) TimerEvent: {}
+[2.037858] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.118395] (-) TimerEvent: {}
+[2.219301] (-) TimerEvent: {}
+[2.320908] (-) TimerEvent: {}
+[2.410048] (motion_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[2.417681] (motion_control) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[2.421097] (-) TimerEvent: {}
+[2.521827] (-) TimerEvent: {}
+[2.602751] (motion_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[2.622056] (-) TimerEvent: {}
+[2.722873] (-) TimerEvent: {}
+[2.824309] (-) TimerEvent: {}
+[2.925506] (-) TimerEvent: {}
+[3.026356] (-) TimerEvent: {}
+[3.127169] (-) TimerEvent: {}
+[3.228338] (-) TimerEvent: {}
+[3.329523] (-) TimerEvent: {}
+[3.430680] (-) TimerEvent: {}
+[3.531450] (-) TimerEvent: {}
+[3.590737] (motion_control) StdoutLine: {'line': b'-- Found oxbot_interfaces: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake)\n'}
+[3.631803] (-) TimerEvent: {}
+[3.702252] (motion_control) StdoutLine: {'line': b'-- Found oxbot_config: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake)\n'}
+[3.709551] (motion_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)\n'}
+[3.732009] (-) TimerEvent: {}
+[3.832808] (-) TimerEvent: {}
+[3.933621] (-) TimerEvent: {}
+[4.034499] (-) TimerEvent: {}
+[4.135341] (-) TimerEvent: {}
+[4.236552] (-) TimerEvent: {}
+[4.242032] (motion_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.243486] (motion_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control\n'}
+[4.244177] (motion_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.246889] (motion_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.252445] (motion_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.253064] (motion_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.254418] (motion_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.257917] (motion_control) StdoutLine: {'line': b'-- Configuring done (3.9s)\n'}
+[4.303839] (motion_control) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.311172] (motion_control) StdoutLine: {'line': b'-- Build files have been written to: /root/oxbot/src/ros2_ws/build/motion_control\n'}
+[4.336746] (-) TimerEvent: {}
+[4.408428] (motion_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o\x1b[0m\n'}
+[4.409222] (motion_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o\x1b[0m\n'}
+[4.409848] (motion_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o\x1b[0m\n'}
+[4.436931] (-) TimerEvent: {}
+[4.537748] (-) TimerEvent: {}
+[4.639347] (-) TimerEvent: {}
+[4.741194] (-) TimerEvent: {}
+[4.841940] (-) TimerEvent: {}
+[4.943546] (-) TimerEvent: {}
+[5.045454] (-) TimerEvent: {}
+[5.147082] (-) TimerEvent: {}
+[5.248490] (-) TimerEvent: {}
+[5.349742] (-) TimerEvent: {}
+[5.450902] (-) TimerEvent: {}
+[5.552630] (-) TimerEvent: {}
+[5.654454] (-) TimerEvent: {}
+[5.756319] (-) TimerEvent: {}
+[5.858355] (-) TimerEvent: {}
+[5.959782] (-) TimerEvent: {}
+[6.061699] (-) TimerEvent: {}
+[6.163551] (-) TimerEvent: {}
+[6.265337] (-) TimerEvent: {}
+[6.367191] (-) TimerEvent: {}
+[6.469166] (-) TimerEvent: {}
+[6.570900] (-) TimerEvent: {}
+[6.672224] (-) TimerEvent: {}
+[6.774125] (-) TimerEvent: {}
+[6.875997] (-) TimerEvent: {}
+[6.979916] (-) TimerEvent: {}
+[7.085048] (-) TimerEvent: {}
+[7.191366] (-) TimerEvent: {}
+[7.292313] (-) TimerEvent: {}
+[7.393134] (-) TimerEvent: {}
+[7.494464] (-) TimerEvent: {}
+[7.595795] (-) TimerEvent: {}
+[7.697041] (-) TimerEvent: {}
+[7.798400] (-) TimerEvent: {}
+[7.899820] (-) TimerEvent: {}
+[8.001111] (-) TimerEvent: {}
+[8.103065] (-) TimerEvent: {}
+[8.204971] (-) TimerEvent: {}
+[8.306654] (-) TimerEvent: {}
+[8.408786] (-) TimerEvent: {}
+[8.510653] (-) TimerEvent: {}
+[8.612310] (-) TimerEvent: {}
+[8.723850] (-) TimerEvent: {}
+[8.825159] (-) TimerEvent: {}
+[8.927650] (-) TimerEvent: {}
+[9.029467] (-) TimerEvent: {}
+[9.131334] (-) TimerEvent: {}
+[9.233230] (-) TimerEvent: {}
+[9.335330] (-) TimerEvent: {}
+[9.437302] (-) TimerEvent: {}
+[9.539148] (-) TimerEvent: {}
+[9.640781] (-) TimerEvent: {}
+[9.742436] (-) TimerEvent: {}
+[9.847803] (-) TimerEvent: {}
+[9.952275] (-) TimerEvent: {}
+[10.053598] (-) TimerEvent: {}
+[10.159807] (-) TimerEvent: {}
+[10.261144] (-) TimerEvent: {}
+[10.371786] (-) TimerEvent: {}
+[10.476237] (-) TimerEvent: {}
+[10.582426] (-) TimerEvent: {}
+[10.684272] (-) TimerEvent: {}
+[10.785559] (-) TimerEvent: {}
+[10.886494] (-) TimerEvent: {}
+[10.988334] (-) TimerEvent: {}
+[11.090189] (-) TimerEvent: {}
+[11.191859] (-) TimerEvent: {}
+[11.293096] (-) TimerEvent: {}
+[11.394389] (-) TimerEvent: {}
+[11.496406] (-) TimerEvent: {}
+[11.598261] (-) TimerEvent: {}
+[11.699155] (-) TimerEvent: {}
+[11.800447] (-) TimerEvent: {}
+[11.901781] (-) TimerEvent: {}
+[12.003124] (-) TimerEvent: {}
+[12.104441] (-) TimerEvent: {}
+[12.206331] (-) TimerEvent: {}
+[12.308169] (-) TimerEvent: {}
+[12.410046] (-) TimerEvent: {}
+[12.511914] (-) TimerEvent: {}
+[12.613750] (-) TimerEvent: {}
+[12.715567] (-) TimerEvent: {}
+[12.817395] (-) TimerEvent: {}
+[12.925287] (-) TimerEvent: {}
+[13.027110] (-) TimerEvent: {}
+[13.127957] (-) TimerEvent: {}
+[13.228776] (-) TimerEvent: {}
+[13.329574] (-) TimerEvent: {}
+[13.431409] (-) TimerEvent: {}
+[13.533246] (-) TimerEvent: {}
+[13.635088] (-) TimerEvent: {}
+[13.742028] (-) TimerEvent: {}
+[13.843343] (-) TimerEvent: {}
+[13.945322] (-) TimerEvent: {}
+[14.047882] (-) TimerEvent: {}
+[14.155801] (-) TimerEvent: {}
+[14.259931] (-) TimerEvent: {}
+[14.363923] (-) TimerEvent: {}
+[14.467930] (-) TimerEvent: {}
+[14.570427] (-) TimerEvent: {}
+[14.671325] (-) TimerEvent: {}
+[14.772984] (-) TimerEvent: {}
+[14.874342] (-) TimerEvent: {}
+[14.975744] (-) TimerEvent: {}
+[15.077010] (-) TimerEvent: {}
+[15.177882] (-) TimerEvent: {}
+[15.279202] (-) TimerEvent: {}
+[15.391852] (-) TimerEvent: {}
+[15.495040] (-) TimerEvent: {}
+[15.597908] (-) TimerEvent: {}
+[15.699171] (-) TimerEvent: {}
+[15.800542] (-) TimerEvent: {}
+[15.901448] (-) TimerEvent: {}
+[16.003341] (-) TimerEvent: {}
+[16.105145] (-) TimerEvent: {}
+[16.206781] (-) TimerEvent: {}
+[16.308072] (-) TimerEvent: {}
+[16.409301] (-) TimerEvent: {}
+[16.511061] (-) TimerEvent: {}
+[16.612916] (-) TimerEvent: {}
+[16.714754] (-) TimerEvent: {}
+[16.816598] (-) TimerEvent: {}
+[16.917924] (-) TimerEvent: {}
+[17.019257] (-) TimerEvent: {}
+[17.120557] (-) TimerEvent: {}
+[17.221912] (-) TimerEvent: {}
+[17.323274] (-) TimerEvent: {}
+[17.424590] (-) TimerEvent: {}
+[17.525935] (-) TimerEvent: {}
+[17.627210] (-) TimerEvent: {}
+[17.728084] (-) TimerEvent: {}
+[17.828894] (-) TimerEvent: {}
+[17.931974] (-) TimerEvent: {}
+[18.034011] (-) TimerEvent: {}
+[18.135360] (-) TimerEvent: {}
+[18.236282] (-) TimerEvent: {}
+[18.338147] (-) TimerEvent: {}
+[18.440037] (-) TimerEvent: {}
+[18.541898] (-) TimerEvent: {}
+[18.643879] (-) TimerEvent: {}
+[18.750152] (-) TimerEvent: {}
+[18.852018] (-) TimerEvent: {}
+[18.953685] (-) TimerEvent: {}
+[19.055005] (-) TimerEvent: {}
+[19.156406] (-) TimerEvent: {}
+[19.257652] (-) TimerEvent: {}
+[19.358975] (-) TimerEvent: {}
+[19.460856] (-) TimerEvent: {}
+[19.561756] (-) TimerEvent: {}
+[19.663420] (-) TimerEvent: {}
+[19.765584] (-) TimerEvent: {}
+[19.866464] (-) TimerEvent: {}
+[19.969102] (-) TimerEvent: {}
+[20.075798] (-) TimerEvent: {}
+[20.182199] (-) TimerEvent: {}
+[20.284020] (-) TimerEvent: {}
+[20.385943] (-) TimerEvent: {}
+[20.487792] (-) TimerEvent: {}
+[20.589603] (-) TimerEvent: {}
+[20.691235] (-) TimerEvent: {}
+[20.792186] (-) TimerEvent: {}
+[20.893028] (-) TimerEvent: {}
+[20.993861] (-) TimerEvent: {}
+[21.094617] (-) TimerEvent: {}
+[21.195445] (-) TimerEvent: {}
+[21.296310] (-) TimerEvent: {}
+[21.397064] (-) TimerEvent: {}
+[21.497807] (-) TimerEvent: {}
+[21.598606] (-) TimerEvent: {}
+[21.699389] (-) TimerEvent: {}
+[21.800181] (-) TimerEvent: {}
+[21.901008] (-) TimerEvent: {}
+[22.001848] (-) TimerEvent: {}
+[22.102692] (-) TimerEvent: {}
+[22.203532] (-) TimerEvent: {}
+[22.304397] (-) TimerEvent: {}
+[22.405218] (-) TimerEvent: {}
+[22.506039] (-) TimerEvent: {}
+[22.606851] (-) TimerEvent: {}
+[22.707719] (-) TimerEvent: {}
+[22.808526] (-) TimerEvent: {}
+[22.909300] (-) TimerEvent: {}
+[23.010137] (-) TimerEvent: {}
+[23.110951] (-) TimerEvent: {}
+[23.211808] (-) TimerEvent: {}
+[23.312661] (-) TimerEvent: {}
+[23.413488] (-) TimerEvent: {}
+[23.514302] (-) TimerEvent: {}
+[23.615139] (-) TimerEvent: {}
+[23.716027] (-) TimerEvent: {}
+[23.816827] (-) TimerEvent: {}
+[23.917651] (-) TimerEvent: {}
+[24.018517] (-) TimerEvent: {}
+[24.119349] (-) TimerEvent: {}
+[24.220216] (-) TimerEvent: {}
+[24.321041] (-) TimerEvent: {}
+[24.421887] (-) TimerEvent: {}
+[24.522731] (-) TimerEvent: {}
+[24.623550] (-) TimerEvent: {}
+[24.724423] (-) TimerEvent: {}
+[24.825242] (-) TimerEvent: {}
+[24.926034] (-) TimerEvent: {}
+[25.026862] (-) TimerEvent: {}
+[25.127765] (-) TimerEvent: {}
+[25.228583] (-) TimerEvent: {}
+[25.329344] (-) TimerEvent: {}
+[25.430213] (-) TimerEvent: {}
+[25.530956] (-) TimerEvent: {}
+[25.631787] (-) TimerEvent: {}
+[25.733034] (-) TimerEvent: {}
+[25.834321] (-) TimerEvent: {}
+[25.935138] (-) TimerEvent: {}
+[26.036036] (-) TimerEvent: {}
+[26.136887] (-) TimerEvent: {}
+[26.237717] (-) TimerEvent: {}
+[26.338558] (-) TimerEvent: {}
+[26.425162] (motion_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable motion_controller\x1b[0m\n'}
+[26.438785] (-) TimerEvent: {}
+[26.539877] (-) TimerEvent: {}
+[26.642615] (-) TimerEvent: {}
+[26.745031] (-) TimerEvent: {}
+[26.845912] (-) TimerEvent: {}
+[26.947302] (-) TimerEvent: {}
+[27.048273] (-) TimerEvent: {}
+[27.149591] (-) TimerEvent: {}
+[27.250393] (-) TimerEvent: {}
+[27.351565] (-) TimerEvent: {}
+[27.452821] (-) TimerEvent: {}
+[27.536272] (motion_control) StderrLine: {'line': b"CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: In function `MotionControllerNode::MotionControllerNode()':\n"}
+[27.537235] (motion_control) StderrLine: {'line': b"MotionControllerNode.cpp:(.text+0x54c): undefined reference to `SerialCommunicator::operator=(SerialCommunicator&&)'\n"}
+[27.537760] (motion_control) StderrLine: {'line': b"MotionControllerNode.cpp:(.text+0x554): undefined reference to `SerialCommunicator::~SerialCommunicator()'\n"}
+[27.538252] (motion_control) StderrLine: {'line': b"MotionControllerNode.cpp:(.text+0x68c): undefined reference to `SerialCommunicator::~SerialCommunicator()'\n"}
+[27.538714] (motion_control) StderrLine: {'line': b"CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: In function `MotionControllerNode::~MotionControllerNode()':\n"}
+[27.539150] (motion_control) StderrLine: {'line': b"MotionControllerNode.cpp:(.text._ZN20MotionControllerNodeD2Ev[_ZN20MotionControllerNodeD5Ev]+0x3c): undefined reference to `SerialCommunicator::~SerialCommunicator()'\n"}
+[27.539591] (motion_control) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[27.543067] (motion_control) StdoutLine: {'line': b"CMakeFiles/motion_controller.dir/build.make:190: recipe for target 'motion_controller' failed\n"}
+[27.544958] (motion_control) StderrLine: {'line': b'make[2]: *** [motion_controller] Error 1\n'}
+[27.545652] (motion_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2\n'}
+[27.546174] (motion_control) StdoutLine: {'line': b"CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed\n"}
+[27.546723] (motion_control) StdoutLine: {'line': b"Makefile:145: recipe for target 'all' failed\n"}
+[27.547262] (motion_control) StderrLine: {'line': b'make: *** [all] Error 2\n'}
+[27.553968] (-) TimerEvent: {}
+[27.573169] (motion_control) CommandEnded: {'returncode': 2}
+[27.654236] (-) TimerEvent: {}
+[27.755587] (-) TimerEvent: {}
+[27.861490] (-) TimerEvent: {}
+[27.973055] (-) TimerEvent: {}
+[28.061230] (motion_control) JobEnded: {'identifier': 'motion_control', 'rc': 2}
+[28.073861] (-) EventReactorShutdown: {}

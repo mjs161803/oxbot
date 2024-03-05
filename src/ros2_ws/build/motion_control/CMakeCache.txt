@@ -370,6 +370,9 @@ motion_control_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 motion_control_SOURCE_DIR:STATIC=/root/oxbot/src/ros2_ws/src/motion_control
 
+//The directory containing a CMake configuration file for oxbot_config.
+oxbot_config_DIR:PATH=/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake
+
 //The directory containing a CMake configuration file for oxbot_interfaces.
 oxbot_interfaces_DIR:PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake
 

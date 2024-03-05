@@ -210,6 +210,30 @@ motion_controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/build
 .PHONY : motion_controller/fast
 
+src/MotionControllerNode.o: src/MotionControllerNode.cpp.o
+.PHONY : src/MotionControllerNode.o
+
+# target to build an object file
+src/MotionControllerNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o
+.PHONY : src/MotionControllerNode.cpp.o
+
+src/MotionControllerNode.i: src/MotionControllerNode.cpp.i
+.PHONY : src/MotionControllerNode.i
+
+# target to preprocess a source file
+src/MotionControllerNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.i
+.PHONY : src/MotionControllerNode.cpp.i
+
+src/MotionControllerNode.s: src/MotionControllerNode.cpp.s
+.PHONY : src/MotionControllerNode.s
+
+# target to generate assembly for a file
+src/MotionControllerNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.s
+.PHONY : src/MotionControllerNode.cpp.s
+
 src/motion_controller.o: src/motion_controller.cpp.o
 .PHONY : src/motion_controller.o
 
@@ -234,29 +258,29 @@ src/motion_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/motion_controller.cpp.s
 .PHONY : src/motion_controller.cpp.s
 
-src/ros2node_motion_controller.o: src/ros2node_motion_controller.cpp.o
-.PHONY : src/ros2node_motion_controller.o
+src/serial_communicator.o: src/serial_communicator.cpp.o
+.PHONY : src/serial_communicator.o
 
 # target to build an object file
-src/ros2node_motion_controller.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o
-.PHONY : src/ros2node_motion_controller.cpp.o
+src/serial_communicator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o
+.PHONY : src/serial_communicator.cpp.o
 
-src/ros2node_motion_controller.i: src/ros2node_motion_controller.cpp.i
-.PHONY : src/ros2node_motion_controller.i
+src/serial_communicator.i: src/serial_communicator.cpp.i
+.PHONY : src/serial_communicator.i
 
 # target to preprocess a source file
-src/ros2node_motion_controller.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.i
-.PHONY : src/ros2node_motion_controller.cpp.i
+src/serial_communicator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.i
+.PHONY : src/serial_communicator.cpp.i
 
-src/ros2node_motion_controller.s: src/ros2node_motion_controller.cpp.s
-.PHONY : src/ros2node_motion_controller.s
+src/serial_communicator.s: src/serial_communicator.cpp.s
+.PHONY : src/serial_communicator.s
 
 # target to generate assembly for a file
-src/ros2node_motion_controller.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.s
-.PHONY : src/ros2node_motion_controller.cpp.s
+src/serial_communicator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.s
+.PHONY : src/serial_communicator.cpp.s
 
 # Help Target
 help:
@@ -274,12 +298,15 @@ help:
 	@echo "... motion_control_uninstall"
 	@echo "... uninstall"
 	@echo "... motion_controller"
+	@echo "... src/MotionControllerNode.o"
+	@echo "... src/MotionControllerNode.i"
+	@echo "... src/MotionControllerNode.s"
 	@echo "... src/motion_controller.o"
 	@echo "... src/motion_controller.i"
 	@echo "... src/motion_controller.s"
-	@echo "... src/ros2node_motion_controller.o"
-	@echo "... src/ros2node_motion_controller.i"
-	@echo "... src/ros2node_motion_controller.s"
+	@echo "... src/serial_communicator.o"
+	@echo "... src/serial_communicator.i"
+	@echo "... src/serial_communicator.s"
 .PHONY : help
 
 

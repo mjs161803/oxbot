@@ -22,6 +22,7 @@
 #include "termios.h"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/hoverboard_command.hpp"
+#include "oxbot_config/oxbot_config.hpp"
 
 class SerialCommunicator
 {

@@ -1,0 +1,8 @@
+source;share/oxbot_config/hook/cmake_prefix_path.ps1
+source;share/oxbot_config/hook/cmake_prefix_path.dsv
+source;share/oxbot_config/hook/cmake_prefix_path.sh
+source;share/oxbot_config/local_setup.bash
+source;share/oxbot_config/local_setup.dsv
+source;share/oxbot_config/local_setup.ps1
+source;share/oxbot_config/local_setup.sh
+source;share/oxbot_config/local_setup.zsh

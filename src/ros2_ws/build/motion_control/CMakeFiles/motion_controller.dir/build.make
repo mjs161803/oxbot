@@ -83,30 +83,46 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_controller.dir/src/motion_controller.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/src/motion_control/src/motion_controller.cpp -o CMakeFiles/motion_controller.dir/src/motion_controller.cpp.s
 
-CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o: CMakeFiles/motion_controller.dir/flags.make
-CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o: /root/oxbot/src/ros2_ws/src/motion_control/src/ros2node_motion_controller.cpp
-CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o: CMakeFiles/motion_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o -MF CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o.d -o CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o -c /root/oxbot/src/ros2_ws/src/motion_control/src/ros2node_motion_controller.cpp
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: CMakeFiles/motion_controller.dir/flags.make
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: /root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: CMakeFiles/motion_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o -MF CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o.d -o CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o -c /root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp
 
-CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/oxbot/src/ros2_ws/src/motion_control/src/ros2node_motion_controller.cpp > CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.i
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp > CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.i
 
-CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/src/motion_control/src/ros2node_motion_controller.cpp -o CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.s
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp -o CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.s
+
+CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o: CMakeFiles/motion_controller.dir/flags.make
+CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o: /root/oxbot/src/ros2_ws/src/motion_control/src/serial_communicator.cpp
+CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o: CMakeFiles/motion_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o -MF CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o.d -o CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o -c /root/oxbot/src/ros2_ws/src/motion_control/src/serial_communicator.cpp
+
+CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/oxbot/src/ros2_ws/src/motion_control/src/serial_communicator.cpp > CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.i
+
+CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/oxbot/src/ros2_ws/src/motion_control/src/serial_communicator.cpp -o CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.s
 
 # Object files for target motion_controller
 motion_controller_OBJECTS = \
 "CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o" \
-"CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o"
+"CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o" \
+"CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o"
 
 # External object files for target motion_controller
 motion_controller_EXTERNAL_OBJECTS =
 
 motion_controller: CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o
-motion_controller: CMakeFiles/motion_controller.dir/src/ros2node_motion_controller.cpp.o
+motion_controller: CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o
+motion_controller: CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o
 motion_controller: CMakeFiles/motion_controller.dir/build.make
 motion_controller: /opt/ros/humble/install/lib/librclcpp.so
 motion_controller: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so
@@ -171,7 +187,7 @@ motion_controller: /opt/ros/humble/install/lib/librosidl_runtime_c.so
 motion_controller: /opt/ros/humble/install/lib/librcutils.so
 motion_controller: /usr/lib/aarch64-linux-gnu/libpython3.6m.so
 motion_controller: CMakeFiles/motion_controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable motion_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable motion_controller"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motion_controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

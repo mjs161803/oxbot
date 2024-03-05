@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/ros/humble/install/include/**"
+                "/opt/ros/humble/install/include/**",
+                "/root/oxbot/src/ros2_ws/install/oxbot_config/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

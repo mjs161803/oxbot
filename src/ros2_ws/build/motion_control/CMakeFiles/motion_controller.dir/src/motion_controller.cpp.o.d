@@ -575,8 +575,17 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_template.hpp \
- /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/ros2node_motion_controller.hpp \
+ /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp \
- /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp
+ /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp \
+ /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/serial_communicator.hpp \
+ /usr/include/termios.h /usr/include/aarch64-linux-gnu/bits/termios.h \
+ /usr/include/aarch64-linux-gnu/sys/ttydefaults.h \
+ /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.hpp \
+ /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp \
+ /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp \
+ /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp \
+ /root/oxbot/src/ros2_ws/install/oxbot_config/include/oxbot_config/oxbot_config.hpp \
+ /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/motion_control_config.hpp
