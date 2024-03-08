@@ -2,15 +2,15 @@
 #include "rclcpp/rclcpp.hpp"
 #include "MotionControllerNode.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
-#include "motion_control_config.hpp"
+#include "oxbot_config/oxbot_config.hpp"
 
 using namespace std::chrono_literals;
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 {
     // Timer Definitions
-    int query_timer_period_micros       = int(1000000* (1.0 / SERIAL_POLLING_FREQUENCY));
-    int feedback_timer_period_micros    = int(1000000* (1.0 / OUTPUT_FREQUENCY));
+    int query_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
+    int feedback_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
     serial_query_timer_ =   this->create_wall_timer(std::chrono::microseconds(query_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCallback, this));
     feedback_timer_ =       this->create_wall_timer(std::chrono::microseconds(feedback_timer_period_micros), std::bind(&MotionControllerNode::publishFeedback,           this));
     
@@ -20,7 +20,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     // Serial Communicator definition
     try
     {
-        serial_comm_ = SerialCommunicator(FRONT_WHEELS_SERIAL_PATH, REAR_WHEELS_SERIAL_PATH);
+        serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, MC_REAR_WHEELS_SERIAL_PATH);
         if (serial_comm_.front_wheels_serial_fh_ == NULL)
         {
             throw std::runtime_error("Unable to initialize SerialCommunicator");

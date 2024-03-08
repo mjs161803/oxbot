@@ -1,0 +1,93 @@
+[0.173s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[0.468s] [ 25%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+[0.470s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o[0m
+[13.157s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:[m[K In constructor ‘[01m[KMotionControllerNode::MotionControllerNode()[m[K’:
+[13.159s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:12:63:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_SERIAL_POLLING_FREQUENCY[m[K’ was not declared in this scope
+[13.159s]      int query_timer_period_micros       = int(1000000* (1.0 / [01;31m[KMC_SERIAL_POLLING_FREQUENCY[m[K));
+[13.160s]                                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.188s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In constructor ‘[01m[KSerialCommunicator::SerialCommunicator()[m[K’:
+[13.189s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:69:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K’ was not declared in this scope
+[13.189s]  SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_([01;31m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+[13.190s]                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.192s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:12:63:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSERIAL_POLLING_FREQUENCY[m[K’
+[13.192s]      int query_timer_period_micros       = int(1000000* (1.0 / [01;36m[KMC_SERIAL_POLLING_FREQUENCY[m[K));
+[13.194s]                                                                [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.195s]                                                                [32m[KSERIAL_POLLING_FREQUENCY[m[K
+[13.196s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:13:63:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_OUTPUT_FREQUENCY[m[K’ was not declared in this scope
+[13.196s]      int feedback_timer_period_micros    = int(1000000* (1.0 / [01;31m[KMC_OUTPUT_FREQUENCY[m[K));
+[13.197s]                                                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[13.217s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:13:63:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KOUTPUT_FREQUENCY[m[K’
+[13.218s]      int feedback_timer_period_micros    = int(1000000* (1.0 / [01;36m[KMC_OUTPUT_FREQUENCY[m[K));
+[13.219s]                                                                [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[13.219s]                                                                [32m[KOUTPUT_FREQUENCY[m[K
+[13.223s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:69:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KFRONT_WHEELS_SERIAL_PATH[m[K’
+[13.224s]  SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_([01;36m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+[13.225s]                                                                      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.225s]                                                                      [32m[KFRONT_WHEELS_SERIAL_PATH[m[K
+[13.226s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:124:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_REAR_WHEELS_SERIAL_PATH[m[K’ was not declared in this scope
+[13.226s]  SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_([01;31m[KMC_REAR_WHEELS_SERIAL_PATH[m[K), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+[13.227s]                                                                                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.260s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:124:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KREAR_WHEELS_SERIAL_PATH[m[K’
+[13.260s]  SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_([01;36m[KMC_REAR_WHEELS_SERIAL_PATH[m[K), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+[13.261s]                                                                                                                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.262s]                                                                                                                             [32m[KREAR_WHEELS_SERIAL_PATH[m[K
+[13.263s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:30:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+[13.263s]          front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+[13.264s]                                    [01;35m[K^~~~[m[K
+[13.265s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:35:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+[13.266s]          front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+[13.267s]                                    [01;35m[K^~~~[m[K
+[13.280s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kconst std::vector<unsigned char, std::allocator<unsigned char> > SerialCommunicator::sc_read()[m[K’:
+[13.281s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:95:29:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE[m[K’ was not declared in this scope
+[13.281s]      unsigned char read_buf [[01;31m[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE[m[K];
+[13.282s]                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.321s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:95:29:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSERIAL_FEEDBACK_MESSAGE_SIZE[m[K’
+[13.321s]      unsigned char read_buf [[01;36m[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE[m[K];
+[13.322s]                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.323s]                              [32m[KSERIAL_FEEDBACK_MESSAGE_SIZE[m[K
+[13.323s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:98:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kread_buf[m[K’ was not declared in this scope
+[13.324s]          int bytes_read = read(this->front_wheels_serial_fh_, &[01;31m[Kread_buf[m[K, sizeof(read_buf));
+[13.325s]                                                                [01;31m[K^~~~~~~~[m[K
+[13.329s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:98:63:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kser_buf[m[K’
+[13.329s]          int bytes_read = read(this->front_wheels_serial_fh_, &[01;36m[Kread_buf[m[K, sizeof(read_buf));
+[13.330s]                                                                [01;36m[K^~~~~~~~[m[K
+[13.330s]                                                                [32m[Kser_buf[m[K
+[13.332s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)[m[K’:
+[13.333s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:112:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwrite_buf[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[13.333s]  int SerialCommunicator::sc_write(std::vector<unsigned char> [01;35m[Kwrite_buf[m[K)
+[13.334s]                                                              [01;35m[K^~~~~~~~~[m[K
+[13.337s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:43:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K’ was not declared in this scope
+[13.338s]          serial_comm_ = SerialCommunicator([01;31m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K, MC_REAR_WHEELS_SERIAL_PATH);
+[13.338s]                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.371s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:43:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KFRONT_WHEELS_SERIAL_PATH[m[K’
+[13.372s]          serial_comm_ = SerialCommunicator([01;36m[KMC_FRONT_WHEELS_SERIAL_PATH[m[K, MC_REAR_WHEELS_SERIAL_PATH);
+[13.372s]                                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.373s]                                            [32m[KFRONT_WHEELS_SERIAL_PATH[m[K
+[13.373s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:72:[m[K [01;31m[Kerror: [m[K‘[01m[KMC_REAR_WHEELS_SERIAL_PATH[m[K’ was not declared in this scope
+[13.374s]          serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, [01;31m[KMC_REAR_WHEELS_SERIAL_PATH[m[K);
+[13.374s]                                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.405s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:72:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KREAR_WHEELS_SERIAL_PATH[m[K’
+[13.406s]          serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, [01;36m[KMC_REAR_WHEELS_SERIAL_PATH[m[K);
+[13.407s]                                                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.408s]                                                                         [32m[KREAR_WHEELS_SERIAL_PATH[m[K
+[13.408s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kint SerialCommunicator::front_wheels_serial_fh_[m[K’ is private within this context
+[13.409s]          if (serial_comm_.[01;31m[Kfront_wheels_serial_fh_[m[K == NULL)
+[13.409s]                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.410s] In file included from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp:3:0[m[K,
+[13.411s]                  from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:3[m[K:
+[13.411s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:47:9:[m[K [01;36m[Knote: [m[Kdeclared private here
+[13.412s]      int [01;36m[Kfront_wheels_serial_fh_[m[K;
+[13.412s]          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.413s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:53:[m[K [01;35m[Kwarning: [m[KNULL used in arithmetic [[01;35m[K-Wpointer-arith[m[K]
+[13.414s]          if (serial_comm_.front_wheels_serial_fh_ == [01;35m[KNULL[m[K)
+[13.414s]                                                      [01;35m[K^~~~[m[K
+[15.913s] CMakeFiles/motion_controller.dir/build.make:103: recipe for target 'CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o' failed
+[15.914s] make[2]: *** [CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o] Error 1
+[15.915s] make[2]: *** Waiting for unfinished jobs....
+[17.674s] make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Error 1
+[17.675s] CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed
+[17.676s] CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+[17.676s] Makefile:145: recipe for target 'all' failed
+[17.677s] make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+[17.678s] make: *** [all] Error 2
+[17.700s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '2': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4

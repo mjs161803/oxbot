@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o"
   "CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o.d"
+  "CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o"
+  "CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o.d"
   "CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o"
   "CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o.d"
-  "CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o"
-  "CMakeFiles/motion_controller.dir/src/serial_communicator.cpp.o.d"
   "motion_controller"
   "motion_controller.pdb"
 )

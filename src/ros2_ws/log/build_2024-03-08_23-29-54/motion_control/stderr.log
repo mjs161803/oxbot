@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/cmake", line 8, in <module>
+    sys.exit(cmake())
+  File "/usr/local/lib/python3.6/dist-packages/cmake/__init__.py", line 43, in cmake
+make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Interrupt
+make[2]: *** [CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Interrupt
+make: *** [all] Interrupt
+    raise SystemExit(_program('cmake', sys.argv[1:]))
+  File "/usr/local/lib/python3.6/dist-packages/cmake/__init__.py", line 39, in _program
+    return subprocess.call([os.path.join(CMAKE_BIN_DIR, name)] + args, close_fds=False)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

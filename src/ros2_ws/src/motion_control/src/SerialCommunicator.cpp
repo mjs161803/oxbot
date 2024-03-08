@@ -8,7 +8,6 @@
 #include "fcntl.h"
 #include "unistd.h"
 #include "rclcpp/rclcpp.hpp"
-#include "rclcpp/logger.hpp"
 
 #include "SerialCommunicator.hpp"
 #include "oxbot_config/oxbot_config.hpp"
@@ -29,30 +28,30 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     catch(const std::runtime_error& re)
     {
         front_wheels_serial_fh_ = NULL;
-        RCLCPP_ERROR(serial_logger_, "SerialCommunicator: Runtime Exception: %s", re.what());
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
     }
     catch(const std::exception& e)
     {
         front_wheels_serial_fh_ = NULL;
-        RCLCPP_ERROR(serial_logger_, "SerialCommunicator: Exception: %s", e.what());
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Exception: %s", e.what());
     }
     
     struct termios front_serial_term;
     if (tcgetattr(front_wheels_serial_fh_, &front_serial_term) != 0) 
     {
-        RCLCPP_ERROR(serial_logger_, "Error %i from tcgetattr: %s\n", errno, strerror(errno));
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
     }
     set_c_flags(front_serial_term, front_wheels_serial_fh_);
 
     // Rear Wheels Serial Port Configuring
     rear_wheels_serial_fh_ = open((rear_wheels_serial_path_).c_str(), O_RDWR);
 	    if (rear_wheels_serial_fh_ < 0) {
-		    RCLCPP_ERROR(serial_logger_, "Unable to open %s.", rear_wheels_serial_path_);
+		    RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Unable to open %s.", rear_wheels_serial_path_);
 	    }
     struct termios rear_serial_term;
     if (tcgetattr(rear_wheels_serial_fh_, &rear_serial_term) != 0) 
     {
-        RCLCPP_ERROR(serial_logger_, "Error %i from tcgetattr: %s\n", errno, strerror(errno));
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
     }
     set_c_flags(rear_serial_term, front_wheels_serial_fh_);
 
@@ -86,7 +85,7 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
     ser_term.c_cc[VMIN] = 0;
     cfsetspeed(&ser_term, B115200);
     if (tcsetattr(fh, TCSANOW, &ser_term) != 0) {
-        RCLCPP_ERROR(serial_logger_, "Error %i from tcsetattr: %s\n", errno, strerror(errno));
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcsetattr: %s\n", errno, strerror(errno));
     }
 }
 
@@ -104,7 +103,7 @@ const std::vector<unsigned char> SerialCommunicator::sc_read()
     }
     catch(const std::runtime_error& re)
     {
-        RCLCPP_ERROR(serial_logger_, "SerialCommunicator: Runtime Exception: %s", re.what());
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
     }
 
     return ser_buf;
