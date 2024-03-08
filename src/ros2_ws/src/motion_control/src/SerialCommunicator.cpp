@@ -1,25 +1,42 @@
 
 #include <string>
 #include <iostream>
+#include <stdexcept>
+
 #include "stdio.h"
 #include "fcntl.h"
 #include "unistd.h"
 #include "rclcpp/rclcpp.hpp"
 
-#include "serial_communicator.hpp"
-#include "motion_control_config.hpp"
+#include "SerialCommunicator.hpp"
+#include "oxbot_config/oxbot_config.hpp"
 
 void set_c_flags(termios &, int fh, rclcpp::Logger &);
 
-SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
 {
     auto serial_logger = rclcpp::get_logger("serial_logger");
     
     // Front Wheels Serial Port Configuring
-    front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR);
-	    if (front_wheels_serial_fh_ < 0) {
-		    RCLCPP_ERROR(serial_logger, "Unable to open %s.", front_wheels_serial_path_);
-	    }
+    try
+    {
+        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
+        if (front_wheels_serial_fh_ == -1) 
+        {
+            throw std::runtime_error("Error opening serial device file for front wheels.");
+        }  
+    }
+    catch(const std::runtime_error& re)
+    {
+        front_wheels_serial_fh_ = NULL;
+        RCLCPP_ERROR(serial_logger, "SerialCommunicator: Runtime Exception: %s", re.what());
+    }
+    catch(const std::exception& e)
+    {
+        front_wheels_serial_fh_ = NULL;
+        RCLCPP_ERROR(serial_logger, "SerialCommunicator: Exception: %s", e.what());
+    }
+    
     struct termios front_serial_term;
     if (tcgetattr(front_wheels_serial_fh_, &front_serial_term) != 0) 
     {
@@ -73,4 +90,31 @@ void set_c_flags(termios &ser_term, int fh, rclcpp::Logger &ser_logger) {
     if (tcsetattr(fh, TCSANOW, &ser_term) != 0) {
         RCLCPP_ERROR(ser_logger, "Error %i from tcsetattr: %s\n", errno, strerror(errno));
     }
+}
+
+const std::vector<unsigned char> SerialCommunicator::sc_read() 
+{
+    const std::vector<unsigned char> ser_buf;
+    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
+    try
+    {
+        int bytes_read = read(this->front_wheels_serial_fh_, &read_buf, sizeof(read_buf));
+        if (bytes_read == -1)
+        {
+            throw()
+        }   
+    }
+    catch
+    {
+
+    }
+
+    return ser_buf;
+}
+
+int SerialCommunicator::sc_write(std::vector<unsigned char> write_buf)
+{
+    int num_written (0);
+
+    return num_written;
 }

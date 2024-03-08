@@ -1,7 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
-#include "serial_communicator.hpp"
-#include "motion_control_config.hpp"
+#include "SerialCommunicator.hpp"
+#include "oxbot_config/oxbot_config.hpp"
 #include <vector>
 
 class MotionControllerNode: public rclcpp::Node {

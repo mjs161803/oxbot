@@ -18,7 +18,19 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     feedback_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_feedback", 30);
     
     // Serial Communicator definition
-    serial_comm_ = SerialCommunicator(FRONT_WHEELS_SERIAL_PATH, REAR_WHEELS_SERIAL_PATH);
+    try
+    {
+        serial_comm_ = SerialCommunicator(FRONT_WHEELS_SERIAL_PATH, REAR_WHEELS_SERIAL_PATH);
+        if (serial_comm_.front_wheels_serial_fh_ == NULL)
+        {
+            throw std::runtime_error("Unable to initialize SerialCommunicator");
+        }
+    }
+    catch (const std::runtime_error& re)
+    {
+        RCLCPP_ERROR(this->get_logger(), "MotionControllerNode: Runtime Exception: %s", re.what());
+    }
+    
 
     
 }

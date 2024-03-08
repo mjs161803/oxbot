@@ -35,7 +35,7 @@ class SerialCommunicator
     SerialCommunicator& operator=(SerialCommunicator&&) noexcept;       //move assignment operator
     ~SerialCommunicator();                                              //destructor
 
-    int sc_write(const oxbot_interfaces::msg::HoverboardCommand);
+    int sc_write(std::vector<unsigned char>);
     const std::vector<unsigned char> sc_read(); // method returns a vector of unsigned char's containing feedback message data for parsing, if any are in the serial device queue
 
     private:
