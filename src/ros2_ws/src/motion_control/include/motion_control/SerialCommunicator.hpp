@@ -19,6 +19,7 @@
 */
 #include <string>
 #include <vector>
+#include "rclcpp/rclcpp.hpp"
 #include "termios.h"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/hoverboard_command.hpp"
@@ -44,4 +45,7 @@ class SerialCommunicator
     int front_wheels_serial_fh_;
     int rear_wheels_serial_fh_;
     int serial_buff_size_;
+    rclcpp::Logger serial_logger_;
+
+    void set_c_flags(termios &, int);
 };
