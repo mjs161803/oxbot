@@ -1,0 +1,31 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o[0m
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In constructor ‘[01m[KSerialCommunicator::SerialCommunicator()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:30:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+         front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+                                   [01;35m[K^~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:35:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+         front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+                                   [01;35m[K^~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:112:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwrite_buf[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ int SerialCommunicator::sc_write(std::vector<unsigned char> [01;35m[Kwrite_buf[m[K)
+                                                             [01;35m[K^~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:[m[K In constructor ‘[01m[KMotionControllerNode::MotionControllerNode()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kint SerialCommunicator::front_wheels_serial_fh_[m[K’ is private within this context
+         if (serial_comm_.[01;31m[Kfront_wheels_serial_fh_[m[K == NULL)
+                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp:3:0[m[K,
+                 from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:3[m[K:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:47:9:[m[K [01;36m[Knote: [m[Kdeclared private here
+     int [01;36m[Kfront_wheels_serial_fh_[m[K;
+         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:53:[m[K [01;35m[Kwarning: [m[KNULL used in arithmetic [[01;35m[K-Wpointer-arith[m[K]
+         if (serial_comm_.front_wheels_serial_fh_ == [01;35m[KNULL[m[K)
+                                                     [01;35m[K^~~~[m[K
+make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Error 1
+CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+Makefile:145: recipe for target 'all' failed
+make: *** [all] Error 2

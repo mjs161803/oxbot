@@ -1,0 +1,33 @@
+[0.165s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[0.447s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+[0.448s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o[0m
+[13.064s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In constructor ‘[01m[KSerialCommunicator::SerialCommunicator()[m[K’:
+[13.066s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:30:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+[13.067s]          front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+[13.067s]                                    [01;35m[K^~~~[m[K
+[13.068s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:35:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+[13.068s]          front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+[13.069s]                                    [01;35m[K^~~~[m[K
+[13.086s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)[m[K’:
+[13.089s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:112:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwrite_buf[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[13.090s]  int SerialCommunicator::sc_write(std::vector<unsigned char> [01;35m[Kwrite_buf[m[K)
+[13.092s]                                                              [01;35m[K^~~~~~~~~[m[K
+[13.169s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:[m[K In constructor ‘[01m[KMotionControllerNode::MotionControllerNode()[m[K’:
+[13.170s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kint SerialCommunicator::front_wheels_serial_fh_[m[K’ is private within this context
+[13.170s]          if (serial_comm_.[01;31m[Kfront_wheels_serial_fh_[m[K == NULL)
+[13.171s]                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.171s] In file included from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp:3:0[m[K,
+[13.172s]                  from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:3[m[K:
+[13.173s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:47:9:[m[K [01;36m[Knote: [m[Kdeclared private here
+[13.173s]      int [01;36m[Kfront_wheels_serial_fh_[m[K;
+[13.174s]          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.175s] [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:53:[m[K [01;35m[Kwarning: [m[KNULL used in arithmetic [[01;35m[K-Wpointer-arith[m[K]
+[13.175s]          if (serial_comm_.front_wheels_serial_fh_ == [01;35m[KNULL[m[K)
+[13.176s]                                                      [01;35m[K^~~~[m[K
+[17.515s] make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Error 1
+[17.516s] CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed
+[17.516s] make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+[17.517s] CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+[17.517s] Makefile:145: recipe for target 'all' failed
+[17.518s] make: *** [all] Error 2
+[17.542s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '2': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4

@@ -1,0 +1,352 @@
+[0.000000] (-) TimerEvent: {}
+[0.012493] (-) JobUnselected: {'identifier': 'oxbot_bringup'}
+[0.013431] (-) JobUnselected: {'identifier': 'oxbot_config'}
+[0.018922] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
+[0.023057] (motion_control) JobQueued: {'identifier': 'motion_control', 'dependencies': OrderedDict([('oxbot_interfaces', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')])}
+[0.023332] (motion_control) JobStarted: {'identifier': 'motion_control'}
+[0.101442] (-) TimerEvent: {}
+[0.172135] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'cmake'}
+[0.185409] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'build'}
+[0.189130] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/motion_control', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/bin/helpers/browser.sh'), ('SHLVL', '2'), ('OLDPWD', '/root/oxbot'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.87.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-fdbd5a39-0297-4b8b-b6ae-162be6ac60f0.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-a1923488-941b-42f8-b0ef-eb3b521ab7bb.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/019f4d1419fbc8219a181fab7892ebccf7ee29a2/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':12'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-a1923488-941b-42f8-b0ef-eb3b521ab7bb.sock","/tmp/.X11-unix/X12","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-a1923488-941b-42f8-b0ef-eb3b521ab7bb.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X12'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install')]), 'shell': False}
+[0.202075] (-) TimerEvent: {}
+[0.303449] (-) TimerEvent: {}
+[0.403636] (motion_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[0.404600] (-) TimerEvent: {}
+[0.505285] (-) TimerEvent: {}
+[0.606127] (-) TimerEvent: {}
+[0.706893] (-) TimerEvent: {}
+[0.808077] (-) TimerEvent: {}
+[0.908764] (-) TimerEvent: {}
+[1.009506] (-) TimerEvent: {}
+[1.110306] (-) TimerEvent: {}
+[1.210971] (-) TimerEvent: {}
+[1.311701] (-) TimerEvent: {}
+[1.412444] (-) TimerEvent: {}
+[1.513290] (-) TimerEvent: {}
+[1.614136] (-) TimerEvent: {}
+[1.642746] (motion_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.5 (/opt/ros/humble/install/share/rclcpp/cmake)\n'}
+[1.714366] (-) TimerEvent: {}
+[1.815134] (-) TimerEvent: {}
+[1.815917] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[1.832555] (motion_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[1.868321] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[1.915339] (-) TimerEvent: {}
+[1.939287] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.015573] (-) TimerEvent: {}
+[2.041652] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.115831] (-) TimerEvent: {}
+[2.216646] (-) TimerEvent: {}
+[2.317508] (-) TimerEvent: {}
+[2.418375] (-) TimerEvent: {}
+[2.422561] (motion_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[2.430466] (motion_control) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[2.518596] (-) TimerEvent: {}
+[2.614905] (motion_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[2.618783] (-) TimerEvent: {}
+[2.719513] (-) TimerEvent: {}
+[2.820358] (-) TimerEvent: {}
+[2.921183] (-) TimerEvent: {}
+[3.022086] (-) TimerEvent: {}
+[3.122858] (-) TimerEvent: {}
+[3.223697] (-) TimerEvent: {}
+[3.324535] (-) TimerEvent: {}
+[3.425637] (-) TimerEvent: {}
+[3.526770] (-) TimerEvent: {}
+[3.605135] (motion_control) StdoutLine: {'line': b'-- Found oxbot_interfaces: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake)\n'}
+[3.626958] (-) TimerEvent: {}
+[3.727797] (motion_control) StdoutLine: {'line': b'-- Found oxbot_config: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake)\n'}
+[3.728580] (-) TimerEvent: {}
+[3.734841] (motion_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)\n'}
+[3.828805] (-) TimerEvent: {}
+[3.930040] (-) TimerEvent: {}
+[4.031177] (-) TimerEvent: {}
+[4.132268] (-) TimerEvent: {}
+[4.233488] (-) TimerEvent: {}
+[4.302277] (motion_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.304261] (motion_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control\n'}
+[4.304954] (motion_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.306851] (motion_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.313114] (motion_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.313910] (motion_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.315230] (motion_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.319102] (motion_control) StdoutLine: {'line': b'-- Configuring done (3.9s)\n'}
+[4.333743] (-) TimerEvent: {}
+[4.408498] (motion_control) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[4.416303] (motion_control) StdoutLine: {'line': b'-- Build files have been written to: /root/oxbot/src/ros2_ws/build/motion_control\n'}
+[4.434077] (-) TimerEvent: {}
+[4.535182] (-) TimerEvent: {}
+[4.536577] (motion_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o\x1b[0m\n'}
+[4.539194] (motion_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o\x1b[0m\n'}
+[4.547055] (motion_control) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o\x1b[0m\n'}
+[4.635381] (-) TimerEvent: {}
+[4.736589] (-) TimerEvent: {}
+[4.837396] (-) TimerEvent: {}
+[4.938592] (-) TimerEvent: {}
+[5.040102] (-) TimerEvent: {}
+[5.141676] (-) TimerEvent: {}
+[5.243296] (-) TimerEvent: {}
+[5.344857] (-) TimerEvent: {}
+[5.445668] (-) TimerEvent: {}
+[5.547212] (-) TimerEvent: {}
+[5.648726] (-) TimerEvent: {}
+[5.749944] (-) TimerEvent: {}
+[5.851627] (-) TimerEvent: {}
+[5.953278] (-) TimerEvent: {}
+[6.054965] (-) TimerEvent: {}
+[6.156621] (-) TimerEvent: {}
+[6.258267] (-) TimerEvent: {}
+[6.359870] (-) TimerEvent: {}
+[6.461490] (-) TimerEvent: {}
+[6.562966] (-) TimerEvent: {}
+[6.664632] (-) TimerEvent: {}
+[6.771671] (-) TimerEvent: {}
+[6.873408] (-) TimerEvent: {}
+[6.974747] (-) TimerEvent: {}
+[7.075997] (-) TimerEvent: {}
+[7.177314] (-) TimerEvent: {}
+[7.278622] (-) TimerEvent: {}
+[7.380253] (-) TimerEvent: {}
+[7.481946] (-) TimerEvent: {}
+[7.582854] (-) TimerEvent: {}
+[7.683699] (-) TimerEvent: {}
+[7.785087] (-) TimerEvent: {}
+[7.885934] (-) TimerEvent: {}
+[7.986763] (-) TimerEvent: {}
+[8.087595] (-) TimerEvent: {}
+[8.188818] (-) TimerEvent: {}
+[8.290470] (-) TimerEvent: {}
+[8.392133] (-) TimerEvent: {}
+[8.493885] (-) TimerEvent: {}
+[8.594846] (-) TimerEvent: {}
+[8.696221] (-) TimerEvent: {}
+[8.797904] (-) TimerEvent: {}
+[8.899260] (-) TimerEvent: {}
+[9.001728] (-) TimerEvent: {}
+[9.103468] (-) TimerEvent: {}
+[9.205101] (-) TimerEvent: {}
+[9.306770] (-) TimerEvent: {}
+[9.408579] (-) TimerEvent: {}
+[9.510274] (-) TimerEvent: {}
+[9.612231] (-) TimerEvent: {}
+[9.713593] (-) TimerEvent: {}
+[9.815879] (-) TimerEvent: {}
+[9.917530] (-) TimerEvent: {}
+[10.019295] (-) TimerEvent: {}
+[10.132651] (-) TimerEvent: {}
+[10.234336] (-) TimerEvent: {}
+[10.336182] (-) TimerEvent: {}
+[10.437841] (-) TimerEvent: {}
+[10.539503] (-) TimerEvent: {}
+[10.641117] (-) TimerEvent: {}
+[10.742830] (-) TimerEvent: {}
+[10.844139] (-) TimerEvent: {}
+[10.945828] (-) TimerEvent: {}
+[11.047791] (-) TimerEvent: {}
+[11.149424] (-) TimerEvent: {}
+[11.251134] (-) TimerEvent: {}
+[11.352819] (-) TimerEvent: {}
+[11.454464] (-) TimerEvent: {}
+[11.556123] (-) TimerEvent: {}
+[11.657787] (-) TimerEvent: {}
+[11.759557] (-) TimerEvent: {}
+[11.861205] (-) TimerEvent: {}
+[11.962867] (-) TimerEvent: {}
+[12.064873] (-) TimerEvent: {}
+[12.166467] (-) TimerEvent: {}
+[12.268144] (-) TimerEvent: {}
+[12.369841] (-) TimerEvent: {}
+[12.471564] (-) TimerEvent: {}
+[12.573272] (-) TimerEvent: {}
+[12.675148] (-) TimerEvent: {}
+[12.776780] (-) TimerEvent: {}
+[12.878495] (-) TimerEvent: {}
+[12.980174] (-) TimerEvent: {}
+[13.081847] (-) TimerEvent: {}
+[13.183572] (-) TimerEvent: {}
+[13.285282] (-) TimerEvent: {}
+[13.386910] (-) TimerEvent: {}
+[13.488604] (-) TimerEvent: {}
+[13.590239] (-) TimerEvent: {}
+[13.691907] (-) TimerEvent: {}
+[13.793510] (-) TimerEvent: {}
+[13.895198] (-) TimerEvent: {}
+[13.996724] (-) TimerEvent: {}
+[14.098404] (-) TimerEvent: {}
+[14.199886] (-) TimerEvent: {}
+[14.301476] (-) TimerEvent: {}
+[14.403128] (-) TimerEvent: {}
+[14.504859] (-) TimerEvent: {}
+[14.606526] (-) TimerEvent: {}
+[14.708214] (-) TimerEvent: {}
+[14.809564] (-) TimerEvent: {}
+[14.911259] (-) TimerEvent: {}
+[15.012940] (-) TimerEvent: {}
+[15.114557] (-) TimerEvent: {}
+[15.226685] (-) TimerEvent: {}
+[15.328344] (-) TimerEvent: {}
+[15.430078] (-) TimerEvent: {}
+[15.531750] (-) TimerEvent: {}
+[15.633421] (-) TimerEvent: {}
+[15.738221] (-) TimerEvent: {}
+[15.842166] (-) TimerEvent: {}
+[15.943854] (-) TimerEvent: {}
+[16.044859] (-) TimerEvent: {}
+[16.145742] (-) TimerEvent: {}
+[16.247441] (-) TimerEvent: {}
+[16.349147] (-) TimerEvent: {}
+[16.450813] (-) TimerEvent: {}
+[16.552553] (-) TimerEvent: {}
+[16.654257] (-) TimerEvent: {}
+[16.755814] (-) TimerEvent: {}
+[16.857443] (-) TimerEvent: {}
+[16.959066] (-) TimerEvent: {}
+[17.060709] (-) TimerEvent: {}
+[17.162313] (-) TimerEvent: {}
+[17.263940] (-) TimerEvent: {}
+[17.365571] (-) TimerEvent: {}
+[17.467268] (-) TimerEvent: {}
+[17.568921] (-) TimerEvent: {}
+[17.670639] (-) TimerEvent: {}
+[17.772360] (-) TimerEvent: {}
+[17.874178] (-) TimerEvent: {}
+[17.975869] (-) TimerEvent: {}
+[18.077113] (-) TimerEvent: {}
+[18.178800] (-) TimerEvent: {}
+[18.280518] (-) TimerEvent: {}
+[18.300171] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KSerialCommunicator::SerialCommunicator()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.301086] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:69:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.301743] (motion_control) StderrLine: {'line': b' SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(\x1b[01;31m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)\n'}
+[18.302499] (motion_control) StderrLine: {'line': b'                                                                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.335552] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:69:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KFRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.336385] (motion_control) StderrLine: {'line': b' SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(\x1b[01;36m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)\n'}
+[18.337042] (motion_control) StderrLine: {'line': b'                                                                     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.337680] (motion_control) StderrLine: {'line': b'                                                                     \x1b[32m\x1b[KFRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\n'}
+[18.338360] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:124:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.339004] (motion_control) StderrLine: {'line': b' SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(\x1b[01;31m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)\n'}
+[18.339594] (motion_control) StderrLine: {'line': b'                                                                                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.371901] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:17:124:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KREAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.373125] (motion_control) StderrLine: {'line': b' SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(\x1b[01;36m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)\n'}
+[18.373833] (motion_control) StderrLine: {'line': b'                                                                                                                            \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.374645] (motion_control) StderrLine: {'line': b'                                                                                                                            \x1b[32m\x1b[KREAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\n'}
+[18.375666] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:30:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kconverting to non-pointer type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 from NULL [\x1b[01;35m\x1b[K-Wconversion-null\x1b[m\x1b[K]\n'}
+[18.376362] (motion_control) StderrLine: {'line': b'         front_wheels_serial_fh_ = \x1b[01;35m\x1b[KNULL\x1b[m\x1b[K;\n'}
+[18.377009] (motion_control) StderrLine: {'line': b'                                   \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.377640] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:35:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kconverting to non-pointer type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 from NULL [\x1b[01;35m\x1b[K-Wconversion-null\x1b[m\x1b[K]\n'}
+[18.378372] (motion_control) StderrLine: {'line': b'         front_wheels_serial_fh_ = \x1b[01;35m\x1b[KNULL\x1b[m\x1b[K;\n'}
+[18.379034] (motion_control) StderrLine: {'line': b'                                   \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.389736] (-) TimerEvent: {}
+[18.392745] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<unsigned char, std::allocator<unsigned char> > SerialCommunicator::sc_read()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.393586] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:95:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.394333] (motion_control) StderrLine: {'line': b'     unsigned char read_buf [\x1b[01;31m\x1b[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE\x1b[m\x1b[K];\n'}
+[18.394935] (motion_control) StderrLine: {'line': b'                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.417170] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMotionControllerNode::MotionControllerNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.417942] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:13:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_OUTPUT_FREQUENCY\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.418686] (motion_control) StderrLine: {'line': b'     int feedback_timer_period_micros    = int(1000000* (1.0 / \x1b[01;31m\x1b[KMC_OUTPUT_FREQUENCY\x1b[m\x1b[K));\n'}
+[18.419219] (motion_control) StderrLine: {'line': b'                                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.433896] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:95:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KSERIAL_FEEDBACK_MESSAGE_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.434738] (motion_control) StderrLine: {'line': b'     unsigned char read_buf [\x1b[01;36m\x1b[KMC_SERIAL_FEEDBACK_MESSAGE_SIZE\x1b[m\x1b[K];\n'}
+[18.435367] (motion_control) StderrLine: {'line': b'                             \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.435998] (motion_control) StderrLine: {'line': b'                             \x1b[32m\x1b[KSERIAL_FEEDBACK_MESSAGE_SIZE\x1b[m\x1b[K\n'}
+[18.436680] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:98:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kread_buf\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.437338] (motion_control) StderrLine: {'line': b'         int bytes_read = read(this->front_wheels_serial_fh_, &\x1b[01;31m\x1b[Kread_buf\x1b[m\x1b[K, sizeof(read_buf));\n'}
+[18.438058] (motion_control) StderrLine: {'line': b'                                                               \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[18.441666] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:98:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[Kser_buf\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.442634] (motion_control) StderrLine: {'line': b'         int bytes_read = read(this->front_wheels_serial_fh_, &\x1b[01;36m\x1b[Kread_buf\x1b[m\x1b[K, sizeof(read_buf));\n'}
+[18.443694] (motion_control) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[18.444343] (motion_control) StderrLine: {'line': b'                                                               \x1b[32m\x1b[Kser_buf\x1b[m\x1b[K\n'}
+[18.445056] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:13:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KOUTPUT_FREQUENCY\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.446146] (motion_control) StderrLine: {'line': b'     int feedback_timer_period_micros    = int(1000000* (1.0 / \x1b[01;36m\x1b[KMC_OUTPUT_FREQUENCY\x1b[m\x1b[K));\n'}
+[18.446873] (motion_control) StderrLine: {'line': b'                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.447507] (motion_control) StderrLine: {'line': b'                                                               \x1b[32m\x1b[KOUTPUT_FREQUENCY\x1b[m\x1b[K\n'}
+[18.448184] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.448868] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:112:61:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwrite_buf\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[18.449565] (motion_control) StderrLine: {'line': b' int SerialCommunicator::sc_write(std::vector<unsigned char> \x1b[01;35m\x1b[Kwrite_buf\x1b[m\x1b[K)\n'}
+[18.450296] (motion_control) StderrLine: {'line': b'                                                             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[18.490072] (-) TimerEvent: {}
+[18.571160] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.572006] (motion_control) StderrLine: {'line': b'         serial_comm_ = SerialCommunicator(\x1b[01;31m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K, MC_REAR_WHEELS_SERIAL_PATH);\n'}
+[18.572638] (motion_control) StderrLine: {'line': b'                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.590255] (-) TimerEvent: {}
+[18.605267] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KFRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.606317] (motion_control) StderrLine: {'line': b'         serial_comm_ = SerialCommunicator(\x1b[01;36m\x1b[KMC_FRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K, MC_REAR_WHEELS_SERIAL_PATH);\n'}
+[18.607001] (motion_control) StderrLine: {'line': b'                                           \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.607622] (motion_control) StderrLine: {'line': b'                                           \x1b[32m\x1b[KFRONT_WHEELS_SERIAL_PATH\x1b[m\x1b[K\n'}
+[18.608215] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[18.608825] (motion_control) StderrLine: {'line': b'         serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, \x1b[01;31m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K);\n'}
+[18.609425] (motion_control) StderrLine: {'line': b'                                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.642160] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:23:72:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternative: \xe2\x80\x98\x1b[01m\x1b[KREAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.643238] (motion_control) StderrLine: {'line': b'         serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, \x1b[01;36m\x1b[KMC_REAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K);\n'}
+[18.643889] (motion_control) StderrLine: {'line': b'                                                                        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.644540] (motion_control) StderrLine: {'line': b'                                                                        \x1b[32m\x1b[KREAR_WHEELS_SERIAL_PATH\x1b[m\x1b[K\n'}
+[18.645181] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kint SerialCommunicator::front_wheels_serial_fh_\x1b[m\x1b[K\xe2\x80\x99 is private within this context\n'}
+[18.645827] (motion_control) StderrLine: {'line': b'         if (serial_comm_.\x1b[01;31m\x1b[Kfront_wheels_serial_fh_\x1b[m\x1b[K == NULL)\n'}
+[18.646553] (motion_control) StderrLine: {'line': b'                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.647739] (motion_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp:3:0\x1b[m\x1b[K,\n'}
+[18.648564] (motion_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:3\x1b[m\x1b[K:\n'}
+[18.649248] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:47:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared private here\n'}
+[18.649889] (motion_control) StderrLine: {'line': b'     int \x1b[01;36m\x1b[Kfront_wheels_serial_fh_\x1b[m\x1b[K;\n'}
+[18.650660] (motion_control) StderrLine: {'line': b'         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.651283] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:24:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KNULL used in arithmetic [\x1b[01;35m\x1b[K-Wpointer-arith\x1b[m\x1b[K]\n'}
+[18.651968] (motion_control) StderrLine: {'line': b'         if (serial_comm_.front_wheels_serial_fh_ == \x1b[01;35m\x1b[KNULL\x1b[m\x1b[K)\n'}
+[18.652661] (motion_control) StderrLine: {'line': b'                                                     \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.690462] (-) TimerEvent: {}
+[18.791783] (-) TimerEvent: {}
+[18.893542] (-) TimerEvent: {}
+[18.995228] (-) TimerEvent: {}
+[19.096948] (-) TimerEvent: {}
+[19.198269] (-) TimerEvent: {}
+[19.299811] (-) TimerEvent: {}
+[19.401388] (-) TimerEvent: {}
+[19.503067] (-) TimerEvent: {}
+[19.603887] (-) TimerEvent: {}
+[19.705210] (-) TimerEvent: {}
+[19.806917] (-) TimerEvent: {}
+[19.908621] (-) TimerEvent: {}
+[20.014149] (-) TimerEvent: {}
+[20.114970] (-) TimerEvent: {}
+[20.215866] (-) TimerEvent: {}
+[20.317545] (-) TimerEvent: {}
+[20.418379] (-) TimerEvent: {}
+[20.522164] (-) TimerEvent: {}
+[20.623859] (-) TimerEvent: {}
+[20.726177] (-) TimerEvent: {}
+[20.826999] (-) TimerEvent: {}
+[20.928695] (-) TimerEvent: {}
+[21.042332] (-) TimerEvent: {}
+[21.146581] (-) TimerEvent: {}
+[21.201065] (motion_control) StdoutLine: {'line': b"CMakeFiles/motion_controller.dir/build.make:103: recipe for target 'CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o' failed\n"}
+[21.201903] (motion_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o] Error 1\n'}
+[21.202621] (motion_control) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[21.246780] (-) TimerEvent: {}
+[21.347602] (-) TimerEvent: {}
+[21.448883] (-) TimerEvent: {}
+[21.550157] (-) TimerEvent: {}
+[21.651385] (-) TimerEvent: {}
+[21.752549] (-) TimerEvent: {}
+[21.853449] (-) TimerEvent: {}
+[21.954614] (-) TimerEvent: {}
+[22.055548] (-) TimerEvent: {}
+[22.156461] (-) TimerEvent: {}
+[22.257364] (-) TimerEvent: {}
+[22.358339] (-) TimerEvent: {}
+[22.459175] (-) TimerEvent: {}
+[22.560003] (-) TimerEvent: {}
+[22.660917] (-) TimerEvent: {}
+[22.761735] (-) TimerEvent: {}
+[22.862713] (-) TimerEvent: {}
+[22.963822] (-) TimerEvent: {}
+[23.064656] (-) TimerEvent: {}
+[23.128077] (motion_control) StdoutLine: {'line': b"CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed\n"}
+[23.128887] (motion_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Error 1\n'}
+[23.129817] (motion_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2\n'}
+[23.130506] (motion_control) StderrLine: {'line': b'make: *** [all] Error 2\n'}
+[23.131005] (motion_control) StdoutLine: {'line': b"CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed\n"}
+[23.131456] (motion_control) StdoutLine: {'line': b"Makefile:145: recipe for target 'all' failed\n"}
+[23.164836] (-) TimerEvent: {}
+[23.175519] (motion_control) CommandEnded: {'returncode': 2}
+[23.265145] (-) TimerEvent: {}
+[23.366166] (-) TimerEvent: {}
+[23.469102] (-) TimerEvent: {}
+[23.575072] (-) TimerEvent: {}
+[23.626125] (motion_control) JobEnded: {'identifier': 'motion_control', 'rc': 2}
+[23.638890] (-) EventReactorShutdown: {}
