@@ -1,0 +1,21 @@
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In constructor ‘[01m[KSerialCommunicator::SerialCommunicator()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:34:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+         front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+                                   [01;35m[K^~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:39:35:[m[K [01;35m[Kwarning: [m[Kconverting to non-pointer type ‘[01m[Kint[m[K’ from NULL [[01;35m[K-Wconversion-null[m[K]
+         front_wheels_serial_fh_ = [01;35m[KNULL[m[K;
+                                   [01;35m[K^~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:116:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwrite_buf[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ int SerialCommunicator::sc_write(std::vector<unsigned char> [01;35m[Kwrite_buf[m[K)
+                                                             [01;35m[K^~~~~~~~~[m[K
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: In function `MotionControllerNode::MotionControllerNode()':
+MotionControllerNode.cpp:(.text+0x550): undefined reference to `SerialCommunicator::operator=(SerialCommunicator&&)'
+MotionControllerNode.cpp:(.text+0x558): undefined reference to `SerialCommunicator::~SerialCommunicator()'
+MotionControllerNode.cpp:(.text+0x89c): undefined reference to `SerialCommunicator::~SerialCommunicator()'
+CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: In function `MotionControllerNode::~MotionControllerNode()':
+MotionControllerNode.cpp:(.text._ZN20MotionControllerNodeD2Ev[_ZN20MotionControllerNodeD5Ev]+0x3c): undefined reference to `SerialCommunicator::~SerialCommunicator()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [motion_controller] Error 1
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+make: *** [all] Error 2

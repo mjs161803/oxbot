@@ -21,7 +21,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     try
     {
         serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, MC_REAR_WHEELS_SERIAL_PATH);
-        if (serial_comm_.front_wheels_serial_fh_ == NULL)
+        if (serial_comm_.initialized == false)
         {
             throw std::runtime_error("Unable to initialize SerialCommunicator");
         }

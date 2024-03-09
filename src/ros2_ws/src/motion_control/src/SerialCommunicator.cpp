@@ -22,17 +22,22 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
         front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
         if (front_wheels_serial_fh_ == -1) 
         {
+            initialized = false;
             throw std::runtime_error("Error opening serial device file for front wheels.");
         }  
+        else
+        {
+            initialized = true;
+        }
     }
     catch(const std::runtime_error& re)
     {
-        front_wheels_serial_fh_ = NULL;
+        front_wheels_serial_fh_ = -1;
         RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
     }
     catch(const std::exception& e)
     {
-        front_wheels_serial_fh_ = NULL;
+        front_wheels_serial_fh_ = -1;
         RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Exception: %s", e.what());
     }
     
