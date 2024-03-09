@@ -70,6 +70,19 @@ SerialCommunicator::SerialCommunicator(std::string front_wheel_path, std::string
     
 }
 
+SerialCommunicator::SerialCommunicator(const SerialCommunicator& copied)
+{
+    initialized = copied.initialized;
+    front_wheels_serial_fh_ = copied.front_wheels_serial_fh_;
+    rear_wheels_serial_fh_ = copied.rear_wheels_serial_fh_;
+    serial_buff_size_ = copied.serial_buff_size_;
+}
+
+SerialCommunicator& SerialCommunicator::operator=(const SerialCommunicator& assigner)
+{
+    return *this;
+}
+
 void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
     ser_term.c_cflag &= ~PARENB;
     ser_term.c_cflag &= ~CSTOPB;
