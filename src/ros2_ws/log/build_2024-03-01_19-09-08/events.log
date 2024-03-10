@@ -1,5 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.001422] (-) JobUnselected: {'identifier': 'motion_control'}
-[0.002128] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
-[0.002476] (-) JobUnselected: {'identifier': 'oxbot_startup'}
-[0.003575] (-) EventReactorShutdown: {}

@@ -1,6 +1,0 @@
-Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
-Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
-Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_startup -- -j4 -l4
-Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_startup -- -j4 -l4
-Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_startup
-Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_startup

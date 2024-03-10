@@ -1,7 +1,0 @@
-In file included from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/motion_controller.cpp:2:0[m[K:
-[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/./ros2node_motion_controller.cpp:9:6:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
-     }[01;35m[K;[m[K
-      [01;35m[K^[m[K
-[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/./ros2node_motion_controller.cpp:24:6:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
-     }[01;35m[K;[m[K
-      [01;35m[K^[m[K

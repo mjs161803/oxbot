@@ -1,9 +1,0 @@
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/uninstall.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/oxbot_bringup_uninstall.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/test.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/edit_cache.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/rebuild_cache.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/list_install_components.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/install.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/install/local.dir
-/root/oxbot/src/ros2_ws/build/oxbot_bringup/CMakeFiles/install/strip.dir

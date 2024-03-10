@@ -1,2 +1,0 @@
-Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_startup': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
-Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_startup' returned '1': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_startup -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_startup
