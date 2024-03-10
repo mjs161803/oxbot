@@ -1,1 +1,1 @@
-/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install
+/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install

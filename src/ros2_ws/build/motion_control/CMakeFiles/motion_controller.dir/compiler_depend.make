@@ -336,8 +336,7 @@ CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: /root/oxbot/src
   /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.hpp \
   /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp \
   /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/MotionControllerNode.hpp \
-  /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/motion_control_config.hpp \
-  /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/serial_communicator.hpp \
+  /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp \
   /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \
   /usr/include/aarch64-linux-gnu/asm/errno.h \
   /usr/include/aarch64-linux-gnu/asm/posix_types.h \
@@ -2406,8 +2405,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/aarch64-linux-gnu/asm/bitsperlong.h:
 
-/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/serial_communicator.hpp:
-
 /opt/ros/humble/install/include/rclcpp/rclcpp/macros.hpp:
 
 /opt/ros/humble/install/include/rcl/rcl/service.h:
@@ -2485,12 +2482,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /usr/include/aarch64-linux-gnu/bits/sys_errlist.h:
 
 /opt/ros/humble/install/include/rcutils/rcutils/types/uint8_array.h:
-
-/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:
-
-/usr/include/aarch64-linux-gnu/bits/signum-generic.h:
-
-/opt/ros/humble/install/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
 
 /usr/include/c++/7/bits/shared_ptr_atomic.h:
 
@@ -2749,6 +2740,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /usr/include/c++/7/clocale:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/event.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/signum-generic.h:
+
+/opt/ros/humble/install/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
+
+/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp:
 
 /opt/ros/humble/install/include/rcl/rcl/init_options.h:
 
@@ -3154,6 +3151,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rmw/rmw/events_statuses/incompatible_qos.h:
 
+/usr/include/c++/7/bits/atomic_lockfree_defines.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
+
+/opt/ros/humble/install/include/rcutils/rcutils/testing/fault_injection.h:
+
 /opt/ros/humble/install/include/rcutils/rcutils/types.h:
 
 /opt/ros/humble/install/include/rcutils/rcutils/types/char_array.h:
@@ -3325,11 +3328,3 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
 
 /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp:
-
-/usr/include/c++/7/bits/atomic_lockfree_defines.h:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
-
-/opt/ros/humble/install/include/rcutils/rcutils/testing/fault_injection.h:
-
-/root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/motion_control_config.hpp:

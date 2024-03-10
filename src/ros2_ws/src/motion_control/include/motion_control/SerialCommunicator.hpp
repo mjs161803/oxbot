@@ -32,10 +32,7 @@ class SerialCommunicator
     SerialCommunicator(std::string, std::string);                       //paramaterized constructor
     SerialCommunicator(const SerialCommunicator&);                      //copy constructor
     SerialCommunicator& operator=(const SerialCommunicator&);           //copy assignment operator
-    SerialCommunicator(SerialCommunicator&&) noexcept;                  //move constructor
-    SerialCommunicator& operator=(SerialCommunicator&&) noexcept;       //move assignment operator
-    ~SerialCommunicator();                                              //destructor
-
+    
     int sc_write(std::vector<unsigned char>);
     const std::vector<unsigned char> sc_read(); // method returns a vector of unsigned char's containing feedback message data for parsing, if any are in the serial device queue
 
