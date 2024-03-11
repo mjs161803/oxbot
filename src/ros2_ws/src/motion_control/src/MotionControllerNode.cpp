@@ -9,13 +9,13 @@ using namespace std::chrono_literals;
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 {
     // Timer Definitions
-    int query_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
-    int feedback_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
-    serial_query_timer_ =   this->create_wall_timer(std::chrono::microseconds(query_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCallback, this));
-    feedback_timer_ =       this->create_wall_timer(std::chrono::microseconds(feedback_timer_period_micros), std::bind(&MotionControllerNode::publishFeedback,           this));
+    int serial_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
+    int output_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
+    serial_feedback_timer_ =   this->create_wall_timer(std::chrono::microseconds(serial_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCB, this));
+    output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB,           this));
     
     // Publisher Definitions
-    feedback_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_feedback", 30);
+    output_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_output", 30);
     
     // Serial Communicator definition
     try
@@ -31,11 +31,9 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
         RCLCPP_ERROR(this->get_logger(), "MotionControllerNode: Runtime Exception: %s", re.what());
     }
     
-
-    
 }
 
-void MotionControllerNode::publishFeedback()
+void MotionControllerNode::publishOutputCB()
 {
     auto msg = oxbot_interfaces::msg::HoverboardFeedback();
     msg.steer_or_brake = 1;
@@ -46,16 +44,18 @@ void MotionControllerNode::publishFeedback()
     msg.temperature = 6;
     msg.led = 7;
 
-    feedback_publisher_->publish(msg);
+    output_publisher_->publish(msg);
 
 }
 
-std::vector<unsigned char> MotionControllerNode::feedbackTimerCallback()
+void MotionControllerNode::feedbackTimerCB()
 {
-    std::vector<unsigned char> serial_buffer_contents;
-    serial_buffer_contents.push_back(0xff);
+    std::vector<unsigned char> serial_data;
 
-    front_serial_feedback_data.push_back(0xff);
+    serial_data = this->serial_comm_.sc_read_front_wheels();
+    this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(serial_data), std::end(serial_data));
 
-    return serial_buffer_contents;
+    serial_data = this->serial_comm_.sc_read_rear_wheels();
+    this->rear_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(serial_data), std::end(serial_data));
+
 }

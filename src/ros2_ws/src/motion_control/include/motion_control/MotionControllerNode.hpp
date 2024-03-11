@@ -11,14 +11,14 @@ class MotionControllerNode: public rclcpp::Node {
     private:
 
     // Callbacks
-    void publishFeedback();
-    std::vector<unsigned char> feedbackTimerCallback();     
+    void publishOutputCB();
+    void feedbackTimerCB();     
 
-    rclcpp::Publisher<oxbot_interfaces::msg::HoverboardFeedback>::SharedPtr feedback_publisher_;
-    rclcpp::TimerBase::SharedPtr feedback_timer_;
-    rclcpp::TimerBase::SharedPtr serial_query_timer_;
+    rclcpp::Publisher<oxbot_interfaces::msg::HoverboardFeedback>::SharedPtr output_publisher_;
+    rclcpp::TimerBase::SharedPtr serial_feedback_timer_;
+    rclcpp::TimerBase::SharedPtr output_timer_;
 
     SerialCommunicator serial_comm_;
-    std::vector<unsigned char> front_serial_feedback_data;
-    std::vector<unsigned char> rear_serial_feedback_data;
+    std::vector<unsigned char> front_serial_feedback_data_;
+    std::vector<unsigned char> rear_serial_feedback_data_;
 };

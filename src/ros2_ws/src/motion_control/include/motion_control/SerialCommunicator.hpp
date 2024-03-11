@@ -34,8 +34,8 @@ class SerialCommunicator
     SerialCommunicator& operator=(const SerialCommunicator&);           //copy assignment operator
     
     int sc_write(std::vector<unsigned char>);
-    const std::vector<unsigned char> sc_read(); // method returns a vector of unsigned char's containing feedback message data for parsing, if any are in the serial device queue
-
+    const std::vector<unsigned char> sc_read_front_wheels();            // method reads the front wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
+    const std::vector<unsigned char> sc_read_rear_wheels();             // method reads the rear wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
     bool initialized;
     
     private:

@@ -107,7 +107,7 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
     }
 }
 
-const std::vector<unsigned char> SerialCommunicator::sc_read() 
+const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels() 
 {
     const std::vector<unsigned char> ser_buf;
     unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
@@ -116,7 +116,27 @@ const std::vector<unsigned char> SerialCommunicator::sc_read()
         int bytes_read = read(this->front_wheels_serial_fh_, &read_buf, sizeof(read_buf));
         if (bytes_read == -1) 
         {
-            throw std::runtime_error("Error reading serial buffer.");
+            throw std::runtime_error("Error reading front serial buffer.");
+        }  
+    }
+    catch(const std::runtime_error& re)
+    {
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
+    }
+
+    return ser_buf;
+}
+
+const std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels() 
+{
+    const std::vector<unsigned char> ser_buf;
+    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
+    try
+    {
+        int bytes_read = read(this->rear_wheels_serial_fh_, &read_buf, sizeof(read_buf));
+        if (bytes_read == -1) 
+        {
+            throw std::runtime_error("Error reading rear serial buffer.");
         }  
     }
     catch(const std::runtime_error& re)
