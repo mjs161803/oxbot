@@ -124,6 +124,21 @@ const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
         RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
     }
 
+    // SERIAL DATA IS LITTLE-ENDIAN (LSB FIRST)
+    // generate timestamp and add to ser_buf
+    // verify bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE
+    // verify first 2 bytes are 0xABCD
+    // process CMD1 (signed int16): steer or brake command
+    // process CMD2 (signed int16): speed or throttle
+    // process SpeedR (signed int16): right wheel speed in RPM
+    // process SpeedL (signed int16): left wheel speed in RPM
+    // process Battery Voltage (signed int16): battery voltage x 100
+    // process Temperature (signed int16): temperature in degrees C x 10
+    // process LED (unsigned int16): state of sideboard LEDs
+    // process Checksum (unsigned int16): XOR checksum
+
+    // If feedback data is bad in any way, return 0xFF for all bytes
+
     return ser_buf;
 }
 
