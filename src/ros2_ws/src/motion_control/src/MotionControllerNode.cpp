@@ -1,8 +1,10 @@
 #include <chrono>
 #include "rclcpp/rclcpp.hpp"
 #include "MotionControllerNode.hpp"
+#include "FeedbackFrame.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_config/oxbot_config.hpp"
+
 
 using namespace std::chrono_literals;
 
@@ -50,12 +52,13 @@ void MotionControllerNode::publishOutputCB()
 
 void MotionControllerNode::feedbackTimerCB()
 {
-    std::vector<unsigned char> serial_data;
+    FeedbackFrame current_frame;
+    const std::chrono::time_point<std::chrono::steady_clock> t = std::chrono::steady_clock::now();
+    current_frame.serial_frame = this->serial_comm_.sc_read_front_wheels();
+    current_frame.ts = t;
+    this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(current_frame), std::end(current_frame));
 
-    serial_data = this->serial_comm_.sc_read_front_wheels();
-    this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(serial_data), std::end(serial_data));
-
-    serial_data = this->serial_comm_.sc_read_rear_wheels();
-    this->rear_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(serial_data), std::end(serial_data));
+    current_frame.serial_frame = this->serial_comm_.sc_read_rear_wheels();
+    this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), std::begin(current_frame), std::end(current_frame));
 
 }

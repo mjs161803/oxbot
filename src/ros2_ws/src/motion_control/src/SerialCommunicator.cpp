@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <stdexcept>
+#include <chrono>
 
 #include "termios.h"
 #include "stdio.h"
