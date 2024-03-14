@@ -127,6 +127,8 @@ const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
 
     // SERIAL DATA IS LITTLE-ENDIAN (LSB FIRST)
     // generate timestamp and add to ser_buf
+    const auto ts = std::chrono::steady_clock::now();
+    
     // verify bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE
     // verify first 2 bytes are 0xABCD
     // process CMD1 (signed int16): steer or brake command
