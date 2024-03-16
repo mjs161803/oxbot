@@ -1,0 +1,10 @@
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/uninstall.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/motion_control_uninstall.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/motion_controller.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/test.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/edit_cache.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/rebuild_cache.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/list_install_components.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/install.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/install/local.dir
+/root/oxbot/src/ros2_ws/build/motion_control/CMakeFiles/install/strip.dir

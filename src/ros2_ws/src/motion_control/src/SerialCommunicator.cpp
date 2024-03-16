@@ -20,7 +20,7 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     // Front Wheels Serial Port Configuring
     try
     {
-        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
+        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR | O_NONBLOCK); 
         if (front_wheels_serial_fh_ == -1) 
         {
             initialized = false;
@@ -100,17 +100,17 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
     ser_term.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL);
     ser_term.c_oflag &= ~OPOST;
     ser_term.c_oflag &= ~ONLCR;
-    ser_term.c_cc[VTIME] = 10; // 1 second
-    ser_term.c_cc[VMIN] = 0;
+    ser_term.c_cc[VTIME] = 0; // 0... but serial device is opened non-blocking
+    ser_term.c_cc[VMIN] = 0; // 0... but serial device is opened non-blocking
     cfsetspeed(&ser_term, B115200);
     if (tcsetattr(fh, TCSANOW, &ser_term) != 0) {
         RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcsetattr: %s\n", errno, strerror(errno));
     }
 }
 
-const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels() 
+std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels() 
 {
-    const std::vector<unsigned char> ser_buf;
+    std::vector<unsigned char> ser_buf;
     unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
     try
     {
@@ -126,9 +126,6 @@ const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     }
 
     // SERIAL DATA IS LITTLE-ENDIAN (LSB FIRST)
-    // generate timestamp and add to ser_buf
-    const auto ts = std::chrono::steady_clock::now();
-    
     // verify bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE
     // verify first 2 bytes are 0xABCD
     // process CMD1 (signed int16): steer or brake command
@@ -145,9 +142,9 @@ const std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     return ser_buf;
 }
 
-const std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels() 
+std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels() 
 {
-    const std::vector<unsigned char> ser_buf;
+    std::vector<unsigned char> ser_buf;
     unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
     try
     {

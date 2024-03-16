@@ -1,3 +1,6 @@
+#ifndef FF_H
+#define FF_H
+
 #include <vector>
 #include <chrono>
 
@@ -5,9 +8,11 @@ class FeedbackFrame
 {
     public:
 
-    const std::vector<unsigned char> serial_frame;
-    const std::chrono::time_point<std::chrono::steady_clock> ts;
+    std::vector<unsigned char> serial_msg;
+    std::chrono::time_point<std::chrono::steady_clock> ts;
 
     private:
 
 };
+
+#endif

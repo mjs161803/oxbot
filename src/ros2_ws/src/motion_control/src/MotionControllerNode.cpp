@@ -46,6 +46,10 @@ void MotionControllerNode::publishOutputCB()
     msg.temperature = 6;
     msg.led = 7;
 
+    // iterate over front_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
+
+    // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
+
     output_publisher_->publish(msg);
 
 }
@@ -53,12 +57,27 @@ void MotionControllerNode::publishOutputCB()
 void MotionControllerNode::feedbackTimerCB()
 {
     FeedbackFrame current_frame;
-    const std::chrono::time_point<std::chrono::steady_clock> t = std::chrono::steady_clock::now();
-    current_frame.serial_frame = this->serial_comm_.sc_read_front_wheels();
-    current_frame.ts = t;
-    this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), std::begin(current_frame), std::end(current_frame));
-
-    current_frame.serial_frame = this->serial_comm_.sc_read_rear_wheels();
-    this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), std::begin(current_frame), std::end(current_frame));
-
+    
+    current_frame.ts = std::chrono::steady_clock::now();
+    current_frame.serial_msg = this->serial_comm_.sc_read_front_wheels();
+    if (current_frame.serial_msg.size() != 0)
+    {
+        this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);    
+    }
+    else
+    {
+        RCLCPP_INFO(this->get_logger(), "Reading front wheels serial port device returned no feedback message.");
+    }
+    
+    current_frame.ts = std::chrono::steady_clock::now();
+    current_frame.serial_msg = this->serial_comm_.sc_read_rear_wheels();
+    if (current_frame.serial_msg.size() != 0)
+    {
+        this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);    
+    }
+    else
+    {
+        RCLCPP_INFO(this->get_logger(), "Reading rear wheels serial port device returned no feedback message.");
+    }
+    
 }
