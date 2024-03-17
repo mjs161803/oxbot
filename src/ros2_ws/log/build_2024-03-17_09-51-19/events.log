@@ -1,0 +1,216 @@
+[0.000000] (-) TimerEvent: {}
+[0.000803] (-) JobUnselected: {'identifier': 'oxbot_bringup'}
+[0.001586] (-) JobUnselected: {'identifier': 'oxbot_config'}
+[0.001746] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
+[0.001892] (motion_control) JobQueued: {'identifier': 'motion_control', 'dependencies': OrderedDict([('oxbot_interfaces', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')])}
+[0.003032] (motion_control) JobStarted: {'identifier': 'motion_control'}
+[0.094999] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'cmake'}
+[0.097861] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'build'}
+[0.102197] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/motion_control', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-1b30c350-2631-41f3-a7b4-2e045420d3d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock'), ('_', '/usr/bin/colcon'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('PATH', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':19'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock","/tmp/.X11-unix/X19","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X19'), ('DEBIAN_FRONTEND', 'noninteractive'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')]), 'shell': False}
+[0.107213] (-) TimerEvent: {}
+[0.210786] (-) TimerEvent: {}
+[0.311808] (-) TimerEvent: {}
+[0.412652] (-) TimerEvent: {}
+[0.420192] (motion_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o\x1b[0m\n'}
+[0.513136] (-) TimerEvent: {}
+[0.614381] (-) TimerEvent: {}
+[0.715681] (-) TimerEvent: {}
+[0.817955] (-) TimerEvent: {}
+[0.918925] (-) TimerEvent: {}
+[1.020436] (-) TimerEvent: {}
+[1.121373] (-) TimerEvent: {}
+[1.222248] (-) TimerEvent: {}
+[1.323116] (-) TimerEvent: {}
+[1.424061] (-) TimerEvent: {}
+[1.525128] (-) TimerEvent: {}
+[1.625917] (-) TimerEvent: {}
+[1.726732] (-) TimerEvent: {}
+[1.827523] (-) TimerEvent: {}
+[1.928402] (-) TimerEvent: {}
+[2.029204] (-) TimerEvent: {}
+[2.130009] (-) TimerEvent: {}
+[2.230824] (-) TimerEvent: {}
+[2.331639] (-) TimerEvent: {}
+[2.432449] (-) TimerEvent: {}
+[2.533280] (-) TimerEvent: {}
+[2.634118] (-) TimerEvent: {}
+[2.734954] (-) TimerEvent: {}
+[2.835818] (-) TimerEvent: {}
+[2.936734] (-) TimerEvent: {}
+[3.038009] (-) TimerEvent: {}
+[3.138844] (-) TimerEvent: {}
+[3.239768] (-) TimerEvent: {}
+[3.340712] (-) TimerEvent: {}
+[3.441535] (-) TimerEvent: {}
+[3.542368] (-) TimerEvent: {}
+[3.643213] (-) TimerEvent: {}
+[3.744105] (-) TimerEvent: {}
+[3.845162] (-) TimerEvent: {}
+[3.946158] (-) TimerEvent: {}
+[4.047129] (-) TimerEvent: {}
+[4.148053] (-) TimerEvent: {}
+[4.248898] (-) TimerEvent: {}
+[4.349764] (-) TimerEvent: {}
+[4.450665] (-) TimerEvent: {}
+[4.551536] (-) TimerEvent: {}
+[4.652660] (-) TimerEvent: {}
+[4.753546] (-) TimerEvent: {}
+[4.854429] (-) TimerEvent: {}
+[4.955331] (-) TimerEvent: {}
+[5.056307] (-) TimerEvent: {}
+[5.157218] (-) TimerEvent: {}
+[5.257996] (-) TimerEvent: {}
+[5.358975] (-) TimerEvent: {}
+[5.459926] (-) TimerEvent: {}
+[5.560834] (-) TimerEvent: {}
+[5.661722] (-) TimerEvent: {}
+[5.762581] (-) TimerEvent: {}
+[5.863508] (-) TimerEvent: {}
+[5.964456] (-) TimerEvent: {}
+[6.065347] (-) TimerEvent: {}
+[6.166293] (-) TimerEvent: {}
+[6.267202] (-) TimerEvent: {}
+[6.368145] (-) TimerEvent: {}
+[6.469008] (-) TimerEvent: {}
+[6.570242] (-) TimerEvent: {}
+[6.671161] (-) TimerEvent: {}
+[6.772081] (-) TimerEvent: {}
+[6.872988] (-) TimerEvent: {}
+[6.974240] (-) TimerEvent: {}
+[7.075178] (-) TimerEvent: {}
+[7.176201] (-) TimerEvent: {}
+[7.277506] (-) TimerEvent: {}
+[7.378402] (-) TimerEvent: {}
+[7.479721] (-) TimerEvent: {}
+[7.581079] (-) TimerEvent: {}
+[7.681954] (-) TimerEvent: {}
+[7.782853] (-) TimerEvent: {}
+[7.883726] (-) TimerEvent: {}
+[7.985357] (-) TimerEvent: {}
+[8.087080] (-) TimerEvent: {}
+[8.187973] (-) TimerEvent: {}
+[8.288876] (-) TimerEvent: {}
+[8.389666] (-) TimerEvent: {}
+[8.490538] (-) TimerEvent: {}
+[8.591819] (-) TimerEvent: {}
+[8.692829] (-) TimerEvent: {}
+[8.793773] (-) TimerEvent: {}
+[8.895061] (-) TimerEvent: {}
+[8.995906] (-) TimerEvent: {}
+[9.096786] (-) TimerEvent: {}
+[9.198029] (-) TimerEvent: {}
+[9.299328] (-) TimerEvent: {}
+[9.400283] (-) TimerEvent: {}
+[9.501041] (-) TimerEvent: {}
+[9.601878] (-) TimerEvent: {}
+[9.702790] (-) TimerEvent: {}
+[9.803623] (-) TimerEvent: {}
+[9.904587] (-) TimerEvent: {}
+[10.005436] (-) TimerEvent: {}
+[10.106324] (-) TimerEvent: {}
+[10.207095] (-) TimerEvent: {}
+[10.307955] (-) TimerEvent: {}
+[10.408977] (-) TimerEvent: {}
+[10.509743] (-) TimerEvent: {}
+[10.610577] (-) TimerEvent: {}
+[10.711410] (-) TimerEvent: {}
+[10.812304] (-) TimerEvent: {}
+[10.913126] (-) TimerEvent: {}
+[11.013984] (-) TimerEvent: {}
+[11.114904] (-) TimerEvent: {}
+[11.215732] (-) TimerEvent: {}
+[11.316609] (-) TimerEvent: {}
+[11.417377] (-) TimerEvent: {}
+[11.518254] (-) TimerEvent: {}
+[11.619024] (-) TimerEvent: {}
+[11.719872] (-) TimerEvent: {}
+[11.820763] (-) TimerEvent: {}
+[11.921597] (-) TimerEvent: {}
+[12.022518] (-) TimerEvent: {}
+[12.123365] (-) TimerEvent: {}
+[12.224354] (-) TimerEvent: {}
+[12.325191] (-) TimerEvent: {}
+[12.409494] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KSerialCommunicator& SerialCommunicator::operator=(const SerialCommunicator&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.410337] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:82:77:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kassigner\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[12.410902] (motion_control) StderrLine: {'line': b' SerialCommunicator& SerialCommunicator::operator=(const SerialCommunicator& \x1b[01;35m\x1b[Kassigner\x1b[m\x1b[K)\n'}
+[12.411408] (motion_control) StderrLine: {'line': b'                                                                             \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.424400] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SerialCommunicator::sc_write(std::vector<unsigned char, std::allocator<unsigned char> >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.425181] (motion_control) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:214:61:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwrite_buf\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[12.425722] (-) TimerEvent: {}
+[12.426171] (motion_control) StderrLine: {'line': b' int SerialCommunicator::sc_write(std::vector<unsigned char> \x1b[01;35m\x1b[Kwrite_buf\x1b[m\x1b[K)\n'}
+[12.426821] (motion_control) StderrLine: {'line': b'                                                             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[12.526005] (-) TimerEvent: {}
+[12.627307] (-) TimerEvent: {}
+[12.728186] (-) TimerEvent: {}
+[12.829095] (-) TimerEvent: {}
+[12.929870] (-) TimerEvent: {}
+[13.031809] (-) TimerEvent: {}
+[13.132848] (-) TimerEvent: {}
+[13.233686] (-) TimerEvent: {}
+[13.334522] (-) TimerEvent: {}
+[13.435357] (-) TimerEvent: {}
+[13.536188] (-) TimerEvent: {}
+[13.637014] (-) TimerEvent: {}
+[13.738277] (-) TimerEvent: {}
+[13.839126] (-) TimerEvent: {}
+[13.940013] (-) TimerEvent: {}
+[14.040943] (-) TimerEvent: {}
+[14.141838] (-) TimerEvent: {}
+[14.242672] (-) TimerEvent: {}
+[14.343545] (-) TimerEvent: {}
+[14.444817] (-) TimerEvent: {}
+[14.545749] (-) TimerEvent: {}
+[14.646625] (-) TimerEvent: {}
+[14.747482] (-) TimerEvent: {}
+[14.848412] (-) TimerEvent: {}
+[14.949230] (-) TimerEvent: {}
+[15.050096] (-) TimerEvent: {}
+[15.151013] (-) TimerEvent: {}
+[15.251843] (-) TimerEvent: {}
+[15.292588] (motion_control) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable motion_controller\x1b[0m\n'}
+[15.352097] (-) TimerEvent: {}
+[15.453007] (-) TimerEvent: {}
+[15.553848] (-) TimerEvent: {}
+[15.655251] (-) TimerEvent: {}
+[15.756088] (-) TimerEvent: {}
+[15.857227] (-) TimerEvent: {}
+[15.958129] (-) TimerEvent: {}
+[16.058980] (-) TimerEvent: {}
+[16.148558] (motion_control) StdoutLine: {'line': b'[100%] Built target motion_controller\n'}
+[16.159165] (-) TimerEvent: {}
+[16.183940] (motion_control) CommandEnded: {'returncode': 0}
+[16.259512] (-) TimerEvent: {}
+[16.360499] (-) TimerEvent: {}
+[16.419644] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'install'}
+[16.460837] (-) TimerEvent: {}
+[16.561899] (-) TimerEvent: {}
+[16.588873] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/root/oxbot/src/ros2_ws/build/motion_control'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-1b30c350-2631-41f3-a7b4-2e045420d3d2.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock'), ('_', '/usr/bin/colcon'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm-256color'), ('PATH', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':19'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock","/tmp/.X11-unix/X19","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-cb38ccfa-f051-4419-8a70-fa63b05bc2f5.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X19'), ('DEBIAN_FRONTEND', 'noninteractive'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')]), 'shell': False}
+[16.662199] (-) TimerEvent: {}
+[16.739567] (motion_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[16.746990] (motion_control) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/motion_control/lib/motion_control/motion_controller\n'}
+[16.752049] (motion_control) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/motion_control/lib/motion_control/motion_controller" to ""\n'}
+[16.758747] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/package_run_dependencies/motion_control\n'}
+[16.759460] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/parent_prefix_path/motion_control\n'}
+[16.760099] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.sh\n'}
+[16.760893] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.dsv\n'}
+[16.761517] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.sh\n'}
+[16.762238] (-) TimerEvent: {}
+[16.763228] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.dsv\n'}
+[16.763953] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.bash\n'}
+[16.764772] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.sh\n'}
+[16.765481] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.zsh\n'}
+[16.766158] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.dsv\n'}
+[16.766822] (motion_control) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.dsv\n'}
+[16.767470] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/packages/motion_control\n'}
+[16.768138] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig.cmake\n'}
+[16.768939] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig-version.cmake\n'}
+[16.769659] (motion_control) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.xml\n'}
+[16.787166] (motion_control) CommandEnded: {'returncode': 0}
+[16.862417] (-) TimerEvent: {}
+[16.964652] (-) TimerEvent: {}
+[17.065699] (-) TimerEvent: {}
+[17.166747] (-) TimerEvent: {}
+[17.272678] (-) TimerEvent: {}
+[17.373414] (-) TimerEvent: {}
+[17.441277] (motion_control) JobEnded: {'identifier': 'motion_control', 'rc': 0}
+[17.446279] (-) EventReactorShutdown: {}

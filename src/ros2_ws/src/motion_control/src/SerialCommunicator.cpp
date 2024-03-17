@@ -111,10 +111,12 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
 std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels() 
 {
     std::vector<unsigned char> ser_buf;
-    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
+    bool valid_msg {false};
+    int bytes_read {0};
+    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE] = {};
     try
     {
-        int bytes_read = read(this->front_wheels_serial_fh_, &read_buf, sizeof(read_buf));
+        bytes_read = read(this->front_wheels_serial_fh_, &read_buf, sizeof(read_buf));
         if (bytes_read == -1) 
         {
             throw std::runtime_error("Error reading front serial buffer.");
@@ -126,18 +128,65 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     }
 
     // SERIAL DATA IS LITTLE-ENDIAN (LSB FIRST)
+    
     // verify bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE
     // verify first 2 bytes are 0xABCD
-    // process CMD1 (signed int16): steer or brake command
-    // process CMD2 (signed int16): speed or throttle
-    // process SpeedR (signed int16): right wheel speed in RPM
-    // process SpeedL (signed int16): left wheel speed in RPM
-    // process Battery Voltage (signed int16): battery voltage x 100
-    // process Temperature (signed int16): temperature in degrees C x 10
-    // process LED (unsigned int16): state of sideboard LEDs
-    // process Checksum (unsigned int16): XOR checksum
+    if ((bytes_read != MC_SERIAL_FEEDBACK_MESSAGE_SIZE) | (read_buf[0] != 0xCD) | (read_buf[1] != 0xAB))
+    {
+        valid_msg = false;
+        RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "Non-valid serial message from front wheels: %d bytes read, 0x%2x 0x%2x header bytes", bytes_read, read_buf[0], read_buf[1]);
+    }
+    else
+    {
+        valid_msg = true;
+    }
 
-    // If feedback data is bad in any way, return 0xFF for all bytes
+    // verify XOR checksum
+    unsigned char checksum_lsb = read_buf[0]^read_buf[2]^read_buf[4]^read_buf[6]^read_buf[8]^read_buf[10]^read_buf[12]^read_buf[14]^read_buf[16];
+    unsigned char checksum_msb = read_buf[1]^read_buf[3]^read_buf[5]^read_buf[7]^read_buf[9]^read_buf[11]^read_buf[13]^read_buf[15]^read_buf[17];
+    if ((checksum_lsb != read_buf[17]) | (checksum_msb != read_buf[18]))
+    {
+        valid_msg = false;
+        RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "Calculated serial frame checksum does not match received: calculated 0x%2x %2x, received 0x%2x %2x", checksum_msb, checksum_lsb, read_buf[18], read_buf[17]);
+    }
+
+    if (valid_msg)
+    {
+        ser_buf.push_back(read_buf[1]);
+        ser_buf.push_back(read_buf[0]);
+
+        // process CMD1 (signed int16): steer or brake command
+        ser_buf.push_back(read_buf[3]);
+        ser_buf.push_back(read_buf[2]);
+        
+        // process CMD2 (signed int16): speed or throttle
+        ser_buf.push_back(read_buf[5]);
+        ser_buf.push_back(read_buf[4]);
+        
+        // process SpeedR (signed int16): right wheel speed in RPM
+        ser_buf.push_back(read_buf[7]);
+        ser_buf.push_back(read_buf[6]);
+        
+        // process SpeedL (signed int16): left wheel speed in RPM
+        ser_buf.push_back(read_buf[9]);
+        ser_buf.push_back(read_buf[8]);
+        
+        // process Battery Voltage (signed int16): battery voltage x 100
+        ser_buf.push_back(read_buf[11]);
+        ser_buf.push_back(read_buf[10]);
+        
+        // process Temperature (signed int16): temperature in degrees C x 10
+        ser_buf.push_back(read_buf[13]);
+        ser_buf.push_back(read_buf[12]);
+        
+        // process LED (unsigned int16): state of sideboard LEDs
+        ser_buf.push_back(read_buf[15]);
+        ser_buf.push_back(read_buf[14]);
+        
+        // process Checksum (unsigned int16): XOR checksum
+        ser_buf.push_back(read_buf[17]);
+        ser_buf.push_back(read_buf[16]);
+    }
 
     return ser_buf;
 }
