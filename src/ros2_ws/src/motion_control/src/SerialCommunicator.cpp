@@ -188,6 +188,8 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
         ser_buf.push_back(read_buf[16]);
     }
 
+    tcflush(front_wheels_serial_fh_, TCIFLUSH);
+
     return ser_buf;
 }
 
