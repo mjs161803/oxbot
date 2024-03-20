@@ -1,0 +1,1040 @@
+[0.000000] (-) TimerEvent: {}
+[0.000722] (oxbot_bringup) JobQueued: {'identifier': 'oxbot_bringup', 'dependencies': OrderedDict()}
+[0.001416] (oxbot_config) JobQueued: {'identifier': 'oxbot_config', 'dependencies': OrderedDict()}
+[0.002822] (oxbot_interfaces) JobQueued: {'identifier': 'oxbot_interfaces', 'dependencies': OrderedDict()}
+[0.003809] (motion_control) JobQueued: {'identifier': 'motion_control', 'dependencies': OrderedDict([('oxbot_interfaces', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces')])}
+[0.010222] (oxbot_interfaces) JobStarted: {'identifier': 'oxbot_interfaces'}
+[0.098939] (-) TimerEvent: {}
+[0.158864] (oxbot_bringup) JobStarted: {'identifier': 'oxbot_bringup'}
+[0.201960] (-) TimerEvent: {}
+[0.277583] (oxbot_config) JobStarted: {'identifier': 'oxbot_config'}
+[0.307357] (-) TimerEvent: {}
+[0.401107] (oxbot_interfaces) JobProgress: {'identifier': 'oxbot_interfaces', 'progress': 'cmake'}
+[0.404464] (oxbot_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '/root/oxbot/src/ros2_ws/src/oxbot_interfaces', '-DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_interfaces'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_interfaces', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_interfaces'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[0.418336] (-) TimerEvent: {}
+[0.420264] (oxbot_bringup) JobProgress: {'identifier': 'oxbot_bringup', 'progress': 'cmake'}
+[0.421466] (oxbot_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '/root/oxbot/src/ros2_ws/src/oxbot_bringup', '-DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_bringup'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_bringup', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_bringup'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[0.440322] (oxbot_config) JobProgress: {'identifier': 'oxbot_config', 'progress': 'cmake'}
+[0.440986] (oxbot_config) Command: {'cmd': ['/usr/local/bin/cmake', '/root/oxbot/src/ros2_ws/src/oxbot_config', '-DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_config'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_config', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_config'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[0.518609] (-) TimerEvent: {}
+[0.620960] (-) TimerEvent: {}
+[0.722437] (-) TimerEvent: {}
+[0.804419] (oxbot_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.817607] (oxbot_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.822634] (-) TimerEvent: {}
+[0.842598] (oxbot_config) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.922831] (-) TimerEvent: {}
+[1.023847] (-) TimerEvent: {}
+[1.123629] (oxbot_config) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[1.124697] (-) TimerEvent: {}
+[1.125399] (oxbot_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[1.127548] (oxbot_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[1.214491] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.219048] (oxbot_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.224896] (-) TimerEvent: {}
+[1.237727] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.325113] (-) TimerEvent: {}
+[1.426346] (-) TimerEvent: {}
+[1.523422] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.526541] (-) TimerEvent: {}
+[1.533494] (oxbot_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.588849] (oxbot_config) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.590129] (oxbot_config) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.592168] (oxbot_config) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.626725] (-) TimerEvent: {}
+[1.654855] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.658742] (oxbot_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.669179] (oxbot_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.670340] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.674671] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.727563] (-) TimerEvent: {}
+[1.755817] (oxbot_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.758309] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.760385] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.762833] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.812437] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.827754] (-) TimerEvent: {}
+[1.928615] (-) TimerEvent: {}
+[1.950753] (oxbot_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.028955] (-) TimerEvent: {}
+[2.042570] (oxbot_config) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.045683] (oxbot_config) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.049780] (oxbot_config) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.071873] (oxbot_config) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[2.129562] (-) TimerEvent: {}
+[2.231326] (-) TimerEvent: {}
+[2.254363] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.332547] (-) TimerEvent: {}
+[2.346205] (oxbot_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.348932] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.351433] (oxbot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.369736] (oxbot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[2.371075] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.432532] (-) TimerEvent: {}
+[2.509953] (oxbot_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.511338] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.514652] (oxbot_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.532717] (-) TimerEvent: {}
+[2.541748] (oxbot_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[2.632926] (-) TimerEvent: {}
+[2.734357] (-) TimerEvent: {}
+[2.835814] (-) TimerEvent: {}
+[2.937220] (-) TimerEvent: {}
+[3.038605] (-) TimerEvent: {}
+[3.140050] (-) TimerEvent: {}
+[3.241240] (-) TimerEvent: {}
+[3.342392] (-) TimerEvent: {}
+[3.443819] (-) TimerEvent: {}
+[3.545156] (-) TimerEvent: {}
+[3.646509] (-) TimerEvent: {}
+[3.747964] (-) TimerEvent: {}
+[3.850110] (-) TimerEvent: {}
+[3.951562] (-) TimerEvent: {}
+[4.052831] (-) TimerEvent: {}
+[4.153682] (-) TimerEvent: {}
+[4.254516] (-) TimerEvent: {}
+[4.355700] (-) TimerEvent: {}
+[4.457193] (-) TimerEvent: {}
+[4.558542] (-) TimerEvent: {}
+[4.659954] (-) TimerEvent: {}
+[4.761254] (-) TimerEvent: {}
+[4.862521] (-) TimerEvent: {}
+[4.963849] (-) TimerEvent: {}
+[5.065181] (-) TimerEvent: {}
+[5.166517] (-) TimerEvent: {}
+[5.267470] (-) TimerEvent: {}
+[5.368880] (-) TimerEvent: {}
+[5.470190] (-) TimerEvent: {}
+[5.571615] (-) TimerEvent: {}
+[5.673081] (-) TimerEvent: {}
+[5.774434] (-) TimerEvent: {}
+[5.875800] (-) TimerEvent: {}
+[5.977103] (-) TimerEvent: {}
+[6.077994] (-) TimerEvent: {}
+[6.179274] (-) TimerEvent: {}
+[6.280738] (-) TimerEvent: {}
+[6.383062] (-) TimerEvent: {}
+[6.487402] (-) TimerEvent: {}
+[6.588683] (-) TimerEvent: {}
+[6.689586] (-) TimerEvent: {}
+[6.790924] (-) TimerEvent: {}
+[6.892638] (-) TimerEvent: {}
+[6.993983] (-) TimerEvent: {}
+[7.094877] (-) TimerEvent: {}
+[7.195801] (-) TimerEvent: {}
+[7.297115] (-) TimerEvent: {}
+[7.398030] (-) TimerEvent: {}
+[7.499452] (-) TimerEvent: {}
+[7.600770] (-) TimerEvent: {}
+[7.702142] (-) TimerEvent: {}
+[7.804046] (-) TimerEvent: {}
+[7.863535] (oxbot_config) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter \n'}
+[7.904246] (-) TimerEvent: {}
+[8.005607] (-) TimerEvent: {}
+[8.043646] (oxbot_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter \n'}
+[8.105794] (-) TimerEvent: {}
+[8.206919] (-) TimerEvent: {}
+[8.263176] (oxbot_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter \n'}
+[8.307109] (-) TimerEvent: {}
+[8.407978] (-) TimerEvent: {}
+[8.509272] (-) TimerEvent: {}
+[8.610539] (-) TimerEvent: {}
+[8.711926] (-) TimerEvent: {}
+[8.757932] (oxbot_config) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/install/share/rosidl_default_generators/cmake)\n'}
+[8.781879] (oxbot_config) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.809204] (oxbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/install/share/rosidl_default_generators/cmake)\n'}
+[8.812106] (-) TimerEvent: {}
+[8.837364] (oxbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.843490] (oxbot_config) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[8.908915] (oxbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[8.912275] (-) TimerEvent: {}
+[9.013167] (-) TimerEvent: {}
+[9.114025] (-) TimerEvent: {}
+[9.139580] (oxbot_config) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.214415] (oxbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.215168] (-) TimerEvent: {}
+[9.316447] (-) TimerEvent: {}
+[9.417261] (-) TimerEvent: {}
+[9.427438] (oxbot_config) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)\n'}
+[9.517459] (-) TimerEvent: {}
+[9.618755] (-) TimerEvent: {}
+[9.720267] (-) TimerEvent: {}
+[9.742822] (oxbot_bringup) StdoutLine: {'line': b'-- Configuring done (9.2s)\n'}
+[9.779175] (oxbot_bringup) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[9.786095] (oxbot_bringup) StdoutLine: {'line': b'-- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_bringup\n'}
+[9.820471] (-) TimerEvent: {}
+[9.847416] (oxbot_bringup) CommandEnded: {'returncode': 0}
+[9.858570] (oxbot_bringup) JobProgress: {'identifier': 'oxbot_bringup', 'progress': 'build'}
+[9.859527] (oxbot_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/oxbot_bringup', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_bringup', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_bringup'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[9.920706] (-) TimerEvent: {}
+[10.021698] (-) TimerEvent: {}
+[10.122612] (-) TimerEvent: {}
+[10.209258] (oxbot_bringup) CommandEnded: {'returncode': 0}
+[10.224562] (-) TimerEvent: {}
+[10.326037] (-) TimerEvent: {}
+[10.339119] (oxbot_config) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[10.340400] (oxbot_config) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /root/oxbot/src/ros2_ws/src/oxbot_config/include\n'}
+[10.341104] (oxbot_config) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[10.355129] (oxbot_config) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[10.367650] (oxbot_config) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[10.368702] (oxbot_config) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[10.373583] (oxbot_config) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[10.382249] (oxbot_config) StdoutLine: {'line': b'-- Configuring done (9.8s)\n'}
+[10.401327] (oxbot_config) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[10.408316] (oxbot_config) StdoutLine: {'line': b'-- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_config\n'}
+[10.426238] (-) TimerEvent: {}
+[10.467203] (oxbot_config) CommandEnded: {'returncode': 0}
+[10.471912] (oxbot_config) JobProgress: {'identifier': 'oxbot_config', 'progress': 'build'}
+[10.472139] (oxbot_config) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/oxbot_config', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_config', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_config'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[10.526459] (-) TimerEvent: {}
+[10.629168] (-) TimerEvent: {}
+[10.732655] (-) TimerEvent: {}
+[10.817194] (oxbot_bringup) JobProgress: {'identifier': 'oxbot_bringup', 'progress': 'install'}
+[10.833567] (-) TimerEvent: {}
+[10.934973] (-) TimerEvent: {}
+[11.035930] (-) TimerEvent: {}
+[11.084235] (oxbot_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/root/oxbot/src/ros2_ws/build/oxbot_bringup'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_bringup', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_bringup'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[11.113513] (oxbot_config) CommandEnded: {'returncode': 0}
+[11.136129] (-) TimerEvent: {}
+[11.238964] (-) TimerEvent: {}
+[11.269638] (oxbot_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.270779] (oxbot_bringup) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/launch\n'}
+[11.291523] (oxbot_bringup) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.dsv\n'}
+[11.337296] (oxbot_bringup) CommandEnded: {'returncode': 0}
+[11.344934] (-) TimerEvent: {}
+[11.450866] (-) TimerEvent: {}
+[11.556404] (oxbot_config) JobProgress: {'identifier': 'oxbot_config', 'progress': 'install'}
+[11.556744] (-) TimerEvent: {}
+[11.564017] (oxbot_config) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/root/oxbot/src/ros2_ws/build/oxbot_config'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_config', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_config'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[11.657055] (-) TimerEvent: {}
+[11.731034] (oxbot_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.736029] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include/\n'}
+[11.737946] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config\n'}
+[11.740360] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config/oxbot_config.hpp\n'}
+[11.740955] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/package_run_dependencies/oxbot_config\n'}
+[11.741530] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/parent_prefix_path/oxbot_config\n'}
+[11.742071] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.sh\n'}
+[11.742624] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.dsv\n'}
+[11.743158] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.sh\n'}
+[11.752449] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.dsv\n'}
+[11.753031] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.bash\n'}
+[11.753583] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.sh\n'}
+[11.754185] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.zsh\n'}
+[11.754748] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.dsv\n'}
+[11.755322] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.dsv\n'}
+[11.755902] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/packages/oxbot_config\n'}
+[11.756472] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig.cmake\n'}
+[11.756999] (oxbot_config) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig-version.cmake\n'}
+[11.757501] (-) TimerEvent: {}
+[11.758721] (oxbot_config) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.xml\n'}
+[11.769926] (oxbot_config) CommandEnded: {'returncode': 0}
+[11.862917] (-) TimerEvent: {}
+[11.991675] (-) TimerEvent: {}
+[12.110103] (-) TimerEvent: {}
+[12.211121] (-) TimerEvent: {}
+[12.228269] (oxbot_bringup) JobEnded: {'identifier': 'oxbot_bringup', 'rc': 0}
+[12.316479] (-) TimerEvent: {}
+[12.422419] (-) TimerEvent: {}
+[12.469980] (oxbot_config) JobEnded: {'identifier': 'oxbot_config', 'rc': 0}
+[12.522709] (-) TimerEvent: {}
+[12.623558] (-) TimerEvent: {}
+[12.724316] (-) TimerEvent: {}
+[12.736496] (oxbot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/install/share/ament_cmake_ros/cmake)\n'}
+[12.824567] (-) TimerEvent: {}
+[12.925322] (-) TimerEvent: {}
+[13.026140] (-) TimerEvent: {}
+[13.126928] (-) TimerEvent: {}
+[13.227812] (-) TimerEvent: {}
+[13.328562] (-) TimerEvent: {}
+[13.429388] (-) TimerEvent: {}
+[13.530228] (-) TimerEvent: {}
+[13.631004] (-) TimerEvent: {}
+[13.731758] (-) TimerEvent: {}
+[13.832563] (-) TimerEvent: {}
+[13.934340] (-) TimerEvent: {}
+[14.035590] (-) TimerEvent: {}
+[14.136411] (-) TimerEvent: {}
+[14.238481] (-) TimerEvent: {}
+[14.339629] (-) TimerEvent: {}
+[14.440373] (-) TimerEvent: {}
+[14.541070] (-) TimerEvent: {}
+[14.641856] (-) TimerEvent: {}
+[14.742702] (-) TimerEvent: {}
+[14.843516] (-) TimerEvent: {}
+[14.933892] (oxbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[14.943711] (-) TimerEvent: {}
+[15.044962] (-) TimerEvent: {}
+[15.145846] (-) TimerEvent: {}
+[15.246674] (-) TimerEvent: {}
+[15.347746] (-) TimerEvent: {}
+[15.448586] (-) TimerEvent: {}
+[15.549560] (-) TimerEvent: {}
+[15.650338] (-) TimerEvent: {}
+[15.751106] (-) TimerEvent: {}
+[15.853259] (-) TimerEvent: {}
+[15.954071] (-) TimerEvent: {}
+[16.054910] (-) TimerEvent: {}
+[16.155755] (-) TimerEvent: {}
+[16.256601] (-) TimerEvent: {}
+[16.357401] (-) TimerEvent: {}
+[16.458748] (-) TimerEvent: {}
+[16.559578] (-) TimerEvent: {}
+[16.660322] (-) TimerEvent: {}
+[16.761090] (-) TimerEvent: {}
+[16.861911] (-) TimerEvent: {}
+[16.962765] (-) TimerEvent: {}
+[17.063580] (-) TimerEvent: {}
+[17.164334] (-) TimerEvent: {}
+[17.265169] (-) TimerEvent: {}
+[17.365995] (-) TimerEvent: {}
+[17.466772] (-) TimerEvent: {}
+[17.567538] (-) TimerEvent: {}
+[17.668311] (-) TimerEvent: {}
+[17.769138] (-) TimerEvent: {}
+[17.789922] (oxbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[17.804019] (oxbot_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/install/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[17.804775] (oxbot_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[17.805325] (oxbot_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[17.805815] (oxbot_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[17.806305] (oxbot_interfaces) StderrLine: {'line': b'\n'}
+[17.806813] (oxbot_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[17.807369] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[17.807894] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[17.808376] (oxbot_interfaces) StderrLine: {'line': b'  CMakeLists.txt:15 (rosidl_generate_interfaces)\n'}
+[17.808819] (oxbot_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[17.809274] (oxbot_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[17.869424] (-) TimerEvent: {}
+[17.918520] (oxbot_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3.6 (found suitable version "3.6.9", minimum required is "3.6") \n'}
+[17.939474] (oxbot_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/install/share/python_cmake_module/cmake)\n'}
+[17.943032] (oxbot_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/install/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[17.943823] (oxbot_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[17.944397] (oxbot_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[17.944961] (oxbot_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[17.945482] (oxbot_interfaces) StderrLine: {'line': b'\n'}
+[17.945990] (oxbot_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[17.946519] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[17.947025] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[17.947635] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[17.948209] (oxbot_interfaces) StderrLine: {'line': b'  CMakeLists.txt:15 (rosidl_generate_interfaces)\n'}
+[17.948752] (oxbot_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[17.949262] (oxbot_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[17.969596] (-) TimerEvent: {}
+[18.053045] (oxbot_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/install/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[18.053746] (oxbot_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[18.054285] (oxbot_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[18.054757] (oxbot_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[18.055201] (oxbot_interfaces) StderrLine: {'line': b'\n'}
+[18.055813] (oxbot_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[18.056273] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[18.056764] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[18.057300] (oxbot_interfaces) StderrLine: {'line': b'  /opt/ros/humble/install/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[18.057810] (oxbot_interfaces) StderrLine: {'line': b'  CMakeLists.txt:15 (rosidl_generate_interfaces)\n'}
+[18.058326] (oxbot_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[18.058819] (oxbot_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[18.069829] (-) TimerEvent: {}
+[18.085189] (oxbot_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.6m.so (found suitable version "3.6.9", minimum required is "3.5") \n'}
+[18.086432] (oxbot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3.6\n'}
+[18.087101] (oxbot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m\n'}
+[18.087770] (oxbot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.6m.so\n'}
+[18.170062] (-) TimerEvent: {}
+[18.197003] (oxbot_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[18.270248] (-) TimerEvent: {}
+[18.371459] (-) TimerEvent: {}
+[18.475392] (-) TimerEvent: {}
+[18.576637] (-) TimerEvent: {}
+[18.677401] (-) TimerEvent: {}
+[18.778175] (-) TimerEvent: {}
+[18.878990] (-) TimerEvent: {}
+[18.979780] (-) TimerEvent: {}
+[19.080536] (-) TimerEvent: {}
+[19.181231] (-) TimerEvent: {}
+[19.281996] (-) TimerEvent: {}
+[19.382798] (-) TimerEvent: {}
+[19.483661] (-) TimerEvent: {}
+[19.507989] (oxbot_interfaces) StdoutLine: {'line': b'-- Using numpy include directory: /usr/local/lib/python3.6/dist-packages/numpy/core/include\n'}
+[19.543779] (oxbot_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)\n'}
+[19.583853] (-) TimerEvent: {}
+[19.664882] (oxbot_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[19.670631] (oxbot_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[19.684042] (-) TimerEvent: {}
+[19.685266] (oxbot_interfaces) StdoutLine: {'line': b'-- Configuring done (19.1s)\n'}
+[19.784239] (-) TimerEvent: {}
+[19.872765] (oxbot_interfaces) StdoutLine: {'line': b'-- Generating done (0.2s)\n'}
+[19.884449] (-) TimerEvent: {}
+[19.886771] (oxbot_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_interfaces\n'}
+[19.949192] (oxbot_interfaces) CommandEnded: {'returncode': 0}
+[19.953655] (oxbot_interfaces) JobProgress: {'identifier': 'oxbot_interfaces', 'progress': 'build'}
+[19.953975] (oxbot_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/oxbot_interfaces', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_interfaces', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_interfaces'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[19.984696] (-) TimerEvent: {}
+[20.085580] (-) TimerEvent: {}
+[20.186805] (-) TimerEvent: {}
+[20.209048] (oxbot_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[20.229972] (oxbot_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[20.235236] (oxbot_interfaces) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_oxbot_interfaces\n'}
+[20.287045] (-) TimerEvent: {}
+[20.388311] (-) TimerEvent: {}
+[20.489420] (-) TimerEvent: {}
+[20.590561] (-) TimerEvent: {}
+[20.691757] (-) TimerEvent: {}
+[20.792487] (-) TimerEvent: {}
+[20.894177] (-) TimerEvent: {}
+[20.995144] (-) TimerEvent: {}
+[21.096293] (-) TimerEvent: {}
+[21.197430] (-) TimerEvent: {}
+[21.298540] (-) TimerEvent: {}
+[21.399735] (-) TimerEvent: {}
+[21.500908] (-) TimerEvent: {}
+[21.602061] (-) TimerEvent: {}
+[21.703177] (-) TimerEvent: {}
+[21.804362] (-) TimerEvent: {}
+[21.905457] (-) TimerEvent: {}
+[22.006730] (-) TimerEvent: {}
+[22.038910] (oxbot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[22.041792] (oxbot_interfaces) StdoutLine: {'line': b'creating oxbot_interfaces.egg-info\n'}
+[22.042661] (oxbot_interfaces) StdoutLine: {'line': b'writing oxbot_interfaces.egg-info/PKG-INFO\n'}
+[22.043542] (oxbot_interfaces) StdoutLine: {'line': b'writing dependency_links to oxbot_interfaces.egg-info/dependency_links.txt\n'}
+[22.044304] (oxbot_interfaces) StdoutLine: {'line': b'writing top-level names to oxbot_interfaces.egg-info/top_level.txt\n'}
+[22.045207] (oxbot_interfaces) StdoutLine: {'line': b"writing manifest file 'oxbot_interfaces.egg-info/SOURCES.txt'\n"}
+[22.059655] (oxbot_interfaces) StdoutLine: {'line': b"reading manifest file 'oxbot_interfaces.egg-info/SOURCES.txt'\n"}
+[22.064639] (oxbot_interfaces) StdoutLine: {'line': b"writing manifest file 'oxbot_interfaces.egg-info/SOURCES.txt'\n"}
+[22.106989] (-) TimerEvent: {}
+[22.169626] (oxbot_interfaces) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_oxbot_interfaces_egg\n'}
+[22.207280] (-) TimerEvent: {}
+[22.307962] (-) TimerEvent: {}
+[22.408717] (-) TimerEvent: {}
+[22.509432] (-) TimerEvent: {}
+[22.610144] (-) TimerEvent: {}
+[22.710810] (-) TimerEvent: {}
+[22.811505] (-) TimerEvent: {}
+[22.912356] (-) TimerEvent: {}
+[22.959661] (oxbot_interfaces) StdoutLine: {'line': b'[  4%] Built target oxbot_interfaces__cpp\n'}
+[22.976567] (oxbot_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[22.988347] (oxbot_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[23.010851] (oxbot_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[23.012534] (-) TimerEvent: {}
+[23.113809] (-) TimerEvent: {}
+[23.215067] (-) TimerEvent: {}
+[23.316794] (-) TimerEvent: {}
+[23.417968] (-) TimerEvent: {}
+[23.518762] (-) TimerEvent: {}
+[23.619606] (-) TimerEvent: {}
+[23.655579] (oxbot_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c.o\x1b[0m\n'}
+[23.719751] (-) TimerEvent: {}
+[23.820585] (-) TimerEvent: {}
+[23.921825] (-) TimerEvent: {}
+[24.023034] (-) TimerEvent: {}
+[24.096626] (oxbot_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_command__functions.c.o\x1b[0m\n'}
+[24.123283] (-) TimerEvent: {}
+[24.225302] (-) TimerEvent: {}
+[24.326623] (-) TimerEvent: {}
+[24.427850] (-) TimerEvent: {}
+[24.453225] (oxbot_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c.o\x1b[0m\n'}
+[24.528042] (-) TimerEvent: {}
+[24.628811] (-) TimerEvent: {}
+[24.730004] (-) TimerEvent: {}
+[24.831239] (-) TimerEvent: {}
+[24.899844] (oxbot_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library liboxbot_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[24.931373] (-) TimerEvent: {}
+[25.032513] (-) TimerEvent: {}
+[25.095996] (oxbot_interfaces) StdoutLine: {'line': b'[ 19%] Built target oxbot_interfaces__rosidl_generator_c\n'}
+[25.132953] (oxbot_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[25.133729] (-) TimerEvent: {}
+[25.234909] (-) TimerEvent: {}
+[25.335697] (-) TimerEvent: {}
+[25.436907] (-) TimerEvent: {}
+[25.538498] (-) TimerEvent: {}
+[25.639657] (-) TimerEvent: {}
+[25.740461] (-) TimerEvent: {}
+[25.841663] (-) TimerEvent: {}
+[25.944123] (-) TimerEvent: {}
+[25.948370] (oxbot_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/oxbot_interfaces/msg/hoverboard_feedback__type_support.cpp.o\x1b[0m\n'}
+[26.044305] (-) TimerEvent: {}
+[26.145518] (-) TimerEvent: {}
+[26.228087] (oxbot_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp.o\x1b[0m\n'}
+[26.245714] (-) TimerEvent: {}
+[26.346473] (-) TimerEvent: {}
+[26.447757] (-) TimerEvent: {}
+[26.548961] (-) TimerEvent: {}
+[26.650358] (-) TimerEvent: {}
+[26.751144] (-) TimerEvent: {}
+[26.830219] (oxbot_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/oxbot_interfaces/msg/detail/dds_fastrtps/hoverboard_feedback__type_support.cpp.o\x1b[0m\n'}
+[26.851375] (-) TimerEvent: {}
+[26.952258] (-) TimerEvent: {}
+[27.053543] (-) TimerEvent: {}
+[27.154376] (-) TimerEvent: {}
+[27.255278] (-) TimerEvent: {}
+[27.356525] (-) TimerEvent: {}
+[27.459380] (-) TimerEvent: {}
+[27.560780] (-) TimerEvent: {}
+[27.617545] (oxbot_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/oxbot_interfaces/msg/hoverboard_command__type_support.cpp.o\x1b[0m\n'}
+[27.661004] (-) TimerEvent: {}
+[27.762256] (-) TimerEvent: {}
+[27.863511] (-) TimerEvent: {}
+[27.964811] (-) TimerEvent: {}
+[28.066101] (-) TimerEvent: {}
+[28.167371] (-) TimerEvent: {}
+[28.268632] (-) TimerEvent: {}
+[28.369914] (-) TimerEvent: {}
+[28.446046] (oxbot_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp.o\x1b[0m\n'}
+[28.470115] (-) TimerEvent: {}
+[28.571393] (-) TimerEvent: {}
+[28.672159] (-) TimerEvent: {}
+[28.773371] (-) TimerEvent: {}
+[28.874825] (-) TimerEvent: {}
+[28.904228] (oxbot_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/oxbot_interfaces/srv/compute_rectangle_area__type_support.cpp.o\x1b[0m\n'}
+[28.942149] (oxbot_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support_c.cpp.o\x1b[0m\n'}
+[28.975034] (-) TimerEvent: {}
+[29.076269] (-) TimerEvent: {}
+[29.177128] (-) TimerEvent: {}
+[29.278011] (-) TimerEvent: {}
+[29.378915] (-) TimerEvent: {}
+[29.405377] (oxbot_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/oxbot_interfaces/msg/detail/dds_fastrtps/hoverboard_command__type_support.cpp.o\x1b[0m\n'}
+[29.479133] (-) TimerEvent: {}
+[29.580886] (-) TimerEvent: {}
+[29.681748] (-) TimerEvent: {}
+[29.783347] (-) TimerEvent: {}
+[29.884684] (-) TimerEvent: {}
+[29.985943] (-) TimerEvent: {}
+[30.087253] (-) TimerEvent: {}
+[30.193241] (-) TimerEvent: {}
+[30.279725] (oxbot_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp.o\x1b[0m\n'}
+[30.293460] (-) TimerEvent: {}
+[30.394767] (-) TimerEvent: {}
+[30.496007] (-) TimerEvent: {}
+[30.596909] (-) TimerEvent: {}
+[30.671157] (oxbot_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library liboxbot_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[30.697124] (-) TimerEvent: {}
+[30.798094] (-) TimerEvent: {}
+[30.852786] (oxbot_interfaces) StdoutLine: {'line': b'[ 42%] Built target oxbot_interfaces__rosidl_typesupport_cpp\n'}
+[30.862152] (oxbot_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/oxbot_interfaces/srv/detail/dds_fastrtps/compute_rectangle_area__type_support.cpp.o\x1b[0m\n'}
+[30.898298] (-) TimerEvent: {}
+[30.940766] (oxbot_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support_c.cpp.o\x1b[0m\n'}
+[30.998511] (-) TimerEvent: {}
+[31.099821] (-) TimerEvent: {}
+[31.201046] (-) TimerEvent: {}
+[31.302268] (-) TimerEvent: {}
+[31.403559] (-) TimerEvent: {}
+[31.504769] (-) TimerEvent: {}
+[31.606030] (-) TimerEvent: {}
+[31.707336] (-) TimerEvent: {}
+[31.730042] (oxbot_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support_c.cpp.o\x1b[0m\n'}
+[31.807730] (-) TimerEvent: {}
+[31.908946] (-) TimerEvent: {}
+[31.939637] (oxbot_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[32.009185] (-) TimerEvent: {}
+[32.110450] (-) TimerEvent: {}
+[32.211747] (-) TimerEvent: {}
+[32.274700] (oxbot_interfaces) StdoutLine: {'line': b'[ 51%] Built target oxbot_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[32.311952] (-) TimerEvent: {}
+[32.328099] (oxbot_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[32.412160] (-) TimerEvent: {}
+[32.512979] (-) TimerEvent: {}
+[32.639314] (-) TimerEvent: {}
+[32.740613] (-) TimerEvent: {}
+[32.841436] (-) TimerEvent: {}
+[32.868795] (oxbot_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[32.941635] (-) TimerEvent: {}
+[33.042510] (-) TimerEvent: {}
+[33.143333] (-) TimerEvent: {}
+[33.215572] (oxbot_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library liboxbot_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[33.243516] (-) TimerEvent: {}
+[33.344753] (-) TimerEvent: {}
+[33.445693] (-) TimerEvent: {}
+[33.546606] (-) TimerEvent: {}
+[33.647368] (-) TimerEvent: {}
+[33.694947] (oxbot_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[33.703649] (oxbot_interfaces) StdoutLine: {'line': b'[ 59%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[33.747760] (-) TimerEvent: {}
+[33.849015] (-) TimerEvent: {}
+[33.949878] (-) TimerEvent: {}
+[34.050637] (-) TimerEvent: {}
+[34.085509] (oxbot_interfaces) StdoutLine: {'line': b'[ 59%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[34.150810] (-) TimerEvent: {}
+[34.252011] (-) TimerEvent: {}
+[34.353207] (-) TimerEvent: {}
+[34.454001] (-) TimerEvent: {}
+[34.554745] (-) TimerEvent: {}
+[34.655921] (-) TimerEvent: {}
+[34.757367] (-) TimerEvent: {}
+[34.858757] (-) TimerEvent: {}
+[34.960043] (-) TimerEvent: {}
+[35.061387] (-) TimerEvent: {}
+[35.162580] (-) TimerEvent: {}
+[35.263866] (-) TimerEvent: {}
+[35.364737] (-) TimerEvent: {}
+[35.414223] (oxbot_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot_interfaces/srv/compute_rectangle_area__type_support.cpp.o\x1b[0m\n'}
+[35.421511] (oxbot_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot_interfaces/msg/hoverboard_command__type_support.cpp.o\x1b[0m\n'}
+[35.440421] (oxbot_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot_interfaces/msg/hoverboard_feedback__type_support.cpp.o\x1b[0m\n'}
+[35.464933] (-) TimerEvent: {}
+[35.566240] (-) TimerEvent: {}
+[35.667432] (-) TimerEvent: {}
+[35.768195] (-) TimerEvent: {}
+[35.869209] (-) TimerEvent: {}
+[35.872956] (oxbot_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library liboxbot_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[35.873795] (oxbot_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c.o\x1b[0m\n'}
+[35.879056] (oxbot_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c.o\x1b[0m\n'}
+[35.895732] (oxbot_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c.o\x1b[0m\n'}
+[35.969432] (-) TimerEvent: {}
+[35.998983] (oxbot_interfaces) StdoutLine: {'line': b'[ 74%] Built target oxbot_interfaces__rosidl_typesupport_c\n'}
+[36.069634] (-) TimerEvent: {}
+[36.084729] (oxbot_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking C shared library liboxbot_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[36.153496] (oxbot_interfaces) StdoutLine: {'line': b'[ 76%] Built target oxbot_interfaces__rosidl_typesupport_introspection_c\n'}
+[36.169821] (-) TimerEvent: {}
+[36.183120] (oxbot_interfaces) StdoutLine: {'line': b'[ 76%] Built target oxbot_interfaces\n'}
+[36.213692] (oxbot_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[36.270072] (-) TimerEvent: {}
+[36.371306] (-) TimerEvent: {}
+[36.479569] (-) TimerEvent: {}
+[36.580757] (-) TimerEvent: {}
+[36.682070] (-) TimerEvent: {}
+[36.783362] (-) TimerEvent: {}
+[36.884066] (-) TimerEvent: {}
+[36.984819] (-) TimerEvent: {}
+[37.085592] (-) TimerEvent: {}
+[37.186335] (-) TimerEvent: {}
+[37.287100] (-) TimerEvent: {}
+[37.387910] (-) TimerEvent: {}
+[37.488679] (-) TimerEvent: {}
+[37.589439] (-) TimerEvent: {}
+[37.691688] (-) TimerEvent: {}
+[37.792463] (-) TimerEvent: {}
+[37.893211] (-) TimerEvent: {}
+[37.993962] (-) TimerEvent: {}
+[38.094719] (-) TimerEvent: {}
+[38.195485] (-) TimerEvent: {}
+[38.296177] (-) TimerEvent: {}
+[38.396949] (-) TimerEvent: {}
+[38.498133] (-) TimerEvent: {}
+[38.599039] (-) TimerEvent: {}
+[38.699984] (-) TimerEvent: {}
+[38.801193] (-) TimerEvent: {}
+[38.901943] (-) TimerEvent: {}
+[39.002696] (-) TimerEvent: {}
+[39.103456] (-) TimerEvent: {}
+[39.204220] (-) TimerEvent: {}
+[39.304980] (-) TimerEvent: {}
+[39.405736] (-) TimerEvent: {}
+[39.506496] (-) TimerEvent: {}
+[39.607336] (-) TimerEvent: {}
+[39.708734] (-) TimerEvent: {}
+[39.810974] (-) TimerEvent: {}
+[39.912203] (-) TimerEvent: {}
+[40.013370] (-) TimerEvent: {}
+[40.114599] (-) TimerEvent: {}
+[40.215952] (-) TimerEvent: {}
+[40.316723] (-) TimerEvent: {}
+[40.334230] (oxbot_interfaces) StdoutLine: {'line': b'[ 78%] Built target oxbot_interfaces__py\n'}
+[40.366748] (oxbot_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_command_s.c.o\x1b[0m\n'}
+[40.369215] (oxbot_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c.o\x1b[0m\n'}
+[40.374549] (oxbot_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o\x1b[0m\n'}
+[40.416925] (-) TimerEvent: {}
+[40.518130] (-) TimerEvent: {}
+[40.619360] (-) TimerEvent: {}
+[40.720158] (-) TimerEvent: {}
+[40.820951] (-) TimerEvent: {}
+[40.921751] (-) TimerEvent: {}
+[41.017256] (oxbot_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[41.021962] (-) TimerEvent: {}
+[41.123404] (-) TimerEvent: {}
+[41.124923] (oxbot_interfaces) StdoutLine: {'line': b'[ 87%] Built target oxbot_interfaces__rosidl_generator_py\n'}
+[41.156996] (oxbot_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[41.157784] (oxbot_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[41.160360] (oxbot_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/oxbot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[41.223644] (-) TimerEvent: {}
+[41.324862] (-) TimerEvent: {}
+[41.426078] (-) TimerEvent: {}
+[41.493212] (oxbot_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[41.495553] (oxbot_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[41.509149] (oxbot_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\x1b[0m\n'}
+[41.526350] (-) TimerEvent: {}
+[41.579537] (oxbot_interfaces) StdoutLine: {'line': b'[100%] Built target oxbot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[41.587199] (oxbot_interfaces) StdoutLine: {'line': b'[100%] Built target oxbot_interfaces__rosidl_typesupport_c__pyext\n'}
+[41.604752] (oxbot_interfaces) StdoutLine: {'line': b'[100%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[41.626542] (-) TimerEvent: {}
+[41.648244] (oxbot_interfaces) CommandEnded: {'returncode': 0}
+[41.726777] (-) TimerEvent: {}
+[41.827616] (-) TimerEvent: {}
+[41.928490] (-) TimerEvent: {}
+[42.029418] (-) TimerEvent: {}
+[42.096702] (oxbot_interfaces) JobProgress: {'identifier': 'oxbot_interfaces', 'progress': 'install'}
+[42.098510] (oxbot_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/root/oxbot/src/ros2_ws/build/oxbot_interfaces'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_interfaces', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_interfaces'), ('PYTHONPATH', '/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble/install')]), 'shell': False}
+[42.129640] (-) TimerEvent: {}
+[42.230560] (-) TimerEvent: {}
+[42.278169] (oxbot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[42.295416] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/rosidl_interfaces/oxbot_interfaces\n'}
+[42.296479] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.297403] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.298125] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/compute_rectangle_area.h\n'}
+[42.298763] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.299405] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h\n'}
+[42.300076] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h\n'}
+[42.300727] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h\n'}
+[42.303197] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c\n'}
+[42.304047] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.304608] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.h\n'}
+[42.305206] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.h\n'}
+[42.305809] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.306577] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h\n'}
+[42.307203] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h\n'}
+[42.321335] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.h\n'}
+[42.329965] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h\n'}
+[42.330649] (-) TimerEvent: {}
+[42.331259] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__functions.h\n'}
+[42.332003] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c\n'}
+[42.332655] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.h\n'}
+[42.333278] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__functions.c\n'}
+[42.344106] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[42.344792] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/library_path.sh\n'}
+[42.345413] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/library_path.dsv\n'}
+[42.346077] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_c.so\n'}
+[42.346739] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_c.so" to ""\n'}
+[42.347572] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.348243] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.349437] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.350133] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_c.h\n'}
+[42.350741] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.351415] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[42.360091] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.362037] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_c.h\n'}
+[42.363630] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h\n'}
+[42.376588] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[42.377242] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[42.377810] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.378381] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.378948] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.379595] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_c.h\n'}
+[42.380206] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c\n'}
+[42.380859] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.381489] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.382107] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c\n'}
+[42.382715] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_c.h\n'}
+[42.398648] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c\n'}
+[42.400389] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h\n'}
+[42.401136] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[42.402014] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[42.402676] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[42.403311] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_c.so\n'}
+[42.403970] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[42.404682] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.405306] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.405932] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/compute_rectangle_area.hpp\n'}
+[42.406576] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.407332] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.hpp\n'}
+[42.408003] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__traits.hpp\n'}
+[42.408591] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__builder.hpp\n'}
+[42.409161] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.409747] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.hpp\n'}
+[42.410365] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp\n'}
+[42.410958] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.420968] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp\n'}
+[42.422191] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp\n'}
+[42.424839] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp\n'}
+[42.427340] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp\n'}
+[42.432139] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp\n'}
+[42.434832] (-) TimerEvent: {}
+[42.445530] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp\n'}
+[42.446312] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.446912] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.447645] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.448305] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[42.448910] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/dds_fastrtps\n'}
+[42.449536] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.450130] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[42.450728] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.451957] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[42.452597] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[42.453734] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/dds_fastrtps\n'}
+[42.458983] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[42.459621] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[42.460145] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces\n'}
+[42.460608] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv\n'}
+[42.461070] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail\n'}
+[42.461569] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_cpp.hpp\n'}
+[42.462065] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp\n'}
+[42.462556] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg\n'}
+[42.463033] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail\n'}
+[42.463646] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp\n'}
+[42.464225] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp\n'}
+[42.464742] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[42.465244] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp\n'}
+[42.465740] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[42.466268] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[42.466765] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_cpp.so\n'}
+[42.467275] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[42.467884] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/pythonpath.sh\n'}
+[42.468501] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/pythonpath.dsv\n'}
+[42.469135] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info\n'}
+[42.469773] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/SOURCES.txt\n'}
+[42.470454] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/dependency_links.txt\n'}
+[42.471103] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/top_level.txt\n'}
+[42.489696] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/PKG-INFO\n'}
+[42.490378] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces\n'}
+[42.490991] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv\n'}
+[42.497851] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/__init__.py\n'}
+[42.498426] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/_compute_rectangle_area_s.c\n'}
+[42.498935] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/_compute_rectangle_area.py\n'}
+[42.499509] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/__init__.py\n'}
+[42.500013] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.500490] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.500997] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg\n'}
+[42.501499] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_feedback.py\n'}
+[42.502014] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_feedback_s.c\n'}
+[42.502583] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/__init__.py\n'}
+[42.503139] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_command_s.c\n'}
+[42.503782] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_command.py\n'}
+[42.504313] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.504805] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so\n'}
+[42.505267] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[42.505746] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[42.506225] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[42.535052] (-) TimerEvent: {}
+[42.635927] (-) TimerEvent: {}
+[42.737107] (-) TimerEvent: {}
+[42.802556] (oxbot_interfaces) StdoutLine: {'line': b"Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces'...\n"}
+[42.804221] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/__init__.py'...\n"}
+[42.805033] (oxbot_interfaces) StdoutLine: {'line': b"Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg'...\n"}
+[42.805739] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/__init__.py'...\n"}
+[42.806437] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_command.py'...\n"}
+[42.807092] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_feedback.py'...\n"}
+[42.807889] (oxbot_interfaces) StdoutLine: {'line': b"Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv'...\n"}
+[42.808547] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/__init__.py'...\n"}
+[42.809195] (oxbot_interfaces) StdoutLine: {'line': b"Compiling '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/_compute_rectangle_area.py'...\n"}
+[42.831364] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.833417] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so" to ""\n'}
+[42.834011] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.834574] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so" to ""\n'}
+[42.839876] (-) TimerEvent: {}
+[42.840453] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[42.841500] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so" to ""\n'}
+[42.842118] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_py.so\n'}
+[42.842713] (oxbot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_py.so" to ""\n'}
+[42.846247] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardFeedback.idl\n'}
+[42.859169] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardCommand.idl\n'}
+[42.860363] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea.idl\n'}
+[42.865234] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardFeedback.msg\n'}
+[42.866504] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardCommand.msg\n'}
+[42.868652] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea.srv\n'}
+[42.869454] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea_Request.msg\n'}
+[42.880460] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea_Response.msg\n'}
+[42.881486] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/package_run_dependencies/oxbot_interfaces\n'}
+[42.887679] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/parent_prefix_path/oxbot_interfaces\n'}
+[42.888840] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/ament_prefix_path.sh\n'}
+[42.889660] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/ament_prefix_path.dsv\n'}
+[42.890472] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/path.sh\n'}
+[42.891066] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/path.dsv\n'}
+[42.891895] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.bash\n'}
+[42.892476] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.sh\n'}
+[42.902103] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.zsh\n'}
+[42.903067] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.dsv\n'}
+[42.905253] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.dsv\n'}
+[42.908897] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/packages/oxbot_interfaces\n'}
+[42.910119] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cExport.cmake\n'}
+[42.911157] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[42.912585] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[42.913610] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[42.914864] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[42.915919] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[42.917175] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[42.919302] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[42.923636] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cppExport.cmake\n'}
+[42.925086] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[42.927849] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[42.929267] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[42.930326] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[42.931673] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[42.932708] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[42.934006] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_pyExport.cmake\n'}
+[42.935031] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[42.936104] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[42.937186] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[42.938221] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[42.939609] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[42.940259] (-) TimerEvent: {}
+[42.941289] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[42.942049] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[42.942674] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[42.943350] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfacesConfig.cmake\n'}
+[42.952215] (oxbot_interfaces) StdoutLine: {'line': b'-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfacesConfig-version.cmake\n'}
+[42.952972] (oxbot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.xml\n'}
+[42.986718] (oxbot_interfaces) CommandEnded: {'returncode': 0}
+[43.045700] (-) TimerEvent: {}
+[43.151569] (-) TimerEvent: {}
+[43.263095] (-) TimerEvent: {}
+[43.374129] (-) TimerEvent: {}
+[43.475257] (-) TimerEvent: {}
+[43.576410] (-) TimerEvent: {}
+[43.677239] (-) TimerEvent: {}
+[43.778145] (-) TimerEvent: {}
+[43.879427] (-) TimerEvent: {}
+[43.981974] (-) TimerEvent: {}
+[44.088334] (-) TimerEvent: {}
+[44.194245] (-) TimerEvent: {}
+[44.305876] (-) TimerEvent: {}
+[44.375272] (oxbot_interfaces) JobEnded: {'identifier': 'oxbot_interfaces', 'rc': 0}
+[44.429798] (-) TimerEvent: {}
+[44.430242] (motion_control) JobStarted: {'identifier': 'motion_control'}
+[44.526875] (motion_control) JobProgress: {'identifier': 'motion_control', 'progress': 'cmake'}
+[44.528857] (motion_control) Command: {'cmd': ['/usr/local/bin/cmake', '/root/oxbot/src/ros2_ws/src/motion_control', '-DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/motion_control'], 'cwd': '/root/oxbot/src/ros2_ws/build/motion_control', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib'), ('BROWSER', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/helpers/browser.sh'), ('SHLVL', '2'), ('HOME', '/root'), ('OLDPWD', '/root/oxbot'), ('TERM_PROGRAM_VERSION', '1.87.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-45458159-a117-43f3-af1b-5f1e5889dde9.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':23'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock","/tmp/.X11-unix/X23","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ede3b31b76.sock'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-7868364f-b06d-4adb-ac23-e9cf7016e3c0.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X23'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/motion_control'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/opt/ros/humble/install')]), 'shell': False}
+[44.539814] (-) TimerEvent: {}
+[44.640638] (-) TimerEvent: {}
+[44.741395] (-) TimerEvent: {}
+[44.842274] (-) TimerEvent: {}
+[44.869060] (motion_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[44.942537] (-) TimerEvent: {}
+[45.043416] (-) TimerEvent: {}
+[45.106336] (motion_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[45.143691] (-) TimerEvent: {}
+[45.189065] (motion_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[45.243841] (-) TimerEvent: {}
+[45.344635] (-) TimerEvent: {}
+[45.418449] (motion_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[45.444886] (-) TimerEvent: {}
+[45.472347] (motion_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[45.473491] (motion_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[45.474950] (motion_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[45.520320] (motion_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[45.545169] (-) TimerEvent: {}
+[45.645947] (-) TimerEvent: {}
+[45.746825] (-) TimerEvent: {}
+[45.839795] (motion_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[45.846988] (-) TimerEvent: {}
+[45.898591] (motion_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[45.901644] (motion_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[45.902560] (motion_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[45.919883] (motion_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[45.947287] (-) TimerEvent: {}
+[46.048436] (-) TimerEvent: {}
+[46.152590] (-) TimerEvent: {}
+[46.253365] (-) TimerEvent: {}
+[46.354671] (-) TimerEvent: {}
+[46.456407] (-) TimerEvent: {}
+[46.557746] (-) TimerEvent: {}
+[46.658636] (-) TimerEvent: {}
+[46.759494] (-) TimerEvent: {}
+[46.860242] (-) TimerEvent: {}
+[46.961004] (-) TimerEvent: {}
+[47.062236] (-) TimerEvent: {}
+[47.163497] (-) TimerEvent: {}
+[47.264340] (-) TimerEvent: {}
+[47.365134] (-) TimerEvent: {}
+[47.466027] (-) TimerEvent: {}
+[47.567303] (-) TimerEvent: {}
+[47.668472] (-) TimerEvent: {}
+[47.769683] (-) TimerEvent: {}
+[47.870842] (-) TimerEvent: {}
+[47.971626] (-) TimerEvent: {}
+[48.072410] (-) TimerEvent: {}
+[48.173239] (-) TimerEvent: {}
+[48.274095] (-) TimerEvent: {}
+[48.374886] (-) TimerEvent: {}
+[48.475659] (-) TimerEvent: {}
+[48.576410] (-) TimerEvent: {}
+[48.677118] (-) TimerEvent: {}
+[48.777871] (-) TimerEvent: {}
+[48.878729] (-) TimerEvent: {}
+[48.980146] (-) TimerEvent: {}
+[49.080974] (-) TimerEvent: {}
+[49.181818] (-) TimerEvent: {}
+[49.283076] (-) TimerEvent: {}
+[49.384370] (-) TimerEvent: {}
+[49.485630] (-) TimerEvent: {}
+[49.586899] (-) TimerEvent: {}
+[49.687769] (-) TimerEvent: {}
+[49.788535] (-) TimerEvent: {}
+[49.889309] (-) TimerEvent: {}
+[49.990071] (-) TimerEvent: {}
+[50.090853] (-) TimerEvent: {}
+[50.191630] (-) TimerEvent: {}
+[50.292387] (-) TimerEvent: {}
+[50.393150] (-) TimerEvent: {}
+[50.493890] (-) TimerEvent: {}
+[50.594634] (-) TimerEvent: {}
+[50.695447] (-) TimerEvent: {}
+[50.796216] (-) TimerEvent: {}
+[50.897025] (-) TimerEvent: {}
+[50.916668] (motion_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter \n'}
+[50.997195] (-) TimerEvent: {}
+[51.098080] (-) TimerEvent: {}
+[51.198871] (-) TimerEvent: {}
+[51.299736] (-) TimerEvent: {}
+[51.400442] (-) TimerEvent: {}
+[51.501239] (-) TimerEvent: {}
+[51.556218] (motion_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.5 (/opt/ros/humble/install/share/rclcpp/cmake)\n'}
+[51.601481] (-) TimerEvent: {}
+[51.702277] (-) TimerEvent: {}
+[51.803067] (-) TimerEvent: {}
+[51.826902] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[51.862829] (motion_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[51.903379] (-) TimerEvent: {}
+[51.920109] (motion_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[52.003575] (-) TimerEvent: {}
+[52.018030] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[52.103765] (-) TimerEvent: {}
+[52.157707] (motion_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[52.203950] (-) TimerEvent: {}
+[52.305160] (-) TimerEvent: {}
+[52.405978] (-) TimerEvent: {}
+[52.507316] (-) TimerEvent: {}
+[52.608514] (-) TimerEvent: {}
+[52.642284] (motion_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[52.659814] (motion_control) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[52.709208] (-) TimerEvent: {}
+[52.811104] (-) TimerEvent: {}
+[52.905572] (motion_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[52.911338] (-) TimerEvent: {}
+[52.964940] (motion_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[53.012061] (-) TimerEvent: {}
+[53.113678] (-) TimerEvent: {}
+[53.215501] (-) TimerEvent: {}
+[53.317275] (-) TimerEvent: {}
+[53.415125] (motion_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[53.417474] (-) TimerEvent: {}
+[53.418802] (motion_control) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[53.518436] (-) TimerEvent: {}
+[53.620685] (-) TimerEvent: {}
+[53.662081] (motion_control) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[53.673144] (motion_control) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[53.720885] (-) TimerEvent: {}
+[53.821758] (-) TimerEvent: {}
+[53.911000] (motion_control) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[53.919992] (motion_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[53.921922] (-) TimerEvent: {}
+[54.023170] (-) TimerEvent: {}
+[54.124493] (-) TimerEvent: {}
+[54.225719] (-) TimerEvent: {}
+[54.327083] (-) TimerEvent: {}
+[54.428378] (-) TimerEvent: {}
+[54.529190] (-) TimerEvent: {}
+[54.630008] (-) TimerEvent: {}
+[54.730829] (-) TimerEvent: {}
+[54.831698] (-) TimerEvent: {}
+[54.932516] (-) TimerEvent: {}
+[55.007104] (motion_control) StdoutLine: {'line': b'-- Found oxbot_interfaces: 0.0.0 (/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake)\n'}
+[55.032701] (-) TimerEvent: {}
+[55.133752] (-) TimerEvent: {}
+[55.184986] (motion_control) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:15 (find_package):\n'}
+[55.186562] (motion_control) StderrLine: {'line': b'  By not providing "Findoxbot_config.cmake" in CMAKE_MODULE_PATH this project\n'}
+[55.187098] (motion_control) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[55.187682] (motion_control) StderrLine: {'line': b'  "oxbot_config", but CMake did not find one.\n'}
+[55.188158] (motion_control) StderrLine: {'line': b'\n'}
+[55.188609] (motion_control) StderrLine: {'line': b'  Could not find a package configuration file provided by "oxbot_config" with\n'}
+[55.189067] (motion_control) StderrLine: {'line': b'  any of the following names:\n'}
+[55.189557] (motion_control) StderrLine: {'line': b'\n'}
+[55.190049] (motion_control) StderrLine: {'line': b'    oxbot_configConfig.cmake\n'}
+[55.190531] (motion_control) StderrLine: {'line': b'    oxbot_config-config.cmake\n'}
+[55.191029] (motion_control) StderrLine: {'line': b'\n'}
+[55.191664] (motion_control) StderrLine: {'line': b'  Add the installation prefix of "oxbot_config" to CMAKE_PREFIX_PATH or set\n'}
+[55.192203] (motion_control) StderrLine: {'line': b'  "oxbot_config_DIR" to a directory containing one of the above files.  If\n'}
+[55.192734] (motion_control) StderrLine: {'line': b'  "oxbot_config" provides a separate development package or SDK, be sure it\n'}
+[55.193243] (motion_control) StderrLine: {'line': b'  has been installed.\n'}
+[55.193714] (motion_control) StderrLine: {'line': b'\n'}
+[55.194189] (motion_control) StderrLine: {'line': b'\x1b[0m\n'}
+[55.194655] (motion_control) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[55.234008] (-) TimerEvent: {}
+[55.250864] (motion_control) CommandEnded: {'returncode': 1}
+[55.334264] (-) TimerEvent: {}
+[55.435173] (-) TimerEvent: {}
+[55.541822] (-) TimerEvent: {}
+[55.640033] (motion_control) JobEnded: {'identifier': 'motion_control', 'rc': 1}
+[55.641960] (-) TimerEvent: {}
+[55.656566] (-) EventReactorShutdown: {}

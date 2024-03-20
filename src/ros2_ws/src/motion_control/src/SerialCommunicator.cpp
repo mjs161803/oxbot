@@ -13,7 +13,7 @@
 #include "SerialCommunicator.hpp"
 #include "oxbot_config/oxbot_config.hpp"
 
-void set_c_flags(termios &, int fh, rclcpp::Logger &);
+using namespace std::chrono_literals;
 
 SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
 {
@@ -45,46 +45,26 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     struct termios front_serial_term;
     if (tcgetattr(front_wheels_serial_fh_, &front_serial_term) != 0) 
     {
-        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "MC::SC default constructor: Error %i from tcgetattr: %s\n", errno, strerror(errno));
     }
     set_c_flags(front_serial_term, front_wheels_serial_fh_);
 
     // Rear Wheels Serial Port Configuring
-    rear_wheels_serial_fh_ = open((rear_wheels_serial_path_).c_str(), O_RDWR);
-	    if (rear_wheels_serial_fh_ < 0) {
-		    RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Unable to open %s.", rear_wheels_serial_path_);
-	    }
-    struct termios rear_serial_term;
-    if (tcgetattr(rear_wheels_serial_fh_, &rear_serial_term) != 0) 
-    {
-        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
-    }
-    set_c_flags(rear_serial_term, front_wheels_serial_fh_);
+    // rear_wheels_serial_fh_ = open((rear_wheels_serial_path_).c_str(), O_RDWR | O_NONBLOCK);
+	//     if (rear_wheels_serial_fh_ < 0) {
+	// 	    RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "MC::SC Default Constructor: Unable to open %s.", rear_wheels_serial_path_);
+	//     }
+    // struct termios rear_serial_term;
+    // if (tcgetattr(rear_wheels_serial_fh_, &rear_serial_term) != 0) 
+    // {
+    //     RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
+    // }
+    // set_c_flags(rear_serial_term, front_wheels_serial_fh_);
 
 }
 
-SerialCommunicator::SerialCommunicator(std::string front_wheel_path, std::string rear_wheel_path): front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
+void SerialCommunicator::set_c_flags(termios &ser_term, int fh) 
 {
-    front_wheels_serial_path_ = front_wheel_path;
-    rear_wheels_serial_path_ = rear_wheel_path;
-
-    
-}
-
-SerialCommunicator::SerialCommunicator(const SerialCommunicator& copied)
-{
-    initialized = copied.initialized;
-    front_wheels_serial_fh_ = copied.front_wheels_serial_fh_;
-    rear_wheels_serial_fh_ = copied.rear_wheels_serial_fh_;
-    serial_buff_size_ = copied.serial_buff_size_;
-}
-
-SerialCommunicator& SerialCommunicator::operator=(const SerialCommunicator& assigner)
-{
-    return *this;
-}
-
-void SerialCommunicator::set_c_flags(termios &ser_term, int fh) {
     ser_term.c_cflag &= ~PARENB;
     ser_term.c_cflag &= ~CSTOPB;
     ser_term.c_cflag &= ~CSIZE;
@@ -196,26 +176,94 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
 std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels() 
 {
     std::vector<unsigned char> ser_buf;
-    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
-    try
-    {
-        int bytes_read = read(this->rear_wheels_serial_fh_, &read_buf, sizeof(read_buf));
-        if (bytes_read == -1) 
-        {
-            throw std::runtime_error("Error reading rear serial buffer.");
-        }  
-    }
-    catch(const std::runtime_error& re)
-    {
-        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
-    }
+    // unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
+    // try
+    // {
+    //     int bytes_read = read(this->rear_wheels_serial_fh_, &read_buf, sizeof(read_buf));
+    //     if (bytes_read == -1) 
+    //     {
+    //         throw std::runtime_error("Error reading rear serial buffer.");
+    //     }  
+    // }
+    // catch(const std::runtime_error& re)
+    // {
+    //     RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
+    // }
 
     return ser_buf;
 }
 
 int SerialCommunicator::sc_write(std::vector<unsigned char> write_buf)
 {
-    int num_written (0);
+    int num_written {0};
+    unsigned char hoverboard_command[8] {write_buf[0], write_buf[1],     // frame header start
+                                        write_buf[2], write_buf[3],     // steer command
+                                        write_buf[4], write_buf[5],     // speed command 
+                                        write_buf[6], write_buf[7]};    // XOR checksum
+    try
+        {
+            write(this->front_wheels_serial_fh_, hoverboard_command, sizeof(hoverboard_command));
+        }
+        catch(const std::runtime_error& re)
+        {
+            RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
+        }
 
     return num_written;
+}
+
+bool SerialCommunicator::sc_initializing_handshake_frontwheels()
+{
+    bool result {false};
+    unsigned char initial_command[8] {  0xAB, 0xCD,     // frame header start
+                                        0x00, 0x00,     // steer command = 0
+                                        0x00, 0x00,     // speed command = 0 
+                                        0xAB, 0xCD};    // XOR checksum
+    
+    
+    int bytes_read {0};
+    unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE] = {};
+    auto read_delay_duration = std::chrono::nanoseconds(100ms);
+    auto sleep_duration = std::chrono::nanoseconds(1s);
+
+    while (result == false)
+    {
+        try
+        {
+            write(this->front_wheels_serial_fh_, initial_command, sizeof(initial_command));
+            rclcpp::sleep_for(read_delay_duration);
+            bytes_read = read(this->front_wheels_serial_fh_, &read_buf, MC_SERIAL_FEEDBACK_MESSAGE_SIZE);
+            if (bytes_read < 0) 
+            {
+                throw std::runtime_error("Error reading front serial buffer.");
+            }  
+            else if (bytes_read == 0)
+            {
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: read 0 bytes... waiting 1 second");
+                rclcpp::sleep_for(sleep_duration);
+            }
+            else if (bytes_read > 0 && bytes_read < MC_SERIAL_FEEDBACK_MESSAGE_SIZE)
+            {
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: read incomplete message of %d bytes. Expected %d bytes... waiting 1 second", bytes_read, MC_SERIAL_FEEDBACK_MESSAGE_SIZE);
+                rclcpp::sleep_for(sleep_duration);
+                tcflush(front_wheels_serial_fh_, TCIFLUSH);
+            }
+            else if (bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE && read_buf[0] != 0xCD && read_buf[1] != 0xAB)
+            {
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes, but incorrect header of 0x%x%x.", bytes_read, read_buf[1], read_buf[0]);
+                result = false;
+            }
+            else if (bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE && read_buf[0] == 0xCD && read_buf[1] == 0xAB)
+            {
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes with correct header.", bytes_read);
+                result = true;
+            }
+        }
+        catch(const std::runtime_error& re)
+        {
+            RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
+        }
+    }
+
+    return result;
 }

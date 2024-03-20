@@ -14,15 +14,16 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     int serial_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
     int output_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
     serial_feedback_timer_ =   this->create_wall_timer(std::chrono::microseconds(serial_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCB, this));
-    output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB,           this));
+    output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB, this));
     
     // Publisher Definitions
     output_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_output", 30);
     
-    // Serial Communicator definition
+    // Serial Communicator initializing and Initial Serial Port Handshakes
     try
     {
-        serial_comm_ = SerialCommunicator(MC_FRONT_WHEELS_SERIAL_PATH, MC_REAR_WHEELS_SERIAL_PATH);
+        serial_comm_ = SerialCommunicator();
+        serial_comm_.initialized = serial_comm_.sc_initializing_handshake_frontwheels(); // && serial_comm_.sc_initializing_handshake_rearwheels();
         if (serial_comm_.initialized == false)
         {
             throw std::runtime_error("Unable to initialize SerialCommunicator");

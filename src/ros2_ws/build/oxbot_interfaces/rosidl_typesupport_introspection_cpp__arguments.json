@@ -1,0 +1,23 @@
+{
+  "package_name": "oxbot_interfaces",
+  "output_dir": "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_introspection_cpp/oxbot_interfaces",
+  "template_dir": "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardFeedback.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardCommand.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:srv/ComputeRectangleArea.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/install/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/humble/install/lib/python3.6/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl"
+  ]
+}
