@@ -1,0 +1,23 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/logging.hpp:24:0[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/install/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:2[m[K:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:[m[K In member function ‘[01m[Kvoid MotionControllerNode::feedbackTimerCB()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/MotionControllerNode.cpp:68:131:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass FeedbackFrame[m[K’ has no member named ‘[01m[Ksize[m[K’
+         RCLCPP_INFO(this->get_logger(), "Reading front wheels serial port device returned %d feedback message(s).", current_frame.[01;31m[Ks[m[Kize());
+                                                                                                                                   [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o] Error 1
+CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed
+CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+make: *** [all] Error 2
+Makefile:145: recipe for target 'all' failed

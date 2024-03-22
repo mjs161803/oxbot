@@ -20,7 +20,7 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     // Front Wheels Serial Port Configuring
     try
     {
-        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR | O_NONBLOCK); 
+        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
         if (front_wheels_serial_fh_ == -1) 
         {
             initialized = false;
@@ -59,7 +59,7 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     // {
     //     RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
     // }
-    // set_c_flags(rear_serial_term, front_wheels_serial_fh_);
+    // set_c_flags(rear_serial_term, rear_wheels_serial_fh_);
 
 }
 
@@ -80,8 +80,8 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh)
     ser_term.c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL);
     ser_term.c_oflag &= ~OPOST;
     ser_term.c_oflag &= ~ONLCR;
-    ser_term.c_cc[VTIME] = 0; // 0... but serial device is opened non-blocking
-    ser_term.c_cc[VMIN] = 0; // 0... but serial device is opened non-blocking
+    ser_term.c_cc[VTIME] = 1; // Will wait for 0.1 seconds -> 10Hz min feedback frequency
+    ser_term.c_cc[VMIN] = MC_SERIAL_FEEDBACK_MESSAGE_SIZE; 
     cfsetspeed(&ser_term, B115200);
     if (tcsetattr(fh, TCSANOW, &ser_term) != 0) {
         RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcsetattr: %s\n", errno, strerror(errno));
@@ -122,12 +122,12 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     }
 
     // verify XOR checksum
-    unsigned char checksum_lsb = read_buf[0]^read_buf[2]^read_buf[4]^read_buf[6]^read_buf[8]^read_buf[10]^read_buf[12]^read_buf[14]^read_buf[16];
-    unsigned char checksum_msb = read_buf[1]^read_buf[3]^read_buf[5]^read_buf[7]^read_buf[9]^read_buf[11]^read_buf[13]^read_buf[15]^read_buf[17];
-    if ((checksum_lsb != read_buf[17]) | (checksum_msb != read_buf[18]))
+    unsigned char checksum_lsb = read_buf[0]^read_buf[2]^read_buf[4]^read_buf[6]^read_buf[8]^read_buf[10]^read_buf[12]^read_buf[14];
+    unsigned char checksum_msb = read_buf[1]^read_buf[3]^read_buf[5]^read_buf[7]^read_buf[9]^read_buf[11]^read_buf[13]^read_buf[15];
+    if ((checksum_lsb != read_buf[16]) | (checksum_msb != read_buf[17]))
     {
         valid_msg = false;
-        RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "Calculated serial frame checksum does not match received: calculated 0x%2x %2x, received 0x%2x %2x", checksum_msb, checksum_lsb, read_buf[18], read_buf[17]);
+        RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "Calculated serial frame checksum does not match received. Calculated checksum: 0x%2x %2x, Raw frame: 0x%2x%2x %2x%2x %2x%2x %2x%2x %2x%2x %2x%2x %2x%2x %2x%2x %2x%2x.", checksum_msb, checksum_lsb, read_buf[0], read_buf[1], read_buf[2], read_buf[3], read_buf[4], read_buf[5], read_buf[6], read_buf[7], read_buf[8], read_buf[9], read_buf[10], read_buf[11], read_buf[12], read_buf[13], read_buf[14], read_buf[15], read_buf[16], read_buf[17]);
     }
 
     if (valid_msg)
@@ -215,16 +215,17 @@ int SerialCommunicator::sc_write(std::vector<unsigned char> write_buf)
 bool SerialCommunicator::sc_initializing_handshake_frontwheels()
 {
     bool result {false};
-    unsigned char initial_command[8] {  0xAB, 0xCD,     // frame header start
+    unsigned char initial_command[8] {  0xCD, 0xAB,     // frame header start
                                         0x00, 0x00,     // steer command = 0
                                         0x00, 0x00,     // speed command = 0 
-                                        0xAB, 0xCD};    // XOR checksum
+                                        0xCD, 0xAB};    // XOR checksum
     
     
     int bytes_read {0};
     unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE] = {};
     auto read_delay_duration = std::chrono::nanoseconds(100ms);
     auto sleep_duration = std::chrono::nanoseconds(1s);
+    auto sync_delay_duration = std::chrono::nanoseconds(101ms);
 
     while (result == false)
     {
@@ -241,21 +242,25 @@ bool SerialCommunicator::sc_initializing_handshake_frontwheels()
             {
                 RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: read 0 bytes... waiting 1 second");
                 rclcpp::sleep_for(sleep_duration);
+                result = false;
             }
             else if (bytes_read > 0 && bytes_read < MC_SERIAL_FEEDBACK_MESSAGE_SIZE)
             {
                 RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: read incomplete message of %d bytes. Expected %d bytes... waiting 1 second", bytes_read, MC_SERIAL_FEEDBACK_MESSAGE_SIZE);
                 rclcpp::sleep_for(sleep_duration);
                 tcflush(front_wheels_serial_fh_, TCIFLUSH);
+                result = false;
             }
             else if (bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE && read_buf[0] != 0xCD && read_buf[1] != 0xAB)
             {
-                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes, but incorrect header of 0x%x%x.", bytes_read, read_buf[1], read_buf[0]);
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes, but incorrect header. Raw frame: 0x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x.", bytes_read, read_buf[0], read_buf[1], read_buf[2], read_buf[3], read_buf[4], read_buf[5], read_buf[6], read_buf[7], read_buf[8], read_buf[9], read_buf[10], read_buf[11], read_buf[12], read_buf[13], read_buf[14], read_buf[15], read_buf[16], read_buf[17]);
+                rclcpp::sleep_for(sync_delay_duration);
+                tcflush(front_wheels_serial_fh_, TCIFLUSH);
                 result = false;
             }
             else if (bytes_read == MC_SERIAL_FEEDBACK_MESSAGE_SIZE && read_buf[0] == 0xCD && read_buf[1] == 0xAB)
             {
-                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes with correct header.", bytes_read);
+                RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "MC::SC front wheels initializing handshake: successfully read feedback frame of %d bytes with correct header. Raw frame: 0x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x.", bytes_read, read_buf[0], read_buf[1], read_buf[2], read_buf[3], read_buf[4], read_buf[5], read_buf[6], read_buf[7], read_buf[8], read_buf[9], read_buf[10], read_buf[11], read_buf[12], read_buf[13], read_buf[14], read_buf[15], read_buf[16], read_buf[17]);
                 result = true;
             }
         }

@@ -63,7 +63,9 @@ void MotionControllerNode::feedbackTimerCB()
     current_frame.serial_msg = this->serial_comm_.sc_read_front_wheels();
     if (current_frame.serial_msg.size() != 0)
     {
-        this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);    
+        this->front_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
+        this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);
+        RCLCPP_INFO(this->get_logger(), "Reading front wheels serial port device returned feedback message with %d bytes.", current_frame.serial_msg.size());    
     }
     else
     {
