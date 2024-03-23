@@ -71,16 +71,16 @@ void MotionControllerNode::feedbackTimerCB()
         RCLCPP_INFO(this->get_logger(), "Reading front wheels serial port device returned no feedback message.");
     }
     
-    current_frame = this->serial_comm_.sc_read_rear_wheels();
-    if (current_frame.valid)
-    {
-        this->rear_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
-        this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);
-        RCLCPP_INFO(this->get_logger(), "Rear Wheels:\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n Battery Voltage: %8d\n   Temperature: %8d\n LED: %016x.", current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
-    }
-    else
-    {
-        RCLCPP_INFO(this->get_logger(), "Reading rear wheels serial port device returned no feedback message.");
-    }
+    // current_frame = this->serial_comm_.sc_read_rear_wheels();
+    // if (current_frame.valid)
+    // {
+    //     this->rear_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
+    //     this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);
+    //     RCLCPP_INFO(this->get_logger(), "Rear Wheels:\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n Battery Voltage: %8d\n   Temperature: %8d\n LED: %016x.", current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
+    // }
+    // else
+    // {
+    //     RCLCPP_INFO(this->get_logger(), "Reading rear wheels serial port device returned no feedback message.");
+    // }
     
 }
