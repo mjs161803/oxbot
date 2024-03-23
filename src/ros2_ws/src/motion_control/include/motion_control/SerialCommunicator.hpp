@@ -25,6 +25,7 @@
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/hoverboard_command.hpp"
 #include "oxbot_config/oxbot_config.hpp"
+#include "FeedbackFrame.hpp"
 
 class SerialCommunicator
 {
@@ -32,8 +33,8 @@ class SerialCommunicator
     SerialCommunicator();                                               //default constructor
     
     int sc_write(std::vector<unsigned char>);
-    std::vector<unsigned char> sc_read_front_wheels();            // method reads the front wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
-    std::vector<unsigned char> sc_read_rear_wheels();             // method reads the rear wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
+    FeedbackFrame sc_read_front_wheels();            // method reads the front wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
+    FeedbackFrame sc_read_rear_wheels();             // method reads the rear wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
     bool sc_initializing_handshake_frontwheels();
     // bool sc_initializing_handshake_rearwheels();
     bool initialized;

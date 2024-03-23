@@ -994,6 +994,7 @@ CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o: /root/oxbot/src/r
   /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp \
   /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.hpp \
   /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp \
+  /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/FeedbackFrame.hpp \
   /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/SerialCommunicator.hpp \
   /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \
   /usr/include/aarch64-linux-gnu/asm/errno.h \

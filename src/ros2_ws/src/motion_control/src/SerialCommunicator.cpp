@@ -106,9 +106,10 @@ void SerialCommunicator::set_c_flags(termios &ser_term, int fh)
     }
 }
 
-std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels() 
+FeedbackFrame SerialCommunicator::sc_read_front_wheels() 
 {
-    std::vector<unsigned char> ser_buf;
+    FeedbackFrame ser_frame;
+    ser_frame.ts = std::chrono::steady_clock::now();
     bool valid_msg {false};
     int bytes_read {0};
     unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE] = {};
@@ -150,40 +151,29 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
 
     if (valid_msg)
     {
-        ser_buf.push_back(read_buf[1]);
-        ser_buf.push_back(read_buf[0]);
-
         // process CMD1 (signed int16): steer or brake command
-        ser_buf.push_back(read_buf[3]);
-        ser_buf.push_back(read_buf[2]);
+        ser_frame.steering = ((read_buf[2]) << 8) | read_buf[3];
         
         // process CMD2 (signed int16): speed or throttle
-        ser_buf.push_back(read_buf[5]);
-        ser_buf.push_back(read_buf[4]);
+        ser_frame.speed = ((read_buf[4]) << 8) | read_buf[5];
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_buf.push_back(read_buf[7]);
-        ser_buf.push_back(read_buf[6]);
+        ser_frame.r_rpm = ((read_buf[6]) << 8) | read_buf[7];
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_buf.push_back(read_buf[9]);
-        ser_buf.push_back(read_buf[8]);
+        ser_frame.l_rpm = ((read_buf[8]) << 8) | read_buf[9];
         
         // process Battery Voltage (signed int16): battery voltage x 100
-        ser_buf.push_back(read_buf[11]);
-        ser_buf.push_back(read_buf[10]);
+        ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
         
         // process Temperature (signed int16): temperature in degrees C x 10
-        ser_buf.push_back(read_buf[13]);
-        ser_buf.push_back(read_buf[12]);
+        ser_frame.temperature = ser_frame.convert_temp(read_buf[12], read_buf[13]);
         
         // process LED (unsigned int16): state of sideboard LEDs
-        ser_buf.push_back(read_buf[15]);
-        ser_buf.push_back(read_buf[14]);
-        
-        // process Checksum (unsigned int16): XOR checksum
-        ser_buf.push_back(read_buf[17]);
-        ser_buf.push_back(read_buf[16]);
+        ser_frame.led_status = ((read_buf[14]) << 8) | read_buf[15];
+
+        ser_frame.valid = true;
+
     }
 
     tcflush(front_wheels_serial_fh_, TCIFLUSH);
@@ -191,13 +181,16 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     write(this->front_wheels_serial_fh_, this->front_wheels_command_, sizeof(this->front_wheels_command_));
     // write(this->rear_wheels_serial_fh_, this->rear_wheels_command_, sizeof(this->rear_wheels_command_));
 
-    return ser_buf;
+    return ser_frame;
 }
 
-std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels() 
+FeedbackFrame SerialCommunicator::sc_read_rear_wheels() 
 {
-    std::vector<unsigned char> ser_buf;
-    // unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE];
+    FeedbackFrame ser_frame;
+    ser_frame.ts = std::chrono::steady_clock::now();
+    // bool valid_msg {false};
+    // int bytes_read {0};
+    // unsigned char read_buf [MC_SERIAL_FEEDBACK_MESSAGE_SIZE] = {};
     // try
     // {
     //     int bytes_read = read(this->rear_wheels_serial_fh_, &read_buf, sizeof(read_buf));
@@ -211,7 +204,7 @@ std::vector<unsigned char> SerialCommunicator::sc_read_rear_wheels()
     //     RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
     // }
 
-    return ser_buf;
+    return ser_frame;
 }
 
 int SerialCommunicator::sc_write(std::vector<unsigned char> write_buf)

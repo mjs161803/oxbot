@@ -210,6 +210,30 @@ motion_controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/build
 .PHONY : motion_controller/fast
 
+src/FeedbackFrame.o: src/FeedbackFrame.cpp.o
+.PHONY : src/FeedbackFrame.o
+
+# target to build an object file
+src/FeedbackFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.o
+.PHONY : src/FeedbackFrame.cpp.o
+
+src/FeedbackFrame.i: src/FeedbackFrame.cpp.i
+.PHONY : src/FeedbackFrame.i
+
+# target to preprocess a source file
+src/FeedbackFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.i
+.PHONY : src/FeedbackFrame.cpp.i
+
+src/FeedbackFrame.s: src/FeedbackFrame.cpp.s
+.PHONY : src/FeedbackFrame.s
+
+# target to generate assembly for a file
+src/FeedbackFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_controller.dir/build.make CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.s
+.PHONY : src/FeedbackFrame.cpp.s
+
 src/MotionControllerNode.o: src/MotionControllerNode.cpp.o
 .PHONY : src/MotionControllerNode.o
 
@@ -298,6 +322,9 @@ help:
 	@echo "... motion_control_uninstall"
 	@echo "... uninstall"
 	@echo "... motion_controller"
+	@echo "... src/FeedbackFrame.o"
+	@echo "... src/FeedbackFrame.i"
+	@echo "... src/FeedbackFrame.s"
 	@echo "... src/MotionControllerNode.o"
 	@echo "... src/MotionControllerNode.i"
 	@echo "... src/MotionControllerNode.s"

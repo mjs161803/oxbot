@@ -14,7 +14,7 @@ find_package(rclcpp REQUIRED)
 find_package(oxbot_interfaces REQUIRED)
 find_package(oxbot_config REQUIRED)
 
-add_executable(motion_controller src/motion_controller.cpp src/MotionControllerNode.cpp src/SerialCommunicator.cpp)
+add_executable(motion_controller src/motion_controller.cpp src/MotionControllerNode.cpp src/SerialCommunicator.cpp src/FeedbackFrame.cpp)
 ament_target_dependencies(motion_controller rclcpp oxbot_interfaces oxbot_config)
 
 if(BUILD_TESTING)

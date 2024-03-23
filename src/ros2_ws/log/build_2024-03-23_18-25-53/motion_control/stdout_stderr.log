@@ -1,0 +1,14 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o[0m
+[100%] [32m[1mLinking CXX executable motion_controller[0m
+CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o: In function `SerialCommunicator::sc_read_front_wheels()':
+SerialCommunicator.cpp:(.text+0x14c8): undefined reference to `FeedbackFrame::convert_v_batt(unsigned char, unsigned char)'
+SerialCommunicator.cpp:(.text+0x14e4): undefined reference to `FeedbackFrame::convert_temp(unsigned char, unsigned char)'
+collect2: error: ld returned 1 exit status
+CMakeFiles/motion_controller.dir/build.make:190: recipe for target 'motion_controller' failed
+CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+make[2]: *** [motion_controller] Error 1
+make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
+make: *** [all] Error 2
+Makefile:145: recipe for target 'all' failed

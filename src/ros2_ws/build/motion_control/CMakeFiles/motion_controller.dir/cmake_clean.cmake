@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.o"
+  "CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.o.d"
   "CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o"
   "CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o.d"
   "CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o"

@@ -598,4 +598,5 @@ CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o: \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp \
  /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp \
- /root/oxbot/src/ros2_ws/install/oxbot_config/include/oxbot_config/oxbot_config.hpp
+ /root/oxbot/src/ros2_ws/install/oxbot_config/include/oxbot_config/oxbot_config.hpp \
+ /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/FeedbackFrame.hpp
