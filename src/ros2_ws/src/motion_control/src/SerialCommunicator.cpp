@@ -17,6 +17,24 @@ using namespace std::chrono_literals;
 
 SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHEELS_SERIAL_PATH), rear_wheels_serial_path_(MC_REAR_WHEELS_SERIAL_PATH), front_wheels_serial_fh_(0), rear_wheels_serial_fh_(0)
 {
+    front_wheels_command_[0] = 0xCD;
+    front_wheels_command_[1] = 0xAB;
+    front_wheels_command_[2] = 0x00;
+    front_wheels_command_[3] = 0x00; 
+    front_wheels_command_[4] = 0x00;
+    front_wheels_command_[5] = 0x00;
+    front_wheels_command_[6] = 0xCD;
+    front_wheels_command_[7] = 0xAB;
+
+    rear_wheels_command_[0] = 0xCD;
+    rear_wheels_command_[1] = 0xAB;
+    rear_wheels_command_[2] = 0x00;
+    rear_wheels_command_[3] = 0x00; 
+    rear_wheels_command_[4] = 0x00;
+    rear_wheels_command_[5] = 0x00;
+    rear_wheels_command_[6] = 0xCD;
+    rear_wheels_command_[7] = 0xAB;   
+
     // Front Wheels Serial Port Configuring
     try
     {
@@ -169,6 +187,9 @@ std::vector<unsigned char> SerialCommunicator::sc_read_front_wheels()
     }
 
     tcflush(front_wheels_serial_fh_, TCIFLUSH);
+    
+    write(this->front_wheels_serial_fh_, this->front_wheels_command_, sizeof(this->front_wheels_command_));
+    // write(this->rear_wheels_serial_fh_, this->rear_wheels_command_, sizeof(this->rear_wheels_command_));
 
     return ser_buf;
 }

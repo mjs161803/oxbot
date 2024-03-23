@@ -44,6 +44,8 @@ class SerialCommunicator
     int front_wheels_serial_fh_;
     int rear_wheels_serial_fh_;
     int serial_buff_size_;
+    unsigned char front_wheels_command_[8];
+    unsigned char rear_wheels_command_[8];
 
     void set_c_flags(termios &, int);
 };
