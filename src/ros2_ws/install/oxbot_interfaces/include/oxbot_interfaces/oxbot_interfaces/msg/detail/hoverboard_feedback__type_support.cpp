@@ -37,7 +37,7 @@ void HoverboardFeedback_fini_function(void * message_memory)
   typed_message->~HoverboardFeedback();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember HoverboardFeedback_message_member_array[7] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember HoverboardFeedback_message_member_array[8] = {
   {
     "steer_or_brake",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
@@ -156,13 +156,30 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HoverboardFee
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "timestamp_ns",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(oxbot_interfaces::msg::HoverboardFeedback, timestamp_ns),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers HoverboardFeedback_message_members = {
   "oxbot_interfaces::msg",  // message namespace
   "HoverboardFeedback",  // message name
-  7,  // number of fields
+  8,  // number of fields
   sizeof(oxbot_interfaces::msg::HoverboardFeedback),
   HoverboardFeedback_message_member_array,  // message members
   HoverboardFeedback_init_function,  // function to initialize message memory (memory has to be allocated)

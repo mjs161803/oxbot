@@ -1,6 +1,0 @@
-[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/FeedbackFrame.cpp:5:30:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KFeedbackFrame::FeedbackFrame()[m[K’
- FeedbackFrame::FeedbackFrame([01;31m[K)[m[K
-                              [01;31m[K^[m[K
-make[2]: *** [CMakeFiles/motion_controller.dir/src/FeedbackFrame.cpp.o] Error 1
-make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
-make: *** [all] Error 2

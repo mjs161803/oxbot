@@ -24,6 +24,7 @@ oxbot_interfaces__msg__HoverboardFeedback__init(oxbot_interfaces__msg__Hoverboar
   // batt_voltage_x100
   // temperature
   // led
+  // timestamp_ns
   return true;
 }
 
@@ -40,6 +41,7 @@ oxbot_interfaces__msg__HoverboardFeedback__fini(oxbot_interfaces__msg__Hoverboar
   // batt_voltage_x100
   // temperature
   // led
+  // timestamp_ns
 }
 
 bool
@@ -76,6 +78,10 @@ oxbot_interfaces__msg__HoverboardFeedback__are_equal(const oxbot_interfaces__msg
   if (lhs->led != rhs->led) {
     return false;
   }
+  // timestamp_ns
+  if (lhs->timestamp_ns != rhs->timestamp_ns) {
+    return false;
+  }
   return true;
 }
 
@@ -101,6 +107,8 @@ oxbot_interfaces__msg__HoverboardFeedback__copy(
   output->temperature = input->temperature;
   // led
   output->led = input->led;
+  // timestamp_ns
+  output->timestamp_ns = input->timestamp_ns;
   return true;
 }
 

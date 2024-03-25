@@ -19,6 +19,8 @@ module oxbot_interfaces {
       int16 temperature;
 
       uint16 led;
+
+      uint64 timestamp_ns;
     };
   };
 };

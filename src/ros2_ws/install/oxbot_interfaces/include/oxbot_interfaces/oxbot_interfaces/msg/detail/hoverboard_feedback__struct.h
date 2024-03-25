@@ -27,6 +27,7 @@ typedef struct oxbot_interfaces__msg__HoverboardFeedback
   int16_t batt_voltage_x100;
   int16_t temperature;
   uint16_t led;
+  uint64_t timestamp_ns;
 } oxbot_interfaces__msg__HoverboardFeedback;
 
 // Struct for a sequence of oxbot_interfaces__msg__HoverboardFeedback.

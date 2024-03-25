@@ -3,6 +3,7 @@
 #include "MotionControllerNode.hpp"
 #include "FeedbackFrame.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
+#include "oxbot_interfaces/msg/motion_control_output.hpp"
 #include "oxbot_config/oxbot_config.hpp"
 
 
@@ -38,6 +39,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 
 void MotionControllerNode::publishOutputCB()
 {
+    auto msg_v = oxbot_interfaces::msg::MotionControlOutput();
     auto msg = oxbot_interfaces::msg::HoverboardFeedback();
     msg.steer_or_brake = 1;
     msg.speed_or_throttle = 2;
@@ -46,8 +48,9 @@ void MotionControllerNode::publishOutputCB()
     msg.batt_voltage_x100 = 5;
     msg.temperature = 6;
     msg.led = 7;
+    msg.timestamp_ns = 1e6; 
 
-    // iterate over front_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
+    // iterate over front_serial_feedback_data_ and push each FeedBackFrame to back of mc_output message
 
     // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
 

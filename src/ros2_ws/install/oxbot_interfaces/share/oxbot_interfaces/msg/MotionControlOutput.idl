@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from oxbot_interfaces/msg/MotionControlOutput.msg
+// generated code does not contain a copyright notice
+
+#include "oxbot_interfaces/msg/HoverboardFeedback.idl"
+
+module oxbot_interfaces {
+  module msg {
+    struct MotionControlOutput {
+      sequence<oxbot_interfaces::msg::HoverboardFeedback> mc_output;
+    };
+  };
+};

@@ -5,3 +5,4 @@ int16 left_wheel_rpm
 int16 batt_voltage_x100
 int16 temperature
 uint16 led
+uint64 timestamp_ns

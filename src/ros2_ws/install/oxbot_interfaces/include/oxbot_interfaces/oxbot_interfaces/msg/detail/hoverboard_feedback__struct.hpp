@@ -45,6 +45,7 @@ struct HoverboardFeedback_
       this->batt_voltage_x100 = 0;
       this->temperature = 0;
       this->led = 0;
+      this->timestamp_ns = 0ull;
     }
   }
 
@@ -61,6 +62,7 @@ struct HoverboardFeedback_
       this->batt_voltage_x100 = 0;
       this->temperature = 0;
       this->led = 0;
+      this->timestamp_ns = 0ull;
     }
   }
 
@@ -86,6 +88,9 @@ struct HoverboardFeedback_
   using _led_type =
     uint16_t;
   _led_type led;
+  using _timestamp_ns_type =
+    uint64_t;
+  _timestamp_ns_type timestamp_ns;
 
   // setters for named parameter idiom
   Type & set__steer_or_brake(
@@ -128,6 +133,12 @@ struct HoverboardFeedback_
     const uint16_t & _arg)
   {
     this->led = _arg;
+    return *this;
+  }
+  Type & set__timestamp_ns(
+    const uint64_t & _arg)
+  {
+    this->timestamp_ns = _arg;
     return *this;
   }
 
@@ -192,6 +203,9 @@ struct HoverboardFeedback_
       return false;
     }
     if (this->led != other.led) {
+      return false;
+    }
+    if (this->timestamp_ns != other.timestamp_ns) {
       return false;
     }
     return true;

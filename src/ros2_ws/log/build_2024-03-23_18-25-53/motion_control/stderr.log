@@ -1,7 +1,0 @@
-CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o: In function `SerialCommunicator::sc_read_front_wheels()':
-SerialCommunicator.cpp:(.text+0x14c8): undefined reference to `FeedbackFrame::convert_v_batt(unsigned char, unsigned char)'
-SerialCommunicator.cpp:(.text+0x14e4): undefined reference to `FeedbackFrame::convert_temp(unsigned char, unsigned char)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [motion_controller] Error 1
-make[1]: *** [CMakeFiles/motion_controller.dir/all] Error 2
-make: *** [all] Error 2
