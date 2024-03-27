@@ -53,11 +53,13 @@ void MotionControllerNode::publishOutputCB()
         msg.led = itr.led_status;
         msg.timestamp_ns = itr.ts.time_since_epoch().count();
         msg_v.mc_output.push_back(msg);
+        // RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", itr.ts.time_since_epoch().count(), itr.steering, itr.speed, itr.r_rpm, itr.l_rpm, itr.v_batt, itr.temperature, itr.led_status);    
     }
 
     // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
 
     output_publisher_->publish(msg_v);
+    this->front_serial_feedback_data_.clear();
 
 }
 
@@ -68,13 +70,11 @@ void MotionControllerNode::feedbackTimerCB()
     current_frame = this->serial_comm_.sc_read_front_wheels();
     if (current_frame.valid)
     {
-        this->front_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
         this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);
-        RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", current_frame.ts.time_since_epoch().count(), current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
     }
     else
     {
-        RCLCPP_INFO(this->get_logger(), "Reading front wheels serial port device returned no feedback message.");
+        RCLCPP_INFO(this->get_logger(), "MotionControllerNode::feedbackTimerCB: Reading front wheels serial port device returned invalid feedback frame.");
     }
     
     // current_frame = this->serial_comm_.sc_read_rear_wheels();

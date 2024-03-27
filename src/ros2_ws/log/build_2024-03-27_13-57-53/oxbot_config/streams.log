@@ -1,0 +1,54 @@
+[0.205s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_config -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_config
+[0.704s] -- The C compiler identification is GNU 7.5.0
+[0.926s] -- The CXX compiler identification is GNU 7.5.0
+[1.020s] -- Detecting C compiler ABI info
+[1.383s] -- Detecting C compiler ABI info - done
+[1.440s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.442s] -- Detecting C compile features
+[1.445s] -- Detecting C compile features - done
+[1.495s] -- Detecting CXX compiler ABI info
+[1.787s] -- Detecting CXX compiler ABI info - done
+[1.840s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.842s] -- Detecting CXX compile features
+[1.845s] -- Detecting CXX compile features - done
+[1.865s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[7.181s] -- Found Python3: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter 
+[7.923s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/install/share/rosidl_default_generators/cmake)
+[7.947s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.011s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[8.300s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.584s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/install/share/ament_lint_auto/cmake)
+[9.287s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.288s] -- Configured cppcheck include dirs: /root/oxbot/src/ros2_ws/src/oxbot_config/include
+[9.288s] -- Configured cppcheck exclude dirs and/or files: 
+[9.292s] -- Added test 'lint_cmake' to check CMake code style
+[9.299s] -- Added test 'uncrustify' to check C / C++ code style
+[9.300s] -- Configured uncrustify additional arguments: 
+[9.303s] -- Added test 'xmllint' to check XML markup files
+[9.310s] -- Configuring done (8.9s)
+[9.329s] -- Generating done (0.0s)
+[9.335s] -- Build files have been written to: /root/oxbot/src/ros2_ws/build/oxbot_config
+[9.382s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_config -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_config
+[9.393s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[9.661s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[10.116s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config
+[10.270s] -- Install configuration: ""
+[10.272s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include/
+[10.272s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config
+[10.273s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config/oxbot_config.hpp
+[10.274s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/package_run_dependencies/oxbot_config
+[10.274s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/parent_prefix_path/oxbot_config
+[10.275s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.sh
+[10.276s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.dsv
+[10.276s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.sh
+[10.277s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.dsv
+[10.277s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.bash
+[10.278s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.sh
+[10.278s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.zsh
+[10.281s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.dsv
+[10.281s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.dsv
+[10.282s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/packages/oxbot_config
+[10.283s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig.cmake
+[10.283s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig-version.cmake
+[10.284s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.xml
+[10.320s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config

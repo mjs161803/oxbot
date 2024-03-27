@@ -1,0 +1,16 @@
+/root/oxbot/src/ros2_ws/install/motion_control/lib/motion_control/motion_controller
+/root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/package_run_dependencies/motion_control
+/root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/parent_prefix_path/motion_control
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.sh
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/ament_prefix_path.dsv
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.sh
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/environment/path.dsv
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.bash
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.sh
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.zsh
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/local_setup.dsv
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.dsv
+/root/oxbot/src/ros2_ws/install/motion_control/share/ament_index/resource_index/packages/motion_control
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig.cmake
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/cmake/motion_controlConfig-version.cmake
+/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.xml
