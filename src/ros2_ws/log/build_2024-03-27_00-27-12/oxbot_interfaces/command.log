@@ -1,0 +1,6 @@
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_interfaces -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_interfaces
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_interfaces -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_interfaces
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces

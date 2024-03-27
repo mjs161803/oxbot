@@ -1,0 +1,8 @@
+int16 steer_or_brake
+int16 speed_or_throttle
+int16 right_wheel_rpm
+int16 left_wheel_rpm
+int16 batt_voltage_x100
+int16 temperature
+uint16 led
+uint64 timestamp_ns

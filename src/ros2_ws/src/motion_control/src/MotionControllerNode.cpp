@@ -18,7 +18,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB, this));
     
     // Publisher Definitions
-    output_publisher_ = this->create_publisher<oxbot_interfaces::msg::HoverboardFeedback>("motor_controller_output", 30);
+    output_publisher_ = this->create_publisher<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_output", 30);
     
     // Serial Communicator initializing and Initial Serial Port Handshakes
     try
@@ -41,20 +41,23 @@ void MotionControllerNode::publishOutputCB()
 {
     auto msg_v = oxbot_interfaces::msg::MotionControlOutput();
     auto msg = oxbot_interfaces::msg::HoverboardFeedback();
-    msg.steer_or_brake = 1;
-    msg.speed_or_throttle = 2;
-    msg.right_wheel_rpm = 3;
-    msg.left_wheel_rpm = 4;
-    msg.batt_voltage_x100 = 5;
-    msg.temperature = 6;
-    msg.led = 7;
-    msg.timestamp_ns = 1e6; 
 
-    // iterate over front_serial_feedback_data_ and push each FeedBackFrame to back of mc_output message
+    for(auto itr : this->front_serial_feedback_data_)
+    {
+        msg.steer_or_brake = itr.steering;
+        msg.speed_or_throttle = itr.speed;
+        msg.right_wheel_rpm = itr.r_rpm;
+        msg.left_wheel_rpm = itr.l_rpm;
+        msg.batt_voltage_x100 = itr.v_batt;
+        msg.temperature = itr.temperature;
+        msg.led = itr.led_status;
+        msg.timestamp_ns = itr.ts.time_since_epoch().count();
+        msg_v.mc_output.push_back(msg);
+    }
 
     // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
 
-    output_publisher_->publish(msg);
+    output_publisher_->publish(msg_v);
 
 }
 
@@ -67,7 +70,7 @@ void MotionControllerNode::feedbackTimerCB()
     {
         this->front_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
         this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);
-        RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n Battery Voltage: %8d\n   Temperature: %8d\n LED: %016x.", current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
+        RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", current_frame.ts.time_since_epoch().count(), current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
     }
     else
     {

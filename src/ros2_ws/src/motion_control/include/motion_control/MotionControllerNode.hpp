@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
+#include "oxbot_interfaces/msg/motion_control_output.hpp"
 #include "SerialCommunicator.hpp"
 #include "FeedbackFrame.hpp"
 #include "oxbot_config/oxbot_config.hpp"
@@ -15,7 +16,7 @@ class MotionControllerNode: public rclcpp::Node {
     void publishOutputCB();
     void feedbackTimerCB();     
 
-    rclcpp::Publisher<oxbot_interfaces::msg::HoverboardFeedback>::SharedPtr output_publisher_;
+    rclcpp::Publisher<oxbot_interfaces::msg::MotionControlOutput>::SharedPtr output_publisher_;
     rclcpp::TimerBase::SharedPtr serial_feedback_timer_;
     rclcpp::TimerBase::SharedPtr output_timer_;
 

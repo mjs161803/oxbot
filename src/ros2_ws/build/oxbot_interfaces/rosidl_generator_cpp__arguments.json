@@ -1,0 +1,32 @@
+{
+  "package_name": "oxbot_interfaces",
+  "output_dir": "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_cpp/oxbot_interfaces",
+  "template_dir": "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource",
+  "idl_tuples": [
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardFeedback.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardCommand.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/MotionControlOutput.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:srv/ComputeRectangleArea.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../../../lib/python3.6/site-packages/rosidl_generator_cpp/__init__.py",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/action__builder.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/action__struct.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/action__traits.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/idl.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/idl__builder.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/idl__struct.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/idl__traits.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/msg__builder.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/msg__struct.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/msg__traits.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
+    "/opt/ros/humble/install/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/HoverboardFeedback.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/HoverboardCommand.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/msg/MotionControlOutput.idl",
+    "/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces/srv/ComputeRectangleArea.idl"
+  ]
+}

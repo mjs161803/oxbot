@@ -1,0 +1,10 @@
+msg/HoverboardCommand.idl
+msg/HoverboardCommand.msg
+msg/HoverboardFeedback.idl
+msg/HoverboardFeedback.msg
+msg/MotionControlOutput.idl
+msg/MotionControlOutput.msg
+srv/ComputeRectangleArea.idl
+srv/ComputeRectangleArea.srv
+srv/ComputeRectangleArea_Request.msg
+srv/ComputeRectangleArea_Response.msg
