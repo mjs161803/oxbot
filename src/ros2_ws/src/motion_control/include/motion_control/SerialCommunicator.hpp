@@ -49,5 +49,5 @@ class SerialCommunicator
     unsigned char rear_wheels_command_[8];
 
     void set_c_flags(termios &, int);
-    unsigned char[] convert_steer_to_uchar_(int16_t);
+    void convert_steer_to_uchar_(int16_t, unsigned char*, int);
 };
