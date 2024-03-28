@@ -286,3 +286,9 @@ bool SerialCommunicator::sc_initializing_handshake_frontwheels()
 
     return result;
 }
+
+void SerialCommunicator::convert_steer_to_uchar_(int16_t steer_cmd, unsigned char* steer_bytes, int num_bytes_steer_array)
+{
+    steer_bytes[0] = steer_cmd && 0x0011;
+    steer_bytes[1] = steer_cmd >> 8;
+}
