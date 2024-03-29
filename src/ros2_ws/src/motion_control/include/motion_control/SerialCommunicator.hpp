@@ -38,6 +38,8 @@ class SerialCommunicator
     bool sc_initializing_handshake_frontwheels();
     // bool sc_initializing_handshake_rearwheels();
     bool initialized;
+    void set_front_speed(int16_t);
+    void set_front_steer(int16_t);
     
     private:
     std::string front_wheels_serial_path_;
@@ -49,5 +51,5 @@ class SerialCommunicator
     unsigned char rear_wheels_command_[8];
 
     void set_c_flags(termios &, int);
-    void convert_steer_to_uchar_(int16_t, unsigned char*, int);
+    void convert_int16_to_uchar_(int16_t, unsigned char*, int);
 };

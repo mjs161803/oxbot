@@ -17,6 +17,7 @@ class MotionControllerNode: public rclcpp::Node {
     void feedbackTimerCB();     
 
     rclcpp::Publisher<oxbot_interfaces::msg::MotionControlOutput>::SharedPtr output_publisher_;
+    // set up subscriber for cmd_vel commands. CB will then update speed and steering for serial_comm_ member
     rclcpp::TimerBase::SharedPtr serial_feedback_timer_;
     rclcpp::TimerBase::SharedPtr output_timer_;
 

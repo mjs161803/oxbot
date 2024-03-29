@@ -287,8 +287,24 @@ bool SerialCommunicator::sc_initializing_handshake_frontwheels()
     return result;
 }
 
-void SerialCommunicator::convert_steer_to_uchar_(int16_t steer_cmd, unsigned char* steer_bytes, int num_bytes_steer_array)
+void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned char* cmd_bytes, int num_bytes_cmd_array)
 {
-    steer_bytes[0] = steer_cmd && 0x0011;
-    steer_bytes[1] = steer_cmd >> 8;
+    cmd_bytes[0] = int16_cmd && 0x0011;   // LSB of int16
+    cmd_bytes[1] = int16_cmd >> 8;        // MSB of int16
+}
+
+void SerialCommunicator::set_front_steer(int16_t st)
+{
+    unsigned char new_steer[2] {0x00};
+    convert_int16_to_uchar_(st, new_steer, sizeof(new_steer));
+    this->front_wheels_command_[2] = new_steer[0];  // LSB first
+    this->front_wheels_command_[3] = new_steer[1];  // MSB second
+}
+
+void SerialCommunicator::set_front_speed(int16_t sp)
+{
+    unsigned char new_speed[2] {0x00};
+    convert_int16_to_uchar_(sp, new_speed, sizeof(new_speed));
+    this->front_wheels_command_[4] = new_speed[0];  // LSB first
+    this->front_wheels_command_[5] = new_speed[1];  // MSB second
 }
