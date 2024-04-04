@@ -8,6 +8,7 @@
 
 
 using namespace std::chrono_literals;
+using std::placeholders::_1;
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 {
@@ -17,9 +18,13 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     serial_feedback_timer_ =   this->create_wall_timer(std::chrono::microseconds(serial_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCB, this));
     output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB, this));
     
+    // Subscriber Definitions
+    cmd_subscription_ = this->create_subscription<geometry_msgs::msg::Twist>("motion_cmd", 10, std::bind(&MotionControllerNode::cmdSubscriptionCB, this, _1));
+
     // Publisher Definitions
     output_publisher_ = this->create_publisher<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_output", 30);
     
+
     // Serial Communicator initializing and Initial Serial Port Handshakes
     try
     {
@@ -35,6 +40,11 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
         RCLCPP_ERROR(this->get_logger(), "MotionControllerNode: Runtime Exception: %s", re.what());
     }
     
+}
+
+void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &msg)
+{
+    // to-do: after receiving a Twist msg, update serial_comm_.front_wheels_command_ and .rear_wheels_command_
 }
 
 void MotionControllerNode::publishOutputCB()

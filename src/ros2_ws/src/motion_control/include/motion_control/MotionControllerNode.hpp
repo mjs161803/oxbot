@@ -1,4 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
+#include "geometry_msgs/msg/twist.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/motion_control_output.hpp"
 #include "SerialCommunicator.hpp"
@@ -14,10 +15,12 @@ class MotionControllerNode: public rclcpp::Node {
 
     // Callbacks
     void publishOutputCB();
-    void feedbackTimerCB();     
+    void feedbackTimerCB();
+    void cmdSubscriptionCB(const geometry_msgs::msg::Twist &);     
 
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_subscription_;
     rclcpp::Publisher<oxbot_interfaces::msg::MotionControlOutput>::SharedPtr output_publisher_;
-    // set up subscriber for cmd_vel commands. CB will then update speed and steering for serial_comm_ member
+    
     rclcpp::TimerBase::SharedPtr serial_feedback_timer_;
     rclcpp::TimerBase::SharedPtr output_timer_;
 
