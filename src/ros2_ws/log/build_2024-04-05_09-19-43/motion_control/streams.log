@@ -1,0 +1,22 @@
+[0.134s] Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[0.397s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[1.289s] Traceback (most recent call last):
+[1.291s]   File "/opt/ros/humble/install/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[1.292s]     from ament_package.templates import get_environment_hook_template_path
+[1.292s] ModuleNotFoundError: No module named 'ament_package'
+[1.307s] [31mCMake Error at /opt/ros/humble/install/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[1.308s]   execute_process(/usr/bin/python3.6
+[1.308s]   /opt/ros/humble/install/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[1.309s]   /root/oxbot/src/ros2_ws/build/motion_control/ament_cmake_package_templates/templates.cmake)
+[1.309s]   returned error code 1
+[1.310s] Call Stack (most recent call first):
+[1.311s]   /opt/ros/humble/install/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.311s]   /opt/ros/humble/install/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.312s]   /opt/ros/humble/install/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.312s]   CMakeLists.txt:12 (find_package)
+[1.313s] 
+[1.313s] [0m
+[1.314s] -- Configuring incomplete, errors occurred!
+[1.317s] Makefile:348: recipe for target 'cmake_check_build_system' failed
+[1.318s] make: *** [cmake_check_build_system] Error 1
+[1.343s] Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '2': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4

@@ -248,7 +248,7 @@ RMW_IMPLEMENTATION:STRING=rmw_cyclonedds_cpp
 SITE:STRING=oxbot
 
 //Path to a library.
-_lib:FILEPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/opt/ros/humble/install/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/install/share/ament_cmake/cmake
@@ -345,6 +345,9 @@ fastcdr_DIR:PATH=/opt/ros/humble/install/lib/cmake/fastcdr
 
 //The directory containing a CMake configuration file for fastrtps_cmake_module.
 fastrtps_cmake_module_DIR:PATH=/opt/ros/humble/install/share/fastrtps_cmake_module/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/humble/install/share/geometry_msgs/cmake
 
 //The directory containing a CMake configuration file for iceoryx_binding_c.
 iceoryx_binding_c_DIR:PATH=/opt/ros/humble/install/lib/cmake/iceoryx_binding_c

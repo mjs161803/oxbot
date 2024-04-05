@@ -1,0 +1,7 @@
+[ 20%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/motion_controller.dir/src/SerialCommunicator.cpp.o[0m
+CMakeFiles/motion_controller.dir/build.make:75: recipe for target 'CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o' failed
+CMakeFiles/motion_controller.dir/build.make:89: recipe for target 'CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o' failed
+CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motion_controller.dir/all' failed
+Makefile:145: recipe for target 'all' failed

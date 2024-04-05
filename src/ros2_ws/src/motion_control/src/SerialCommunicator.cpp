@@ -207,25 +207,6 @@ FeedbackFrame SerialCommunicator::sc_read_rear_wheels()
     return ser_frame;
 }
 
-int SerialCommunicator::sc_write(std::vector<unsigned char> write_buf)
-{
-    int num_written {0};
-    unsigned char hoverboard_command[8] {write_buf[0], write_buf[1],     // frame header start
-                                        write_buf[2], write_buf[3],     // steer command
-                                        write_buf[4], write_buf[5],     // speed command 
-                                        write_buf[6], write_buf[7]};    // XOR checksum
-    try
-        {
-            write(this->front_wheels_serial_fh_, hoverboard_command, sizeof(hoverboard_command));
-        }
-        catch(const std::runtime_error& re)
-        {
-            RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
-        }
-
-    return num_written;
-}
-
 bool SerialCommunicator::sc_initializing_handshake_frontwheels()
 {
     bool result {false};
