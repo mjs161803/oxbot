@@ -280,6 +280,7 @@ void SerialCommunicator::set_front_steer(int16_t st)
     convert_int16_to_uchar_(st, new_steer, sizeof(new_steer));
     this->front_wheels_command_[2] = new_steer[0];  // LSB first
     this->front_wheels_command_[3] = new_steer[1];  // MSB second
+    update_front_checksum();
 }
 
 void SerialCommunicator::set_front_speed(int16_t sp)
@@ -288,4 +289,21 @@ void SerialCommunicator::set_front_speed(int16_t sp)
     convert_int16_to_uchar_(sp, new_speed, sizeof(new_speed));
     this->front_wheels_command_[4] = new_speed[0];  // LSB first
     this->front_wheels_command_[5] = new_speed[1];  // MSB second
+    update_front_checksum();
+}
+
+void SerialCommunicator::update_front_checksum()
+{
+    unsigned char checksum_lsb = front_wheels_command_[0]^front_wheels_command_[2]^front_wheels_command_[4];
+    unsigned char checksum_msb = front_wheels_command_[1]^front_wheels_command_[3]^front_wheels_command_[5];
+    front_wheels_command_[6] = checksum_lsb;
+    front_wheels_command_[7] = checksum_msb;
+}
+
+void SerialCommunicator::update_rear_checksum()
+{
+    unsigned char checksum_lsb = rear_wheels_command_[0]^rear_wheels_command_[2]^rear_wheels_command_[4];
+    unsigned char checksum_msb = rear_wheels_command_[1]^rear_wheels_command_[3]^rear_wheels_command_[5];
+    rear_wheels_command_[6] = checksum_lsb;
+    rear_wheels_command_[7] = checksum_msb;
 }
