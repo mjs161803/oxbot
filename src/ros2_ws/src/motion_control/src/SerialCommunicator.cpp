@@ -152,16 +152,16 @@ FeedbackFrame SerialCommunicator::sc_read_front_wheels()
     if (valid_msg)
     {
         // process CMD1 (signed int16): steer or brake command
-        ser_frame.steering = ((read_buf[2]) << 8) | read_buf[3];
+        ser_frame.steering = read_buf[2] | (read_buf[3] << 8);
         
         // process CMD2 (signed int16): speed or throttle
-        ser_frame.speed = ((read_buf[4]) << 8) | read_buf[5];
+        ser_frame.speed = read_buf[4] | (read_buf[5] << 8);
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_frame.r_rpm = ((read_buf[6]) << 8) | read_buf[7];
+        ser_frame.r_rpm = read_buf[6] | (read_buf[7] << 8);
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_frame.l_rpm = ((read_buf[8]) << 8) | read_buf[9];
+        ser_frame.l_rpm = read_buf[8] | (read_buf[9] << 8);
         
         // process Battery Voltage (signed int16): battery voltage x 100
         ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
@@ -270,8 +270,8 @@ bool SerialCommunicator::sc_initializing_handshake_frontwheels()
 
 void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned char* cmd_bytes, int num_bytes_cmd_array)
 {
-    cmd_bytes[0] = int16_cmd && 0x0011;   // LSB of int16
-    cmd_bytes[1] = int16_cmd >> 8;        // MSB of int16
+    cmd_bytes[0] = int16_cmd;               // LSB of int16
+    cmd_bytes[1] = int16_cmd >> 8;          // MSB of int16
 }
 
 void SerialCommunicator::set_front_steer(int16_t st)
@@ -298,6 +298,7 @@ void SerialCommunicator::update_front_checksum()
     unsigned char checksum_msb = front_wheels_command_[1]^front_wheels_command_[3]^front_wheels_command_[5];
     front_wheels_command_[6] = checksum_lsb;
     front_wheels_command_[7] = checksum_msb;
+    RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Updated front_wheel command: %2x %2x   %2x %2x   %2x %2x   %2x %2x", front_wheels_command_[1], front_wheels_command_[0], front_wheels_command_[3], front_wheels_command_[2], front_wheels_command_[5], front_wheels_command_[4], front_wheels_command_[7], front_wheels_command_[6]);
 }
 
 void SerialCommunicator::update_rear_checksum()

@@ -95,6 +95,12 @@ CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/time.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/twist.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp
@@ -1430,6 +1436,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp
  /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/time.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+ /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/twist.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp
  /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp

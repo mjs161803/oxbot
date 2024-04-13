@@ -93,6 +93,12 @@ CMakeFiles/motion_controller.dir/src/MotionControllerNode.cpp.o: /root/oxbot/src
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp \
@@ -1426,6 +1432,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp \
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp \
   /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp \
@@ -2131,8 +2143,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/c++/7/stdlib.h:
 
-/usr/include/c++/7/shared_mutex:
-
 /usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/c++/7/optional:
@@ -2495,15 +2505,11 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rcutils/rcutils/types.h:
 
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
+/opt/ros/humble/install/include/tracetools/tracetools/utils.hpp:
 
-/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+/opt/ros/humble/install/include/rcutils/rcutils/time.h:
 
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
-
-/usr/include/c++/7/tr1/beta_function.tcc:
-
-/usr/include/c++/7/bits/parse_numbers.h:
+/opt/ros/humble/install/include/rcutils/rcutils/macros.h:
 
 /usr/include/aarch64-linux-gnu/bits/fcntl.h:
 
@@ -2534,8 +2540,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/waitable.hpp:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
 
 /opt/ros/humble/install/include/rcl/rcl/types.h:
 
@@ -2619,9 +2623,21 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
 
+/usr/include/c++/7/shared_mutex:
+
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp:
+
 /opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/detail/storage_policy_common.hpp:
+
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp:
+
+/usr/include/c++/7/bits/ios_base.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/7/include/stdint.h:
+
+/opt/ros/humble/install/include/rclcpp/rclcpp/time.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
 
@@ -2696,6 +2712,14 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/node_interfaces/get_node_timers_interface.hpp:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
+
+/usr/include/c++/7/tr1/beta_function.tcc:
+
+/usr/include/c++/7/bits/parse_numbers.h:
 
 /opt/ros/humble/install/include/rcl/rcl/init_options.h:
 
@@ -2813,6 +2837,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /root/oxbot/src/ros2_ws/src/motion_control/include/motion_control/FeedbackFrame.hpp:
 
+/usr/include/c++/7/bits/atomic_lockfree_defines.h:
+
+/opt/ros/humble/install/include/rcutils/rcutils/testing/fault_injection.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
+
 /opt/ros/humble/install/include/rcl/rcl/client.h:
 
 /opt/ros/humble/install/include/rmw/rmw/error_handling.h:
@@ -2837,6 +2867,8 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/c++/7/ext/alloc_traits.h:
 
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
+
 /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/posix_opt.h:
@@ -2848,14 +2880,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /usr/include/c++/7/vector:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/function_traits.hpp:
-
-/usr/include/c++/7/csignal:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
-
-/opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
-
-/usr/include/c++/7/bits/memoryfwd.h:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
@@ -2877,10 +2901,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/c++/7/bits/exception_ptr.h:
 
-/opt/ros/humble/install/include/tracetools/tracetools/tracetools.h:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
-
 /opt/ros/humble/install/include/rcl/rcl/logging_rosout.h:
 
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
@@ -2890,6 +2910,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /usr/include/c++/7/new:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/create_client.hpp:
+
+/usr/include/c++/7/list:
+
+/opt/ros/humble/install/include/rcutils/rcutils/qsort.h:
+
+/opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp:
 
@@ -2943,6 +2969,14 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
 
+/opt/ros/humble/install/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
+
+/usr/include/c++/7/bits/memoryfwd.h:
+
+/usr/include/c++/7/csignal:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
+
 /usr/include/c++/7/exception:
 
 /usr/include/c++/7/bits/stl_algobase.h:
@@ -2965,15 +2999,15 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
+
 /opt/ros/humble/install/include/rcl/rcl/allocator.h:
 
-/usr/include/c++/7/list:
-
-/opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
-
-/opt/ros/humble/install/include/rcutils/rcutils/qsort.h:
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
 
 /usr/include/c++/7/bits/stl_iterator_base_types.h:
+
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
 
 /usr/include/c++/7/atomic:
 
@@ -3005,12 +3039,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
 
-/usr/include/c++/7/bits/ios_base.h:
-
-/usr/lib/gcc/aarch64-linux-gnu/7/include/stdint.h:
-
-/opt/ros/humble/install/include/rclcpp/rclcpp/time.hpp:
-
 /usr/include/aarch64-linux-gnu/bits/sigthread.h:
 
 /usr/include/aarch64-linux-gnu/asm/types.h:
@@ -3039,6 +3067,12 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /usr/include/stdc-predef.h:
 
+/opt/ros/humble/install/include/tracetools/tracetools/tracetools.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
+
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp:
 
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
@@ -3052,6 +3086,10 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
 /opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
+
+/opt/ros/humble/install/include/rcutils/rcutils/shared_library.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
 /opt/ros/humble/install/include/rcl/rcl/event_callback.h:
 
@@ -3146,10 +3184,6 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rclcpp/rclcpp/create_timer.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
-
-/opt/ros/humble/install/include/tracetools/tracetools/utils.hpp:
-
-/opt/ros/humble/install/include/rcutils/rcutils/time.h:
 
 /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp:
 
@@ -3327,9 +3361,9 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rmw/rmw/qos_profiles.h:
 
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
-
 /usr/include/c++/7/ext/new_allocator.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
 
@@ -3349,9 +3383,9 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/parameter_service.hpp:
 
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
-
 /opt/ros/humble/install/include/rclcpp/rclcpp/generic_subscription.hpp:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
 
@@ -3366,6 +3400,8 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rclcpp/rclcpp/qos.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/rclcpp.hpp:
+
+/opt/ros/humble/install/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/service.hpp:
 
@@ -3401,9 +3437,9 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
 
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
-
 /opt/ros/humble/install/include/rcutils/rcutils/snprintf.h:
+
+/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
 
 /opt/ros/humble/install/include/rclcpp/rclcpp/wait_set_template.hpp:
 
@@ -3422,15 +3458,3 @@ CMakeFiles/motion_controller.dir/src/motion_controller.cpp.o: /root/oxbot/src/ro
 /opt/ros/humble/install/include/rcutils/rcutils/logging.h:
 
 /opt/ros/humble/install/include/rcutils/rcutils/logging_macros.h:
-
-/opt/ros/humble/install/include/rcutils/rcutils/macros.h:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
-
-/opt/ros/humble/install/include/rcutils/rcutils/shared_library.h:
-
-/usr/include/c++/7/bits/atomic_lockfree_defines.h:
-
-/opt/ros/humble/install/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
-
-/opt/ros/humble/install/include/rcutils/rcutils/testing/fault_injection.h:
