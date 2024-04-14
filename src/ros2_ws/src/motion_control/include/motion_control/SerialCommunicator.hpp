@@ -35,10 +35,12 @@ class SerialCommunicator
     FeedbackFrame sc_read_front_wheels();            // method reads the front wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
     FeedbackFrame sc_read_rear_wheels();             // method reads the rear wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
     bool sc_initializing_handshake_frontwheels();
-    // bool sc_initializing_handshake_rearwheels();
+    bool sc_initializing_handshake_rearwheels();
     bool initialized;
     void set_front_speed(int16_t);
     void set_front_steer(int16_t);
+    void set_rear_speed(int16_t);
+    void set_rear_steer(int16_t);
     
     private:
     std::string front_wheels_serial_path_;

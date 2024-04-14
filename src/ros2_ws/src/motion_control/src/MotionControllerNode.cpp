@@ -34,6 +34,11 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
         {
             throw std::runtime_error("Unable to initialize SerialCommunicator");
         }
+        serial_comm_.initialized = serial_comm_.sc_initializing_handshake_rearwheels(); // && serial_comm_.sc_initializing_handshake_rearwheels();
+        if (serial_comm_.initialized == false)
+        {
+            throw std::runtime_error("Unable to initialize SerialCommunicator");
+        }
     }
     catch (const std::runtime_error& re)
     {
@@ -50,6 +55,8 @@ void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &ms
     RCLCPP_INFO(this->get_logger(), "MotionControllerNode: Attempting to update hoverboard command to steer_cmd=%d  speed_cmd=%d", steer_cmd, speed_cmd);
     this->serial_comm_.set_front_steer(steer_cmd);
     this->serial_comm_.set_front_speed(speed_cmd);
+    this->serial_comm_.set_rear_steer(steer_cmd);
+    this->serial_comm_.set_rear_speed(speed_cmd);
 }
 
 void MotionControllerNode::publishOutputCB()
@@ -72,9 +79,22 @@ void MotionControllerNode::publishOutputCB()
     }
 
     // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
-
+    for(auto itr : this->rear_serial_feedback_data_)
+    {
+        msg.steer_or_brake = itr.steering;
+        msg.speed_or_throttle = itr.speed;
+        msg.right_wheel_rpm = itr.r_rpm;
+        msg.left_wheel_rpm = itr.l_rpm;
+        msg.batt_voltage_x100 = itr.v_batt;
+        msg.temperature = itr.temperature;
+        msg.led = itr.led_status;
+        msg.timestamp_ns = itr.ts.time_since_epoch().count();
+        msg_v.mc_output.push_back(msg);
+        // RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", itr.ts.time_since_epoch().count(), itr.steering, itr.speed, itr.r_rpm, itr.l_rpm, itr.v_batt, itr.temperature, itr.led_status);    
+    }
     output_publisher_->publish(msg_v);
     this->front_serial_feedback_data_.clear();
+    this->rear_serial_feedback_data_.clear();
 
 }
 
@@ -92,16 +112,14 @@ void MotionControllerNode::feedbackTimerCB()
         RCLCPP_INFO(this->get_logger(), "MotionControllerNode::feedbackTimerCB: Reading front wheels serial port device returned invalid feedback frame.");
     }
     
-    // current_frame = this->serial_comm_.sc_read_rear_wheels();
-    // if (current_frame.valid)
-    // {
-    //     this->rear_serial_feedback_data_.clear(); // TEMPORARY WHILE TESTING TO PREVENT RUNNING OUT OF MEMORY.  TO BE REMOVED LATER.
-    //     this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);
-    //     RCLCPP_INFO(this->get_logger(), "Rear Wheels:\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n Battery Voltage: %8d\n   Temperature: %8d\n LED: %016x.", current_frame.steering, current_frame.speed, current_frame.r_rpm, current_frame.l_rpm, current_frame.v_batt, current_frame.temperature, current_frame.led_status);    
-    // }
-    // else
-    // {
-    //     RCLCPP_INFO(this->get_logger(), "Reading rear wheels serial port device returned no feedback message.");
-    // }
+    current_frame = this->serial_comm_.sc_read_rear_wheels();
+    if (current_frame.valid)
+    {
+        this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);
+    }
+    else
+    {
+        RCLCPP_INFO(this->get_logger(), "MotionControllerNode::feedbackTimerCB: Reading rear wheels serial port device returned invalid feedback frame.");
+    }
     
 }
