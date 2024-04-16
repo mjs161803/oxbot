@@ -36,28 +36,15 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     rear_wheels_command_[7] = 0xAB;   
 
     // Front Wheels Serial Port Configuring
-    try
+    front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
+    if (front_wheels_serial_fh_ == -1) 
     {
-        front_wheels_serial_fh_ = open((front_wheels_serial_path_).c_str(), O_RDWR); 
-        if (front_wheels_serial_fh_ == -1) 
-        {
-            initialized = false;
-            throw std::runtime_error("Error opening serial device file for front wheels.");
-        }  
-        else
-        {
-            initialized = true;
-        }
-    }
-    catch(const std::runtime_error& re)
+        initialized = false;
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: unable to open front wheel serial port.");
+    }  
+    else
     {
-        front_wheels_serial_fh_ = -1;
-        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Runtime Exception: %s", re.what());
-    }
-    catch(const std::exception& e)
-    {
-        front_wheels_serial_fh_ = -1;
-        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Exception: %s", e.what());
+        initialized = true;
     }
     
     struct termios front_serial_term;
@@ -68,16 +55,23 @@ SerialCommunicator::SerialCommunicator(): front_wheels_serial_path_(MC_FRONT_WHE
     set_c_flags(front_serial_term, front_wheels_serial_fh_);
 
     // Rear Wheels Serial Port Configuring
-    // rear_wheels_serial_fh_ = open((rear_wheels_serial_path_).c_str(), O_RDWR | O_NONBLOCK);
-	//     if (rear_wheels_serial_fh_ < 0) {
-	// 	    RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "MC::SC Default Constructor: Unable to open %s.", rear_wheels_serial_path_);
-	//     }
-    // struct termios rear_serial_term;
-    // if (tcgetattr(rear_wheels_serial_fh_, &rear_serial_term) != 0) 
-    // {
-    //     RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "Error %i from tcgetattr: %s\n", errno, strerror(errno));
-    // }
-    // set_c_flags(rear_serial_term, rear_wheels_serial_fh_);
+    rear_wheels_serial_fh_ = open((rear_wheels_serial_path_).c_str(), O_RDWR); 
+    if (rear_wheels_serial_fh_ == -1) 
+    {
+        initialized = false;
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "SerialCommunicator: unable to open rear wheels serial port.");
+    }  
+    else
+    {
+        initialized = true;
+    }
+    
+    struct termios rear_serial_term;
+    if (tcgetattr(rear_wheels_serial_fh_, &rear_serial_term) != 0) 
+    {
+        RCLCPP_ERROR(rclcpp::get_logger("serial_logger"), "MC::SC default constructor: Error %i from tcgetattr: %s\n", errno, strerror(errno));
+    }
+    set_c_flags(rear_serial_term, rear_wheels_serial_fh_);
 
 }
 
