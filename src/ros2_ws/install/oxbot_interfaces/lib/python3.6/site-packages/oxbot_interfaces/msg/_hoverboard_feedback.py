@@ -63,6 +63,7 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
         '_temperature',
         '_led',
         '_timestamp_ns',
+        '_front_or_back',
     ]
 
     _fields_and_field_types = {
@@ -74,6 +75,7 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
         'temperature': 'int16',
         'led': 'uint16',
         'timestamp_ns': 'uint64',
+        'front_or_back': 'string',
     }
 
     SLOT_TYPES = (
@@ -85,6 +87,7 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
         rosidl_parser.definition.BasicType('int16'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -99,6 +102,7 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
         self.temperature = kwargs.get('temperature', int())
         self.led = kwargs.get('led', int())
         self.timestamp_ns = kwargs.get('timestamp_ns', int())
+        self.front_or_back = kwargs.get('front_or_back', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -144,6 +148,8 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
         if self.led != other.led:
             return False
         if self.timestamp_ns != other.timestamp_ns:
+            return False
+        if self.front_or_back != other.front_or_back:
             return False
         return True
 
@@ -271,3 +277,16 @@ class HoverboardFeedback(metaclass=Metaclass_HoverboardFeedback):
             assert value >= 0 and value < 18446744073709551616, \
                 "The 'timestamp_ns' field must be an unsigned integer in [0, 18446744073709551615]"
         self._timestamp_ns = value
+
+    @builtins.property
+    def front_or_back(self):
+        """Message field 'front_or_back'."""
+        return self._front_or_back
+
+    @front_or_back.setter
+    def front_or_back(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'front_or_back' field must be of type 'str'"
+        self._front_or_back = value

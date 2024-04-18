@@ -16,6 +16,9 @@
 #include "oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h"
 #include "oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h"
 
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool oxbot_interfaces__msg__hoverboard_feedback__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -122,6 +125,21 @@ bool oxbot_interfaces__msg__hoverboard_feedback__convert_from_py(PyObject * _pym
     ros_message->timestamp_ns = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
+  {  // front_or_back
+    PyObject * field = PyObject_GetAttrString(_pymsg, "front_or_back");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->front_or_back, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -226,6 +244,23 @@ PyObject * oxbot_interfaces__msg__hoverboard_feedback__convert_to_py(void * raw_
     field = PyLong_FromUnsignedLongLong(ros_message->timestamp_ns);
     {
       int rc = PyObject_SetAttrString(_pymessage, "timestamp_ns", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // front_or_back
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->front_or_back.data,
+      strlen(ros_message->front_or_back.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "front_or_back", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

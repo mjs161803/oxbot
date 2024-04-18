@@ -17,6 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'front_or_back'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in msg/HoverboardFeedback in the package oxbot_interfaces.
 typedef struct oxbot_interfaces__msg__HoverboardFeedback
 {
@@ -28,6 +32,7 @@ typedef struct oxbot_interfaces__msg__HoverboardFeedback
   int16_t temperature;
   uint16_t led;
   uint64_t timestamp_ns;
+  rosidl_runtime_c__String front_or_back;
 } oxbot_interfaces__msg__HoverboardFeedback;
 
 // Struct for a sequence of oxbot_interfaces__msg__HoverboardFeedback.

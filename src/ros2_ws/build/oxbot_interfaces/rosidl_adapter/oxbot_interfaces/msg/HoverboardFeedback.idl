@@ -21,6 +21,8 @@ module oxbot_interfaces {
       uint16 led;
 
       uint64 timestamp_ns;
+
+      string front_or_back;
     };
   };
 };

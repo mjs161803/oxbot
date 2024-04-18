@@ -66,6 +66,7 @@ void MotionControllerNode::publishOutputCB()
 
     for(auto itr : this->front_serial_feedback_data_)
     {
+        msg.front_or_back = "front";
         msg.steer_or_brake = itr.steering;
         msg.speed_or_throttle = itr.speed;
         msg.right_wheel_rpm = itr.r_rpm;
@@ -81,6 +82,7 @@ void MotionControllerNode::publishOutputCB()
     // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
     for(auto itr : this->rear_serial_feedback_data_)
     {
+        msg.front_or_back = "back";
         msg.steer_or_brake = itr.steering;
         msg.speed_or_throttle = itr.speed;
         msg.right_wheel_rpm = itr.r_rpm;

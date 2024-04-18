@@ -1,0 +1,22 @@
+[0.229s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+[0.586s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[1.727s] Traceback (most recent call last):
+[1.728s]   File "/opt/ros/humble/install/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[1.729s]     from ament_package.templates import get_environment_hook_template_path
+[1.730s] ModuleNotFoundError: No module named 'ament_package'
+[1.755s] [31mCMake Error at /opt/ros/humble/install/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[1.756s]   execute_process(/usr/bin/python3.6
+[1.757s]   /opt/ros/humble/install/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[1.758s]   /root/oxbot/src/ros2_ws/build/oxbot_interfaces/ament_cmake_package_templates/templates.cmake)
+[1.758s]   returned error code 1
+[1.759s] Call Stack (most recent call first):
+[1.760s]   /opt/ros/humble/install/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.760s]   /opt/ros/humble/install/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.761s]   /opt/ros/humble/install/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.762s]   CMakeLists.txt:9 (find_package)
+[1.763s] 
+[1.763s] [0m
+[1.764s] -- Configuring incomplete, errors occurred!
+[1.781s] make: *** [cmake_check_build_system] Error 1
+[1.782s] Makefile:1395: recipe for target 'cmake_check_build_system' failed
+[2.251s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '2': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4

@@ -6,3 +6,4 @@ int16 batt_voltage_x100
 int16 temperature
 uint16 led
 uint64 timestamp_ns
+string front_or_back

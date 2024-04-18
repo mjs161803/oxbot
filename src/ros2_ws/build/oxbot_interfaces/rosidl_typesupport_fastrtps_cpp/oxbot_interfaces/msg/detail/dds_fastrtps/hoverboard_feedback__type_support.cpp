@@ -48,6 +48,8 @@ cdr_serialize(
   cdr << ros_message.led;
   // Member: timestamp_ns
   cdr << ros_message.timestamp_ns;
+  // Member: front_or_back
+  cdr << ros_message.front_or_back;
   return true;
 }
 
@@ -80,6 +82,9 @@ cdr_deserialize(
 
   // Member: timestamp_ns
   cdr >> ros_message.timestamp_ns;
+
+  // Member: front_or_back
+  cdr >> ros_message.front_or_back;
 
   return true;
 }
@@ -145,6 +150,10 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: front_or_back
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.front_or_back.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -229,6 +238,19 @@ max_serialized_size_HoverboardFeedback(
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: front_or_back
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   return current_alignment - initial_alignment;

@@ -11,6 +11,10 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `front_or_back`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 oxbot_interfaces__msg__HoverboardFeedback__init(oxbot_interfaces__msg__HoverboardFeedback * msg)
 {
@@ -25,6 +29,11 @@ oxbot_interfaces__msg__HoverboardFeedback__init(oxbot_interfaces__msg__Hoverboar
   // temperature
   // led
   // timestamp_ns
+  // front_or_back
+  if (!rosidl_runtime_c__String__init(&msg->front_or_back)) {
+    oxbot_interfaces__msg__HoverboardFeedback__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -42,6 +51,8 @@ oxbot_interfaces__msg__HoverboardFeedback__fini(oxbot_interfaces__msg__Hoverboar
   // temperature
   // led
   // timestamp_ns
+  // front_or_back
+  rosidl_runtime_c__String__fini(&msg->front_or_back);
 }
 
 bool
@@ -82,6 +93,12 @@ oxbot_interfaces__msg__HoverboardFeedback__are_equal(const oxbot_interfaces__msg
   if (lhs->timestamp_ns != rhs->timestamp_ns) {
     return false;
   }
+  // front_or_back
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->front_or_back), &(rhs->front_or_back)))
+  {
+    return false;
+  }
   return true;
 }
 
@@ -109,6 +126,12 @@ oxbot_interfaces__msg__HoverboardFeedback__copy(
   output->led = input->led;
   // timestamp_ns
   output->timestamp_ns = input->timestamp_ns;
+  // front_or_back
+  if (!rosidl_runtime_c__String__copy(
+      &(input->front_or_back), &(output->front_or_back)))
+  {
+    return false;
+  }
   return true;
 }
 

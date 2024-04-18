@@ -22,6 +22,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h \
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_generator_c/oxbot_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/install/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \

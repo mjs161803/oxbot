@@ -12,6 +12,10 @@
 #include "oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h"
 
 
+// Include directives for member types
+// Member `front_or_back`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +35,7 @@ void oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection
   oxbot_interfaces__msg__HoverboardFeedback__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection_c__HoverboardFeedback_message_member_array[8] = {
+static rosidl_typesupport_introspection_c__MessageMember oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection_c__HoverboardFeedback_message_member_array[9] = {
   {
     "steer_or_brake",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
@@ -167,13 +171,30 @@ static rosidl_typesupport_introspection_c__MessageMember oxbot_interfaces__msg__
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "front_or_back",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(oxbot_interfaces__msg__HoverboardFeedback, front_or_back),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection_c__HoverboardFeedback_message_members = {
   "oxbot_interfaces__msg",  // message namespace
   "HoverboardFeedback",  // message name
-  8,  // number of fields
+  9,  // number of fields
   sizeof(oxbot_interfaces__msg__HoverboardFeedback),
   oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection_c__HoverboardFeedback_message_member_array,  // message members
   oxbot_interfaces__msg__HoverboardFeedback__rosidl_typesupport_introspection_c__HoverboardFeedback_init_function,  // function to initialize message memory (memory has to be allocated)

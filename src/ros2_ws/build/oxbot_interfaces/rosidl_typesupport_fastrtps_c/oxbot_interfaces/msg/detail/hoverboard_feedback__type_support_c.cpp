@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // front_or_back
+#include "rosidl_runtime_c/string_functions.h"  // front_or_back
 
 // forward declare type support functions
 
@@ -89,6 +91,20 @@ static bool _HoverboardFeedback__cdr_serialize(
     cdr << ros_message->timestamp_ns;
   }
 
+  // Field name: front_or_back
+  {
+    const rosidl_runtime_c__String * str = &ros_message->front_or_back;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   return true;
 }
 
@@ -139,6 +155,22 @@ static bool _HoverboardFeedback__cdr_deserialize(
   // Field name: timestamp_ns
   {
     cdr >> ros_message->timestamp_ns;
+  }
+
+  // Field name: front_or_back
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->front_or_back.data) {
+      rosidl_runtime_c__String__init(&ros_message->front_or_back);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->front_or_back,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'front_or_back'\n");
+      return false;
+    }
   }
 
   return true;
@@ -206,6 +238,10 @@ size_t get_serialized_size_oxbot_interfaces__msg__HoverboardFeedback(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name front_or_back
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->front_or_back.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -288,6 +324,18 @@ size_t max_serialized_size_oxbot_interfaces__msg__HoverboardFeedback(
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: front_or_back
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   return current_alignment - initial_alignment;

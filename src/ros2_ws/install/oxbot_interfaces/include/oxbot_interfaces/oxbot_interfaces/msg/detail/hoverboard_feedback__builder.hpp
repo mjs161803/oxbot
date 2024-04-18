@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_HoverboardFeedback_front_or_back
+{
+public:
+  explicit Init_HoverboardFeedback_front_or_back(::oxbot_interfaces::msg::HoverboardFeedback & msg)
+  : msg_(msg)
+  {}
+  ::oxbot_interfaces::msg::HoverboardFeedback front_or_back(::oxbot_interfaces::msg::HoverboardFeedback::_front_or_back_type arg)
+  {
+    msg_.front_or_back = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::oxbot_interfaces::msg::HoverboardFeedback msg_;
+};
+
 class Init_HoverboardFeedback_timestamp_ns
 {
 public:
   explicit Init_HoverboardFeedback_timestamp_ns(::oxbot_interfaces::msg::HoverboardFeedback & msg)
   : msg_(msg)
   {}
-  ::oxbot_interfaces::msg::HoverboardFeedback timestamp_ns(::oxbot_interfaces::msg::HoverboardFeedback::_timestamp_ns_type arg)
+  Init_HoverboardFeedback_front_or_back timestamp_ns(::oxbot_interfaces::msg::HoverboardFeedback::_timestamp_ns_type arg)
   {
     msg_.timestamp_ns = std::move(arg);
-    return std::move(msg_);
+    return Init_HoverboardFeedback_front_or_back(msg_);
   }
 
 private:

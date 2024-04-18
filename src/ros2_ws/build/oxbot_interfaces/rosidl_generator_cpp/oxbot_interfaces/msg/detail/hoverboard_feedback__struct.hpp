@@ -46,12 +46,13 @@ struct HoverboardFeedback_
       this->temperature = 0;
       this->led = 0;
       this->timestamp_ns = 0ull;
+      this->front_or_back = "";
     }
   }
 
   explicit HoverboardFeedback_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : front_or_back(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -63,6 +64,7 @@ struct HoverboardFeedback_
       this->temperature = 0;
       this->led = 0;
       this->timestamp_ns = 0ull;
+      this->front_or_back = "";
     }
   }
 
@@ -91,6 +93,9 @@ struct HoverboardFeedback_
   using _timestamp_ns_type =
     uint64_t;
   _timestamp_ns_type timestamp_ns;
+  using _front_or_back_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _front_or_back_type front_or_back;
 
   // setters for named parameter idiom
   Type & set__steer_or_brake(
@@ -139,6 +144,12 @@ struct HoverboardFeedback_
     const uint64_t & _arg)
   {
     this->timestamp_ns = _arg;
+    return *this;
+  }
+  Type & set__front_or_back(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->front_or_back = _arg;
     return *this;
   }
 
@@ -206,6 +217,9 @@ struct HoverboardFeedback_
       return false;
     }
     if (this->timestamp_ns != other.timestamp_ns) {
+      return false;
+    }
+    if (this->front_or_back != other.front_or_back) {
       return false;
     }
     return true;
