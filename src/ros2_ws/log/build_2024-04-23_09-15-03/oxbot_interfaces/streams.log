@@ -1,0 +1,217 @@
+[0.506s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+[0.890s] [  1%] Built target oxbot_interfaces__cpp
+[0.913s] [ 12%] Built target oxbot_interfaces__rosidl_generator_c
+[0.943s] [ 12%] Built target ament_cmake_python_copy_oxbot_interfaces
+[1.080s] [ 23%] Built target oxbot_interfaces__rosidl_typesupport_introspection_cpp
+[1.083s] [ 34%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.120s] [ 45%] Built target oxbot_interfaces__rosidl_typesupport_cpp
+[1.181s] [ 56%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_c
+[1.272s] [ 67%] Built target oxbot_interfaces__rosidl_typesupport_c
+[1.312s] [ 78%] Built target oxbot_interfaces__rosidl_typesupport_introspection_c
+[1.477s] [ 78%] Built target oxbot_interfaces
+[1.620s] [ 80%] Built target oxbot_interfaces__py
+[1.812s] [ 89%] Built target oxbot_interfaces__rosidl_generator_py
+[1.981s] [ 92%] Built target oxbot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.992s] [ 96%] Built target oxbot_interfaces__rosidl_typesupport_c__pyext
+[2.006s] [100%] Built target oxbot_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.190s] running egg_info
+[3.194s] writing oxbot_interfaces.egg-info/PKG-INFO
+[3.195s] writing dependency_links to oxbot_interfaces.egg-info/dependency_links.txt
+[3.195s] writing top-level names to oxbot_interfaces.egg-info/top_level.txt
+[3.213s] reading manifest file 'oxbot_interfaces.egg-info/SOURCES.txt'
+[3.220s] writing manifest file 'oxbot_interfaces.egg-info/SOURCES.txt'
+[3.330s] [100%] Built target ament_cmake_python_build_oxbot_interfaces_egg
+[3.373s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+[3.929s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces
+[4.093s] -- Install configuration: ""
+[4.093s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/rosidl_interfaces/oxbot_interfaces
+[4.095s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.095s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.096s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/compute_rectangle_area.h
+[4.096s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.098s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.h
+[4.099s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.h
+[4.099s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.h
+[4.100s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c
+[4.100s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.101s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.h
+[4.102s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.h
+[4.102s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/motion_control_output.h
+[4.103s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.104s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.h
+[4.105s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h
+[4.106s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__functions.c
+[4.106s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.h
+[4.107s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h
+[4.108s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__functions.h
+[4.109s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__functions.h
+[4.110s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__struct.h
+[4.111s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c
+[4.112s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__type_support.h
+[4.112s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.h
+[4.113s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__functions.c
+[4.113s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.114s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/library_path.sh
+[4.115s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/library_path.dsv
+[4.115s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_c.so
+[4.116s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.118s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.119s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.120s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_c.h
+[4.121s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.122s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.122s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.123s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_c.h
+[4.123s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_c.h
+[4.124s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__rosidl_typesupport_fastrtps_c.h
+[4.125s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.126s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.127s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.127s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.128s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_c.h
+[4.128s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.c
+[4.129s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.130s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.130s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__type_support.c
+[4.131s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.c
+[4.131s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_c.h
+[4.132s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.c
+[4.133s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_c.h
+[4.134s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__rosidl_typesupport_introspection_c.h
+[4.134s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.135s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_c.so
+[4.136s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_c.so
+[4.137s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.138s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.139s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/compute_rectangle_area.hpp
+[4.139s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.140s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__struct.hpp
+[4.141s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__traits.hpp
+[4.141s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__builder.hpp
+[4.142s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.142s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/motion_control_output.hpp
+[4.143s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_command.hpp
+[4.143s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/hoverboard_feedback.hpp
+[4.144s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.144s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__traits.hpp
+[4.145s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__builder.hpp
+[4.145s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__struct.hpp
+[4.146s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.hpp
+[4.146s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__traits.hpp
+[4.147s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__struct.hpp
+[4.147s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__builder.hpp
+[4.147s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__builder.hpp
+[4.148s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__traits.hpp
+[4.148s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.149s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.149s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.150s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_fastrtps_cpp.hpp
+[4.150s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/dds_fastrtps
+[4.151s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.151s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.152s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.152s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[4.153s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__rosidl_typesupport_fastrtps_cpp.hpp
+[4.153s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_fastrtps_cpp.hpp
+[4.154s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/dds_fastrtps
+[4.154s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.155s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces
+[4.156s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv
+[4.156s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail
+[4.157s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__rosidl_typesupport_introspection_cpp.hpp
+[4.157s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/srv/detail/compute_rectangle_area__type_support.cpp
+[4.158s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg
+[4.158s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail
+[4.159s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__type_support.cpp
+[4.160s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__type_support.cpp
+[4.160s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__rosidl_typesupport_introspection_cpp.hpp
+[4.161s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_command__rosidl_typesupport_introspection_cpp.hpp
+[4.161s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/hoverboard_feedback__rosidl_typesupport_introspection_cpp.hpp
+[4.162s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/include/oxbot_interfaces/oxbot_interfaces/msg/detail/motion_control_output__type_support.cpp
+[4.162s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.163s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_typesupport_cpp.so
+[4.163s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/pythonpath.sh
+[4.164s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/pythonpath.dsv
+[4.165s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info
+[4.165s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/SOURCES.txt
+[4.166s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/dependency_links.txt
+[4.166s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/top_level.txt
+[4.167s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces-0.0.0-py3.6.egg-info/PKG-INFO
+[4.167s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces
+[4.167s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv
+[4.168s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/__init__.py
+[4.168s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/_compute_rectangle_area_s.c
+[4.169s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv/_compute_rectangle_area.py
+[4.170s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/__init__.py
+[4.170s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+[4.171s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so
+[4.171s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg
+[4.172s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_feedback.py
+[4.172s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_feedback_s.c
+[4.173s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/__init__.py
+[4.174s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_command_s.c
+[4.174s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_motion_control_output.py
+[4.175s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_motion_control_output_s.c
+[4.175s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg/_hoverboard_command.py
+[4.176s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+[4.176s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/liboxbot_interfaces__rosidl_generator_py.so
+[4.177s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.177s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_c.c
+[4.178s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/_oxbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.330s] Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces'...
+[4.331s] Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/msg'...
+[4.331s] Listing '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/srv'...
+[4.360s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+[4.362s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_introspection_c.cpython-36m-aarch64-linux-gnu.so
+[4.366s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages/oxbot_interfaces/oxbot_interfaces_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+[4.370s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/liboxbot_interfaces__rosidl_generator_py.so
+[4.371s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardFeedback.idl
+[4.373s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardCommand.idl
+[4.374s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/MotionControlOutput.idl
+[4.376s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea.idl
+[4.377s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardFeedback.msg
+[4.378s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/HoverboardCommand.msg
+[4.379s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/msg/MotionControlOutput.msg
+[4.397s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea.srv
+[4.404s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea_Request.msg
+[4.407s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/srv/ComputeRectangleArea_Response.msg
+[4.410s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/package_run_dependencies/oxbot_interfaces
+[4.416s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/parent_prefix_path/oxbot_interfaces
+[4.419s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/ament_prefix_path.sh
+[4.422s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/ament_prefix_path.dsv
+[4.424s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/path.sh
+[4.425s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/environment/path.dsv
+[4.430s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.bash
+[4.431s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.sh
+[4.431s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.zsh
+[4.441s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/local_setup.dsv
+[4.442s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.dsv
+[4.442s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/ament_index/resource_index/packages/oxbot_interfaces
+[4.443s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cExport.cmake
+[4.443s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.444s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.444s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.456s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.458s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.461s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cExport.cmake
+[4.462s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.462s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_cppExport.cmake
+[4.463s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.464s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.464s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.465s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.466s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cppExport.cmake
+[4.466s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.467s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_pyExport.cmake
+[4.468s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/export_oxbot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.484s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.485s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.486s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.486s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.487s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.487s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.488s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.522s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfacesConfig.cmake
+[4.523s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/cmake/oxbot_interfacesConfig-version.cmake
+[4.524s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.xml
+[4.525s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces

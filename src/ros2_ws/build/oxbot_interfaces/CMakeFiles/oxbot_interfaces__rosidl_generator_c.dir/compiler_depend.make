@@ -79,6 +79,9 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_int
   /opt/ros/humble/install/include/rcutils/rcutils/types/rcutils_ret.h \
   /opt/ros/humble/install/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/install/include/rcutils/rcutils/visibility_control_macros.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h \
@@ -150,6 +153,8 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_int
   /opt/ros/humble/install/include/rcutils/rcutils/types/rcutils_ret.h \
   /opt/ros/humble/install/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/install/include/rcutils/rcutils/visibility_control_macros.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h \
@@ -288,6 +293,8 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_int
   /usr/lib/gcc/aarch64-linux-gnu/7/include/stdint.h
 
 
+rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c:
+
 /usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/FILE.h:
@@ -305,8 +312,6 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/oxbot_int
 /usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
-
-rosidl_generator_c/oxbot_interfaces/msg/detail/motion_control_output__struct.h:
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 
@@ -402,6 +407,10 @@ rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions
 
 /usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
+rosidl_generator_c/oxbot_interfaces/msg/detail/motion_control_output__struct.h:
+
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
+
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
 
 /usr/include/stdlib.h:
@@ -430,9 +439,13 @@ rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.c:
 
 /usr/include/features.h:
 
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 /usr/lib/gcc/aarch64-linux-gnu/7/include/stdarg.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/7/include/stddef.h:
+
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
 
@@ -443,5 +456,3 @@ rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h:
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
 rosidl_generator_c/oxbot_interfaces/msg/detail/motion_control_output__functions.c:
-
-rosidl_generator_c/oxbot_interfaces/srv/detail/compute_rectangle_area__functions.c:

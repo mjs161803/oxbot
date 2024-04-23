@@ -38,6 +38,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot_interfaces/msg/hoverboard_feedback__type_support.cpp.o
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_c/oxbot_interfaces/msg/hoverboard_feedback__type_support.cpp
  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h
  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
  /opt/ros/humble/install/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h
  /opt/ros/humble/install/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h
@@ -72,6 +74,8 @@ CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot
 CMakeFiles/oxbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/oxbot_interfaces/msg/motion_control_output__type_support.cpp.o
  /root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_typesupport_c/oxbot_interfaces/msg/motion_control_output__type_support.cpp
  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h
  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
  /opt/ros/humble/install/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h
  /opt/ros/humble/install/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h

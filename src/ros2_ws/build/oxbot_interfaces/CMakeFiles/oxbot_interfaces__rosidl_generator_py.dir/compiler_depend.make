@@ -192,6 +192,9 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_i
   /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/utils.h
 
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c.o: rosidl_generator_py/oxbot_interfaces/msg/_hoverboard_feedback_s.c \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h \
@@ -384,6 +387,7 @@ CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_i
 CMakeFiles/oxbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/oxbot_interfaces/msg/_motion_control_output_s.c.o: rosidl_generator_py/oxbot_interfaces/msg/_motion_control_output_s.c \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__functions.h \
   rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h \
@@ -772,9 +776,13 @@ rosidl_generator_py/oxbot_interfaces/srv/_compute_rectangle_area_s.c:
 
 rosidl_generator_c/oxbot_interfaces/msg/detail/motion_control_output__functions.h:
 
-/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
 rosidl_generator_c/oxbot_interfaces/msg/detail/hoverboard_feedback__struct.h:
+
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
+
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
+/opt/ros/humble/install/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/utils.h:
 
