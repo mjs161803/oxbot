@@ -1,0 +1,342 @@
+[2.776s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.776s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f927edda0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f927edda0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f92777668>)
+[2.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.984s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.984s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.985s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.986s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/oxbot/src/ros2_ws'
+[2.986s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.987s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.987s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.989s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.989s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.989s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.190s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.193s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.193s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extensions ['ignore', 'ignore_ament_install']
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extension 'ignore'
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extension 'ignore_ament_install'
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extensions ['colcon_pkg']
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extension 'colcon_pkg'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extensions ['colcon_meta']
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extension 'colcon_meta'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extensions ['ros']
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motion_control) by extension 'ros'
+[3.213s] DEBUG:colcon.colcon_core.package_identification:Package 'src/motion_control' with type 'ros.ament_cmake' and name 'motion_control'
+[3.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[3.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extension 'ignore'
+[3.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extension 'ignore_ament_install'
+[3.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extensions ['colcon_pkg']
+[3.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extension 'colcon_pkg'
+[3.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extensions ['colcon_meta']
+[3.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extension 'colcon_meta'
+[3.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extensions ['ros']
+[3.216s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_bringup) by extension 'ros'
+[3.219s] DEBUG:colcon.colcon_core.package_identification:Package 'src/oxbot_bringup' with type 'ros.ament_cmake' and name 'oxbot_bringup'
+[3.219s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extensions ['ignore', 'ignore_ament_install']
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extension 'ignore'
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extension 'ignore_ament_install'
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extensions ['colcon_pkg']
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extension 'colcon_pkg'
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extensions ['colcon_meta']
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extension 'colcon_meta'
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extensions ['ros']
+[3.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_config) by extension 'ros'
+[3.224s] DEBUG:colcon.colcon_core.package_identification:Package 'src/oxbot_config' with type 'ros.ament_cmake' and name 'oxbot_config'
+[3.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extension 'ignore'
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extension 'ignore_ament_install'
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extensions ['colcon_pkg']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extension 'colcon_pkg'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extensions ['colcon_meta']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extension 'colcon_meta'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extensions ['ros']
+[3.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/oxbot_interfaces) by extension 'ros'
+[3.229s] DEBUG:colcon.colcon_core.package_identification:Package 'src/oxbot_interfaces' with type 'ros.ament_cmake' and name 'oxbot_interfaces'
+[3.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.447s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_args' from command line to 'None'
+[3.447s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_target' from command line to 'None'
+[3.448s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.448s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[3.448s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[3.448s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[3.448s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[3.449s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[3.449s] Level 5:colcon.colcon_core.verb:set package 'oxbot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.449s] DEBUG:colcon.colcon_core.verb:Building package 'oxbot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/oxbot/src/ros2_ws/build/oxbot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/oxbot/src/ros2_ws/install/oxbot_bringup', 'merge_install': False, 'path': '/root/oxbot/src/ros2_ws/src/oxbot_bringup', 'symlink_install': False, 'test_result_base': None}
+[3.469s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_args' from command line to 'None'
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_target' from command line to 'None'
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_clean_cache' from command line to 'False'
+[3.470s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_clean_first' from command line to 'False'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'cmake_force_configure' from command line to 'False'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'ament_cmake_args' from command line to 'None'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'catkin_cmake_args' from command line to 'None'
+[3.471s] Level 5:colcon.colcon_core.verb:set package 'oxbot_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.471s] DEBUG:colcon.colcon_core.verb:Building package 'oxbot_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/oxbot/src/ros2_ws/build/oxbot_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/oxbot/src/ros2_ws/install/oxbot_config', 'merge_install': False, 'path': '/root/oxbot/src/ros2_ws/src/oxbot_config', 'symlink_install': False, 'test_result_base': None}
+[3.493s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_args' from command line to 'None'
+[3.493s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_target' from command line to 'None'
+[3.493s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.494s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[3.494s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[3.494s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[3.494s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[3.494s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[3.495s] Level 5:colcon.colcon_core.verb:set package 'oxbot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.495s] DEBUG:colcon.colcon_core.verb:Building package 'oxbot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/oxbot/src/ros2_ws/build/oxbot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/oxbot/src/ros2_ws/install/oxbot_interfaces', 'merge_install': False, 'path': '/root/oxbot/src/ros2_ws/src/oxbot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[3.516s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_args' from command line to 'None'
+[3.516s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_target' from command line to 'None'
+[3.516s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_clean_cache' from command line to 'False'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_clean_first' from command line to 'False'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'cmake_force_configure' from command line to 'False'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'ament_cmake_args' from command line to 'None'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'catkin_cmake_args' from command line to 'None'
+[3.517s] Level 5:colcon.colcon_core.verb:set package 'motion_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.518s] DEBUG:colcon.colcon_core.verb:Building package 'motion_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/oxbot/src/ros2_ws/build/motion_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/oxbot/src/ros2_ws/install/motion_control', 'merge_install': False, 'path': '/root/oxbot/src/ros2_ws/src/motion_control', 'symlink_install': False, 'test_result_base': None}
+[3.534s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.618s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.620s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/oxbot/src/ros2_ws/src/oxbot_interfaces' with build type 'ament_cmake'
+[3.621s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/oxbot/src/ros2_ws/src/oxbot_interfaces'
+[3.674s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.675s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.676s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.698s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/oxbot/src/ros2_ws/src/oxbot_bringup' with build type 'ament_cmake'
+[3.700s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/oxbot/src/ros2_ws/src/oxbot_bringup'
+[3.745s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.745s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.761s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/oxbot/src/ros2_ws/src/oxbot_config' with build type 'ament_cmake'
+[3.762s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/oxbot/src/ros2_ws/src/oxbot_config'
+[3.813s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.813s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.852s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+[3.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_bringup -- -j4 -l4
+[3.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[4.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_bringup -- -j4 -l4
+[4.242s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[4.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_bringup
+[4.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config
+[5.124s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_config)
+[5.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config
+[5.202s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config' for CMake module files
+[5.206s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config' for CMake config files
+[5.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_config', 'cmake_prefix_path')
+[5.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.ps1'
+[5.251s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.dsv'
+[5.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.sh'
+[5.260s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/bin'
+[5.260s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/lib/pkgconfig/oxbot_config.pc'
+[5.261s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/lib/python3.6/site-packages'
+[5.263s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/bin'
+[5.316s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.ps1'
+[5.321s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.dsv'
+[5.326s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.sh'
+[5.331s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.bash'
+[5.336s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.zsh'
+[5.342s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_config/share/colcon-core/packages/oxbot_config)
+[5.359s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_bringup)
+[5.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_bringup' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_bringup
+[5.430s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup' for CMake module files
+[5.434s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup' for CMake config files
+[5.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_bringup', 'cmake_prefix_path')
+[5.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.ps1'
+[5.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.dsv'
+[5.490s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.sh'
+[5.496s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/bin'
+[5.497s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/lib/pkgconfig/oxbot_bringup.pc'
+[5.498s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/lib/python3.6/site-packages'
+[5.500s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/bin'
+[5.548s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.ps1'
+[5.552s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.dsv'
+[5.555s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.sh'
+[5.560s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.bash'
+[5.563s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.zsh'
+[5.566s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/colcon-core/packages/oxbot_bringup)
+[5.649s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_config)
+[5.718s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config' for CMake module files
+[5.722s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config' for CMake config files
+[5.725s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_config', 'cmake_prefix_path')
+[5.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.ps1'
+[5.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.dsv'
+[5.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/hook/cmake_prefix_path.sh'
+[5.795s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/bin'
+[5.796s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/lib/pkgconfig/oxbot_config.pc'
+[5.798s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/lib/python3.6/site-packages'
+[5.799s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_config/bin'
+[5.854s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.ps1'
+[5.857s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.dsv'
+[5.861s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.sh'
+[5.864s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.bash'
+[5.867s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.zsh'
+[5.869s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_config/share/colcon-core/packages/oxbot_config)
+[5.925s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_bringup)
+[5.987s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup' for CMake module files
+[5.990s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup' for CMake config files
+[5.992s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_bringup', 'cmake_prefix_path')
+[6.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.ps1'
+[6.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.dsv'
+[6.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/hook/cmake_prefix_path.sh'
+[6.041s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/bin'
+[6.041s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/lib/pkgconfig/oxbot_bringup.pc'
+[6.042s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/lib/python3.6/site-packages'
+[6.043s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_bringup/bin'
+[6.082s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.ps1'
+[6.085s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.dsv'
+[6.087s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.sh'
+[6.090s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.bash'
+[6.092s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/oxbot_bringup/package.zsh'
+[6.094s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_bringup/share/colcon-core/packages/oxbot_bringup)
+[6.106s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_interfaces -- -j4 -l4
+[6.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces
+[7.123s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_interfaces)
+[7.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_interfaces' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_interfaces
+[7.184s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces' for CMake module files
+[7.188s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces' for CMake config files
+[7.193s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'cmake_prefix_path')
+[7.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.ps1'
+[7.234s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.dsv'
+[7.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.sh'
+[7.239s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib'
+[7.241s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'ld_library_path_lib')
+[7.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.ps1'
+[7.284s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.dsv'
+[7.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.sh'
+[7.288s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/bin'
+[7.289s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/pkgconfig/oxbot_interfaces.pc'
+[7.290s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages'
+[7.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'pythonpath')
+[7.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.ps1'
+[7.332s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.dsv'
+[7.334s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.sh'
+[7.337s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/bin'
+[7.380s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.ps1'
+[7.383s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.dsv'
+[7.386s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.sh'
+[7.390s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.bash'
+[7.392s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.zsh'
+[7.394s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/colcon-core/packages/oxbot_interfaces)
+[8.005s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(oxbot_interfaces)
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces' for CMake module files
+[8.075s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces' for CMake config files
+[8.080s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'cmake_prefix_path')
+[8.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.ps1'
+[8.129s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.dsv'
+[8.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/cmake_prefix_path.sh'
+[8.136s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib'
+[8.136s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'ld_library_path_lib')
+[8.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.ps1'
+[8.177s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.dsv'
+[8.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/ld_library_path_lib.sh'
+[8.181s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/bin'
+[8.182s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/pkgconfig/oxbot_interfaces.pc'
+[8.183s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages'
+[8.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('oxbot_interfaces', 'pythonpath')
+[8.224s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.ps1'
+[8.226s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.dsv'
+[8.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/hook/pythonpath.sh'
+[8.231s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/bin'
+[8.272s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.ps1'
+[8.276s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.dsv'
+[8.279s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.sh'
+[8.281s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.bash'
+[8.283s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/oxbot_interfaces/package.zsh'
+[8.286s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/oxbot_interfaces/share/colcon-core/packages/oxbot_interfaces)
+[8.287s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/oxbot/src/ros2_ws/src/motion_control' with build type 'ament_cmake'
+[8.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/oxbot/src/ros2_ws/src/motion_control'
+[8.329s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.329s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[55.961s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '0': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/motion_control -- -j4 -l4
+[56.232s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/oxbot/src/ros2_ws/build/motion_control': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/motion_control
+[56.442s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motion_control)
+[56.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/oxbot/src/ros2_ws/build/motion_control' returned '0': AMENT_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces CMAKE_PREFIX_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces LD_LIBRARY_PATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/motion_control
+[56.505s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control' for CMake module files
+[56.509s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control' for CMake config files
+[56.511s] Level 1:colcon.colcon_core.shell:create_environment_hook('motion_control', 'cmake_prefix_path')
+[56.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.ps1'
+[56.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.dsv'
+[56.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.sh'
+[56.556s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib'
+[56.557s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/bin'
+[56.557s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib/pkgconfig/motion_control.pc'
+[56.558s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib/python3.6/site-packages'
+[56.559s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/bin'
+[56.598s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.ps1'
+[56.601s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.dsv'
+[56.603s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.sh'
+[56.605s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.bash'
+[56.606s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.zsh'
+[56.607s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/motion_control/share/colcon-core/packages/motion_control)
+[56.919s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motion_control)
+[56.982s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control' for CMake module files
+[56.986s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control' for CMake config files
+[56.988s] Level 1:colcon.colcon_core.shell:create_environment_hook('motion_control', 'cmake_prefix_path')
+[57.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.ps1'
+[57.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.dsv'
+[57.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/hook/cmake_prefix_path.sh'
+[57.039s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib'
+[57.040s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/bin'
+[57.040s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib/pkgconfig/motion_control.pc'
+[57.041s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/lib/python3.6/site-packages'
+[57.043s] Level 1:colcon.colcon_core.environment:checking '/root/oxbot/src/ros2_ws/install/motion_control/bin'
+[57.084s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.ps1'
+[57.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.dsv'
+[57.090s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.sh'
+[57.092s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.bash'
+[57.093s] INFO:colcon.colcon_core.shell:Creating package script '/root/oxbot/src/ros2_ws/install/motion_control/share/motion_control/package.zsh'
+[57.095s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/oxbot/src/ros2_ws/install/motion_control/share/colcon-core/packages/motion_control)
+[57.096s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[57.101s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[57.101s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[57.102s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[57.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[57.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[57.137s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[57.137s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[57.142s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[57.143s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[57.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/oxbot/src/ros2_ws/install/local_setup.ps1'
+[57.199s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/oxbot/src/ros2_ws/install/_local_setup_util_ps1.py'
+[57.208s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/oxbot/src/ros2_ws/install/setup.ps1'
+[57.221s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/oxbot/src/ros2_ws/install/local_setup.sh'
+[57.224s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/oxbot/src/ros2_ws/install/_local_setup_util_sh.py'
+[57.226s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/oxbot/src/ros2_ws/install/setup.sh'
+[57.239s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/oxbot/src/ros2_ws/install/local_setup.bash'
+[57.242s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/oxbot/src/ros2_ws/install/setup.bash'
+[57.254s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/oxbot/src/ros2_ws/install/local_setup.zsh'
+[57.257s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/oxbot/src/ros2_ws/install/setup.zsh'

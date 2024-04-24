@@ -1,0 +1,23 @@
+[0.211s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[0.548s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_config -- -j4 -l4
+[1.334s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_config': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config
+[1.524s] -- Install configuration: ""
+[1.526s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include/
+[1.527s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config
+[1.527s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/include//oxbot_config/oxbot_config.hpp
+[1.528s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/package_run_dependencies/oxbot_config
+[1.528s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/parent_prefix_path/oxbot_config
+[1.529s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.sh
+[1.530s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.dsv
+[1.530s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.sh
+[1.531s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/environment/path.dsv
+[1.553s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.bash
+[1.554s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.sh
+[1.555s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.zsh
+[1.555s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/local_setup.dsv
+[1.564s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.dsv
+[1.565s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/ament_index/resource_index/packages/oxbot_config
+[1.584s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig.cmake
+[1.585s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig-version.cmake
+[1.586s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_config/share/oxbot_config/package.xml
+[1.587s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_config' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_config

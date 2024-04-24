@@ -149,13 +149,13 @@ FeedbackFrame SerialCommunicator::sc_read_front_wheels()
         ser_frame.steering = read_buf[2] | (read_buf[3] << 8);
         
         // process CMD2 (signed int16): speed or throttle
-        ser_frame.speed = read_buf[4] | (read_buf[5] << 8);
+        ser_frame.speed = MC_FRONT_WHEELS_INSTALL_ORIENTATION*(read_buf[4] | (read_buf[5] << 8));
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_frame.r_rpm = -1* (read_buf[6] | (read_buf[7] << 8)); // note the polarity reversal: "forward" = "positive rpm"
+        ser_frame.r_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION*(-1* (read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_frame.l_rpm = read_buf[8] | (read_buf[9] << 8);
+        ser_frame.l_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
         
         // process Battery Voltage (signed int16): battery voltage x 100
         ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
@@ -227,13 +227,13 @@ FeedbackFrame SerialCommunicator::sc_read_rear_wheels()
         ser_frame.steering = read_buf[2] | (read_buf[3] << 8);
         
         // process CMD2 (signed int16): speed or throttle
-        ser_frame.speed = read_buf[4] | (read_buf[5] << 8);
+        ser_frame.speed = MC_REAR_WHEELS_INSTALL_ORIENTATION *(read_buf[4] | (read_buf[5] << 8));
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_frame.r_rpm = -1* (read_buf[6] | (read_buf[7] << 8)); // note the polarity reversal: "forward" = "positive rpm"
+        ser_frame.r_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION *(-1* (read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_frame.l_rpm = read_buf[8] | (read_buf[9] << 8);
+        ser_frame.l_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
         
         // process Battery Voltage (signed int16): battery voltage x 100
         ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
@@ -415,7 +415,7 @@ void SerialCommunicator::set_front_speed(int16_t sp)
 void SerialCommunicator::set_rear_speed(int16_t sp)
 {
     unsigned char new_speed[2] {0x00};
-    sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION;
+    sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
     convert_int16_to_uchar_(sp, new_speed, sizeof(new_speed));
     this->rear_wheels_command_[4] = new_speed[0];  // LSB first
     this->rear_wheels_command_[5] = new_speed[1];  // MSB second
