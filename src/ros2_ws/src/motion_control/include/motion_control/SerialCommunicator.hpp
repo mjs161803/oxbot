@@ -52,7 +52,7 @@ class SerialCommunicator
     unsigned char rear_wheels_command_[8];
 
     void set_c_flags(termios &, int);
-    void convert_int16_to_uchar_(int16_t, unsigned char*, int);
+    void convert_int16_to_uchar_(int16_t, unsigned char*);
     void update_front_checksum();
     void update_rear_checksum();
 };

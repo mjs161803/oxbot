@@ -157,6 +157,12 @@ FeedbackFrame SerialCommunicator::sc_read_front_wheels()
         // process SpeedL (signed int16): left wheel speed in RPM
         ser_frame.l_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
         
+        // swap left and right wheel RPM values if hoverboard was installed backwards
+        if (MC_FRONT_WHEELS_INSTALL_ORIENTATION == -1) 
+        {
+            std::swap(ser_frame.r_rpm, ser_frame.l_rpm);
+        }
+
         // process Battery Voltage (signed int16): battery voltage x 100
         ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
         
@@ -235,6 +241,12 @@ FeedbackFrame SerialCommunicator::sc_read_rear_wheels()
         // process SpeedL (signed int16): left wheel speed in RPM
         ser_frame.l_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
         
+        // swap left and right wheel RPM values if hoverboard was installed backwards
+        if (MC_REAR_WHEELS_INSTALL_ORIENTATION == -1) 
+        {
+            std::swap(ser_frame.r_rpm, ser_frame.l_rpm);
+        }
+
         // process Battery Voltage (signed int16): battery voltage x 100
         ser_frame.v_batt = ser_frame.convert_v_batt(read_buf[10], read_buf[11]);
         
@@ -378,7 +390,7 @@ bool SerialCommunicator::sc_initializing_handshake_rearwheels()
     return result;
 }
 
-void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned char* cmd_bytes, int num_bytes_cmd_array)
+void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned char* cmd_bytes)
 {
     cmd_bytes[0] = int16_cmd;               // LSB of int16
     cmd_bytes[1] = int16_cmd >> 8;          // MSB of int16
@@ -387,7 +399,7 @@ void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned cha
 void SerialCommunicator::set_front_steer(int16_t st)
 {
     unsigned char new_steer[2] {0x00};
-    convert_int16_to_uchar_(st, new_steer, sizeof(new_steer));
+    convert_int16_to_uchar_(st, new_steer);
     this->front_wheels_command_[2] = new_steer[0];  // LSB first
     this->front_wheels_command_[3] = new_steer[1];  // MSB second
     update_front_checksum();
@@ -396,7 +408,7 @@ void SerialCommunicator::set_front_steer(int16_t st)
 void SerialCommunicator::set_rear_steer(int16_t st)
 {
     unsigned char new_steer[2] {0x00};
-    convert_int16_to_uchar_(st, new_steer, sizeof(new_steer));
+    convert_int16_to_uchar_(st, new_steer);
     this->rear_wheels_command_[2] = new_steer[0];  // LSB first
     this->rear_wheels_command_[3] = new_steer[1];  // MSB second
     update_rear_checksum();
@@ -406,7 +418,7 @@ void SerialCommunicator::set_front_speed(int16_t sp)
 {
     unsigned char new_speed[2] {0x00};
     sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION; 
-    convert_int16_to_uchar_(sp, new_speed, sizeof(new_speed));
+    convert_int16_to_uchar_(sp, new_speed);
     this->front_wheels_command_[4] = new_speed[0];  // LSB first
     this->front_wheels_command_[5] = new_speed[1];  // MSB second
     update_front_checksum();
@@ -416,7 +428,7 @@ void SerialCommunicator::set_rear_speed(int16_t sp)
 {
     unsigned char new_speed[2] {0x00};
     sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
-    convert_int16_to_uchar_(sp, new_speed, sizeof(new_speed));
+    convert_int16_to_uchar_(sp, new_speed);
     this->rear_wheels_command_[4] = new_speed[0];  // LSB first
     this->rear_wheels_command_[5] = new_speed[1];  // MSB second
     update_rear_checksum();
