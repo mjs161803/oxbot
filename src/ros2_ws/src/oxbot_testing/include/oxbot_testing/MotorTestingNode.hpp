@@ -29,10 +29,10 @@ class MotorTestingNode: public rclcpp::Node {
     int min_steer_;
     int speed_step_size_;
     int speed_step_direction_;
+    int steer_step_size_;
+    int steer_step_direction_;
     int current_speed_cmd_;
     int current_steer_cmd_;
-    bool speed_testing;
-    bool steer_testing;
     signed int fb_speed_cmd_;
     signed int fb_steer_cmd_;
     signed int fb_r_rpm_;

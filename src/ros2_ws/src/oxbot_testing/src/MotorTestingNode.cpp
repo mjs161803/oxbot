@@ -23,12 +23,12 @@ MotorTestingNode::MotorTestingNode() : Node("motor_tester")
     int min_speed_=-100;
     int max_steer_=100;
     int min_steer_=-100;
-    int step_size_=5;
-    int step_direction_=1;
+    int speed_step_size_=5;
+    int speed_step_direction_=1;
+    int steer_step_size_=5;
+    int steer_step_direction_=1;
     int current_speed_cmd_=0;
     int current_steer_cmd_=0;
-    bool speed_testing = true;
-    bool steer_testing = false;
 
     signed int fb_speed_cmd_=0;
     signed int fb_steer_cmd_=0;
@@ -65,11 +65,13 @@ void MotorTestingNode::pubTimerCB(void)
         {
             prev_state_ = current_state_;
             current_state_ = increasing_steer;
+            current_steer_cmd_ += steer_step_direction_*steer_step_size_;
         }
         else if (prev_state_ == increasing_steer | prev_state_ == decreasing_steer)
         {
             prev_state_ = current_state_;
             current_state_ = increasing_speed;
+            current_speed_cmd_ += speed_step_direction_*speed_step_size_;
         }
         break;
     case increasing_speed:
@@ -103,7 +105,38 @@ void MotorTestingNode::pubTimerCB(void)
         }        
         break;
     case returning_to_zero:
-        //prev_state_ = current_state_;
+        if (current_speed_cmd_ > 0)
+        {
+            current_speed_cmd_ += -speed_step_size_;
+            current_speed_cmd_ = (current_speed_cmd_ < 0) ? 0 : current_speed_cmd_;
+        }
+        else if (current_speed_cmd_ < 0)
+        {
+            current_speed_cmd_ += speed_step_size_;
+            current_speed_cmd_ = (current_speed_cmd_ > 0) ? 0 : current_speed_cmd_;
+        }
+        
+        if (current_steer_cmd_ > 0)
+        {
+            current_steer_cmd_ += -steer_step_size_;
+            current_steer_cmd_ = (current_steer_cmd_ < 0) ? 0 : current_steer_cmd_;
+        }
+        else if (current_steer_cmd_ < 0)
+        {
+            current_steer_cmd_ += steer_step_size_;
+            current_steer_cmd_ = (current_steer_cmd_ > 0) ? 0 : current_steer_cmd_;
+        }
+        
+        if (current_speed_cmd_ == 0 && current_steer_cmd_ == 0)
+        {
+            prev_state_ = current_state_;
+            current_state_ = zero_twist;
+        }
+        else 
+        {
+            prev_state_ = current_state_;
+            current_state_ = returning_to_zero;
+        }
         break;
     case increasing_steer:
         //prev_state_ = current_state_;
