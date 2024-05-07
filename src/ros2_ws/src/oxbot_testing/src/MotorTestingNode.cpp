@@ -12,32 +12,31 @@ MotorTestingNode::MotorTestingNode() : Node("motor_tester")
 {
     current_state_ = starting;
     prev_state_ = starting;
-    next_state_ = starting;
 
     mc_output_subscription_ = this->create_subscription<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_feedback", 1, std::bind(&MotorTestingNode::MCOutputSubscriptionCB, this, _1));
     test_twist_publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("motion_cmd", 10);
-    int twist_publisher_timer_period_micros    = int(1000000* (1.0 / 0.2)); // 0.2 Hz... i.e. - every 5 seconds.
+    int twist_publisher_timer_period_micros    = int(1000000* (1.0 / 4.0)); // 4 Hz rate
     twist_publisher_timer_ =   this->create_wall_timer(std::chrono::microseconds(twist_publisher_timer_period_micros), std::bind(&MotorTestingNode::pubTimerCB, this));
     
-    int max_speed_=100;
-    int min_speed_=-100;
-    int max_steer_=100;
-    int min_steer_=-100;
-    int speed_step_size_=5;
-    int speed_step_direction_=1;
-    int steer_step_size_=5;
-    int steer_step_direction_=1;
-    int current_speed_cmd_=0;
-    int current_steer_cmd_=0;
+    max_speed_=100;
+    min_speed_=-100;
+    max_steer_=100;
+    min_steer_=-100;
+    speed_step_size_=5;
+    speed_step_direction_=1;
+    steer_step_size_=5;
+    steer_step_direction_=1;
+    current_speed_cmd_=0;
+    current_steer_cmd_=0;
 
-    signed int fb_speed_cmd_=0;
-    signed int fb_steer_cmd_=0;
-    signed int fb_r_rpm_=0;
-    signed int fb_l_rpm_=0;
-    signed int fb_v_batt_=0;
-    signed int fb_temperature_=0;
-    unsigned int fb_led_=0;
-    unsigned int fb_timestamp_ = 0;
+    fb_speed_cmd_=0;
+    fb_steer_cmd_=0;
+    fb_r_rpm_=0;
+    fb_l_rpm_=0;
+    fb_v_batt_=0;
+    fb_temperature_=0;
+    fb_led_=0;
+    fb_timestamp_ = 0;
 }
 
 void MotorTestingNode::MCOutputSubscriptionCB(const oxbot_interfaces::msg::MotionControlOutput &msg)
@@ -56,100 +55,81 @@ void MotorTestingNode::pubTimerCB(void)
     switch (current_state_)
     {
     case starting:
+    {
         /* code */
+        current_state_ = increasing_speed;
+        current_speed_cmd_ = 0;
+        current_steer_cmd_ = 0;
+        break;
+    }
+    case zero_twist:
+    {
         prev_state_ = current_state_;
         current_state_ = increasing_speed;
+        current_speed_cmd_ += speed_step_direction_*speed_step_size_;
         break;
-    case zero_twist:
-        if (prev_state_ == increasing_speed | prev_state_ == decreasing_speed)
-        {
-            prev_state_ = current_state_;
-            current_state_ = increasing_steer;
-            current_steer_cmd_ += steer_step_direction_*steer_step_size_;
-        }
-        else if (prev_state_ == increasing_steer | prev_state_ == decreasing_steer)
-        {
-            prev_state_ = current_state_;
-            current_state_ = increasing_speed;
-            current_speed_cmd_ += speed_step_direction_*speed_step_size_;
-        }
-        break;
+    }
     case increasing_speed:
-        current_speed_cmd_ += speed_step_size_*speed_step_direction_;
-        if (current_speed_cmd_ > max_speed_)
+    {
+        int old_speed = current_speed_cmd_;
+        current_speed_cmd_ += speed_step_size_;
+        if ((old_speed < 0) & (current_speed_cmd_ == 0))
+        {
+            current_speed_cmd_ = 0;
+            current_state_ = increasing_steer;
+        }
+        else if (current_speed_cmd_ > max_speed_)
         {
             current_speed_cmd_ = max_speed_;
-            speed_step_direction_ *= -1;
-            prev_state_ = current_state_;
             current_state_ = decreasing_speed;
         }
-        else
-        {
-            prev_state_ = current_state_;
-            current_state_ = increasing_speed;
-        }
         break;
+    }
     case decreasing_speed:
-        current_speed_cmd_ += speed_step_size_*speed_step_direction_;
+    {
+        current_speed_cmd_ -= speed_step_size_;
         if (current_speed_cmd_ < min_speed_)
         {
             current_speed_cmd_ = min_speed_;
-            speed_step_direction_ *= -1;
-            prev_state_ = current_state_;
-            current_state_ = returning_to_zero;
-        }
-        else
-        {
-            prev_state_ = current_state_;
-            current_state_ = decreasing_speed;
-        }        
-        break;
-    case returning_to_zero:
-        if (current_speed_cmd_ > 0)
-        {
-            current_speed_cmd_ += -speed_step_size_;
-            current_speed_cmd_ = (current_speed_cmd_ < 0) ? 0 : current_speed_cmd_;
-        }
-        else if (current_speed_cmd_ < 0)
-        {
-            current_speed_cmd_ += speed_step_size_;
-            current_speed_cmd_ = (current_speed_cmd_ > 0) ? 0 : current_speed_cmd_;
-        }
-        
-        if (current_steer_cmd_ > 0)
-        {
-            current_steer_cmd_ += -steer_step_size_;
-            current_steer_cmd_ = (current_steer_cmd_ < 0) ? 0 : current_steer_cmd_;
-        }
-        else if (current_steer_cmd_ < 0)
-        {
-            current_steer_cmd_ += steer_step_size_;
-            current_steer_cmd_ = (current_steer_cmd_ > 0) ? 0 : current_steer_cmd_;
-        }
-        
-        if (current_speed_cmd_ == 0 && current_steer_cmd_ == 0)
-        {
-            prev_state_ = current_state_;
-            current_state_ = zero_twist;
-        }
-        else 
-        {
-            prev_state_ = current_state_;
-            current_state_ = returning_to_zero;
+            current_state_ = increasing_speed;
         }
         break;
+    }
     case increasing_steer:
-        //prev_state_ = current_state_;
+    {
+        int old_steer = current_steer_cmd_;
+        current_steer_cmd_ += steer_step_size_;
+        if ((old_steer < 0)&(current_steer_cmd_==0))
+        {
+            current_steer_cmd_ = 0;
+            current_state_ = increasing_speed;
+        }
+        else if (current_steer_cmd_ > max_steer_)
+        {
+            current_steer_cmd_ = max_steer_;
+            current_state_ = decreasing_steer;
+        }
         break;
+    }
     case decreasing_steer:
-        //prev_state_ = current_state_;
+    {
+        current_steer_cmd_ -= steer_step_size_;
+        if (current_steer_cmd_ < min_steer_)
+        {
+            current_steer_cmd_ = min_steer_;
+            current_state_ = increasing_steer;
+        }
         break;
+    }
     default:
-        //prev_state_ = current_state_;
+    {
+        current_state_ = starting;
         break;
+    }
     }
 
     geometry_msgs::msg::Twist new_mc_cmd;
     new_mc_cmd.linear.x = current_speed_cmd_;
     new_mc_cmd.angular.z = current_steer_cmd_;
+    test_twist_publisher_->publish(new_mc_cmd);
 }

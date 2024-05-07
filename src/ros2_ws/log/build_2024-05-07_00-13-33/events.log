@@ -1,0 +1,319 @@
+[0.000000] (-) TimerEvent: {}
+[0.003225] (-) JobUnselected: {'identifier': 'motion_control'}
+[0.003795] (-) JobUnselected: {'identifier': 'oxbot_bringup'}
+[0.011096] (-) JobUnselected: {'identifier': 'oxbot_config'}
+[0.015360] (-) JobUnselected: {'identifier': 'oxbot_interfaces'}
+[0.015699] (oxbot_testing) JobQueued: {'identifier': 'oxbot_testing', 'dependencies': OrderedDict()}
+[0.015868] (oxbot_testing) JobStarted: {'identifier': 'oxbot_testing'}
+[0.098088] (-) TimerEvent: {}
+[0.176915] (oxbot_testing) JobProgress: {'identifier': 'oxbot_testing', 'progress': 'cmake'}
+[0.180131] (oxbot_testing) JobProgress: {'identifier': 'oxbot_testing', 'progress': 'build'}
+[0.183855] (oxbot_testing) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/oxbot/src/ros2_ws/build/oxbot_testing', '--', '-j4', '-l4'], 'cwd': '/root/oxbot/src/ros2_ws/build/oxbot_testing', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'oxbot'), ('GIT_ASKPASS', '/root/.vscode-server/bin/b58957e67ee1e712cebf466b995adf4c5307b2bd-legacy/extensions/git/dist/askpass.sh'), ('LD_LIBRARY_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('BROWSER', '/root/.vscode-server/bin/b58957e67ee1e712cebf466b995adf4c5307b2bd-legacy/bin/helpers/browser.sh'), ('SHLVL', '2'), ('OLDPWD', '/root/oxbot'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.89.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-5ca5b962-9e2a-4218-95aa-0a5a074d3964.sock'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/b58957e67ee1e712cebf466b995adf4c5307b2bd-legacy/extensions/git/dist/askpass-main.js'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/b58957e67ee1e712cebf466b995adf4c5307b2bd-legacy/node'), ('REMOTE_CONTAINERS', 'true'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-f526421d-dabb-47de-84fc-bdd8f475ab1b.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/install/bin:/root/.vscode-server/bin/b58957e67ee1e712cebf466b995adf4c5307b2bd-legacy/bin/remote-cli:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':5'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-f526421d-dabb-47de-84fc-bdd8f475ab1b.sock","/tmp/.X11-unix/X5","/root/.gnupg/S.gpg-agent"]'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('ROS_ROOT', '/opt/ros/humble'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-6002d20d46.sock'), ('AMENT_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_testing:/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/root/oxbot/src/ros2_ws/install/oxbot_config:/root/oxbot/src/ros2_ws/install/oxbot_bringup:/opt/ros/humble/install'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-f526421d-dabb-47de-84fc-bdd8f475ab1b.sock'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/oxbot/src/ros2_ws/build/oxbot_testing'), ('PYTHONPATH', '/root/oxbot/src/ros2_ws/install/oxbot_interfaces/lib/python3.6/site-packages:/opt/ros/humble/install/lib/python3.6/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/oxbot/src/ros2_ws/install/oxbot_testing:/root/oxbot/src/ros2_ws/install/oxbot_startup:/root/oxbot/src/ros2_ws/install/motion_control:/root/oxbot/src/ros2_ws/install/oxbot_interfaces:/root/oxbot/src/ros2_ws/install/oxbot_config:/root/oxbot/src/ros2_ws/install/oxbot_bringup:/opt/ros/humble/install')]), 'shell': False}
+[0.198397] (-) TimerEvent: {}
+[0.301745] (-) TimerEvent: {}
+[0.402481] (-) TimerEvent: {}
+[0.448867] (oxbot_testing) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o\x1b[0m\n'}
+[0.502685] (-) TimerEvent: {}
+[0.605017] (-) TimerEvent: {}
+[0.706837] (-) TimerEvent: {}
+[0.817108] (-) TimerEvent: {}
+[0.917893] (-) TimerEvent: {}
+[1.018650] (-) TimerEvent: {}
+[1.120445] (-) TimerEvent: {}
+[1.221281] (-) TimerEvent: {}
+[1.322542] (-) TimerEvent: {}
+[1.423371] (-) TimerEvent: {}
+[1.524796] (-) TimerEvent: {}
+[1.625649] (-) TimerEvent: {}
+[1.726471] (-) TimerEvent: {}
+[1.828799] (-) TimerEvent: {}
+[1.929678] (-) TimerEvent: {}
+[2.030564] (-) TimerEvent: {}
+[2.132102] (-) TimerEvent: {}
+[2.233631] (-) TimerEvent: {}
+[2.335409] (-) TimerEvent: {}
+[2.437168] (-) TimerEvent: {}
+[2.539089] (-) TimerEvent: {}
+[2.640712] (-) TimerEvent: {}
+[2.742224] (-) TimerEvent: {}
+[2.843033] (-) TimerEvent: {}
+[2.943903] (-) TimerEvent: {}
+[3.044783] (-) TimerEvent: {}
+[3.145625] (-) TimerEvent: {}
+[3.246447] (-) TimerEvent: {}
+[3.350008] (-) TimerEvent: {}
+[3.452228] (-) TimerEvent: {}
+[3.554505] (-) TimerEvent: {}
+[3.656703] (-) TimerEvent: {}
+[3.757605] (-) TimerEvent: {}
+[3.858515] (-) TimerEvent: {}
+[3.960749] (-) TimerEvent: {}
+[4.063029] (-) TimerEvent: {}
+[4.164594] (-) TimerEvent: {}
+[4.265428] (-) TimerEvent: {}
+[4.366933] (-) TimerEvent: {}
+[4.468506] (-) TimerEvent: {}
+[4.570086] (-) TimerEvent: {}
+[4.671630] (-) TimerEvent: {}
+[4.773191] (-) TimerEvent: {}
+[4.874671] (-) TimerEvent: {}
+[4.976480] (-) TimerEvent: {}
+[5.078040] (-) TimerEvent: {}
+[5.179603] (-) TimerEvent: {}
+[5.281172] (-) TimerEvent: {}
+[5.381993] (-) TimerEvent: {}
+[5.482802] (-) TimerEvent: {}
+[5.584399] (-) TimerEvent: {}
+[5.686108] (-) TimerEvent: {}
+[5.787694] (-) TimerEvent: {}
+[5.888592] (-) TimerEvent: {}
+[5.989478] (-) TimerEvent: {}
+[6.091718] (-) TimerEvent: {}
+[6.198565] (-) TimerEvent: {}
+[6.299460] (-) TimerEvent: {}
+[6.400373] (-) TimerEvent: {}
+[6.501964] (-) TimerEvent: {}
+[6.603525] (-) TimerEvent: {}
+[6.705152] (-) TimerEvent: {}
+[6.806320] (-) TimerEvent: {}
+[6.907189] (-) TimerEvent: {}
+[7.008051] (-) TimerEvent: {}
+[7.109214] (-) TimerEvent: {}
+[7.210441] (-) TimerEvent: {}
+[7.311681] (-) TimerEvent: {}
+[7.413161] (-) TimerEvent: {}
+[7.514363] (-) TimerEvent: {}
+[7.615823] (-) TimerEvent: {}
+[7.718172] (-) TimerEvent: {}
+[7.820505] (-) TimerEvent: {}
+[7.922538] (-) TimerEvent: {}
+[8.024854] (-) TimerEvent: {}
+[8.127262] (-) TimerEvent: {}
+[8.229211] (-) TimerEvent: {}
+[8.331474] (-) TimerEvent: {}
+[8.433700] (-) TimerEvent: {}
+[8.536154] (-) TimerEvent: {}
+[8.638364] (-) TimerEvent: {}
+[8.740722] (-) TimerEvent: {}
+[8.843126] (-) TimerEvent: {}
+[8.945475] (-) TimerEvent: {}
+[9.047856] (-) TimerEvent: {}
+[9.150261] (-) TimerEvent: {}
+[9.252779] (-) TimerEvent: {}
+[9.355176] (-) TimerEvent: {}
+[9.457582] (-) TimerEvent: {}
+[9.559945] (-) TimerEvent: {}
+[9.662268] (-) TimerEvent: {}
+[9.764625] (-) TimerEvent: {}
+[9.865524] (-) TimerEvent: {}
+[9.966346] (-) TimerEvent: {}
+[10.067854] (-) TimerEvent: {}
+[10.169381] (-) TimerEvent: {}
+[10.270874] (-) TimerEvent: {}
+[10.373184] (-) TimerEvent: {}
+[10.475460] (-) TimerEvent: {}
+[10.577061] (-) TimerEvent: {}
+[10.678557] (-) TimerEvent: {}
+[10.780131] (-) TimerEvent: {}
+[10.881077] (-) TimerEvent: {}
+[10.982552] (-) TimerEvent: {}
+[11.084051] (-) TimerEvent: {}
+[11.185594] (-) TimerEvent: {}
+[11.287113] (-) TimerEvent: {}
+[11.388620] (-) TimerEvent: {}
+[11.489467] (-) TimerEvent: {}
+[11.590380] (-) TimerEvent: {}
+[11.692036] (-) TimerEvent: {}
+[11.793437] (-) TimerEvent: {}
+[11.894731] (-) TimerEvent: {}
+[11.996447] (-) TimerEvent: {}
+[12.097947] (-) TimerEvent: {}
+[12.199496] (-) TimerEvent: {}
+[12.301112] (-) TimerEvent: {}
+[12.402659] (-) TimerEvent: {}
+[12.504219] (-) TimerEvent: {}
+[12.605732] (-) TimerEvent: {}
+[12.708145] (-) TimerEvent: {}
+[12.809892] (-) TimerEvent: {}
+[12.910783] (-) TimerEvent: {}
+[13.012545] (-) TimerEvent: {}
+[13.114275] (-) TimerEvent: {}
+[13.215850] (-) TimerEvent: {}
+[13.317553] (-) TimerEvent: {}
+[13.418384] (-) TimerEvent: {}
+[13.519939] (-) TimerEvent: {}
+[13.621469] (-) TimerEvent: {}
+[13.723050] (-) TimerEvent: {}
+[13.824618] (-) TimerEvent: {}
+[13.926135] (-) TimerEvent: {}
+[14.027917] (-) TimerEvent: {}
+[14.128834] (-) TimerEvent: {}
+[14.174917] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorTestingNode::pubTimerCB()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.177735] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:82:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kjump to case label [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[14.178427] (oxbot_testing) StderrLine: {'line': b'     case \x1b[01;31m\x1b[Kdecreasing_speed\x1b[m\x1b[K:\n'}
+[14.179045] (oxbot_testing) StderrLine: {'line': b'          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.179607] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_speed\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.180202] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_speed\x1b[m\x1b[K = current_speed_cmd_;\n'}
+[14.180756] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.192436] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:90:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kjump to case label [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[14.193179] (oxbot_testing) StderrLine: {'line': b'     case \x1b[01;31m\x1b[Kincreasing_steer\x1b[m\x1b[K:\n'}
+[14.193834] (oxbot_testing) StderrLine: {'line': b'          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.194413] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_speed\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.195023] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_speed\x1b[m\x1b[K = current_speed_cmd_;\n'}
+[14.195634] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.196215] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:104:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kjump to case label [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[14.196842] (oxbot_testing) StderrLine: {'line': b'     case \x1b[01;31m\x1b[Kdecreasing_steer\x1b[m\x1b[K:\n'}
+[14.197512] (oxbot_testing) StderrLine: {'line': b'          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.198166] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:91:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_steer\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.198834] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_steer\x1b[m\x1b[K = current_steer_cmd_;\n'}
+[14.199444] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.200011] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_speed\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.200633] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_speed\x1b[m\x1b[K = current_speed_cmd_;\n'}
+[14.226732] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.227409] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:112:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kjump to case label [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[14.228017] (oxbot_testing) StderrLine: {'line': b'     \x1b[01;31m\x1b[Kdefault\x1b[m\x1b[K:\n'}
+[14.228622] (oxbot_testing) StderrLine: {'line': b'     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[14.229256] (-) TimerEvent: {}
+[14.236134] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:91:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_steer\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.239126] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_steer\x1b[m\x1b[K = current_steer_cmd_;\n'}
+[14.239811] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.241372] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  crosses initialization of \xe2\x80\x98\x1b[01m\x1b[Kint old_speed\x1b[m\x1b[K\xe2\x80\x99\n'}
+[14.244277] (oxbot_testing) StderrLine: {'line': b'         int \x1b[01;36m\x1b[Kold_speed\x1b[m\x1b[K = current_speed_cmd_;\n'}
+[14.244896] (oxbot_testing) StderrLine: {'line': b'             \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[14.245565] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kenumeration value \xe2\x80\x98\x1b[01m\x1b[Kdecreasing_speed\x1b[m\x1b[K\xe2\x80\x99 not handled in switch [\x1b[01;35m\x1b[K-Wswitch\x1b[m\x1b[K]\n'}
+[14.246169] (oxbot_testing) StderrLine: {'line': b'     switch \x1b[01;35m\x1b[K(\x1b[m\x1b[Kcurrent_state_)\n'}
+[14.246729] (oxbot_testing) StderrLine: {'line': b'            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[14.247282] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kenumeration value \xe2\x80\x98\x1b[01m\x1b[Kreturning_to_zero\x1b[m\x1b[K\xe2\x80\x99 not handled in switch [\x1b[01;35m\x1b[K-Wswitch\x1b[m\x1b[K]\n'}
+[14.247854] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kenumeration value \xe2\x80\x98\x1b[01m\x1b[Kincreasing_steer\x1b[m\x1b[K\xe2\x80\x99 not handled in switch [\x1b[01;35m\x1b[K-Wswitch\x1b[m\x1b[K]\n'}
+[14.248474] (oxbot_testing) StderrLine: {'line': b'\x1b[01m\x1b[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kenumeration value \xe2\x80\x98\x1b[01m\x1b[Kdecreasing_steer\x1b[m\x1b[K\xe2\x80\x99 not handled in switch [\x1b[01;35m\x1b[K-Wswitch\x1b[m\x1b[K]\n'}
+[14.329473] (-) TimerEvent: {}
+[14.430929] (-) TimerEvent: {}
+[14.531755] (-) TimerEvent: {}
+[14.633309] (-) TimerEvent: {}
+[14.734253] (-) TimerEvent: {}
+[14.835849] (-) TimerEvent: {}
+[14.937382] (-) TimerEvent: {}
+[15.038239] (-) TimerEvent: {}
+[15.139840] (-) TimerEvent: {}
+[15.241454] (-) TimerEvent: {}
+[15.343803] (-) TimerEvent: {}
+[15.445664] (-) TimerEvent: {}
+[15.547227] (-) TimerEvent: {}
+[15.648986] (-) TimerEvent: {}
+[15.750496] (-) TimerEvent: {}
+[15.852076] (-) TimerEvent: {}
+[15.953642] (-) TimerEvent: {}
+[16.055631] (-) TimerEvent: {}
+[16.157169] (-) TimerEvent: {}
+[16.258628] (-) TimerEvent: {}
+[16.360148] (-) TimerEvent: {}
+[16.461623] (-) TimerEvent: {}
+[16.563196] (-) TimerEvent: {}
+[16.664768] (-) TimerEvent: {}
+[16.766302] (-) TimerEvent: {}
+[16.867865] (-) TimerEvent: {}
+[16.969371] (-) TimerEvent: {}
+[17.070871] (-) TimerEvent: {}
+[17.172623] (-) TimerEvent: {}
+[17.273626] (-) TimerEvent: {}
+[17.374495] (-) TimerEvent: {}
+[17.476635] (-) TimerEvent: {}
+[17.579390] (-) TimerEvent: {}
+[17.680225] (-) TimerEvent: {}
+[17.781770] (-) TimerEvent: {}
+[17.883330] (-) TimerEvent: {}
+[17.984809] (-) TimerEvent: {}
+[18.085674] (-) TimerEvent: {}
+[18.186510] (-) TimerEvent: {}
+[18.287390] (-) TimerEvent: {}
+[18.388925] (-) TimerEvent: {}
+[18.490714] (-) TimerEvent: {}
+[18.592282] (-) TimerEvent: {}
+[18.693812] (-) TimerEvent: {}
+[18.795314] (-) TimerEvent: {}
+[18.896903] (-) TimerEvent: {}
+[18.998698] (-) TimerEvent: {}
+[19.099618] (-) TimerEvent: {}
+[19.200450] (-) TimerEvent: {}
+[19.301947] (-) TimerEvent: {}
+[19.403689] (-) TimerEvent: {}
+[19.505400] (-) TimerEvent: {}
+[19.606252] (-) TimerEvent: {}
+[19.707783] (-) TimerEvent: {}
+[19.809810] (-) TimerEvent: {}
+[19.910729] (-) TimerEvent: {}
+[20.013933] (-) TimerEvent: {}
+[20.115680] (-) TimerEvent: {}
+[20.217170] (-) TimerEvent: {}
+[20.318741] (-) TimerEvent: {}
+[20.420285] (-) TimerEvent: {}
+[20.522055] (-) TimerEvent: {}
+[20.622918] (-) TimerEvent: {}
+[20.723779] (-) TimerEvent: {}
+[20.825647] (-) TimerEvent: {}
+[20.927340] (-) TimerEvent: {}
+[21.028267] (-) TimerEvent: {}
+[21.129790] (-) TimerEvent: {}
+[21.231311] (-) TimerEvent: {}
+[21.332849] (-) TimerEvent: {}
+[21.433725] (-) TimerEvent: {}
+[21.535214] (-) TimerEvent: {}
+[21.636754] (-) TimerEvent: {}
+[21.739177] (-) TimerEvent: {}
+[21.841498] (-) TimerEvent: {}
+[21.943253] (-) TimerEvent: {}
+[22.044129] (-) TimerEvent: {}
+[22.145087] (-) TimerEvent: {}
+[22.246545] (-) TimerEvent: {}
+[22.348061] (-) TimerEvent: {}
+[22.449572] (-) TimerEvent: {}
+[22.551243] (-) TimerEvent: {}
+[22.652109] (-) TimerEvent: {}
+[22.753333] (-) TimerEvent: {}
+[22.854194] (-) TimerEvent: {}
+[22.955073] (-) TimerEvent: {}
+[23.055877] (-) TimerEvent: {}
+[23.156737] (-) TimerEvent: {}
+[23.257690] (-) TimerEvent: {}
+[23.358943] (-) TimerEvent: {}
+[23.460192] (-) TimerEvent: {}
+[23.561485] (-) TimerEvent: {}
+[23.662350] (-) TimerEvent: {}
+[23.763499] (-) TimerEvent: {}
+[23.864356] (-) TimerEvent: {}
+[23.965278] (-) TimerEvent: {}
+[24.066509] (-) TimerEvent: {}
+[24.167684] (-) TimerEvent: {}
+[24.268996] (-) TimerEvent: {}
+[24.369863] (-) TimerEvent: {}
+[24.471273] (-) TimerEvent: {}
+[24.572186] (-) TimerEvent: {}
+[24.673077] (-) TimerEvent: {}
+[24.773881] (-) TimerEvent: {}
+[24.875031] (-) TimerEvent: {}
+[24.976509] (-) TimerEvent: {}
+[25.077491] (-) TimerEvent: {}
+[25.178348] (-) TimerEvent: {}
+[25.279589] (-) TimerEvent: {}
+[25.380503] (-) TimerEvent: {}
+[25.481804] (-) TimerEvent: {}
+[25.583035] (-) TimerEvent: {}
+[25.683918] (-) TimerEvent: {}
+[25.784788] (-) TimerEvent: {}
+[25.886141] (-) TimerEvent: {}
+[25.987054] (-) TimerEvent: {}
+[26.087972] (-) TimerEvent: {}
+[26.136974] (oxbot_testing) StderrLine: {'line': b'make[2]: *** [CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o] Error 1\n'}
+[26.137836] (oxbot_testing) StdoutLine: {'line': b"CMakeFiles/motor_tester.dir/build.make:89: recipe for target 'CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o' failed\n"}
+[26.139717] (oxbot_testing) StdoutLine: {'line': b"CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motor_tester.dir/all' failed\n"}
+[26.140919] (oxbot_testing) StdoutLine: {'line': b"Makefile:145: recipe for target 'all' failed\n"}
+[26.149777] (oxbot_testing) StderrLine: {'line': b'make[1]: *** [CMakeFiles/motor_tester.dir/all] Error 2\n'}
+[26.150431] (oxbot_testing) StderrLine: {'line': b'make: *** [all] Error 2\n'}
+[26.163907] (oxbot_testing) CommandEnded: {'returncode': 2}
+[26.188312] (-) TimerEvent: {}
+[26.289551] (-) TimerEvent: {}
+[26.391178] (-) TimerEvent: {}
+[26.497667] (-) TimerEvent: {}
+[26.602111] (-) TimerEvent: {}
+[26.627616] (oxbot_testing) JobEnded: {'identifier': 'oxbot_testing', 'rc': 2}
+[26.641142] (-) EventReactorShutdown: {}

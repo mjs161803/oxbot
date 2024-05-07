@@ -1,0 +1,32 @@
+[0.121s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_testing -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_testing
+[0.871s] -- The C compiler identification is GNU 7.5.0
+[1.343s] -- The CXX compiler identification is GNU 7.5.0
+[1.442s] -- Detecting C compiler ABI info
+[1.674s] -- Detecting C compiler ABI info - done
+[1.728s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.735s] -- Detecting C compile features
+[1.737s] -- Detecting C compile features - done
+[1.783s] -- Detecting CXX compiler ABI info
+[2.039s] -- Detecting CXX compiler ABI info - done
+[2.115s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.117s] -- Detecting CXX compile features
+[2.120s] -- Detecting CXX compile features - done
+[2.221s] [31mCMake Error at CMakeLists.txt:12 (find_package):
+[2.222s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[2.223s]   has asked CMake to find a package configuration file provided by
+[2.223s]   "ament_cmake", but CMake did not find one.
+[2.224s] 
+[2.224s]   Could not find a package configuration file provided by "ament_cmake" with
+[2.225s]   any of the following names:
+[2.225s] 
+[2.226s]     ament_cmakeConfig.cmake
+[2.227s]     ament_cmake-config.cmake
+[2.227s] 
+[2.228s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[2.229s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[2.229s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[2.230s]   has been installed.
+[2.230s] 
+[2.231s] [0m
+[2.232s] -- Configuring incomplete, errors occurred!
+[2.261s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '1': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_testing -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/install/oxbot_testing

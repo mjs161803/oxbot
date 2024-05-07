@@ -1,0 +1,62 @@
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In constructor ‘[01m[KMotorTestingNode::MotorTestingNode()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:21:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmax_speed_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kmax_speed_[m[K=100;
+         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:22:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmin_speed_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kmin_speed_[m[K=-100;
+         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:23:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmax_steer_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kmax_steer_[m[K=100;
+         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:24:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmin_steer_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kmin_steer_[m[K=-100;
+         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:25:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspeed_step_size_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kspeed_step_size_[m[K=5;
+         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:26:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspeed_step_direction_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kspeed_step_direction_[m[K=1;
+         [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:27:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksteer_step_size_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Ksteer_step_size_[m[K=5;
+         [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:28:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksteer_step_direction_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Ksteer_step_direction_[m[K=1;
+         [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:29:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_speed_cmd_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kcurrent_speed_cmd_[m[K=0;
+         [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:30:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_steer_cmd_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     int [01;35m[Kcurrent_steer_cmd_[m[K=0;
+         [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:32:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_speed_cmd_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_speed_cmd_[m[K=0;
+                [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:33:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_steer_cmd_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_steer_cmd_[m[K=0;
+                [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:34:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_r_rpm_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_r_rpm_[m[K=0;
+                [01;35m[K^~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:35:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_l_rpm_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_l_rpm_[m[K=0;
+                [01;35m[K^~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:36:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_v_batt_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_v_batt_[m[K=0;
+                [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:37:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_temperature_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     signed int [01;35m[Kfb_temperature_[m[K=0;
+                [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:38:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_led_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     unsigned int [01;35m[Kfb_led_[m[K=0;
+                  [01;35m[K^~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:39:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfb_timestamp_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+     unsigned int [01;35m[Kfb_timestamp_[m[K = 0;
+                  [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In member function ‘[01m[Kvoid MotorTestingNode::pubTimerCB()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:63:25:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K|[m[K’ [[01;35m[K-Wparentheses[m[K]
+         if ([01;35m[Kprev_state_ == increasing_speed[m[K | prev_state_ == decreasing_speed)
+             [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:30:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K|[m[K’ [[01;35m[K-Wparentheses[m[K]
+         else if ([01;35m[Kprev_state_ == increasing_steer[m[K | prev_state_ == decreasing_steer)
+                  [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K

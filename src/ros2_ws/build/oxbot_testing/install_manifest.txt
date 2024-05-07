@@ -1,0 +1,16 @@
+/root/oxbot/src/ros2_ws/install/oxbot_testing/lib/oxbot_testing/motor_tester
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/package_run_dependencies/oxbot_testing
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/parent_prefix_path/oxbot_testing
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.sh
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.bash
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.sh
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.zsh
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.dsv
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/packages/oxbot_testing
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig-version.cmake
+/root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.xml

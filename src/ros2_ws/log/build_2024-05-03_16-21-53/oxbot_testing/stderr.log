@@ -1,0 +1,7 @@
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In member function ‘[01m[Kvoid MotorTestingNode::pubTimerCB()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:63:25:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K|[m[K’ [[01;35m[K-Wparentheses[m[K]
+         if ([01;35m[Kprev_state_ == increasing_speed[m[K | prev_state_ == decreasing_speed)
+             [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:30:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around comparison in operand of ‘[01m[K|[m[K’ [[01;35m[K-Wparentheses[m[K]
+         else if ([01;35m[Kprev_state_ == increasing_steer[m[K | prev_state_ == decreasing_steer)
+                  [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K

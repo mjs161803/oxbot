@@ -1,0 +1,46 @@
+[0.172s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4
+[0.433s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o[0m
+[14.161s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In member function ‘[01m[Kvoid MotorTestingNode::pubTimerCB()[m[K’:
+[14.162s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:82:10:[m[K [01;31m[Kerror: [m[Kjump to case label [[01;31m[K-fpermissive[m[K]
+[14.163s]      case [01;31m[Kdecreasing_speed[m[K:
+[14.163s]           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[14.164s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_speed[m[K’
+[14.164s]          int [01;36m[Kold_speed[m[K = current_speed_cmd_;
+[14.176s]              [01;36m[K^~~~~~~~~[m[K
+[14.177s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:90:10:[m[K [01;31m[Kerror: [m[Kjump to case label [[01;31m[K-fpermissive[m[K]
+[14.178s]      case [01;31m[Kincreasing_steer[m[K:
+[14.178s]           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[14.179s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_speed[m[K’
+[14.179s]          int [01;36m[Kold_speed[m[K = current_speed_cmd_;
+[14.180s]              [01;36m[K^~~~~~~~~[m[K
+[14.181s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:104:10:[m[K [01;31m[Kerror: [m[Kjump to case label [[01;31m[K-fpermissive[m[K]
+[14.181s]      case [01;31m[Kdecreasing_steer[m[K:
+[14.182s]           [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[14.182s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:91:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_steer[m[K’
+[14.183s]          int [01;36m[Kold_steer[m[K = current_steer_cmd_;
+[14.184s]              [01;36m[K^~~~~~~~~[m[K
+[14.184s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_speed[m[K’
+[14.210s]          int [01;36m[Kold_speed[m[K = current_speed_cmd_;
+[14.211s]              [01;36m[K^~~~~~~~~[m[K
+[14.212s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:112:5:[m[K [01;31m[Kerror: [m[Kjump to case label [[01;31m[K-fpermissive[m[K]
+[14.212s]      [01;31m[Kdefault[m[K:
+[14.213s]      [01;31m[K^~~~~~~[m[K
+[14.223s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:91:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_steer[m[K’
+[14.223s]          int [01;36m[Kold_steer[m[K = current_steer_cmd_;
+[14.225s]              [01;36m[K^~~~~~~~~[m[K
+[14.228s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:69:13:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kint old_speed[m[K’
+[14.229s]          int [01;36m[Kold_speed[m[K = current_speed_cmd_;
+[14.229s]              [01;36m[K^~~~~~~~~[m[K
+[14.230s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[Kdecreasing_speed[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[14.230s]      switch [01;35m[K([m[Kcurrent_state_)
+[14.231s]             [01;35m[K^[m[K
+[14.232s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[Kreturning_to_zero[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[14.232s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[Kincreasing_steer[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[14.233s] [01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:55:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[Kdecreasing_steer[m[K’ not handled in switch [[01;35m[K-Wswitch[m[K]
+[26.121s] make[2]: *** [CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o] Error 1
+[26.122s] CMakeFiles/motor_tester.dir/build.make:89: recipe for target 'CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o' failed
+[26.125s] CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motor_tester.dir/all' failed
+[26.133s] Makefile:145: recipe for target 'all' failed
+[26.134s] make[1]: *** [CMakeFiles/motor_tester.dir/all] Error 2
+[26.135s] make: *** [all] Error 2
+[26.149s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '2': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4

@@ -1,0 +1,25 @@
+[0.177s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4
+[0.462s] [ 33%] [32mBuilding CXX object CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o[0m
+[39.093s] [ 66%] [32m[1mLinking CXX executable motor_tester[0m
+[40.923s] [100%] Built target motor_tester
+[40.968s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4
+[41.431s] Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_testing
+[41.602s] -- Install configuration: ""
+[41.606s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_testing/lib/oxbot_testing/motor_tester
+[41.629s] -- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_testing/lib/oxbot_testing/motor_tester" to ""
+[41.633s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/package_run_dependencies/oxbot_testing
+[41.636s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/parent_prefix_path/oxbot_testing
+[41.637s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.sh
+[41.637s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.dsv
+[41.638s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.sh
+[41.639s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.dsv
+[41.639s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.bash
+[41.651s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.sh
+[41.653s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.zsh
+[41.654s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.dsv
+[41.654s] -- Installing: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.dsv
+[41.655s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/packages/oxbot_testing
+[41.655s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig.cmake
+[41.657s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig-version.cmake
+[41.669s] -- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.xml
+[41.679s] Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_testing

@@ -19,7 +19,6 @@ class MotorTestingNode: public rclcpp::Node {
                 decreasing_steer=32};
     state prev_state_;
     state current_state_;
-    state next_state_;
     rclcpp::Subscription<oxbot_interfaces::msg::MotionControlOutput>::SharedPtr mc_output_subscription_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr test_twist_publisher_;
     rclcpp::TimerBase::SharedPtr twist_publisher_timer_;
