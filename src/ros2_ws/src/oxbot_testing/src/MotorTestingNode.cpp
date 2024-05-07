@@ -11,9 +11,8 @@ using std::placeholders::_1;
 MotorTestingNode::MotorTestingNode() : Node("motor_tester")
 {
     current_state_ = starting;
-    prev_state_ = starting;
 
-    mc_output_subscription_ = this->create_subscription<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_feedback", 1, std::bind(&MotorTestingNode::MCOutputSubscriptionCB, this, _1));
+    mc_output_subscription_ = this->create_subscription<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_output", 1, std::bind(&MotorTestingNode::MCOutputSubscriptionCB, this, _1));
     test_twist_publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("motion_cmd", 10);
     int twist_publisher_timer_period_micros    = int(1000000* (1.0 / 4.0)); // 4 Hz rate
     twist_publisher_timer_ =   this->create_wall_timer(std::chrono::microseconds(twist_publisher_timer_period_micros), std::bind(&MotorTestingNode::pubTimerCB, this));
@@ -29,25 +28,54 @@ MotorTestingNode::MotorTestingNode() : Node("motor_tester")
     current_speed_cmd_=0;
     current_steer_cmd_=0;
 
-    fb_speed_cmd_=0;
-    fb_steer_cmd_=0;
-    fb_r_rpm_=0;
-    fb_l_rpm_=0;
-    fb_v_batt_=0;
-    fb_temperature_=0;
-    fb_led_=0;
-    fb_timestamp_ = 0;
+    fb_front_speed_cmd_=0;
+    fb_front_steer_cmd_=0;
+    fb_front_r_rpm_=0;
+    fb_front_l_rpm_=0;
+    fb_front_v_batt_=0;
+    fb_front_temperature_=0;
+    fb_front_led_=0;
+    fb_front_timestamp_ = 0;
+    fb_rear_speed_cmd_=0;
+    fb_rear_steer_cmd_=0;
+    fb_rear_r_rpm_=0;
+    fb_rear_l_rpm_=0;
+    fb_rear_v_batt_=0;
+    fb_rear_temperature_=0;
+    fb_rear_led_=0;
+    fb_rear_timestamp_ = 0;
 }
 
 void MotorTestingNode::MCOutputSubscriptionCB(const oxbot_interfaces::msg::MotionControlOutput &msg)
 {
-    fb_speed_cmd_ = msg.mc_output.end()->speed_or_throttle;
-    fb_steer_cmd_ = msg.mc_output.end()->steer_or_brake;
-    fb_r_rpm_ = msg.mc_output.end()->right_wheel_rpm;
-    fb_l_rpm_ = msg.mc_output.end()->left_wheel_rpm;
-    fb_v_batt_ = msg.mc_output.end()->batt_voltage_x100;
-    fb_temperature_ = msg.mc_output.end()->temperature;
-    fb_timestamp_ = msg.mc_output.end()->timestamp_ns;
+    for (auto it = msg.mc_output.rbegin(); it != msg.mc_output.rend(); ++it)
+    {
+        if (it->front_or_back == "front")
+        {
+            fb_front_speed_cmd_ = it->speed_or_throttle;
+            fb_front_steer_cmd_ = it->steer_or_brake;
+            fb_front_r_rpm_ = it->right_wheel_rpm;
+            fb_front_l_rpm_ = it->left_wheel_rpm;
+            fb_front_v_batt_ = it->batt_voltage_x100;
+            fb_front_temperature_ = it->temperature;
+            fb_front_timestamp_ = it->timestamp_ns;
+        }
+    }
+    for (auto it = msg.mc_output.rbegin(); it != msg.mc_output.rend(); ++it)
+    {
+        if (it->front_or_back == "back")
+        {
+            fb_rear_speed_cmd_ = it->speed_or_throttle;
+            fb_rear_steer_cmd_ = it->steer_or_brake;
+            fb_rear_r_rpm_ = it->right_wheel_rpm;
+            fb_rear_l_rpm_ = it->left_wheel_rpm;
+            fb_rear_v_batt_ = it->batt_voltage_x100;
+            fb_rear_temperature_ = it->temperature;
+            fb_rear_timestamp_ = it->timestamp_ns;
+        }
+    }
+
+
 }
 
 void MotorTestingNode::pubTimerCB(void)
@@ -64,7 +92,6 @@ void MotorTestingNode::pubTimerCB(void)
     }
     case zero_twist:
     {
-        prev_state_ = current_state_;
         current_state_ = increasing_speed;
         current_speed_cmd_ += speed_step_direction_*speed_step_size_;
         break;
@@ -132,4 +159,11 @@ void MotorTestingNode::pubTimerCB(void)
     new_mc_cmd.linear.x = current_speed_cmd_;
     new_mc_cmd.angular.z = current_steer_cmd_;
     test_twist_publisher_->publish(new_mc_cmd);
+    printMCOutput();
+}
+
+void MotorTestingNode::printMCOutput()
+{
+    RCLCPP_INFO(this->get_logger(), "Front Wheels Feedback: %d / %d / %d / %d / %d / %d / %d / %d", fb_front_speed_cmd_, fb_front_steer_cmd_, fb_front_r_rpm_, fb_front_l_rpm_, fb_front_v_batt_, fb_front_temperature_, fb_front_led_, fb_front_timestamp_);
+    RCLCPP_INFO(this->get_logger(), "Rear Wheels Feedback: %d / %d / %d / %d / %d / %d / %d / %d", fb_rear_speed_cmd_, fb_rear_steer_cmd_, fb_rear_r_rpm_, fb_rear_l_rpm_, fb_rear_v_batt_, fb_rear_temperature_, fb_rear_led_, fb_rear_timestamp_);
 }

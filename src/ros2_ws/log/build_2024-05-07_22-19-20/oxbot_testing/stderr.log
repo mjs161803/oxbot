@@ -1,0 +1,19 @@
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In constructor ‘[01m[KMotorTestingNode::MotorTestingNode()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:14:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_state_[m[K’ was not declared in this scope
+     [01;31m[Kprev_state_[m[K = starting;
+     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:14:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_state_[m[K’
+     [01;36m[Kprev_state_[m[K = starting;
+     [01;36m[K^~~~~~~~~~~[m[K
+     [32m[Kcurrent_state_[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:[m[K In member function ‘[01m[Kvoid MotorTestingNode::pubTimerCB()[m[K’:
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:96:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_state_[m[K’ was not declared in this scope
+         [01;31m[Kprev_state_[m[K = current_state_;
+         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/root/oxbot/src/ros2_ws/src/oxbot_testing/src/MotorTestingNode.cpp:96:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_state_[m[K’
+         [01;36m[Kprev_state_[m[K = current_state_;
+         [01;36m[K^~~~~~~~~~~[m[K
+         [32m[Kcurrent_state_[m[K
+make[2]: *** [CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o] Error 1
+make[1]: *** [CMakeFiles/motor_tester.dir/all] Error 2
+make: *** [all] Error 2

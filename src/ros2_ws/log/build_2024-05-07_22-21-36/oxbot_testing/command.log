@@ -1,0 +1,4 @@
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/build/oxbot_testing -- -j4 -l4
+Invoking command in '/root/oxbot/src/ros2_ws/build/oxbot_testing': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_testing
+Invoked command in '/root/oxbot/src/ros2_ws/build/oxbot_testing' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/build/oxbot_testing

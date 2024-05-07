@@ -1,0 +1,5 @@
+[ 66%] [32mBuilding CXX object CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/motor_tester.dir/src/motor_tester.cpp.o[0m
+CMakeFiles/motor_tester.dir/build.make:89: recipe for target 'CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o' failed
+CMakeFiles/Makefile2:136: recipe for target 'CMakeFiles/motor_tester.dir/all' failed
+Makefile:145: recipe for target 'all' failed

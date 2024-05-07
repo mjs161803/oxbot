@@ -1,0 +1,21 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/motor_tester.dir/src/MotorTestingNode.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable motor_tester[0m
+[100%] Built target motor_tester
+-- Install configuration: ""
+-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_testing/lib/oxbot_testing/motor_tester
+-- Set runtime path of "/root/oxbot/src/ros2_ws/install/oxbot_testing/lib/oxbot_testing/motor_tester" to ""
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/package_run_dependencies/oxbot_testing
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/parent_prefix_path/oxbot_testing
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.sh
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.sh
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/environment/path.dsv
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.bash
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.sh
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.zsh
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/local_setup.dsv
+-- Installing: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.dsv
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/ament_index/resource_index/packages/oxbot_testing
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig.cmake
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/cmake/oxbot_testingConfig-version.cmake
+-- Up-to-date: /root/oxbot/src/ros2_ws/install/oxbot_testing/share/oxbot_testing/package.xml
