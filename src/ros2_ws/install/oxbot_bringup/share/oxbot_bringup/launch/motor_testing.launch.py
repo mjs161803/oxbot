@@ -1,1 +1,0 @@
-/root/oxbot/src/ros2_ws/src/oxbot_bringup/launch/motor_testing.launch.py

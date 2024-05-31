@@ -59,6 +59,7 @@ void MotorTestingNode::MCOutputSubscriptionCB(const oxbot_interfaces::msg::Motio
             fb_front_v_batt_ = it->batt_voltage_x100;
             fb_front_temperature_ = it->temperature;
             fb_front_timestamp_ = it->timestamp_ns;
+            break;
         }
     }
     for (auto it = msg.mc_output.rbegin(); it != msg.mc_output.rend(); ++it)
@@ -72,6 +73,7 @@ void MotorTestingNode::MCOutputSubscriptionCB(const oxbot_interfaces::msg::Motio
             fb_rear_v_batt_ = it->batt_voltage_x100;
             fb_rear_temperature_ = it->temperature;
             fb_rear_timestamp_ = it->timestamp_ns;
+            break;
         }
     }
 

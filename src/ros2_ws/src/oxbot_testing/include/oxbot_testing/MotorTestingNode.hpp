@@ -38,7 +38,7 @@ class MotorTestingNode: public rclcpp::Node {
     signed int fb_front_v_batt_;
     signed int fb_front_temperature_;
     unsigned int fb_front_led_;
-    unsigned int fb_front_timestamp_;
+    uint64_t fb_front_timestamp_;
     signed int fb_rear_speed_cmd_;
     signed int fb_rear_steer_cmd_;
     signed int fb_rear_r_rpm_;
@@ -46,7 +46,7 @@ class MotorTestingNode: public rclcpp::Node {
     signed int fb_rear_v_batt_;
     signed int fb_rear_temperature_;
     unsigned int fb_rear_led_;
-    unsigned int fb_rear_timestamp_;
+    uint64_t fb_rear_timestamp_;
 
     // Methods & Callbacks (CBs)
     void MCOutputSubscriptionCB(const oxbot_interfaces::msg::MotionControlOutput &);   

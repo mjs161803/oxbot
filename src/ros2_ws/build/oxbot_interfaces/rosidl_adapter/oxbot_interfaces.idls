@@ -1,4 +1,0 @@
-/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardFeedback.idl
-/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/HoverboardCommand.idl
-/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:msg/MotionControlOutput.idl
-/root/oxbot/src/ros2_ws/build/oxbot_interfaces/rosidl_adapter/oxbot_interfaces:srv/ComputeRectangleArea.idl

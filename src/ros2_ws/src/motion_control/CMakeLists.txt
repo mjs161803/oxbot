@@ -20,6 +20,20 @@ ament_target_dependencies(motion_controller rclcpp oxbot_interfaces geometry_msg
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
+  find_package(ament_cmake_gtest REQUIRED)
+  ament_add_gtest(${PROJECT_NAME}_motion_controller_node_test test/MotionControllerNodeTest.cpp)
+  target_include_directories(${PROJECT_NAME}_motion_controller_node_test PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+  )
+  ament_target_dependencies(${PROJECT_NAME}_motion_controller_node_test
+    std_msgs
+    rclcpp 
+    oxbot_interfaces 
+    geometry_msgs 
+    oxbot_config
+  )
+  target_link_libraries(${PROJECT_NAME}_motion_controller_node_test)
   # the following line skips the linter which checks for copyrights
   # comment the line when a copyright and license is added to all source files
   set(ament_cmake_copyright_FOUND TRUE)

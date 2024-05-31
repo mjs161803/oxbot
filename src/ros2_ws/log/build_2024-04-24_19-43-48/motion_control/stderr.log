@@ -1,4 +1,0 @@
-[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:[m[K In member function ‘[01m[Kvoid SerialCommunicator::convert_int16_to_uchar_(int16_t, unsigned char*, int)[m[K’:
-[01m[K/root/oxbot/src/ros2_ws/src/motion_control/src/SerialCommunicator.cpp:381:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knum_bytes_cmd_array[m[K’ [[01;35m[K-Wunused-parameter[m[K]
- t16_t int16_cmd, unsigned char* cmd_bytes, int [01;35m[Knum_bytes_cmd_array[m[K)
-                                                [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
