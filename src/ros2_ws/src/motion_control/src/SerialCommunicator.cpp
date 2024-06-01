@@ -416,8 +416,11 @@ void SerialCommunicator::set_rear_steer(int16_t st)
 
 void SerialCommunicator::set_front_speed(int16_t sp)
 {
+    // sp is in units of cm/sec
+    // new_speed is in units of RPM (aka - 2pi rad/min)
     unsigned char new_speed[2] {0x00};
     sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION; 
+    sp *= (120.0 / MC_FRONT_WHEEL_DIAMETER_CM);
     convert_int16_to_uchar_(sp, new_speed);
     this->front_wheels_command_[4] = new_speed[0];  // LSB first
     this->front_wheels_command_[5] = new_speed[1];  // MSB second
@@ -426,8 +429,11 @@ void SerialCommunicator::set_front_speed(int16_t sp)
 
 void SerialCommunicator::set_rear_speed(int16_t sp)
 {
+    // sp is in units of cm/sec
+    // New_speed is in units of RPM (aka - 2pi rad/min)
     unsigned char new_speed[2] {0x00};
     sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
+    sp += (120.0 / MC_REAR_WHEEL_DIAMETER_CM);
     convert_int16_to_uchar_(sp, new_speed);
     this->rear_wheels_command_[4] = new_speed[0];  // LSB first
     this->rear_wheels_command_[5] = new_speed[1];  // MSB second
