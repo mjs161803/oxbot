@@ -5,7 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/ros/humble/install/include/**",
-                "/root/oxbot/src/ros2_ws/install/oxbot_config/include/**"
+                "/opt/ros/humble/include/**",
+                "/root/oxbot/src/ros2_ws/install/oxbot_config/include/**",
+                "/home/mjs161803/git/oxbot/src/ros2_ws/install/oxbot_config/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
