@@ -4,8 +4,8 @@
 ****************************/
 
 // Serial Port Configuration for current Oxbot hardware platform
-#define MC_FRONT_WHEELS_SERIAL_PATH "/dev/ttyUSB0"
-#define MC_REAR_WHEELS_SERIAL_PATH "/dev/ttyUSB1"
+#define MC_FRONT_WHEELS_SERIAL_PATH "/dev/ttyUSB1"
+#define MC_REAR_WHEELS_SERIAL_PATH "/dev/ttyUSB0"
 #define MC_SERIAL_FEEDBACK_MESSAGE_SIZE 18 // the feedback message from the hoverboard controller is 144 bytes long 
 #define MC_FRONT_WHEELS_INSTALL_ORIENTATION 1 // 1 for correct, -1 if hoverboard wheels were installed backwards
 #define MC_REAR_WHEELS_INSTALL_ORIENTATION -1 // 1 for correct, -1 if hoverboard wheels were installed backwards

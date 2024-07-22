@@ -12,8 +12,12 @@ class OxbotTeleopNode: public rclcpp::Node {
     // Members
     rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_subscription_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr joycmd_publisher_;    
+    rclcpp::TimerBase::SharedPtr output_timer_;
+
+    double speed_;
+    double steer_;
     
     // Methods & Callbacks (CBs)
-    void joySubscriptionCB(const sensor_msgs::msg::Joy &);     
-    
+    void joySubscriptionCB(const sensor_msgs::msg::Joy &);  
+    void outputTimerCB();   
 };
