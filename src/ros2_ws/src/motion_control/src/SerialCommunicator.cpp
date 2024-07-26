@@ -180,6 +180,7 @@ FeedbackFrame SerialCommunicator::sc_read_front_wheels()
     
     write(this->front_wheels_serial_fh_, this->front_wheels_command_, sizeof(this->front_wheels_command_));
     // write(this->rear_wheels_serial_fh_, this->rear_wheels_command_, sizeof(this->rear_wheels_command_));
+    RCLCPP_DEBUG(rclcpp::get_logger("serial_logger"), "Completed sc_read_front_wheels.");
 
     return ser_frame;
 }
@@ -264,6 +265,7 @@ FeedbackFrame SerialCommunicator::sc_read_rear_wheels()
     
     write(this->rear_wheels_serial_fh_, this->rear_wheels_command_, sizeof(this->rear_wheels_command_));
     // write(this->rear_wheels_serial_fh_, this->rear_wheels_command_, sizeof(this->rear_wheels_command_));
+    RCLCPP_DEBUG(rclcpp::get_logger("serial_logger"), "Completed sc_read_rear_wheels.");
 
     return ser_frame;
 }
@@ -433,7 +435,7 @@ void SerialCommunicator::set_rear_speed(int16_t sp)
     // New_speed is in units of RPM (aka - 2pi rad/min)
     unsigned char new_speed[2] {0x00};
     sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
-    sp += int16_t(120.0 / MC_REAR_WHEEL_DIAMETER_CM);
+    sp *= int16_t(120.0 / MC_REAR_WHEEL_DIAMETER_CM);
     convert_int16_to_uchar_(sp, new_speed);
     this->rear_wheels_command_[4] = new_speed[0];  // LSB first
     this->rear_wheels_command_[5] = new_speed[1];  // MSB second
@@ -446,7 +448,7 @@ void SerialCommunicator::update_front_checksum()
     unsigned char checksum_msb = front_wheels_command_[1]^front_wheels_command_[3]^front_wheels_command_[5];
     front_wheels_command_[6] = checksum_lsb;
     front_wheels_command_[7] = checksum_msb;
-    RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Updated front_wheel command: %2x %2x   %2x %2x   %2x %2x   %2x %2x", front_wheels_command_[1], front_wheels_command_[0], front_wheels_command_[3], front_wheels_command_[2], front_wheels_command_[5], front_wheels_command_[4], front_wheels_command_[7], front_wheels_command_[6]);
+    //RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Updated front_wheel command: %2x %2x   %2x %2x   %2x %2x   %2x %2x", front_wheels_command_[1], front_wheels_command_[0], front_wheels_command_[3], front_wheels_command_[2], front_wheels_command_[5], front_wheels_command_[4], front_wheels_command_[7], front_wheels_command_[6]);
 }
 
 void SerialCommunicator::update_rear_checksum()
@@ -455,5 +457,5 @@ void SerialCommunicator::update_rear_checksum()
     unsigned char checksum_msb = rear_wheels_command_[1]^rear_wheels_command_[3]^rear_wheels_command_[5];
     rear_wheels_command_[6] = checksum_lsb;
     rear_wheels_command_[7] = checksum_msb;
-    RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Updated rear_wheel command: %2x %2x   %2x %2x   %2x %2x   %2x %2x", rear_wheels_command_[1], rear_wheels_command_[0], rear_wheels_command_[3], rear_wheels_command_[2], rear_wheels_command_[5], rear_wheels_command_[4], rear_wheels_command_[7], rear_wheels_command_[6]);
+    //RCLCPP_INFO(rclcpp::get_logger("serial_logger"), "SerialCommunicator: Updated rear_wheel command: %2x %2x   %2x %2x   %2x %2x   %2x %2x", rear_wheels_command_[1], rear_wheels_command_[0], rear_wheels_command_[3], rear_wheels_command_[2], rear_wheels_command_[5], rear_wheels_command_[4], rear_wheels_command_[7], rear_wheels_command_[6]);
 }
