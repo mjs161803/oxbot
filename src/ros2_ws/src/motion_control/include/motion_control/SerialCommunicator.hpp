@@ -37,9 +37,10 @@ class SerialCommunicator
     bool sc_initializing_handshake_frontwheels();
     bool sc_initializing_handshake_rearwheels();
     bool initialized;
-    void set_front_speed(int16_t);
+    void set_front_speed(double);
     void set_front_steer(int16_t);
-    void set_rear_speed(int16_t);
+    
+    void set_rear_speed(double);
     void set_rear_steer(int16_t);
     
     private:
