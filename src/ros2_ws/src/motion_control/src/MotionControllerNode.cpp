@@ -50,8 +50,8 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &msg)
 {
     // to-do: after receiving a Twist msg, update serial_comm_.front_wheels_command_ and .rear_wheels_command_
-    int16_t steer_cmd = msg.angular.z;
-    int16_t speed_cmd = msg.linear.x;
+    double steer_cmd = msg.angular.z;
+    double speed_cmd = msg.linear.x;
     //rclcpp_info(this->get_logger(), "MotionControllerNode: Attempting to update hoverboard command to steer_cmd=%d  speed_cmd=%d", steer_cmd, speed_cmd);
     this->serial_comm_.set_front_steer(steer_cmd);
     this->serial_comm_.set_front_speed(speed_cmd);
