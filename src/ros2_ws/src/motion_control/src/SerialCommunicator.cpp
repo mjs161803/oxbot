@@ -423,8 +423,8 @@ void SerialCommunicator::set_front_speed(double sp)
     unsigned char new_speed[2] {0x00};
     sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION * MC_MAX_SPEED_CM_PER_SEC; 
     sp *= (120.0 / MC_FRONT_WHEEL_DIAMETER_CM);
-    sp = int16_t(sp);
-    convert_int16_to_uchar_(sp, new_speed);
+    int16_t sp_int = static_cast<int16_t>(sp);
+    convert_int16_to_uchar_(sp_int, new_speed);
     this->front_wheels_command_[4] = new_speed[0];  // LSB first
     this->front_wheels_command_[5] = new_speed[1];  // MSB second
     update_front_checksum();
@@ -437,8 +437,8 @@ void SerialCommunicator::set_rear_speed(double sp)
     unsigned char new_speed[2] {0x00};
     sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION * MC_MAX_SPEED_CM_PER_SEC;
     sp *= (120.0 / MC_REAR_WHEEL_DIAMETER_CM);
-    sp = int16_t(sp);
-    convert_int16_to_uchar_(sp, new_speed);
+    int16_t sp_int = static_cast<int16_t>(sp);
+    convert_int16_to_uchar_(sp_int, new_speed);
     this->rear_wheels_command_[4] = new_speed[0];  // LSB first
     this->rear_wheels_command_[5] = new_speed[1];  // MSB second
     update_rear_checksum();
