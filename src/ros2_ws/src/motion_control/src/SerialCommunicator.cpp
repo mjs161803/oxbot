@@ -398,19 +398,27 @@ void SerialCommunicator::convert_int16_to_uchar_(int16_t int16_cmd, unsigned cha
     cmd_bytes[1] = int16_cmd >> 8;          // MSB of int16
 }
 
-void SerialCommunicator::set_front_steer(int16_t st)
+void SerialCommunicator::set_front_steer(double st)
 {
+    // st is in units of rad/sec
     unsigned char new_steer[2] {0x00};
-    convert_int16_to_uchar_(st, new_steer);
+    st *= MC_FRONT_WHEELS_INSTALL_ORIENTATION;
+    st *= (1948.0/MC_FRONT_WHEEL_DIAMETER_CM);
+    int16_t st_int = static_cast<int16_t>(st);
+    convert_int16_to_uchar_(st_int, new_steer);
     this->front_wheels_command_[2] = new_steer[0];  // LSB first
     this->front_wheels_command_[3] = new_steer[1];  // MSB second
     update_front_checksum();
 }
 
-void SerialCommunicator::set_rear_steer(int16_t st)
+void SerialCommunicator::set_rear_steer(double st)
 {
+    // st is in units of rad/sec
     unsigned char new_steer[2] {0x00};
-    convert_int16_to_uchar_(st, new_steer);
+    st *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
+    st *= (1948.0/MC_REAR_WHEEL_DIAMETER_CM);
+    int16_t st_int = static_cast<int16_t>(st);
+    convert_int16_to_uchar_(st_int, new_steer);
     this->rear_wheels_command_[2] = new_steer[0];  // LSB first
     this->rear_wheels_command_[3] = new_steer[1];  // MSB second
     update_rear_checksum();
@@ -421,7 +429,7 @@ void SerialCommunicator::set_front_speed(double sp)
     // sp is in units of cm/sec
     // new_speed is in units of RPM (aka - 2pi rad/min)
     unsigned char new_speed[2] {0x00};
-    sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION * MC_MAX_SPEED_CM_PER_SEC; 
+    sp *= MC_FRONT_WHEELS_INSTALL_ORIENTATION; 
     sp *= (120.0 / MC_FRONT_WHEEL_DIAMETER_CM);
     int16_t sp_int = static_cast<int16_t>(sp);
     convert_int16_to_uchar_(sp_int, new_speed);
@@ -435,7 +443,7 @@ void SerialCommunicator::set_rear_speed(double sp)
     // sp is in units of cm/sec
     // New_speed is in units of RPM (aka - 2pi rad/min)
     unsigned char new_speed[2] {0x00};
-    sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION * MC_MAX_SPEED_CM_PER_SEC;
+    sp *= MC_REAR_WHEELS_INSTALL_ORIENTATION;
     sp *= (120.0 / MC_REAR_WHEEL_DIAMETER_CM);
     int16_t sp_int = static_cast<int16_t>(sp);
     convert_int16_to_uchar_(sp_int, new_speed);
