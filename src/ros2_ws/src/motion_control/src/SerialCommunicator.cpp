@@ -402,7 +402,7 @@ void SerialCommunicator::set_front_steer(double st)
 {
     // st is in units of rad/sec
     unsigned char new_steer[2] {0x00};
-    st *= MC_FRONT_WHEELS_INSTALL_ORIENTATION;
+    st *= -MC_FRONT_WHEELS_INSTALL_ORIENTATION;
     st *= (1948.0/MC_FRONT_WHEEL_DIAMETER_CM);
     int16_t st_int = static_cast<int16_t>(st);
     convert_int16_to_uchar_(st_int, new_steer);
