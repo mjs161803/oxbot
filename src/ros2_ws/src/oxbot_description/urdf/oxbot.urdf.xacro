@@ -55,6 +55,52 @@
         <origin rpy="0 0 0" xyz="0 -0.0135 0.115"/>
     </joint>
 
+    <link name="camera_mount_link">
+        <!--<inertial>
+            <origin xyz="0 0 0.0575" rpy="0.0 0.0 0.0"/>
+            <mass value="8"/>
+            <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
+        </inertial>-->
+        <visual>
+            <origin rpy="0 0 3.1415" xyz="0.09 0 0"/>
+            <geometry>  
+                <mesh filename="package://oxbot_description/meshes/oxbot_realsense_mount.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.180 0.03 0.04"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="camera_mount_joint" type="fixed">
+        <parent link="chassis_top_link"/>
+        <child link="camera_mount_link"/>
+        <origin rpy="0 0 0" xyz="0 0.1075 0.140"/>
+    </joint>
+
+    <link name="camera_link">
+        <!--<inertial>
+            <origin xyz="0 0 0.0575" rpy="0.0 0.0 0.0"/>
+            <mass value="8"/>
+            <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
+        </inertial>-->
+        <visual>
+            <origin rpy="1.57 0 3.1415" xyz="0 0.026 0"/>
+            <geometry>  
+                <mesh filename="package://oxbot_description/meshes/d455.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="camera_joint" type="fixed">
+        <parent link="camera_mount_link"/>
+        <child link="camera_link"/>
+        <origin rpy="0 0 0" xyz="0 -0.029 0.0325"/>
+    </joint>
+
     <link name="wheel_front_right_link">
         <!--<inertial>
             <mass value="3"/>
