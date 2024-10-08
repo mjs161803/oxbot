@@ -127,6 +127,58 @@
         <origin rpy="0 0 0" xyz="-0.01 0.015 0.184"/>
     </joint>
 
+    <link name="fan1_link">
+        <!--<inertial>
+            <origin xyz="0 0 0.0575" rpy="0.0 0.0 0.0"/>
+            <mass value="8"/>
+            <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
+        </inertial>-->
+        <visual>
+            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <geometry>  
+                <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <geometry>
+                <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="fan1_joint" type="fixed">
+        <parent link="chassis_top_link"/>
+        <child link="fan1_link"/>
+        <origin rpy="0 0 0" xyz="0.215 -0.078 0.140"/>
+    </joint>
+
+    <link name="fan2_link">
+        <!--<inertial>
+            <origin xyz="0 0 0.0575" rpy="0.0 0.0 0.0"/>
+            <mass value="8"/>
+            <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
+        </inertial>-->
+        <visual>
+            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <geometry>  
+                <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <geometry>
+                <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="fan2_joint" type="fixed">
+        <parent link="chassis_top_link"/>
+        <child link="fan2_link"/>
+        <origin rpy="0 0 0" xyz="-0.085 -0.078 0.140"/>
+    </joint>
+
     <link name="wheel_front_right_link">
         <!--<inertial>
             <mass value="3"/>
