@@ -179,6 +179,27 @@
         <origin rpy="0 0 0" xyz="-0.085 -0.078 0.140"/>
     </joint>
 
+    <link name="antenna_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>  
+                <mesh filename="package://oxbot_description/meshes/oxbot_antenna.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://oxbot_description/meshes/oxbot_antenna.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="antenna_joint" type="fixed">
+        <parent link="chassis_top_link"/>
+        <child link="antenna_link"/>
+        <origin rpy="0 0 0" xyz="0.068 -0.062 0.140"/>
+    </joint>
+
     <link name="wheel_front_right_link">
         <!--<inertial>
             <mass value="3"/>
