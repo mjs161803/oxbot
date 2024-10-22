@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/motion_control_output.hpp"
 #include "SerialCommunicator.hpp"
@@ -20,6 +21,7 @@ class MotionControllerNode: public rclcpp::Node {
     SerialCommunicator serial_comm_;
     std::vector<FeedbackFrame> front_serial_feedback_data_;
     std::vector<FeedbackFrame> rear_serial_feedback_data_;
+    nav_msgs::msg::Odometry current_odom_;
 
     // Methods & Callbacks (CBs)
     void cmdSubscriptionCB(const geometry_msgs::msg::Twist &);     
