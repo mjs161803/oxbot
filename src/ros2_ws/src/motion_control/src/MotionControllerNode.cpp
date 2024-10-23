@@ -24,6 +24,23 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     // Publisher Definitions
     output_publisher_ = this->create_publisher<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_output", 30);
     
+    // Initializing current_odom_ message contents
+    current_odom_.header.frame_id = "odom";
+    current_odom_.header.stamp = this->get_clock()->now();
+    current_odom_.child_frame_id = "base_footprint";
+    current_odom_.pose.pose.position.x = 0.0;
+    current_odom_.pose.pose.position.y = 0.0;
+    current_odom_.pose.pose.position.z = 0.0;
+    current_odom_.pose.pose.orientation.x = 0.0;
+    current_odom_.pose.pose.orientation.y = 0.0;
+    current_odom_.pose.pose.orientation.z = 0.0;
+    current_odom_.pose.pose.orientation.w = 1.0;
+    current_odom_.twist.twist.linear.x = 0.0;
+    current_odom_.twist.twist.linear.y = 0.0;
+    current_odom_.twist.twist.linear.z = 0.0;
+    current_odom_.twist.twist.angular.x = 0.0;
+    current_odom_.twist.twist.angular.y = 0.0;
+    current_odom_.twist.twist.angular.z = 0.0;
 
     // Serial Communicator initializing and Initial Serial Port Handshakes
     try

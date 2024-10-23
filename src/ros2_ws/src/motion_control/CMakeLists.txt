@@ -14,10 +14,11 @@ find_package(rclcpp REQUIRED)
 find_package(oxbot_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(oxbot_config REQUIRED)
 
 add_executable(motion_controller src/motion_controller.cpp src/MotionControllerNode.cpp src/SerialCommunicator.cpp src/FeedbackFrame.cpp)
-ament_target_dependencies(motion_controller rclcpp oxbot_interfaces geometry_msgs oxbot_config)
+ament_target_dependencies(motion_controller rclcpp oxbot_interfaces geometry_msgs nav_msgs oxbot_config)
 
 add_executable(oxbot_teleop src/oxbot_teleop.cpp src/OxbotTeleopNode.cpp)
 ament_target_dependencies(oxbot_teleop rclcpp sensor_msgs oxbot_config)
