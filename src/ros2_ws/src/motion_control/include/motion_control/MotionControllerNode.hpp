@@ -1,3 +1,6 @@
+#ifndef MOTION_CONTROLLER
+#define MOTION_CONTROLLER 
+
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "nav_msgs/msg/odometry.hpp"
@@ -16,16 +19,15 @@ class MotionControllerNode: public rclcpp::Node {
     // Members
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_subscription_;
     rclcpp::TimerBase::SharedPtr serial_feedback_timer_;
-    rclcpp::TimerBase::SharedPtr output_timer_;
-    rclcpp::Publisher<oxbot_interfaces::msg::MotionControlOutput>::SharedPtr output_publisher_;    
+    rclcpp::TimerBase::SharedPtr odom_timer_;
+    rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_publisher_;    
     SerialCommunicator serial_comm_;
-    std::vector<FeedbackFrame> front_serial_feedback_data_;
-    std::vector<FeedbackFrame> rear_serial_feedback_data_;
     nav_msgs::msg::Odometry current_odom_;
 
     // Methods & Callbacks (CBs)
     void cmdSubscriptionCB(const geometry_msgs::msg::Twist &);     
     void feedbackTimerCB();
-    void publishOutputCB();
-
+    void publishOdomCB();
 };
+
+#endif 

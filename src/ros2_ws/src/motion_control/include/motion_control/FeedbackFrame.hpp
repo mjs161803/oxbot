@@ -1,5 +1,5 @@
-#ifndef FF_H
-#define FF_H
+#ifndef FEEDBACK_FRAME
+#define FEEDBACK_FRAME
 
 #include <vector>
 #include <chrono>

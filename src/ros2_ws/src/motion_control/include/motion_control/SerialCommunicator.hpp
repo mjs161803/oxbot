@@ -1,3 +1,6 @@
+#ifndef SERIAL_COMMUNICATOR
+#define SERIAL_COMMUNICATOR 
+
 /*****
 * High-level operation of serial_control within Oxbot:
 *   1) Jetson Nano is powered up
@@ -57,3 +60,5 @@ class SerialCommunicator
     void update_front_checksum();
     void update_rear_checksum();
 };
+
+#endif 

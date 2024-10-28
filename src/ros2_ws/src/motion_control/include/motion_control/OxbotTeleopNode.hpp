@@ -1,3 +1,6 @@
+#ifndef OXBOT_TELEOP
+#define OXBOT_TELEOP
+
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "sensor_msgs/msg/joy.hpp"
@@ -21,3 +24,5 @@ class OxbotTeleopNode: public rclcpp::Node {
     void joySubscriptionCB(const sensor_msgs::msg::Joy &);  
     void outputTimerCB();   
 };
+
+#endif

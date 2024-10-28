@@ -16,13 +16,13 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     int serial_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
     int output_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
     serial_feedback_timer_ =   this->create_wall_timer(std::chrono::microseconds(serial_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCB, this));
-    output_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOutputCB, this));
+    odom_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOdomCB, this));
     
     // Subscriber Definitions
     cmd_subscription_ = this->create_subscription<geometry_msgs::msg::Twist>("motion_cmd", 10, std::bind(&MotionControllerNode::cmdSubscriptionCB, this, _1));
 
     // Publisher Definitions
-    output_publisher_ = this->create_publisher<oxbot_interfaces::msg::MotionControlOutput>("motor_controller_output", 30);
+    odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motor_controller_odom", 30);
     
     // Initializing current_odom_ message contents
     current_odom_.header.frame_id = "odom";
@@ -67,8 +67,8 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &msg)
 {
     // to-do: after receiving a Twist msg, update serial_comm_.front_wheels_command_ and .rear_wheels_command_
-    double steer_cmd = msg.angular.z;
-    double speed_cmd = msg.linear.x;
+    double steer_cmd = msg.angular.z; // in units of rad/sec
+    double speed_cmd = msg.linear.x;  // in units of m/sec
     //rclcpp_info(this->get_logger(), "MotionControllerNode: Attempting to update hoverboard command to steer_cmd=%d  speed_cmd=%d", steer_cmd, speed_cmd);
     this->serial_comm_.set_front_steer(steer_cmd);
     this->serial_comm_.set_front_speed(speed_cmd);
@@ -76,69 +76,24 @@ void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &ms
     this->serial_comm_.set_rear_speed(speed_cmd);
 }
 
-void MotionControllerNode::publishOutputCB()
+void MotionControllerNode::publishOdomCB()
 {
-    auto msg_v = oxbot_interfaces::msg::MotionControlOutput();
-    auto msg = oxbot_interfaces::msg::HoverboardFeedback();
-
-    for(auto itr : this->front_serial_feedback_data_)
-    {
-        msg.front_or_back = "front";
-        msg.steer_or_brake = itr.steering;
-        msg.speed_or_throttle = itr.speed;
-        msg.right_wheel_rpm = itr.r_rpm;
-        msg.left_wheel_rpm = itr.l_rpm;
-        msg.batt_voltage_x100 = itr.v_batt;
-        msg.temperature = itr.temperature;
-        msg.led = itr.led_status;
-        msg.timestamp_ns = itr.ts.time_since_epoch().count();
-        msg_v.mc_output.push_back(msg);
-        // RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", itr.ts.time_since_epoch().count(), itr.steering, itr.speed, itr.r_rpm, itr.l_rpm, itr.v_batt, itr.temperature, itr.led_status);    
-    }
-
-    // iterate over rear_serial_feedback_data_ and convert/publish each FeedBackFrame as a HoverboardFeedback ROS2 message
-    for(auto itr : this->rear_serial_feedback_data_)
-    {
-        msg.front_or_back = "back";
-        msg.steer_or_brake = itr.steering;
-        msg.speed_or_throttle = itr.speed;
-        msg.right_wheel_rpm = itr.r_rpm;
-        msg.left_wheel_rpm = itr.l_rpm;
-        msg.batt_voltage_x100 = itr.v_batt;
-        msg.temperature = itr.temperature;
-        msg.led = itr.led_status;
-        msg.timestamp_ns = itr.ts.time_since_epoch().count();
-        msg_v.mc_output.push_back(msg);
-        // RCLCPP_INFO(this->get_logger(), "Front Wheels:\n   Timestamp: %d\n   Steering: %8d\n   Speed: %8d\n   Right RPM: %8d\n   Left RPM: %8d\n   Battery Voltage: %8d\n   Temperature: %8d\n   LED: %016x.", itr.ts.time_since_epoch().count(), itr.steering, itr.speed, itr.r_rpm, itr.l_rpm, itr.v_batt, itr.temperature, itr.led_status);    
-    }
-    output_publisher_->publish(msg_v);
-    this->front_serial_feedback_data_.clear();
-    this->rear_serial_feedback_data_.clear();
-
+    odom_publisher_->publish(current_odom_);
 }
 
 void MotionControllerNode::feedbackTimerCB()
 {
-    FeedbackFrame current_frame;
-    
-    current_frame = this->serial_comm_.sc_read_front_wheels();
-    if (current_frame.valid)
-    {
-        this->front_serial_feedback_data_.insert(std::end(this->front_serial_feedback_data_), current_frame);
-    }
-    else
+    auto front_frame = this->serial_comm_.sc_read_front_wheels();
+    if (!front_frame.valid)
     {
         RCLCPP_INFO(this->get_logger(), "MotionControllerNode::feedbackTimerCB: Reading front wheels serial port device returned invalid feedback frame.");
     }
     
-    current_frame = this->serial_comm_.sc_read_rear_wheels();
-    if (current_frame.valid)
-    {
-        this->rear_serial_feedback_data_.insert(std::end(this->rear_serial_feedback_data_), current_frame);
-    }
-    else
+    auto rear_frame = this->serial_comm_.sc_read_rear_wheels();
+    if (!rear_frame.valid)
     {
         RCLCPP_INFO(this->get_logger(), "MotionControllerNode::feedbackTimerCB: Reading rear wheels serial port device returned invalid feedback frame.");
     }
-    
+       // update current_odom_
+
 }
