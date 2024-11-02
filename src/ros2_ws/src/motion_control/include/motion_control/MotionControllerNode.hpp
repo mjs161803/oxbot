@@ -23,6 +23,13 @@ class MotionControllerNode: public rclcpp::Node {
     rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_publisher_;    
     SerialCommunicator serial_comm_;
     nav_msgs::msg::Odometry current_odom_;
+    double theta_;
+    double x_;
+    double y_;
+    double linear_vel_;
+    double angular_vel_;
+    rclcpp::Time t0_;
+    rclcpp::Time t1_;
 
     // Methods & Callbacks (CBs)
     void cmdSubscriptionCB(const geometry_msgs::msg::Twist &);     

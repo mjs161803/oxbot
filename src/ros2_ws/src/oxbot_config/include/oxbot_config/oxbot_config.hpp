@@ -10,6 +10,7 @@
 #define MC_FRONT_WHEELS_INSTALL_ORIENTATION 1.0 // 1 for correct, -1 if hoverboard wheels were installed backwards
 #define MC_REAR_WHEELS_INSTALL_ORIENTATION -1.0 // 1 for correct, -1 if hoverboard wheels were installed backwards
 #define MC_FRONT_WHEEL_DIAMETER_CM 19.0
+#define MC_FRONT_WHEEL_SEPARATION_CM 62.5
 #define MC_REAR_WHEEL_DIAMETER_CM 24.5
 #define MC_MAX_SPEED_CM_PER_SEC 100.0
 #define MC_MAX_OMEGA_RAD_PER_SEC 3.1415
