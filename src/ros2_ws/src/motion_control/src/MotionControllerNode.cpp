@@ -2,6 +2,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "tf2/LinearMath/Quaternion.h"
+#include "tf2_ros/transform_broadcaster.h"
+#include "geometry_msgs/msg/transform_stamped.hpp"
 #include "MotionControllerNode.hpp"
 #include "FeedbackFrame.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
@@ -27,7 +29,8 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 
     // Publisher Definitions
     odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motor_controller_odom", 30);
-    
+    tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
+
     // Other private members
     t0_ = this->get_clock()->now();
     current_odom_.header.frame_id = "odom";
@@ -102,6 +105,19 @@ void MotionControllerNode::publishOdomCB()
     current_odom_.pose.pose.position.y = y_;
 
     odom_publisher_->publish(current_odom_);
+
+    geometry_msgs::msg::TransformStamped transformStamped;
+    transformStamped.header = current_odom_.header;
+    transformStamped.child_frame_id = current_odom_.child_frame_id;
+    transformStamped.transform.translation.x = x_;
+    transformStamped.transform.translation.y = y_;
+    transformStamped.transform.translation.z = 0.0;
+    transformStamped.transform.rotation.x = current_odom_.pose.pose.orientation.x;
+    transformStamped.transform.rotation.y = current_odom_.pose.pose.orientation.y;
+    transformStamped.transform.rotation.z = current_odom_.pose.pose.orientation.z;
+    transformStamped.transform.rotation.w = current_odom_.pose.pose.orientation.w;
+
+    tf_broadcaster_->sendTransform(transformStamped);
 }
 
 void MotionControllerNode::feedbackTimerCB()
