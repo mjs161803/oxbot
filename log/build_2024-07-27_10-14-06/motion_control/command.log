@@ -1,6 +1,0 @@
-Invoking command in '/root/oxbot/build/motion_control': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/motion_control -DCMAKE_INSTALL_PREFIX=/root/oxbot/install/motion_control
-Invoked command in '/root/oxbot/build/motion_control' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/motion_control -DCMAKE_INSTALL_PREFIX=/root/oxbot/install/motion_control
-Invoking command in '/root/oxbot/build/motion_control': /usr/local/bin/cmake --build /root/oxbot/build/motion_control -- -j4 -l4
-Invoked command in '/root/oxbot/build/motion_control' returned '0': /usr/local/bin/cmake --build /root/oxbot/build/motion_control -- -j4 -l4
-Invoking command in '/root/oxbot/build/motion_control': /usr/local/bin/cmake --install /root/oxbot/build/motion_control
-Invoked command in '/root/oxbot/build/motion_control' returned '0': /usr/local/bin/cmake --install /root/oxbot/build/motion_control

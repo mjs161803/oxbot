@@ -1,6 +1,0 @@
-Invoking command in '/root/oxbot/build/oxbot_config': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_config -DCMAKE_INSTALL_PREFIX=/root/oxbot/install/oxbot_config
-Invoked command in '/root/oxbot/build/oxbot_config' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/oxbot_config -DCMAKE_INSTALL_PREFIX=/root/oxbot/install/oxbot_config
-Invoking command in '/root/oxbot/build/oxbot_config': /usr/local/bin/cmake --build /root/oxbot/build/oxbot_config -- -j4 -l4
-Invoked command in '/root/oxbot/build/oxbot_config' returned '0': /usr/local/bin/cmake --build /root/oxbot/build/oxbot_config -- -j4 -l4
-Invoking command in '/root/oxbot/build/oxbot_config': /usr/local/bin/cmake --install /root/oxbot/build/oxbot_config
-Invoked command in '/root/oxbot/build/oxbot_config' returned '0': /usr/local/bin/cmake --install /root/oxbot/build/oxbot_config
