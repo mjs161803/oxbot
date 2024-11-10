@@ -1,0 +1,16 @@
+/root/oxbot/install/oxbot_config/include//oxbot_config/oxbot_config.hpp
+/root/oxbot/install/oxbot_config/share/ament_index/resource_index/package_run_dependencies/oxbot_config
+/root/oxbot/install/oxbot_config/share/ament_index/resource_index/parent_prefix_path/oxbot_config
+/root/oxbot/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.sh
+/root/oxbot/install/oxbot_config/share/oxbot_config/environment/ament_prefix_path.dsv
+/root/oxbot/install/oxbot_config/share/oxbot_config/environment/path.sh
+/root/oxbot/install/oxbot_config/share/oxbot_config/environment/path.dsv
+/root/oxbot/install/oxbot_config/share/oxbot_config/local_setup.bash
+/root/oxbot/install/oxbot_config/share/oxbot_config/local_setup.sh
+/root/oxbot/install/oxbot_config/share/oxbot_config/local_setup.zsh
+/root/oxbot/install/oxbot_config/share/oxbot_config/local_setup.dsv
+/root/oxbot/install/oxbot_config/share/oxbot_config/package.dsv
+/root/oxbot/install/oxbot_config/share/ament_index/resource_index/packages/oxbot_config
+/root/oxbot/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig.cmake
+/root/oxbot/install/oxbot_config/share/oxbot_config/cmake/oxbot_configConfig-version.cmake
+/root/oxbot/install/oxbot_config/share/oxbot_config/package.xml

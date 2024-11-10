@@ -1,0 +1,9 @@
+/root/oxbot/build/oxbot_config/CMakeFiles/uninstall.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/oxbot_config_uninstall.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/test.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/edit_cache.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/rebuild_cache.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/list_install_components.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/install.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/install/local.dir
+/root/oxbot/build/oxbot_config/CMakeFiles/install/strip.dir
