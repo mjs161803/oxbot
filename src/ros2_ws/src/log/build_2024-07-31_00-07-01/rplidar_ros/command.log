@@ -1,6 +1,0 @@
-Invoking command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/src/install/rplidar_ros
-Invoked command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros' returned '0': /usr/local/bin/cmake /root/oxbot/src/ros2_ws/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/root/oxbot/src/ros2_ws/src/install/rplidar_ros
-Invoking command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/src/build/rplidar_ros -- -j4 -l4
-Invoked command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros' returned '0': /usr/local/bin/cmake --build /root/oxbot/src/ros2_ws/src/build/rplidar_ros -- -j4 -l4
-Invoking command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/src/build/rplidar_ros
-Invoked command in '/root/oxbot/src/ros2_ws/src/build/rplidar_ros' returned '0': /usr/local/bin/cmake --install /root/oxbot/src/ros2_ws/src/build/rplidar_ros
