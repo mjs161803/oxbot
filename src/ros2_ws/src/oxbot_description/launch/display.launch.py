@@ -8,7 +8,6 @@ from launch.substitutions import Command, LaunchConfiguration
 
 
 def generate_launch_description():
-
     model_arg = DeclareLaunchArgument(
         name="model",
         default_value=os.path.join(get_package_share_directory("oxbot_description"), "urdf", "oxbot.urdf.xacro"),
