@@ -68,7 +68,7 @@ def generate_launch_description():
                 executable = 'rviz2',
                 name='rviz2',
                 output='screen',
-                arguments=["-d", os.path.join(oxbot_description_path, "rviz", "display.rviz")]
+                arguments=["-d", os.path.join(oxbot_description_path, "rviz", "rvizconfig2.rviz")]
             ),
         ]
     )
