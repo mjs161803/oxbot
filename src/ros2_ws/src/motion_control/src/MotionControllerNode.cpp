@@ -31,6 +31,10 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motor_controller_odom", 30);
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
+    // Parameters
+    this->declare_parameter("max_linear_velocity_m_sec", 0.5);
+    this->declare_parameter("max_angular_velocity_rad_sec", 1.0);
+
     // Other private members
     t0_ = this->get_clock()->now();
     current_odom_.header.frame_id = "odom";
@@ -80,10 +84,8 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 
 void MotionControllerNode::cmdSubscriptionCB(const geometry_msgs::msg::Twist &msg)
 {
-    // to-do: after receiving a Twist msg, update serial_comm_.front_wheels_command_ and .rear_wheels_command_
     double steer_cmd = msg.angular.z; // in units of rad/sec
     double speed_cmd = msg.linear.x;  // in units of m/sec
-    //rclcpp_info(this->get_logger(), "MotionControllerNode: Attempting to update hoverboard command to steer_cmd=%d  speed_cmd=%d", steer_cmd, speed_cmd);
     this->serial_comm_.set_front_steer(steer_cmd);
     this->serial_comm_.set_front_speed(speed_cmd);
     this->serial_comm_.set_rear_steer(steer_cmd);

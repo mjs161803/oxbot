@@ -1,10 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "OxbotTeleopNode.hpp"
-#include "oxbot_config/oxbot_config.hpp"
 
 using std::placeholders::_1;
-
-#define MAX_RPM 100.0
 
 OxbotTeleopNode::OxbotTeleopNode() : Node("oxbot_teleop")
 {
@@ -17,14 +14,18 @@ OxbotTeleopNode::OxbotTeleopNode() : Node("oxbot_teleop")
     // Publisher Definitions
     joycmd_publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("motion_cmd", 30);
 
+    // Parameters
+    this->declare_parameter("max_linear_velocity_m_sec", 0.5);
+    this->declare_parameter("max_angular_velocity_rad_sec", 1.0);
+
     speed_ = 0.0;
     steer_ = 0.0;
 }
 
 void OxbotTeleopNode::joySubscriptionCB(const sensor_msgs::msg::Joy &msg)
 {
-    speed_ = msg.axes[1]*MC_MAX_SPEED_CM_PER_SEC;
-    steer_ = msg.axes[2]*MC_MAX_OMEGA_RAD_PER_SEC;
+    speed_ = msg.axes[1]*(this->get_parameter("max_linear_velocity_m_sec").as_double());
+    steer_ = msg.axes[2]*(this->get_parameter("max_angular_velocity_rad_sec").as_double());
 }
 
 void OxbotTeleopNode::outputTimerCB() 
