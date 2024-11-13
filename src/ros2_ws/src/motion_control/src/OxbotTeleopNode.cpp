@@ -24,16 +24,16 @@ OxbotTeleopNode::OxbotTeleopNode() : Node("oxbot_teleop")
 
 void OxbotTeleopNode::joySubscriptionCB(const sensor_msgs::msg::Joy &msg)
 {
-    speed_ = msg.axes[1]*(this->get_parameter("max_linear_velocity_m_sec").as_double());
-    steer_ = msg.axes[2]*(this->get_parameter("max_angular_velocity_rad_sec").as_double());
+    speed_ = static_cast<double>(msg.axes[1])*(this->get_parameter("max_linear_velocity_m_sec").as_double());
+    steer_ = static_cast<double>(msg.axes[2])*(this->get_parameter("max_angular_velocity_rad_sec").as_double());
 }
 
 void OxbotTeleopNode::outputTimerCB() 
 {
     geometry_msgs::msg::Twist teleop_msg;
     // convert joystick msg to Twist msg and publish for motion_controller node
-    teleop_msg.linear.x = static_cast<double>(speed_);
-    teleop_msg.angular.z = static_cast<double>(steer_);
+    teleop_msg.linear.x = speed_;
+    teleop_msg.angular.z = steer_;
 
     joycmd_publisher_->publish(teleop_msg);
 }

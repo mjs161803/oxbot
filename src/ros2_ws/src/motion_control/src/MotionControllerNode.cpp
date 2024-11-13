@@ -28,7 +28,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     cmd_subscription_ = this->create_subscription<geometry_msgs::msg::Twist>("motion_cmd", 10, std::bind(&MotionControllerNode::cmdSubscriptionCB, this, _1));
 
     // Publisher Definitions
-    odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motor_controller_odom", 30);
+    odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motion_controller_odom", 30);
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
     // Parameters
