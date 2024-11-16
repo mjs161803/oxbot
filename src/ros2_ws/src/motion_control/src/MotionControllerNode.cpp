@@ -139,15 +139,30 @@ void MotionControllerNode::feedbackTimerCB()
     }
     t1_ = this->get_clock()->now();
     auto dt = t1_-t0_;
-    double lw_ang_vel = double(front_frame.l_rpm) * M_PI / 3.0;
-    double rw_ang_vel = double(front_frame.r_rpm) * M_PI / 3.0;
-    double linear_vel = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0) / 2.0) * (rw_ang_vel + lw_ang_vel);
-    double angular_vel = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0)/(MC_FRONT_WHEEL_SEPARATION_CM/100.0))*(rw_ang_vel-lw_ang_vel);
-    auto d_s = linear_vel * dt.seconds();
-    auto d_theta = angular_vel * dt.seconds();
+    double lw_ang_vel = double(front_frame.l_rpm) * M_PI / 30.0;
+    double rw_ang_vel = double(front_frame.r_rpm) * M_PI / 30.0;
+    linear_vel_ = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0) / 2.0) * (rw_ang_vel + lw_ang_vel);
+    angular_vel_ = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0)/(MC_FRONT_WHEEL_SEPARATION_CM/100.0))*(rw_ang_vel-lw_ang_vel);
+    auto d_s = linear_vel_ * dt.seconds();
+    auto d_theta = angular_vel_ * dt.seconds();
     theta_ += d_theta;
     x_ += d_s * cos(theta_);
     y_ += d_s * sin(theta_);
 
     t0_ = t1_;
+
+    RCLCPP_INFO_STREAM(get_logger(),
+                        "\n t0_: " << t0_.seconds() <<
+                        " t1_: "<< t1_.seconds() <<
+                        " dt: " << dt.seconds() <<
+                        " lw_ang_vel: " << lw_ang_vel <<
+                        " rw_ang_vel: " << rw_ang_vel <<
+                        " linear_vel: " << linear_vel_ <<
+                        " angular_vel: " << angular_vel_ <<
+                        " d_s: " << d_s <<
+                        " d_theta: " << d_theta <<
+                        " theta_: " << theta_ <<
+                        " x_: " << x_ <<
+                        " y_: " << y_
+                        );
 }

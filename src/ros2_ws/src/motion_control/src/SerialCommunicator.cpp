@@ -149,16 +149,16 @@ FeedbackFrame SerialCommunicator::sc_read_front_wheels()
         ser_frame.steering = read_buf[2] | (read_buf[3] << 8);
         
         // process CMD2 (signed int16): speed or throttle
-        ser_frame.speed = MC_FRONT_WHEELS_INSTALL_ORIENTATION*(read_buf[4] | (read_buf[5] << 8));
+        ser_frame.speed = MC_FRONT_WHEELS_INSTALL_ORIENTATION*int16_t(read_buf[4] | (read_buf[5] << 8));
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_frame.r_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION*(-1* (read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
+        ser_frame.r_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION*(-1 * int16_t(read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_frame.l_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
+        ser_frame.l_rpm = MC_FRONT_WHEELS_INSTALL_ORIENTATION * int16_t(read_buf[8] | (read_buf[9] << 8));
         
         // swap left and right wheel RPM values if hoverboard was installed backwards
-        if (MC_FRONT_WHEELS_INSTALL_ORIENTATION == -1) 
+        if (MC_FRONT_WHEELS_INSTALL_ORIENTATION == -1.0) 
         {
             std::swap(ser_frame.r_rpm, ser_frame.l_rpm);
         }
@@ -234,16 +234,16 @@ FeedbackFrame SerialCommunicator::sc_read_rear_wheels()
         ser_frame.steering = read_buf[2] | (read_buf[3] << 8);
         
         // process CMD2 (signed int16): speed or throttle
-        ser_frame.speed = MC_REAR_WHEELS_INSTALL_ORIENTATION *(read_buf[4] | (read_buf[5] << 8));
+        ser_frame.speed = MC_REAR_WHEELS_INSTALL_ORIENTATION *int16_t(read_buf[4] | (read_buf[5] << 8));
         
         // process SpeedR (signed int16): right wheel speed in RPM
-        ser_frame.r_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION *(-1* (read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
+        ser_frame.r_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION *(-1* int16_t(read_buf[6] | (read_buf[7] << 8))); // note the polarity reversal: "forward" = "positive rpm"
         
         // process SpeedL (signed int16): left wheel speed in RPM
-        ser_frame.l_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION * (read_buf[8] | (read_buf[9] << 8));
+        ser_frame.l_rpm = MC_REAR_WHEELS_INSTALL_ORIENTATION * int16_t(read_buf[8] | (read_buf[9] << 8));
         
         // swap left and right wheel RPM values if hoverboard was installed backwards
-        if (MC_REAR_WHEELS_INSTALL_ORIENTATION == -1) 
+        if (MC_REAR_WHEELS_INSTALL_ORIENTATION == -1.0) 
         {
             std::swap(ser_frame.r_rpm, ser_frame.l_rpm);
         }

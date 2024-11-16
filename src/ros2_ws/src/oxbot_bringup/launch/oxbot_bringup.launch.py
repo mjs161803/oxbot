@@ -1,8 +1,9 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction
+from launch.actions import DeclareLaunchArgument, GroupAction, ExecuteProcess, RegisterEventHandler
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import LaunchConfiguration, FindExecutable
 from launch.conditions import UnlessCondition, IfCondition
+from launch.event_handlers import OnExecutionComplete
 
 def generate_launch_description():
     #rplidar_node
@@ -80,6 +81,15 @@ def generate_launch_description():
                 ),
         ]
     )
+    # stop_lidar_motor = ExecuteProcess(
+    #     cmd=[[
+    #         FindExecutable(name="ros2"),
+    #         " service call ",
+    #         "/stop_motor ",
+    #         "std_srvs/srv/Empty"
+    #     ]],
+    #     shell=True
+    # )
 
     return LaunchDescription(
         [
@@ -93,5 +103,13 @@ def generate_launch_description():
             use_teleop_mode_arg,
             teleoperated_oxbot,
             autonomous_oxbot,
+            # RegisterEventHandler(
+            #     OnExecutionComplete(
+            #         target_action=oxbot_teleop,
+            #         on_completion=[
+            #             stop_lidar_motor
+            #         ]
+            #     )
+            # ),
         ]
     )
