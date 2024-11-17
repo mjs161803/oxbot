@@ -151,18 +151,18 @@ void MotionControllerNode::feedbackTimerCB()
 
     t0_ = t1_;
 
-    RCLCPP_INFO_STREAM(get_logger(),
-                        "\n t0_: " << t0_.seconds() <<
-                        " t1_: "<< t1_.seconds() <<
-                        " dt: " << dt.seconds() <<
-                        " lw_ang_vel: " << lw_ang_vel <<
-                        " rw_ang_vel: " << rw_ang_vel <<
-                        " linear_vel: " << linear_vel_ <<
-                        " angular_vel: " << angular_vel_ <<
-                        " d_s: " << d_s <<
-                        " d_theta: " << d_theta <<
-                        " theta_: " << theta_ <<
-                        " x_: " << x_ <<
-                        " y_: " << y_
-                        );
+    // RCLCPP_INFO_STREAM(get_logger(),
+    //                     "\n t0_: " << t0_.seconds() <<
+    //                     " t1_: "<< t1_.seconds() <<
+    //                     " dt: " << dt.seconds() <<
+    //                     " lw_ang_vel: " << lw_ang_vel <<
+    //                     " rw_ang_vel: " << rw_ang_vel <<
+    //                     " linear_vel: " << linear_vel_ <<
+    //                     " angular_vel: " << angular_vel_ <<
+    //                     " d_s: " << d_s <<
+    //                     " d_theta: " << d_theta <<
+    //                     " theta_: " << theta_ <<
+    //                     " x_: " << x_ <<
+    //                     " y_: " << y_
+    //                     );
 }

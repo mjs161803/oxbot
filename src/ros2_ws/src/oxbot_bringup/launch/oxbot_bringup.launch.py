@@ -81,15 +81,15 @@ def generate_launch_description():
                 ),
         ]
     )
-    # stop_lidar_motor = ExecuteProcess(
-    #     cmd=[[
-    #         FindExecutable(name="ros2"),
-    #         " service call ",
-    #         "/stop_motor ",
-    #         "std_srvs/srv/Empty"
-    #     ]],
-    #     shell=True
-    # )
+    stop_lidar_motor = ExecuteProcess(
+        cmd=[[
+            FindExecutable(name="ros2"),
+            " service call ",
+            "/stop_motor ",
+            "std_srvs/srv/Empty"
+        ]],
+        shell=True
+    )
 
     return LaunchDescription(
         [
@@ -103,13 +103,13 @@ def generate_launch_description():
             use_teleop_mode_arg,
             teleoperated_oxbot,
             autonomous_oxbot,
-            # RegisterEventHandler(
-            #     OnExecutionComplete(
-            #         target_action=oxbot_teleop,
-            #         on_completion=[
-            #             stop_lidar_motor
-            #         ]
-            #     )
-            # ),
+            RegisterEventHandler(
+                OnExecutionComplete(
+                    target_action=teleoperated_oxbot,
+                    on_completion=[
+                        stop_lidar_motor
+                    ]
+                )
+            ),
         ]
     )
