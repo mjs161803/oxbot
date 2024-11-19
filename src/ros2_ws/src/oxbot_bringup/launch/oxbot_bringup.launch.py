@@ -28,7 +28,7 @@ def generate_launch_description():
     rplidar_frame_id = LaunchConfiguration('rplidar_frame_id')
     rplidar_frame_id_arg = DeclareLaunchArgument(
         'rplidar_frame_id',
-        default_value='laser',
+        default_value='lidar_link',
         description='Specifying frame_id of lidar'
     )
     rplidar_inverted = LaunchConfiguration('rplidar_inverted')
@@ -70,25 +70,40 @@ def generate_launch_description():
                 package = 'motion_control',
                 executable = 'motion_controller'
             ),
+            Node(
+                package = 'rplidar_ros',
+                executable = 'rplidar_node',
+                name='rplidar_node',
+                parameters=[{'channel_type':rplidar_channel_type,
+                    'serial_port': rplidar_serial_port,
+                    'serial_baudrate': rplidar_serial_baudrate,
+                    'frame_id': rplidar_frame_id,
+                    'inverted': rplidar_inverted,
+                    'angle_compensate': rplidar_angle_compensate}],
+                output='screen',
+            )
         ]
     )
     autonomous_oxbot = GroupAction(
         condition = UnlessCondition(use_teleop_mode),
-            actions=[
-                Node(
-                    package = 'motion_control',
-                    executable = 'motion_controller'
-                ),
+        actions=[
+            Node(
+                package = 'motion_control',
+                executable = 'motion_controller',
+            ),
+            Node(
+                package = 'rplidar_ros',
+                executable = 'rplidar_node',
+                name='rplidar_node',
+                parameters=[{'channel_type':rplidar_channel_type,
+                    'serial_port': rplidar_serial_port,
+                    'serial_baudrate': rplidar_serial_baudrate,
+                    'frame_id': rplidar_frame_id,
+                    'inverted': rplidar_inverted,
+                    'angle_compensate': rplidar_angle_compensate}],
+                output='screen',
+            )
         ]
-    )
-    stop_lidar_motor = ExecuteProcess(
-        cmd=[[
-            FindExecutable(name="ros2"),
-            " service call ",
-            "/stop_motor ",
-            "std_srvs/srv/Empty"
-        ]],
-        shell=True
     )
 
     return LaunchDescription(
@@ -103,13 +118,5 @@ def generate_launch_description():
             use_teleop_mode_arg,
             teleoperated_oxbot,
             autonomous_oxbot,
-            RegisterEventHandler(
-                OnExecutionComplete(
-                    target_action=teleoperated_oxbot,
-                    on_completion=[
-                        stop_lidar_motor
-                    ]
-                )
-            ),
         ]
     )
