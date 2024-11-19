@@ -10,7 +10,7 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_bottom.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -36,7 +36,7 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_top.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -52,7 +52,7 @@
     <joint name="chassis_top_joint" type="fixed">
         <parent link="chassis_bottom_link"/>
         <child link="chassis_top_link"/>
-        <origin rpy="0 0 0" xyz="0 -0.0135 0.115"/>
+        <origin rpy="0 0 0" xyz="-0.0135 0 0.115"/>
     </joint>
 
     <link name="camera_mount_link">
@@ -62,7 +62,7 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 3.1415" xyz="0.09 0 0"/>
+            <origin rpy="0 0 1.57" xyz="0 -0.09 0"/> <!--xyz="0.09 0 0"/> -->
             <geometry>  
                 <mesh filename="package://oxbot_description/meshes/oxbot_realsense_mount.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -78,7 +78,7 @@
     <joint name="camera_mount_joint" type="fixed">
         <parent link="chassis_top_link"/>
         <child link="camera_mount_link"/>
-        <origin rpy="0 0 0" xyz="0 0.1075 0.140"/>
+        <origin rpy="0 0 0" xyz="0.1075 0 0.140"/>
     </joint>
 
     <link name="camera_link">
@@ -88,7 +88,7 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="1.57 0 3.1415" xyz="0 0.026 0"/>
+            <origin rpy="1.57 0 1.57" xyz="0 0 0"/>
             <geometry>  
                 <mesh filename="package://oxbot_description/meshes/d455.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -98,7 +98,7 @@
     <joint name="camera_joint" type="fixed">
         <parent link="camera_mount_link"/>
         <child link="camera_link"/>
-        <origin rpy="0 0 0" xyz="0 -0.029 0.0325"/>
+        <origin rpy="0 0 0" xyz="-0.002 0 0.0325"/>
     </joint>
 
     <link name="lidar_link">
@@ -124,7 +124,7 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="chassis_top_link"/>
         <child link="lidar_link"/>
-        <origin rpy="0 0 0" xyz="-0.01 0.015 0.184"/>
+        <origin rpy="0 0 -1.57" xyz="0.015 -0.01 0.184"/>
     </joint>
 
     <link name="fan1_link">
@@ -134,13 +134,13 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>  
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -150,7 +150,7 @@
     <joint name="fan1_joint" type="fixed">
         <parent link="chassis_top_link"/>
         <child link="fan1_link"/>
-        <origin rpy="0 0 0" xyz="0.215 -0.078 0.140"/>
+        <origin rpy="0 0 0" xyz="-.095 0.09 0.140"/>
     </joint>
 
     <link name="fan2_link">
@@ -160,13 +160,13 @@
             <inertia ixx="9.330733e-02" iyy="2.1713733e-01" izz="2.92811333e-01"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="-0 0 0"/>
             <geometry>  
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -176,7 +176,7 @@
     <joint name="fan2_joint" type="fixed">
         <parent link="chassis_top_link"/>
         <child link="fan2_link"/>
-        <origin rpy="0 0 0" xyz="-0.085 -0.078 0.140"/>
+        <origin rpy="0 0 0" xyz="-.095 -0.21 0.140"/>
     </joint>
 
     <link name="antenna_link">
@@ -197,7 +197,7 @@
     <joint name="antenna_joint" type="fixed">
         <parent link="chassis_top_link"/>
         <child link="antenna_link"/>
-        <origin rpy="0 0 0" xyz="0.068 -0.062 0.140"/>
+        <origin rpy="0 0 0" xyz="-0.057 -0.07 0.140"/>
     </joint>
 
     <link name="wheel_front_right_link">
@@ -206,7 +206,7 @@
             <inertia ixx="6.7775e-01" iyy="6.7775e-01" izz="1.35375e-02"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 3.1415 0" xyz="0.075 0 0"/>
+            <origin rpy="0 0 01.57" xyz="0 -0.075 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_front_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -219,11 +219,10 @@
         </collision>
     </link>
 
-    <joint name="wheel_front_right_joint" type="continuous">
+    <joint name="wheel_front_right_joint" type="fixed">
         <parent link="chassis_bottom_link"/>
         <child link="wheel_front_right_link"/>
-        <axis xyz="1 0 0"/>
-        <origin rpy="0 0 0" xyz="0.28 0.1325 0.026"/>
+        <origin rpy="0 0 0" xyz="0.1325 -0.28 0.026"/>
     </joint>
 
     <link name="wheel_front_left_link">
@@ -232,7 +231,7 @@
             <inertia ixx="6.7775e-01" iyy="6.7775e-01" izz="1.35375e-02"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="-0.075 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0.075 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_front_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -245,11 +244,10 @@
         </collision>
     </link>
 
-    <joint name="wheel_front_left_joint" type="continuous">
+    <joint name="wheel_front_left_joint" type="fixed">
         <parent link="chassis_bottom_link"/>
         <child link="wheel_front_left_link"/>
-        <axis xyz="1 0 0"/>
-        <origin rpy="0 0 0" xyz="-0.28 0.1325 0.026"/>
+        <origin rpy="0 0 0" xyz="0.1325 0.28 0.026"/>
     </joint>
 
     <link name="wheel_rear_right_link">
@@ -258,7 +256,7 @@
             <inertia ixx="6.7775e-01" iyy="6.7775e-01" izz="1.35375e-02"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 3.1415 0" xyz="0.105 0 0"/>
+            <origin rpy="0 0 1.57" xyz="0 -0.105 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_rear_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -271,11 +269,10 @@
         </collision>
     </link>
 
-    <joint name="wheel_rear_right_joint" type="continuous">
+    <joint name="wheel_rear_right_joint" type="fixed">
         <parent link="chassis_bottom_link"/>
         <child link="wheel_rear_right_link"/>
-        <axis xyz="1 0 0"/>
-        <origin rpy="0 0 0" xyz="0.28 -0.1325 0.049"/>
+        <origin rpy="0 0 0" xyz="-0.1325 -0.28 0.049"/>
     </joint>
 
     <link name="wheel_rear_left_link">
@@ -284,7 +281,7 @@
             <inertia ixx="6.7775e-01" iyy="6.7775e-01" izz="1.35375e-02"/>
         </inertial>-->
         <visual>
-            <origin rpy="0 0 0" xyz="-0.105 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0.105 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_rear_wheel.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -297,11 +294,10 @@
         </collision>
     </link>
 
-    <joint name="wheel_rear_left_joint" type="continuous">
+    <joint name="wheel_rear_left_joint" type="fixed">
         <parent link="chassis_bottom_link"/>
         <child link="wheel_rear_left_link"/>
-        <axis xyz="1 0 0"/>
-        <origin rpy="0 0 0" xyz="-0.28 -0.1325 0.049"/>
+        <origin rpy="0 0 0" xyz="-0.1325 0.28 0.049"/>
     </joint>
 
 </robot>

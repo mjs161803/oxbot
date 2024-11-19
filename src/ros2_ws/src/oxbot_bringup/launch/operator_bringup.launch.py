@@ -39,14 +39,19 @@ def generate_launch_description():
             Node(
                 package="robot_state_publisher",
                 executable="robot_state_publisher",
-                parameters=[{"robot_description": robot_description}]
+                output='screen',
+                parameters=[{"robot_description": robot_description}] 
+            ),
+            Node(
+                package="joint_state_publisher_gui",
+                executable="joint_state_publisher_gui",
             ),
             Node(
                 package = 'rviz2',
                 executable = 'rviz2',
                 name='rviz2',
                 output='screen',
-                arguments=['-d' + os.path.join(get_package_share_directory('oxbot_bringup'), 'config', 'config.rviz')]
+                arguments=["-d", os.path.join(oxbot_description_path, "rviz", "rvizconfig2.rviz")]
             ),
         ]
     )
