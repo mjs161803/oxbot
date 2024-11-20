@@ -8,7 +8,6 @@
 #include "FeedbackFrame.hpp"
 #include "oxbot_interfaces/msg/hoverboard_feedback.hpp"
 #include "oxbot_interfaces/msg/motion_control_output.hpp"
-#include "oxbot_config/oxbot_config.hpp"
 
 #define _USE_MATH_DEFINES
 #include <math.h> 
@@ -18,9 +17,23 @@ using std::placeholders::_1;
 
 MotionControllerNode::MotionControllerNode() : Node("motion_controller")
 {
+    // Parameters
+    this->declare_parameter("max_linear_velocity_m_sec", 0.5);
+    this->declare_parameter("max_angular_velocity_rad_sec", 1.0);
+    this->declare_parameter("front_wheels_serial_path", "/dev/ttyUSB1");
+    this->declare_parameter("rear_wheels_serial_path", "/dev/ttyUSB0");
+    this->declare_parameter("front_wheels_install_orientation", 1.0);
+    this->declare_parameter("rear_wheels_install_orientation", -1.0);
+    this->declare_parameter("front_wheel_diameter_cm", 19.0);
+    this->declare_parameter("front_wheels_separation", 62.5);
+    this->declare_parameter("rear_wheel_diamter_cm", 24.5);
+    this->declare_parameter("rear_wheels_separation", 66.0);
+    this->declare_parameter("odom_frequency", 10.0);
+    this->declare_parameter("serial_polling_frequency", 100.0);
+
     // Timer Definitions
-    int serial_timer_period_micros       = int(1000000* (1.0 / MC_SERIAL_POLLING_FREQUENCY));
-    int output_timer_period_micros    = int(1000000* (1.0 / MC_OUTPUT_FREQUENCY));
+    int serial_timer_period_micros       = int(1000000.0 * (1.0 / this->get_parameter("serial_polling_frequency").as_double()));
+    int output_timer_period_micros    = int(1000000.0 * (1.0 / this->get_parameter("odom_frequency").as_double()));
     serial_feedback_timer_ =   this->create_wall_timer(std::chrono::microseconds(serial_timer_period_micros), std::bind(&MotionControllerNode::feedbackTimerCB, this));
     odom_timer_ =       this->create_wall_timer(std::chrono::microseconds(output_timer_period_micros), std::bind(&MotionControllerNode::publishOdomCB, this));
     
@@ -31,10 +44,7 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     odom_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("motion_controller_odom", 30);
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
-    // Parameters
-    this->declare_parameter("max_linear_velocity_m_sec", 0.5);
-    this->declare_parameter("max_angular_velocity_rad_sec", 1.0);
-
+    
     // Other private members
     t0_ = this->get_clock()->now();
     current_odom_.header.frame_id = "odom";
@@ -63,7 +73,16 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     // Serial Communicator initializing and Initial Serial Port Handshakes
     try
     {
-        serial_comm_ = SerialCommunicator();
+        serial_comm_ = SerialCommunicator(
+                                            this->get_parameter("front_wheels_serial_path").as_string(), 
+                                            this->get_parameter("rear_wheels_serial_path").as_string(),
+                                            this->get_parameter("front_wheels_install_orientation").as_double(),
+                                            this->get_parameter("rear_wheels_install_orientation").as_double(),
+                                            this->get_parameter("front_wheel_diameter_cm").as_double(),
+                                            this->get_parameter("front_wheels_separation_cm").as_double(),
+                                            this->get_parameter("rear_wheel_diameter_cm").as_double(),
+                                            this->get_parameter("rear_wheels_separation_cm").as_double()
+                                        );
         serial_comm_.initialized = serial_comm_.sc_initializing_handshake_frontwheels(); // && serial_comm_.sc_initializing_handshake_rearwheels();
         if (serial_comm_.initialized == false)
         {
@@ -141,8 +160,8 @@ void MotionControllerNode::feedbackTimerCB()
     auto dt = t1_-t0_;
     double lw_ang_vel = double(front_frame.l_rpm) * M_PI / 30.0;
     double rw_ang_vel = double(front_frame.r_rpm) * M_PI / 30.0;
-    linear_vel_ = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0) / 2.0) * (rw_ang_vel + lw_ang_vel);
-    angular_vel_ = ((MC_FRONT_WHEEL_DIAMETER_CM/100.0)/(MC_FRONT_WHEEL_SEPARATION_CM/100.0))*(rw_ang_vel-lw_ang_vel);
+    linear_vel_ = ((this->get_parameter("front_wheel_diameter_cm").as_double()/100.0) / 2.0) * (rw_ang_vel + lw_ang_vel);
+    angular_vel_ = ((this->get_parameter("front_wheel_diameter_cm").as_double()/100.0)/(this->get_parameter("front_wheels_separation_cm").as_double()/100.0))*(rw_ang_vel-lw_ang_vel);
     auto d_s = linear_vel_ * dt.seconds();
     auto d_theta = angular_vel_ * dt.seconds();
     theta_ += d_theta;
