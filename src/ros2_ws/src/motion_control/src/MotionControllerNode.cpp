@@ -25,9 +25,9 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     this->declare_parameter("front_wheels_install_orientation", 1.0);
     this->declare_parameter("rear_wheels_install_orientation", -1.0);
     this->declare_parameter("front_wheel_diameter_cm", 19.0);
-    this->declare_parameter("front_wheels_separation", 62.5);
-    this->declare_parameter("rear_wheel_diamter_cm", 24.5);
-    this->declare_parameter("rear_wheels_separation", 66.0);
+    this->declare_parameter("front_wheels_separation_cm", 62.5);
+    this->declare_parameter("rear_wheel_diameter_cm", 24.5);
+    this->declare_parameter("rear_wheels_separation_cm", 66.0);
     this->declare_parameter("odom_frequency", 10.0);
     this->declare_parameter("serial_polling_frequency", 100.0);
 
