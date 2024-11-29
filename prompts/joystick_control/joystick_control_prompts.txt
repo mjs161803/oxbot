@@ -1,1 +1,0 @@
-Generate code for a ROS2 Humble node in C++ that receives data from a Logitech G Extreme 3D Pro USB Joystick, and publishes the joystick data as Twist messages. The code should have a separate sections for the class declaration and implementation.

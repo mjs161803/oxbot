@@ -2,6 +2,9 @@ src/ros2_ws/build
 src/ros2_ws/install
 src/ros2_ws/log
 src/ros2_ws/src/rplidar_ros
+src/ros2_ws/src/realsense-ros
+src/ros2_ws/src/diagnostics
+src/ros2_ws/ros2.humble.rosinstall
 build
 install
 log
