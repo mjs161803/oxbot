@@ -20,8 +20,8 @@ MotionControllerNode::MotionControllerNode() : Node("motion_controller")
     // Parameters
     this->declare_parameter("max_linear_velocity_m_sec", 0.5);
     this->declare_parameter("max_angular_velocity_rad_sec", 1.0);
-    this->declare_parameter("front_wheels_serial_path", "/dev/ttyUSB1");
-    this->declare_parameter("rear_wheels_serial_path", "/dev/ttyUSB0");
+    this->declare_parameter("front_wheels_serial_path", "/dev/front_wheels");
+    this->declare_parameter("rear_wheels_serial_path", "/dev/rear_wheels");
     this->declare_parameter("front_wheels_install_orientation", 1.0);
     this->declare_parameter("rear_wheels_install_orientation", -1.0);
     this->declare_parameter("front_wheel_diameter_cm", 19.0);
