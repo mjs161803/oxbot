@@ -15,7 +15,7 @@ class SerialCommunicator
 {
     public:
     SerialCommunicator();
-    SerialCommunicator(const std::string &, const std::string &, const double &, const double &, const double &, const double &, const double &, const double &);
+    SerialCommunicator(const std::string, const std::string, const double, const double, const double, const double, const double, const double);
     
     FeedbackFrame sc_read_front_wheels();            // method reads the front wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars
     FeedbackFrame sc_read_rear_wheels();             // method reads the rear wheels serial device, and returns a timestamped serial buffer contents as a vector of unsigned chars

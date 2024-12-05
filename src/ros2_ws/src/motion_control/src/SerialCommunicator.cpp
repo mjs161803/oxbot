@@ -14,18 +14,20 @@
 
 using namespace std::chrono_literals;
 
-SerialCommunicator::SerialCommunicator(): 
-                                        front_wheels_serial_path_("/dev/ttyUSB1"), 
-                                        rear_wheels_serial_path_("/dev/ttyUSB0"), 
-                                        front_wheels_serial_fh_(0), 
-                                        rear_wheels_serial_fh_(0),
-                                        fwheel_orientation_(1.0),
-                                        rwheel_orientation_(-1.0),
-                                        fwheel_diameter_cm_(19.0),
-                                        fwheel_separation_cm_(62.5),
-                                        rwheel_diameter_cm_(24.5),
-                                        rwheel_separation_cm_(66.0)
+SerialCommunicator::SerialCommunicator()
 {
+    front_wheels_serial_path_="/dev/front_wheels";
+    rear_wheels_serial_path_="/dev/rear_wheels";
+    front_wheels_serial_fh_=0;
+    rear_wheels_serial_fh_=0;
+    fwheel_orientation_=1.0;
+    rwheel_orientation_=-1.0;
+    fwheel_diameter_cm_=19.0;
+    fwheel_separation_cm_=62.5;
+    rwheel_diameter_cm_=24.5;
+    rwheel_separation_cm_=66.0;
+    front_wheels_serial_fh_ = 0;
+
     front_wheels_command_[0] = 0xCD;
     front_wheels_command_[1] = 0xAB;
     front_wheels_command_[2] = 0x00;
@@ -84,25 +86,26 @@ SerialCommunicator::SerialCommunicator():
 
 }
 
-SerialCommunicator::SerialCommunicator( const std::string & front_path, 
-                                        const std::string & rear_path,
-                                        const double & front_orientation,
-                                        const double & rear_orientation,
-                                        const double & front_diameter, 
-                                        const double & front_separation,
-                                        const double & rear_diameter,
-                                        const double & rear_separation): 
-                                        front_wheels_serial_path_(front_path), 
-                                        rear_wheels_serial_path_(rear_path), 
-                                        front_wheels_serial_fh_(0), 
-                                        rear_wheels_serial_fh_(0),
-                                        fwheel_orientation_(front_orientation),
-                                        rwheel_orientation_(rear_orientation),
-                                        fwheel_diameter_cm_(front_diameter),
-                                        fwheel_separation_cm_(front_separation),
-                                        rwheel_diameter_cm_(rear_diameter),
-                                        rwheel_separation_cm_(rear_separation)
+SerialCommunicator::SerialCommunicator( const std::string front_path, 
+                                        const std::string rear_path,
+                                        const double front_orientation,
+                                        const double rear_orientation,
+                                        const double front_diameter, 
+                                        const double front_separation,
+                                        const double rear_diameter,
+                                        const double rear_separation) 
 {
+    front_wheels_serial_path_=front_path; 
+    rear_wheels_serial_path_=rear_path; 
+    front_wheels_serial_fh_=0;
+    rear_wheels_serial_fh_=0;
+    fwheel_orientation_=front_orientation;
+    rwheel_orientation_=rear_orientation;
+    fwheel_diameter_cm_=front_diameter;
+    fwheel_separation_cm_=front_separation;
+    rwheel_diameter_cm_=rear_diameter;
+    rwheel_separation_cm_=rear_separation;
+    
     front_wheels_command_[0] = 0xCD;
     front_wheels_command_[1] = 0xAB;
     front_wheels_command_[2] = 0x00;
