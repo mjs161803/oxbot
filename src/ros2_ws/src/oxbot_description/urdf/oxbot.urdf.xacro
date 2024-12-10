@@ -6,7 +6,11 @@
     <link name="base_footprint"/>
 
     <link name="chassis_bottom_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.0575"/>
+            <mass value="4.5"/>
+            <inertia ixx="0.12205" ixy="0.0" ixz="0.0" iyy="0.05243" iyz="0.0" izz="0.16467"/>
+        </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
@@ -18,7 +22,6 @@
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_bottom.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <density>1000.0</density>
         </collision>
     </link>
 
@@ -29,7 +32,11 @@
     </joint>
 
     <link name="chassis_top_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.07"/>
+            <mass value="2.0"/>
+            <inertia ixx="0.05553" ixy="0.0" ixz="0.0" iyy="0.01208" iyz="0.0" izz="0.06108"/>
+        </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
@@ -37,7 +44,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>333.0</density>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_top.stl" scale="0.001 0.001 0.001"/>
@@ -52,15 +58,18 @@
     </joint>
 
     <link name="camera_mount_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.000283" ixy="0.0" ixz="0.0" iyy="0.000020" iyz="0.0" izz="0.00027"/>
+        </inertial>
         <visual>
-            <origin rpy="0 0 1.57" xyz="0 -0.09 0"/> <!--xyz="0.09 0 0"/> -->
+            <origin rpy="0 0 1.57" xyz="0 -0.09 0"/> 
             <geometry>  
                 <mesh filename="package://oxbot_description/meshes/oxbot_realsense_mount.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
-            <density>250.0</density>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <box size="0.180 0.03 0.04"/>
@@ -75,7 +84,11 @@
     </joint>
 
     <link name="camera_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.072" />
+            <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />
+        </inertial>
         <visual>
             <origin rpy="1.57 0 1.57" xyz="0.01 -0.055 0.01"/>
             <geometry>  
@@ -83,7 +96,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>1000.0</density>
             <origin rpy="0 0 0" xyz="0 0 0 "/>
             <geometry>
                 <box size="0.18 0.03 0.04"/>
@@ -98,7 +110,11 @@
     </joint>
 
     <link name="lidar_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.17" />
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
         <visual>
             <origin rpy="1.57 0 0" xyz="-0.0351 0.0351 -0.037"/>
             <geometry>  
@@ -106,7 +122,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>750.0</density>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <box size="0.110 0.09 0.09"/>
@@ -121,7 +136,11 @@
     </joint>
 
     <link name="fan1_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.05" />
+            <inertia ixx="63e-6" ixy="0" ixz="0" iyy="63e-6" iyz="0" izz="122e-6" />
+        </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>  
@@ -129,7 +148,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>500.0</density>
             <origin rpy="0 0 0" xyz="-0.121 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
@@ -144,7 +162,11 @@
     </joint>
 
     <link name="fan2_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.05" />
+            <inertia ixx="63e-6" ixy="0" ixz="0" iyy="63e-6" iyz="0" izz="122e-6" />
+        </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="-0 0 0"/>
             <geometry>  
@@ -152,7 +174,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>500.0</density>
             <origin rpy="0 0 0" xyz="-0.121 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
@@ -167,7 +188,11 @@
     </joint>
 
     <link name="antenna_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.025" />
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>  
@@ -175,7 +200,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>750.0</density>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_antenna.stl" scale="0.001 0.001 0.001"/>
@@ -190,7 +214,11 @@
     </joint>
 
     <link name="wheel_front_right_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="3.0" />
+            <inertia ixx="0.005772" ixy="0" ixz="0" iyy="0.010086" iyz="0" izz="0.005772" />
+        </inertial>
         <visual>
             <origin rpy="0 0 01.57" xyz="0 -0.075 0"/>
             <geometry>
@@ -198,7 +226,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>6000.0</density>
             <origin xyz="0.075 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_front_wheel.stl" scale="0.001 0.001 0.001"/>
@@ -214,7 +241,11 @@
     </joint>
 
     <link name="wheel_front_left_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="3.0" />
+            <inertia ixx="0.005772" ixy="0" ixz="0" iyy="0.010086" iyz="0" izz="0.005772" />
+        </inertial>
         <visual>
             <origin rpy="0 0 -1.57" xyz="0 0.075 0"/>
             <geometry>
@@ -222,7 +253,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>6000.0</density>
             <origin xyz="-0.075 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_front_wheel.stl" scale="0.001 0.001 0.001"/>
@@ -238,7 +268,11 @@
     </joint>
 
     <link name="wheel_rear_right_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="4.0" />
+            <inertia ixx="0.014425" ixy="0" ixz="0" iyy="0.02645" iyz="0" izz="0.014425" />
+        </inertial>
         <visual>
             <origin rpy="0 0 1.57" xyz="0 -0.105 0"/>
             <geometry>
@@ -246,7 +280,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>6000.0</density>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_rear_wheel.stl" scale="0.001 0.001 0.001"/>
@@ -262,7 +295,11 @@
     </joint>
 
     <link name="wheel_rear_left_link">
-        <inertial auto="true" />
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="4.0" />
+            <inertia ixx="0.014425" ixy="0" ixz="0" iyy="0.02645" iyz="0" izz="0.014425" />
+        </inertial>
         <visual>
             <origin rpy="0 0 -1.57" xyz="0 0.105 0"/>
             <geometry>
@@ -270,7 +307,6 @@
             </geometry>
         </visual>
         <collision>
-            <density>6000.0</density>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_rear_wheel.stl" scale="0.001 0.001 0.001"/>
