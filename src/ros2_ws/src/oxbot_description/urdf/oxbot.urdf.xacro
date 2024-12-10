@@ -12,7 +12,7 @@
             <inertia ixx="0.12205" ixy="0.0" ixz="0.0" iyy="0.05243" iyz="0.0" izz="0.16467"/>
         </inertial>
         <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_bottom.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -38,7 +38,7 @@
             <inertia ixx="0.05553" ixy="0.0" ixz="0.0" iyy="0.01208" iyz="0.0" izz="0.06108"/>
         </inertial>
         <visual>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_top.stl" scale="0.001 0.001 0.001"/>
             </geometry>
