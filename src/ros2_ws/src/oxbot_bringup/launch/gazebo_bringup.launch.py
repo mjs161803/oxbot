@@ -10,6 +10,8 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     oxbot_description_dir = get_package_share_directory("oxbot_description")
+    ros_distro = os.environ["ROS_DISTRO"]
+    is_ignition = "True" if ros_distro == "humble" else "False"
     
     model_arg = DeclareLaunchArgument(
         name="model", 
@@ -18,7 +20,12 @@ def generate_launch_description():
     )
     
     robot_description = ParameterValue(
-        Command(["xacro ", LaunchConfiguration("model")]), 
+        Command([
+            "xacro ", 
+            LaunchConfiguration("model"),
+            " is_ignition:=",
+            is_ignition
+        ]), 
         value_type=str
     )
     
@@ -52,13 +59,35 @@ def generate_launch_description():
         output="screen",
         arguments=["-topic", "robot_description", "-name", "oxbot"]
     )
+
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[
+            "joint_state_broadcaster",
+            "--controller-manager",
+            "/controller_manager",
+        ],
+    )
+
+    simple_controller = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["simple_velocity_controller",
+                "--controller-manager",
+                "/controller_manager"
+        ]
+    )
+
     
     return LaunchDescription([
         model_arg,
         robot_state_publisher_node,
         gazebo_resource_path,
         gazebo,
-        gz_spawn_entity
+        gz_spawn_entity,
+        joint_state_broadcaster_spawner,
+        simple_controller,
     ])
     
 # be sure to update package.xml for oxbot_bringup: <exec_depend>ros_gz_sim</exec_depend>
