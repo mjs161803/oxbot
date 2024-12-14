@@ -21,7 +21,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_bottom.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -47,7 +47,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 -1.57" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_chassis_top.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -73,7 +73,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 1.57" xyz="0 0 0"/>
             <geometry>
                 <box size="0.180 0.03 0.04"/>
             </geometry>
@@ -99,7 +99,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0 "/>
+            <origin rpy="1.57 0 1.57" xyz="0.01 -0.055 0.01"/>
             <geometry>
                 <box size="0.18 0.03 0.04"/>
             </geometry>
@@ -125,7 +125,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="1.57 0 0" xyz="0 0 0"/>
             <geometry>
                 <box size="0.110 0.09 0.09"/>
             </geometry>
@@ -151,7 +151,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -177,7 +177,7 @@
             </geometry>
         </visual>
         <collision>
-            <origin rpy="0 0 0" xyz="-0.121 0 0"/>
+            <origin rpy="0 0 0" xyz="-0 0 0"/>
             <geometry>
                 <mesh filename="package://oxbot_description/meshes/oxbot_fan.stl" scale="0.001 0.001 0.001"/>
             </geometry>

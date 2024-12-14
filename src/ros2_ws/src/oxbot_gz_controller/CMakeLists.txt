@@ -23,13 +23,17 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 add_executable(gz_motion_controller src/gz_motion_controller.cpp src/GZControllerNode.cpp)
 ament_target_dependencies(gz_motion_controller rclcpp geometry_msgs std_msgs sensor_msgs nav_msgs tf2_ros tf2 ${Eigen_LIBRARIES})
 
+add_executable(oxbot_teleop_node src/OxbotTeleopNode.cpp)
+ament_target_dependencies(oxbot_teleop_node rclcpp sensor_msgs geometry_msgs)
+
 install(
   DIRECTORY include
   DESTINATION include
 )
 
 install(TARGETS
-  gz_motion_controller
+  gz_motion_controller 
+  oxbot_teleop_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

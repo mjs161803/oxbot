@@ -84,6 +84,26 @@ def generate_launch_description():
         executable="gz_motion_controller",
         output="screen"
     )
+
+    joy_node = Node(
+        package = 'joy',
+        executable = 'joy_node',
+        name="joystick",
+        parameters=[os.path.join(get_package_share_directory("oxbot_bringup"), "config", "joy_config.yaml")],
+    )
+
+    rviz_node = Node(
+        package = 'rviz2',
+        executable = 'rviz2',
+        name='rviz2',
+        output='screen',
+        arguments=["-d", os.path.join(oxbot_description_dir, "rviz", "rvizconfig2.rviz")]
+    )
+
+    teleop_node = Node(
+        package="oxbot_gz_controller",
+        executable="oxbot_teleop_node"
+    )
     
     return LaunchDescription([
         model_arg,
@@ -93,7 +113,10 @@ def generate_launch_description():
         gz_spawn_entity,
         joint_state_broadcaster_spawner,
         wheel_controller,
-        gz_motion_controller
+        gz_motion_controller,
+        joy_node,
+        rviz_node,
+        teleop_node
     ])
     
 # be sure to update package.xml for oxbot_bringup: <exec_depend>ros_gz_sim</exec_depend>

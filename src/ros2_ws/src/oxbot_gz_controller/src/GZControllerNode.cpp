@@ -36,6 +36,8 @@ GZControllerNode::GZControllerNode() : Node("gz_motion_controller")
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
     // Other private members
+    current_transform_.header.frame_id = "odom";
+    current_transform_.child_frame_id = "base_footprint";
     current_odom_.header.frame_id = "odom";
     current_odom_.header.stamp = this->get_clock()->now();
     current_odom_.child_frame_id = "base_footprint";
