@@ -70,7 +70,7 @@ def generate_launch_description():
         ],
     )
 
-    simple_controller = Node(
+    wheel_controller = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["simple_velocity_controller",
@@ -79,6 +79,11 @@ def generate_launch_description():
         ]
     )
 
+    gz_motion_controller = Node(
+        package="oxbot_gz_controller",
+        executable="gz_motion_controller",
+        output="screen"
+    )
     
     return LaunchDescription([
         model_arg,
@@ -87,7 +92,8 @@ def generate_launch_description():
         gazebo,
         gz_spawn_entity,
         joint_state_broadcaster_spawner,
-        simple_controller,
+        wheel_controller,
+        gz_motion_controller
     ])
     
 # be sure to update package.xml for oxbot_bringup: <exec_depend>ros_gz_sim</exec_depend>
