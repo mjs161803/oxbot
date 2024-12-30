@@ -25,8 +25,7 @@ def generate_launch_description():
         default_value='False',
         description='Specifying whether robot is using joystick for manual control. If false, robot is under autonomous control.',
     )
-
-    #joy_node and rviz     
+ 
     teleoperated_oxbot = GroupAction(
         condition = IfCondition(use_teleop_mode),
         actions=[
