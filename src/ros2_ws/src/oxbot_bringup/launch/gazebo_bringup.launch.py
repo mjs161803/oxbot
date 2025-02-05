@@ -72,24 +72,24 @@ def generate_launch_description():
         arguments=["-topic", "robot_description", "-name", "oxbot"]
     )
 
-    joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=[
-            "joint_state_broadcaster",
-            "--controller-manager",
-            "/controller_manager",
-        ],
-    )
+    # joint_state_broadcaster_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=[
+    #         "joint_state_broadcaster",
+    #         "--controller-manager",
+    #         "/controller_manager",
+    #     ],
+    # )
 
-    wheel_controller = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["simple_velocity_controller",
-                "--controller-manager",
-                "/controller_manager"
-        ]
-    )
+    # wheel_controller = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["simple_velocity_controller",
+    #             "--controller-manager",
+    #             "/controller_manager"
+    #     ]
+    # )
 
     gz_motion_controller = Node(
         package="oxbot_gz_controller",
@@ -138,8 +138,8 @@ def generate_launch_description():
         gazebo,
         gz_spawn_entity,
         gz_ros2_bridge,
-        joint_state_broadcaster_spawner,
-        wheel_controller,
+        # joint_state_broadcaster_spawner,
+        # wheel_controller,
         gz_motion_controller,
         joy_node,
         rviz_node,
