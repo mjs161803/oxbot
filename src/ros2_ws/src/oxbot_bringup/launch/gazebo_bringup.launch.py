@@ -12,6 +12,8 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
     oxbot_description_dir = get_package_share_directory("oxbot_description")
     
+    use_sim_time_arg = DeclareLaunchArgument("use_sim_time", default_value="True")
+    
     model_arg = DeclareLaunchArgument(
         name="model", 
         default_value=os.path.join(oxbot_description_dir, "urdf", "oxbot.urdf.xacro"),
@@ -52,8 +54,16 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[{"robot_description": robot_description,
-                     "use_sim_time": True}]
+                     "use_sim_time": LaunchConfiguration("use_sim_time")}]
     )
+
+    map_name_arg = DeclareLaunchArgument("map_name", default_value="my_map5")
+    map_path = PathJoinSubstitution([
+        get_package_share_directory("oxbot_mapping"),
+        "maps",
+        LaunchConfiguration("map_name"),
+        "my_map5.yaml"
+    ])
         
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
@@ -129,8 +139,19 @@ def generate_launch_description():
             ('/imu', '/realsense/camera/imu'),
         ]
     )
+
+    nav2_map_server = Node(
+        package="nav2_map_server",
+        executable="map_server",
+        output="screen",
+        parameters=[
+            {"yaml_filename": map_path},
+            {"use_sim_time": LaunchConfiguration("use_sim_time")},
+        ]
+    )
     
     return LaunchDescription([
+        use_sim_time_arg,
         model_arg,
         world_name_arg,
         robot_state_publisher_node,
@@ -143,7 +164,9 @@ def generate_launch_description():
         gz_motion_controller,
         joy_node,
         rviz_node,
-        teleop_node
+        teleop_node,
+        map_name_arg,
+        nav2_map_server
     ])
     
 # be sure to update package.xml for oxbot_bringup: <exec_depend>ros_gz_sim</exec_depend>
