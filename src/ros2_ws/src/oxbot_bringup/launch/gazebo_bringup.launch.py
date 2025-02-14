@@ -18,12 +18,12 @@ def generate_launch_description():
         description="Absolute path to robot urdf file"
     )
     
-    world_name_arg = DeclareLaunchArgument(name="world_name", default_value="empty")
+    world_name_arg = DeclareLaunchArgument(name="world_name", default_value="my_house")
 
     world_path = PathJoinSubstitution([
             oxbot_description_dir,
             "worlds",
-            PythonExpression(expression=["'", LaunchConfiguration("world_name"), "'", " + '.world'"])
+            PythonExpression(expression=["'", LaunchConfiguration("world_name"), "'", " + '.sdf'"])
         ]
     )
 

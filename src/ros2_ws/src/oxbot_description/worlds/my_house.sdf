@@ -1,0 +1,105 @@
+<sdf version='1.9'>
+  <world name='default'>
+    <physics type='ode'>
+      <max_step_size>0.0040000000000000001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <plugin name='gz::sim::systems::Imu' filename='gz-sim-imu-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='map'>
+      <static>true</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <heightmap>
+              <use_terrain_paging>true</use_terrain_paging>
+              <texture>
+                <diffuse>package://oxbot_description/textures/white.png</diffuse>
+                <normal>package://oxbot_description/textures/white.png</normal>
+                <size>1</size>
+              </texture>
+              <texture>
+                <diffuse>package://oxbot_description/textures/gray.png</diffuse>
+                <normal>package://oxbot_description/textures/white.png</normal>
+                <size>1</size>
+              </texture>
+              <blend>
+                <min_height>0</min_height>
+                <fade_dist>0.01</fade_dist>
+              </blend>
+              <blend>
+                <min_height>2</min_height>
+                <fade_dist>0.01</fade_dist>
+              </blend>
+              <uri>file:///home/mjs161803/heightmaps/prepared_map.png</uri>
+              <size>12.8 18.45 0.5</size>
+              <pos>4.22 0.865 0</pos>
+              <sampling>2</sampling>
+            </heightmap>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <pose>4.220000 0.865000 0 0 0 0</pose>
+          <geometry>
+            <heightmap>
+              <uri>file:///home/mjs161803/heightmaps/prepared_map.png</uri>
+              <size>12.8 18.45 0.5</size>
+              <pos>0 0 0</pos>
+              <sampling>2</sampling>
+            </heightmap>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.1 -0.9</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
