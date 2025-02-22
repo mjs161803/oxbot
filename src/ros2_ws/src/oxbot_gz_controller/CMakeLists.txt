@@ -31,6 +31,11 @@ install(
   DESTINATION include
 )
 
+install(
+  DIRECTORY launch config
+  DESTINATION share/${PROJECT_NAME}
+)
+
 install(TARGETS
   gz_motion_controller 
   oxbot_teleop_node
